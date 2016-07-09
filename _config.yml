@@ -54,8 +54,8 @@ defaults:
       comments: "true"
 
 # Serving
-url: "http://michaeljolley.com/"
-baseurl: ""
+url: ""
+baseurl: "http://michaeljolley.com/"
 
 # Includes
 include: ["_pages"]
