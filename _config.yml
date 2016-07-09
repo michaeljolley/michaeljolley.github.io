@@ -1,26 +1,26 @@
 # General Settings
-name: Steve Austin
-job_title: UI/UX Engineer
-email: youremail@gmail.com
+name: Mike Jolley
+job_title: Software Engineer
+email: mikejolley@advancedsystemsunlimited.com
 description: I build great products at Google, currently Google Maps. I also enjoy capturing moments with my camera and discovering new music. Follow me Twitter or drop me a line.
 avatar: https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg
 favicon: /favicon.ico
-twitter_handler: your_handler
+twitter_handler: michaeljolley
 analytics_code: UA-XXXXXXX-2
-disqus: your_disqus_site
+disqus: michaeljolley
 
 # Social Accounts
 social_networks:
--  { name: facebook, url: 'http://facebook.com' }
--  { name: twitter, url: 'http://twitter.com' }
--  { name: instagram, url: '' }
+-  { name: facebook, url: 'https://www.facebook.com/mike.jolley.940' }
+-  { name: twitter, url: 'https://twitter.com/michaeljolley' }
+-  { name: instagram, url: 'https://www.instagram.com/michaeljolley' }
 -  { name: google-plus, url: '' }
--  { name: linkedin, url: '' }
+-  { name: linkedin, url: 'https://www.linkedin.com/in/michaelwjolley' }
 -  { name: skype, url: '' }
--  { name: github, url: '' }
+-  { name: github, url: 'https://github.com/MichaelJolley' }
 -  { name: codepen, url: '' }
--  { name: stack-overflow, url: '' }
--  { name: dribbble, url: '' }
+-  { name: stack-overflow, url: 'http://stackoverflow.com/users/2019929/mike-jolley' }
+-  { name: dribbble, url: 'https://dribbble.com/michaeljolley' }
 -  { name: behance, url: '' }
 -  { name: pinterest, url: '' }
 -  { name: tumblr, url: '' }
