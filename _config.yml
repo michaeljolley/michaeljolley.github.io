@@ -41,7 +41,7 @@ show_mood: 0
 show_email: 1
 show_rss: 1
 show_comments: 1
-show_menu: 1
+show_menu: 0
 fixed_sidebar: 1
 
 # Defaults
