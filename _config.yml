@@ -37,11 +37,11 @@ social_networks:
 # Modules Settings
 show_categories: 1
 show_tags: 1
-show_mood: 1
+show_mood: 0
 show_email: 1
 show_rss: 1
 show_comments: 1
-show_menu: 0
+show_menu: 1
 fixed_sidebar: 1
 
 # Defaults
