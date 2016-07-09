@@ -1,0 +1,36 @@
+<aside class="user-profile {% if site.fixed_sidebar == 1 %}fixed{% endif %}" role="complementary">
+    <a href="{{ site.baseurl | prepend: site.url }}"><img class="avatar" src="{% if site.avatar %}{{site.avatar}}{% else %}{{ site.email | to_gravatar:140 }}{% endif %}" /></a>
+    <strong class="my-name">{{ site.name }}</strong>
+    <span class="my-job-title">{{ site.job_title }}</span>
+
+    {% if site.show_menu == 1 %}
+        {% if site.pages %}
+        <div class="mainmenu">
+            {% for p in site.pages %}
+                {% if p.layout == 'page' %}
+                    <a href="{{ site.baseurl | prepend: site.url }}">Home</a>
+                    {% if page.url == p.url %}
+                        <a href="{{p.url}}" class="active">{{ p.title }}</a>
+                    {% else %}
+                        <a href="{{p.url}}">{{ p.title }}</a>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        </div>
+        {% endif %}
+    {% endif %}
+
+    <p class="about-me">{{ site.description }}</p>
+
+    <ul>
+        {% for social in site.social_networks %}{% if social.url != '' %}<li><a href="{{social.url}}"><svg title="{{social.name}}" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl | prepend: site.url }}/assets/svg/social-icons.svg#{{social.name}}-icon"></use></svg></a></li>{% endif %}{% endfor %}
+
+        {% if site.email != blank and site.show_email == 1 %}
+            <li><a href="mailto:{{site.email}}"><svg title="{{social.name}}" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl | prepend: site.url }}/assets/svg/social-icons.svg#email-icon"></use></svg></a></li>
+        {% endif %}
+
+        {% if site.show_rss == 1 %}
+         <li><a href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}"><svg title="{{social.name}}" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl | prepend: site.url }}/assets/svg/social-icons.svg#rss-icon"></use></svg></a></li>
+        {% endif %}
+    </ul>
+</aside>
