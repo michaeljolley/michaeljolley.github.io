@@ -2,15 +2,16 @@
 layout: post
 date: 2016-07-27 12:36
 title: "Girls Who Code"
-description: Discussing the future for women in software development.
+description: Thinking about our girls interest in STEM related fields.
 comments: true
 category: 
 - parenting
-- business
 tags:
-- code
-- business
-- parenting
+- STEM
+- RaspberryPi
+- SnapCircuits
+- GirlsWhoCode
+- GirlsInTech
 ---
 <figure >
     <img src="https://cloud.githubusercontent.com/assets/1228996/17200725/66d4554a-544d-11e6-82d7-ced84abd4123.jpg" />
