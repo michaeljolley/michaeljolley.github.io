@@ -2,7 +2,7 @@
 layout: post
 date: 2016-07-27 12:36
 title: "Girls Who Code"
-description: Basic information about the Steve.
+description: Discussing the future for women in software development.
 comments: true
 category: 
 - parenting
@@ -12,127 +12,36 @@ tags:
 - business
 - parenting
 ---
-
-### Configuration
-All configuration options are in the <code>_config.yml</code> file.
-
-<figure>
-    <img src="https://d13yacurqjgara.cloudfront.net/users/239125/screenshots/2591055/littleprincedribbble.jpg" />
-    <figcaption>Created by <a href="https://dribbble.com/Pmafra" target="_blank_">Patricia Mafra</a></figcaption>
+<figure >
+    <img src="https://cloud.githubusercontent.com/assets/1228996/17200725/66d4554a-544d-11e6-82d7-ced84abd4123.jpg" />
+    <figcaption>Picture from <a href="www.ucdavis.edu" target="_blank">UC Davis Today</a></figcaption>
 </figure>
 
-##### General Settings
-* **name**: Your name.
-* **job_title**: Your job title.
-* **email**: Your email. There are two cases where email is used. First, if you entered the email and you've activated **show_email** option the end result will be a visible social email icon in the sidebar. The second use of your email is when you do not set your own avatar. In this case your email is used by the gravatar plugin to automatically fetch your gravatar.
-* **description**: Describe yourself with a couple of words.
-* **avatar**: Write down the full path to the avatar <code>http://mysite.com/blog/assets/images/avatar.jpg</code>. If you comment this row, "Steve" checks if you have an email and shows your gravatar if you have any.
-* **favicon**: Want a favicon? Enter the full path here. For example <code>http://mysite.com/blog/assets/favicon.ico</code>.
-* **twitter_handler**: Add your Twitter username without the @. It will be used for [Twitter Cards](https://dev.twitter.com/cards/overview){:target="_blank"}. The default card type for "Steve" is [Summary Card with Large Image](https://dev.twitter.com/cards/types/summary-large-image){:target="_blank"}.
-* **analytics_code**: Add your Google Analytics Tracking ID. Example ID: *UA-XXXXXXX-2*.
-* **disqus**: Add your website shortname from Disqus.
+These days, the topic of women in technology is hot.  There have been numerous articles lamenting the shortage of women in our field and the lack of girls interested or pursuing education in **STEM** *(Science, Technology, Engineering and Mathematics)* fields.
 
-**Important Note:** Keep in mind that **name**, **job_title**, **twitter_handler** and some of the post specific variables are used as default meta data in some cases.
+As a dad of two daughters, I often think about what their futures hold.  Like most parents, I don’t want them to feel pigeon-holed into a specific field of study or occupation.  During the course of a normal day, and usually depending on what TV show they watched last, they want to become actresses, musicians, artists, cooks, fashion designers, princesses, teachers or nurses.  Of course, at 7 and 10 years old, those are all fine aspirations.  But it sometimes puzzles me that I've never heard them say I want to be a scientist or software developer or engineer. 
 
-<!--more-->
+Of course, we'll support them in whatever they choose to be when they grow up, but I still feel an urge to expose them to other ideas and skills and professions while they're young.  Even if it's nothing more than me letting them know "hey, it's okay to be a girl and like math or science or robots."  *Heck, who doesn't like robots?*
 
-##### Social Accounts
-* **social_networks**: Here you can find the list of all the available social networks that you can currently use. Of course you can always add a new one by yourself or ask for it to be available in the next version of the theme. If you don't want a specific social network to be seen, just leave the url value empty or delete the line.
- 
-**Important:** Do not change the names of the social networks!
+<figure style="width:300px;float:right;margin:10px;border:4px solid #C0C0C0;padding:5px">
+    <img src="https://cloud.githubusercontent.com/assets/1228996/17200845/439e9ce2-544e-11e6-9497-8f6883536914.jpg" />
+    <figcaption>Picture from <a href="http://www.snapcircuits.net/" target="_blank">Snap Circuits</a></figcaption>
+</figure>
 
-##### Modules Settings
-One thing to remember - 1 is **on**, 0 is **off**.
+One of the ways I've started exposing them to these ideas is with a kit I found online that helps teach kids about electronics.  It teaches them how circuits and resistors and sensors work.  If you'd like to check it out it's called <a href="http://www.snapcircuits.net/" target="_blank">Snap Circuits</a>.  No, I have no incentive to push their product and there are many on the market like it, but this one really seems to get the attention of my kids.   They have several packages you can pick up but we got the <a href="https://www.amazon.com/gp/product/B000IXMP6Q/ref=oh_aui_detailpage_o01_s00?ie=UTF8&psc=1" target="_blank">Extreme SC-750R Student Electronics Training Program</a>.  It comes with several books to help teach how electronics work and includes over 750 experiments for us to build.
 
-* **show_categories**: If it is on and you've added categories in the post itself the categories will be visible. If it is off and you've added categories in the post they will be hidden. This option is helpful if you want to turn on/off categories for all your posts at once. 
-* **show_tags**: If it is on and you've added tags in the post itself the tags will be visible. If it is off and you've added tags in the post they will be hidden.  This option is helpful if you want to turn on/off tags for all your posts at once. 
-* **show_mood**: If it is on and you've added mood in the post itself the mood will be visible. If it is off and you've added mood in the post the mood will be hidden. This option is helpful if you want to turn on/off mood for all your posts at once. 
-* **show_email**: If this is turned on and you've entered an email value in **email**, an email icon will appear next to your social media accounts and all your readers will be able to contact you. 
-* **show_rss**: If this is turned on, a new RSS button will appear in the sidebar next to your social media accounts.
-* **show_comments**: If it is on and you've added <code>comments: true</code> in the post itself the comments will be visible. If it is off and you've added <code>comments: true</code> in the post the comments will be hidden. This option is helpful if you want to turn on/off comments for all your posts at once.
-* **show_menu**: If it is on the main menu will be visible.
-* **fixed_sidebar**: If it is on the sidebar will be fixed (sticky).
+Our first night with it was a hit as we built a fan with a switch, a light with a switch and connected a speaker to a click switch to show how sensors can be used like a flip switch to turn on circuits.  It was so much fun to watch their eyes get huge and fight for who would be the first one to turn on our new experiment.
 
-##### Defaults
-* **defaults**: The only available option at the moment is whether to enable the comments automatically in the post or not. The default value is <code>true</code>.
+Like I said there are numerous systems/kits like that from different companies with the same goal but I would recommend the one we got.  
 
-##### Serving
-These options are pretty important, so take a closer look. If you experience any problems with your paths you should check them here.
+Another project we're looking to start is an automated irrigation system for our planter outside.  Being a good "geek" I own several Raspberry Pi's and have developed several applications on them.  But one day our oldest daughter asked about the "little computer" and when I told her what kind of things are possible with it I could tell it was a "mind blown" experience for her.
 
-* **url**: Enter your domain! Example: <code>https://mysite.com</code>
-* **baseurl**: The baseurl can remain empty if you’re not going to host your site in a subfolder. But if you want your site to be something like <code>htttp://mysite.com/blog</code> you should write down <code>/blog</code> here.
+So now we're planning a project with an elevated planter in the backyard where we will setup a <a href="https://www.raspberrypi.org/" target="_blank">Raspberry Pi</a> connected to a moisture sensor to monitor the moisture level in the box.  Our goal is to connect it to a solenoid valve connected to our home to automatically water the plants when the moisture level gets too low.  Mom & Dad are fans because it means we don't have to remember to water the plants and the 10yo thinks it's the coolest thing ever.
 
-##### Includes
+There are tons of resources that are available for girls who are interested in STEM fields.  If your daughter is interested in STEM or you'd like to expose them moreso to STEM fields, research <a href="https://girlswhocode.com/" target="_blank">Girls Who Code</a> and <a href="http://girlsintech.org/" target="_blank">Girls In Tech</a>.  Here in Birmingham, we have great opportunities for girls who want to get involved with Girls Who Code.  Once our girls are old enough I hope they will have the chance to participate.  Thankfully they have events at the <a href="http://innovationdepot.org/" target="_blank">Innovation Depot</a> where our offices are so it will be very accessible for us.
 
-* **include**: Force the inclusion of the pages directory.
+```C#
 
-##### Outputting
+var x = Blah();
 
-* **permalink**: By default your links will look like this <code>http://mysite.com/categories/post-name.html</code>. If you want a different permalink check [Jekyll documentation](https://jekyllrb.com/docs/permalinks/){:target="_blank"}.
-* **category_dir**: The default directory is <code>categories</code>, so for example if you go to random category index you will see something like this <code>http://mysite.com/categories/category-name/postname.html</code>.
-
-##### Plugins
-* **gems**: This option includes pagination on your site. If you want a working pagination, do nothing here.
-
-##### Pagination
-* **paginate**: You should enter a number that stands for the number of posts per page.
-* **paginate_path**: The default path is <code>/page:num/</code>, so for example if you go to second page you will see something like this <code>http://mysite.com/page2/</code>.
-
-**Important Note:** Pagination is currently working only on home page due to Jekyll limitations. 
-
-##### Conversion
-* **markdown**: Choose your Markdown renderer. Different Markdown renderers supported by Jekyll sometimes have extra options available. I suggest to stick with the default.
-
-##### Post Settings
-* **excerpt_separator**: By default when you're writing a post, you should add <code>&lt;!--more--&gt;</code> to define excerpt. You have three options - to leave it as is, to change the tag or to completely remove it but in this case you'll always see the full content.
-
-##### Assets Settings
-* **sass**: Choose the path to all of yours SCSS partials and the compression method for the final file.
-
-If you need extra help, just check out the [official Jekyll documentation](https://jekyllrb.com/docs/home/){:target="_blank"}.
-
-### Additional Configuration
-
-<dl>
-	<dt>How to change your default theme color?</dt>
-	<dd>Just go to <code>/assets/partials/_vars.scss</code> and change the color of the <code>$primary-color</code> variable.</dd>
-	
-	<dt>How Facebook knows which image to use for sharing?</dt>
-	<dd>By default the script gets the first image in the post so take that in mind when you write a blog post.</dd>
-</dl>
-
-### Adding Post
-
-The next thing after you are done with the configuration file is to add your first post. You will need to have at least basic knowledge of HTML or Markdown.
-
-All you need to do is to create a new file with name <code>YYYY-MM-DD-my-first-post</code> and <code>.markdown</code> or <code>.md</code> extension. Create it in the <code>_posts</code> folder. By default the name of the file is composed by date and title but you can overwrite these in the post's front matter.
-
-In the beginning of the every post you have a so called [front matter](https://jekyllrb.com/docs/frontmatter/){:target="_blank"} block which contains some data about the post. Here is the short description of the options.
-
-**layout**: The post layout.
-
-**date**: Exact date when the post is published. The date is actually pretty important and I suggest you never change it. Specific date helps Jekyll to order correctly all the posts. Also, the date is used to generate a unique ID, so Disqus can always get the right comments for the right post, even when you change the title.
-
-**title**: Post's title.
-
-**description**: Meta description used for better SEO.
-
-**comments**: By default they are always <code>true</code>, but if you want to turn them off for a specific post just set this to <code>false</code>.
-
-**mood**: You have four options here, representing your current state when you are writing the post - happy, sad, angry, speechless. Expect more in the upcoming versions.
-
-**category**: List the categories in which you want your post to appear.
-
-**tags**: List your tags here.
-
-### Adding Page
-
-Adding page is even simpler than adding post. Just create a sub-folder to the pages directory and inside that sub-folder create index.md file. The folder name is your page name. Every folder must contain index file. Pages are also using front matter to add information to your page.
-
-**layout**: The page layout.
-
-**title**: Page's title.
-
-**permalink**: This is important. If you do not enter the permalink, your url will be something like this <code>http://example.com/_pages/about</code>. Enter the permalink and get rid of <code>/_pages/</code> part. Do not forget the trailing slash!
-
-That's it! Do not hesitate to ask if you have any questions. Also you can send me feature requests. There are some nice features that are planed for the upcoming versions. Happy blogging!
+```
