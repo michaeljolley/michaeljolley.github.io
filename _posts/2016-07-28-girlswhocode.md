@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2016-07-27 12:36
+date: 2016-07-28 16:36
 title: "Girls Who Code"
 description: Thinking about our girls interest in STEM related fields.
 comments: true
