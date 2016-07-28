@@ -39,9 +39,3 @@ Another project we're looking to start is an automated irrigation system for our
 So now we're planning a project with an elevated planter in the backyard where we will setup a <a href="https://www.raspberrypi.org/" target="_blank">Raspberry Pi</a> connected to a moisture sensor to monitor the moisture level in the box.  Our goal is to connect it to a solenoid valve connected to our home to automatically water the plants when the moisture level gets too low.  Mom & Dad are fans because it means we don't have to remember to water the plants and the 10yo thinks it's the coolest thing ever.
 
 There are tons of resources that are available for girls who are interested in STEM fields.  If your daughter is interested in STEM or you'd like to expose them moreso to STEM fields, research <a href="https://girlswhocode.com/" target="_blank">Girls Who Code</a> and <a href="http://girlsintech.org/" target="_blank">Girls In Tech</a>.  Here in Birmingham, we have great opportunities for girls who want to get involved with Girls Who Code.  Once our girls are old enough I hope they will have the chance to participate.  Thankfully they have events at the <a href="http://innovationdepot.org/" target="_blank">Innovation Depot</a> where our offices are so it will be very accessible for us.
-
-```C#
-
-var x = Blah();
-
-```
