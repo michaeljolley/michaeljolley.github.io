@@ -50,7 +50,8 @@ layout: default
     <div id="disqus_thread"></div>
     <script>
         var disqus_config = function () {
-            this.page.url = '{{ page.title }}';
+            this.page.title = '{{ page.title }}';
+            this.page.url = '{{page.url | prepend: site.url | escape}}';
             this.page.identifier = '{{ page.date | date: "%-m/%-d/%Y" }}';
         };
         (function() {
