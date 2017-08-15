@@ -5,10 +5,6 @@
 
 .wrapper { max-width: $default-width; margin: 0 auto; padding: 100px 20px; }
 
-.btn-facebook:hover {
-	background-color: #3B5998;
-}
-
 .user-profile { position: relative; float: left; width: 28%; margin-right: 4%; text-align: center;
 	& > * { display: block; }
 	.avatar { max-width: 140px; max-height: 140px; border-radius: 50%; margin: 0 auto 25px; }
@@ -25,7 +21,15 @@
 	ul { font-size: 0; margin: 25px 0 0;
 		li { display: inline-block; margin: 5px;
 			a { position: relative; display: block; width: 40px; height: 40px; line-height: 40px; background: darken($grey-color-lightest, 6%); border-radius: 50%;
-				&:hover { background: $primary-color; }
+				&.btn-facebook:hover { background: #3B5998; }
+				&.btn-twitter:hover { background: #4099FF; }
+				&.btn-instagram:hover { background: #4b1b02; }
+				&.btn-linkedin:hover { background: #007bb6; }
+				&.btn-github:hover { background: #000000; }
+				&.btn-stack-overflow:hover { background: #FF9900; }
+				&.btn-dribbble:hover { background: #C73B6F; }
+				&.btn-rss:hover { background: #FF6600; }
+				&.btn-email:hover { background: $primary-color; }
 				svg { display: inline-block; vertical-align: middle;
 					* { fill: $white;  }
 				}
