@@ -5,6 +5,10 @@
 
 .wrapper { max-width: $default-width; margin: 0 auto; padding: 100px 20px; }
 
+.btn-facebook:hover {
+	background-color: #3B5998;
+}
+
 .user-profile { position: relative; float: left; width: 28%; margin-right: 4%; text-align: center;
 	& > * { display: block; }
 	.avatar { max-width: 140px; max-height: 140px; border-radius: 50%; margin: 0 auto 25px; }
