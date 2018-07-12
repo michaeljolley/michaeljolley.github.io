@@ -1,5 +1,3 @@
-svg4everybody();
-
 jQuery(document).ready( function() {
 
     // Shows the number of search results.
