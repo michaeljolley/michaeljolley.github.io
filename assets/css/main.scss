@@ -1,4 +1,5 @@
-
+---
+---
 @import "vars", "reset", "mixins", "comments";
 
 .wrapper { max-width: $default-width; margin: 0 auto; padding: 100px 20px; }
@@ -19,13 +20,13 @@
 	ul { font-size: 0; margin: 25px 0 0;
 		li { display: inline-block; margin: 5px;
 			a { position: relative; display: block; width: 40px; height: 40px; line-height: 40px; background: darken($grey-color-lightest, 6%); border-radius: 50%;
-				&.btn-facebook:hover { background: $brand-fackbook; }
+				&.btn-facebook:hover { background: $brand-facebook; }
 				&.btn-twitter:hover { background: $brand-twitter; }
 				&.btn-instagram:hover { background: $brand-instagram; }
 				&.btn-linkedin:hover { background: $brand-linkedin; }
 				&.btn-github:hover { background: $brand-github; }
 				&.btn-stack-overflow:hover { background: $brand-stack-overflow; }
-				&.btn-dribbble:hover { background: $brand-dribble; }
+				&.btn-dribbble:hover { background: $brand-dribbble; }
 				&.btn-rss:hover { background: $brand-rss; }
 				&.btn-email:hover { background: $brand-email; }
 				svg { display: inline-block; vertical-align: middle;
@@ -147,8 +148,8 @@
 					.social-networks { display: none; position: absolute; top: -48px; left: 50%; width: 100px; box-shadow: 0 0 0 1px $grey-color-lightest, 0 3px 4px rgba($black,.05); @include translate(-50%, 0);
 						li { position: relative; float: left; width: 50%; min-height: 50px; background: $white; text-align: center; box-shadow: inset 1px 0 0 $grey-color-lightest;
 							&:first-of-type { box-shadow: none; }
-							&.share-facebook:hover { background: $facebook-brand-color; }
-							&.share-twitter:hover { background: $twitter-brand-color; }
+							&.share-facebook:hover { background: $brand-facebook; }
+							&.share-twitter:hover { background: $brand-twitter; }
 							&:hover a svg { fill: $white; }
 							a { position: absolute; width: 100%; height: 100%; left: 0; top: 0;
 								svg { display: inline-block; vertical-align: middle; }
