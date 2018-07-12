@@ -2,24 +2,27 @@
 ---
 @import "vars", "reset", "mixins", "comments";
 
-.wrapper { max-width: $default-width; margin: 0 auto; padding: 100px 20px; }
+.wrapper { max-width: $default-width; margin: 0 auto; padding: 60px 20px; }
 
-.user-profile { position: relative; float: left; width: 28%; margin-right: 4%; text-align: center;
-	& > * { display: block; }
-	.avatar { max-width: 140px; max-height: 140px; border-radius: 50%; margin: 0 auto 25px; }
-	.my-name { font-size: 24px; font-weight: 700; line-height: 30px; color: $grey-color-dark; }
-	.my-job-title { font-size: 14px; font-weight: 300; margin: 5px 0 0; }
+.user-profile { position: absolute; top: 60px; width: 100%; max-width: 300px; text-align: center; @include transition(right .3s ease-in-out);
+	&.fixed { position: fixed; }
+	.compact-header {
+		.avatar { max-width: 140px; max-height: 140px; border-radius: 50%; margin: 0 auto 25px; }
+		.my-info {
+			.my-name { display: block; font-size: 24px; font-weight: 700; line-height: 30px; color: $grey-color-dark; }
+			.my-job-title { font-size: 14px; font-weight: 300; margin: 5px 0 0; }
+		}
+	}
 	.mainmenu { margin: 40px 0; text-align: center;
-		a { display: block; max-width: 300px; margin: 0 auto; padding: 15px 0; border: 1px solid $grey-color-lightest; background: $background-color; box-shadow: 0 2px 3px rgba($black,.05); @include transition(all, .1s, linear);
-			&:hover, &.active { background: darken($background-color, 1%); border-left: 4px solid $grey-color-lightest; }
+		a { display: block; max-width: 300px; margin: 0 auto; padding: 15px 0; border: 1px solid $grey-color-lightest; border-top: none; background: $background-color; box-shadow: 0 2px 3px rgba($black,.05); @include transition(all, .1s, linear);
+			&:hover, &.active { background: darken($background-color, 1%); box-shadow: 0 2px 3px rgba($black,.05), inset 4px 0 0 $primary-color; }
+			&:first-of-type { border-top: 1px solid $grey-color-lightest; }
 		}
 	}
 	.about-me { font-size: 16px; line-height: 26px; margin: 30px 0 0; }
-	a { color: $secondary-color;}
-	
-	ul { font-size: 0; margin: 25px 0 0;
+	.socials { font-size: 0; margin: 25px 0 0;
 		li { display: inline-block; margin: 5px;
-			a { position: relative; display: block; width: 40px; height: 40px; line-height: 40px; background: darken($grey-color-lightest, 6%); border-radius: 50%;
+			a { position: relative; display: block; width: 40px; height: 40px; line-height: 40px; background: darken($grey-color-lightest, 6%); border-radius: 50%; @include transition(all, .07s, linear);
 				&.btn-facebook:hover { background: $brand-facebook; }
 				&.btn-twitter:hover { background: $brand-twitter; }
 				&.btn-instagram:hover { background: $brand-instagram; }
@@ -35,9 +38,24 @@
 			}
 		}
 	}
+	.burger { display: none !important;
+		.hidden { display: none; }
+		label { display: block; padding: 4*$burger-cell-height 0; cursor: pointer; margin: 0;
+			& > span { position: relative; display: block; width: 24px; height: $burger-cell-height; background: #111; text-indent: -9999px; @include transition(background .01s .3s ease);
+				&:before, &:after { position: absolute; left: 0; width: 24px; height: $burger-cell-height; background: #111; content: ""; @include transition(top .3s .35s ease, transform .3s .05s ease); }
+				&:before { top: -(4*$burger-cell-height); }
+				&:after { top: 4*$burger-cell-height; }
+			}
+		}
+		.trigger:checked ~ label > span { background: transparent;
+			&:after, &:before { @include transition(top .3s .05s ease, transform .3s .35s ease); top: 0; }
+			&:before { @include rotate(45deg); }
+			&:after { @include rotate(-45deg); }
+		}
+	}
 }
 
-.the-content { float: left; width: 68%;
+.the-content { margin-left: 350px;
 	& > h1 { text-transform: uppercase; color: $grey-color-light; letter-spacing: 0.1em; font-size: 12px; font-weight: 400; margin: 0 0 20px; text-align: center; }
 	.search { position: relative; margin: 0 0 20px; border: 1px solid $grey-color-lightest; background: $white; box-shadow: 0 2px 3px rgba($black,.05), inset 6px 0 0 $grey-color-lightest; @include placeholder($grey-color-lighter, italic);
 		& > div { overflow: hidden;
@@ -64,7 +82,7 @@
 
 		.post-header {
 			ul { margin: 0 0 4px;
-				li { position: relative; float: left; margin: 0 0 0 10px; padding: 0 0 0 12px; text-transform: uppercase; font-size: 13px; letter-spacing: 0.05em; color: $grey-color-light;
+				li { position: relative; float: left; margin: 0 0 0 10px; padding: 0 0 0 12px; text-transform: uppercase; font-size: 12px; letter-spacing: 0.06em; color: $grey-color-light;
 					&:first-of-type { margin: 0; padding: 0;
 						&:before { content: none; }
 					}
@@ -85,13 +103,13 @@
 
 		.post-content { font-size: 16px; line-height: 26px;
 			abbr { border-bottom: 1px dotted $grey-color-normal; cursor: help; }
-			code, kbd, pre { margin: 0; font-family: monospace; word-wrap: break-word; word-break: break-word; }
+			code, kbd, pre { margin: 0; font-family: monospace; word-wrap: break-word; word-break: break-word; white-space: pre-wrap; }
 			address, cite, var { font-style: italic; }
 			blockquote { margin: 40px 0; padding-left: 30px; font-style: italic; border-left: 3px solid $grey-color-light; }
 
 			em, strong { color: $grey-color-dark; }
 
-			h1, h2, h3, h4, h5, h6 { margin: 30px 0; color: $grey-color-dark; }
+			h1, h2, h3, h4, h5, h6 { position: relative; left: -40px; padding: 0 0 0 40px; margin: 30px 0; color: $grey-color-dark; }
 			h1 { font-size: 30px; }
 			h2 { font-size: 26px; }
 			h3 { font-size: 22px; }
@@ -99,11 +117,16 @@
 			h5 { font-size: 18px; }
 			h6 { font-size: 16px; }
 
+			.heading-marker { position: absolute; left: 15px; top: 50%; border: none; font-weight: 400; color: darken($grey-color-lightest, 8%); font-size: 24px; @include transition(color, .1s, linear); @include translate(0, -50%);
+				&:hover { color: $grey-color-light; }
+			}
+
 			a { color: $primary-color; border-bottom: 1px solid $primary-color;
 				&:hover { border: none; }
 			}
 
 			ul, ol { margin: 15px 0;
+				ul, ol { padding: 0 0 0 20px; }
 				li { margin: 5px 0;
 					& > code { font-size: 14px; padding: 3px 6px; background: $background-color; border: 1px solid $grey-color-lightest; }
 				}
@@ -133,14 +156,7 @@
 
 		.post-footer { position: absolute; bottom: 0; left: 0; width: 100%; border-top: 1px solid $grey-color-lightest; background: lighten($grey-color-lightest, 5%);
 			div { float: left; min-height: 48px; border-right: 1px solid $grey-color-lightest; font-size: 11px; line-height: 48px; text-transform: uppercase; color: $grey-color-light;
-				&.mood { padding: 0 40px 0 20px; z-index: 10; background: lighten($grey-color-lightest, 5%);
-					&.happy { background: url(../svg/mood-icons.svg#smiley-happy) no-repeat calc(100% - 20px) center; @include bgsizeNum(12px, 12px); }
-					&.sad { background: url(../svg/mood-icons.svg#smiley-sad) no-repeat calc(100% - 20px) center; @include bgsizeNum(12px, 12px); }
-					&.angry { background: url(../svg/mood-icons.svg#smiley-angry) no-repeat calc(100% - 20px) center; @include bgsizeNum(12px, 12px); }
-					&.speechless { background: url(../svg/mood-icons.svg#smiley-speechless) no-repeat calc(100% - 20px) center; @include bgsizeNum(12px, 12px); }
-				}
-
-				&.share { position: relative; z-index: 10; padding: 0 20px 0 40px; background: lighten($grey-color-lightest, 5%) url(../svg/share-icon.svg) no-repeat 20px center; @include bgsizeNum(10px, 10px); cursor: pointer;
+					&.share { position: relative; z-index: 10; padding: 0 20px 0 40px; background: lighten($grey-color-lightest, 5%) url(../svg/share-icon.svg) no-repeat 20px center; @include bgsizeNum(10px, 10px); cursor: pointer;
 					&:hover { background-color: $white; }
 					&.active { background-color: $white;
 						.social-networks { display: block; }
@@ -150,7 +166,7 @@
 							&:first-of-type { box-shadow: none; }
 							&.share-facebook {
 								&:hover { background: $brand-facebook; }
-
+					
 								a svg { fill: $brand-facebook; }
 							}
 							&.share-twitter {

@@ -7,6 +7,12 @@ layout: default
     <header class="post-header">
         <ul class="clear">
             <li><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%-d %b, %Y" }}</time></li>
+            {% if post.comments %}
+                {% capture post_default_slug %}{{ post.slug | default: (post.title | slugify) }}{% endcapture %}
+                {% capture slug %}{{ (post.slug | fallback: post_default_slug) | downcase }}{% endcapture %}
+                <li class="meta-comments"><a href="{{ post.url }}#comments">{{ site.data.comments[slug] | size }} comments</a></span>
+            {% endif %}
+    
             {% if site.show_categories == 1 and post.category %}
                 <li class="cats">
                     {% for category in post.category %}
