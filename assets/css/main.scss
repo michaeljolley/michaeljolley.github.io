@@ -148,7 +148,7 @@
 					.social-networks { display: none; position: absolute; top: -48px; left: 50%; width: 100px; box-shadow: 0 0 0 1px $grey-color-lightest, 0 3px 4px rgba($black,.05); @include translate(-50%, 0);
 						li { position: relative; float: left; width: 50%; min-height: 50px; background: $white; text-align: center; box-shadow: inset 1px 0 0 $grey-color-lightest;
 							&:first-of-type { box-shadow: none; }
-							&.share-facebook:hover { background: $brand-facebook; }
+							&.share-facebook:hover { background: $brand-facebook; color: red; }
 							&.share-twitter:hover { background: $brand-twitter; }
 							&:hover a svg { fill: $white; }
 							a { position: absolute; width: 100%; height: 100%; left: 0; top: 0;
