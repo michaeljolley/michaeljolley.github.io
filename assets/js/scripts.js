@@ -1,4 +1,4 @@
-jQuery.ready( function() {
+jQuery(document).ready( function() {
 
     // Shows the number of search results.
     jQuery('#search-input').on('focus', function() {

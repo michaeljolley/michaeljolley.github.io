@@ -5,13 +5,3 @@
             <li class="share-twitter"><a href="http://twitter.com/share?url={{page.url | prepend: site.url | escape}}&text={{ page.content | strip_html | truncate: 140 }}&hashtags={% for tag in page.tags %}{{ tag }},{% endfor %}" rel="noreferrer" target="_blank" onclick="window.open(this.href, '','width=700,height=300');return false;"><svg title="" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.url }}/assets/svg/social-icons.svg#twitter-icon"></use></svg></a></li>
         </ul>
     </div>
-    {% if site.show_tags == 1 and page.tags %}
-    <div class="tags">
-        <ul>
-            {% for tag in page.tags %}
-            <li><a href="{{ site.url }}/tag/{{ tag }}">{{ tag }}</a></li>
-            {% endfor %}
-        </ul>
-    </div>
-    {% endif %}
-</footer>
