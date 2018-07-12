@@ -6,7 +6,6 @@ description: I build great products at <a href='http://www.advsysunlimited.com' 
 avatar: https://cloud.githubusercontent.com/assets/1228996/16710684/31b6f3e4-45fd-11e6-9185-ef27665fbe5b.jpg
 favicon: /favicon.ico
 twitter_handler: michaeljolley
-analytics_code: UA-XXXXXXX-2
 comments:
   receiver: https://michaeljolley-comments.azurewebsites.net/api/PostComment
 emptyArray: []
