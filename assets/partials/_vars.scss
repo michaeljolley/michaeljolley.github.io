@@ -9,10 +9,19 @@ $grey-color-light: 		#aaa;
 $grey-color-lighter: 	#ddd;
 $grey-color-lightest: 	#eee;
 
-$primary-color:			#1abc9c;
+$primary-color:			#2d3339;
+$secondary-color:       #1abc9c;
 
-$facebook-brand-color:	#3b5998;
-$twitter-brand-color:	#55acee;
+// brand colors
+$brand-facebook:	    #3b5998;
+$brand-twitter:	        #55acee;
+$brand-instagram:       #815f4d;
+$brand-linkedin:        #007bb6;
+$brand-github:          $black;
+$brand-stack-overflow:  #FF9900;
+$brand-dribbble:        #C73B6F;
+$brand-rss:             #FF6600;
+$brand-email:           $primary-color;
 
 $default-width:			1100px;
 $on-tablet:				768px;

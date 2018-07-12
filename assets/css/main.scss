@@ -1,7 +1,5 @@
----
----
 
-@import "vars", "reset", "mixins";
+@import "vars", "reset", "mixins", "comments";
 
 .wrapper { max-width: $default-width; margin: 0 auto; padding: 100px 20px; }
 
@@ -16,20 +14,20 @@
 		}
 	}
 	.about-me { font-size: 16px; line-height: 26px; margin: 30px 0 0; }
-	a { color: #1abc9c;}
-	a.osbbq {color: #f52c0f}
+	a { color: $secondary-color;}
+	
 	ul { font-size: 0; margin: 25px 0 0;
 		li { display: inline-block; margin: 5px;
 			a { position: relative; display: block; width: 40px; height: 40px; line-height: 40px; background: darken($grey-color-lightest, 6%); border-radius: 50%;
-				&.btn-facebook:hover { background: #3B5998; }
-				&.btn-twitter:hover { background: #4099FF; }
-				&.btn-instagram:hover { background: #815f4d; }
-				&.btn-linkedin:hover { background: #007bb6; }
-				&.btn-github:hover { background: #000000; }
-				&.btn-stack-overflow:hover { background: #FF9900; }
-				&.btn-dribbble:hover { background: #C73B6F; }
-				&.btn-rss:hover { background: #FF6600; }
-				&.btn-email:hover { background: $primary-color; }
+				&.btn-facebook:hover { background: $brand-fackbook; }
+				&.btn-twitter:hover { background: $brand-twitter; }
+				&.btn-instagram:hover { background: $brand-instagram; }
+				&.btn-linkedin:hover { background: $brand-linkedin; }
+				&.btn-github:hover { background: $brand-github; }
+				&.btn-stack-overflow:hover { background: $brand-stack-overflow; }
+				&.btn-dribbble:hover { background: $brand-dribble; }
+				&.btn-rss:hover { background: $brand-rss; }
+				&.btn-email:hover { background: $brand-email; }
 				svg { display: inline-block; vertical-align: middle;
 					* { fill: $white;  }
 				}
