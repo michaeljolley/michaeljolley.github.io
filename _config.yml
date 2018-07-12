@@ -67,7 +67,7 @@ permalink: /:categories/:title.html
 category_dir: categories
 
 # Plugins
-gems: ['jekyll-paginate']
+plugins: ['jekyll-paginate']
 
 # Pagination
 paginate: 10
