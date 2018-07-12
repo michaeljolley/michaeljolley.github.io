@@ -55,7 +55,7 @@ defaults:
       comments: "true"
 
 # Serving
-url: ""
+url: "https://michaeljolley.com"
 baseurl: "http://michaeljolley.com/"
 
 # Includes

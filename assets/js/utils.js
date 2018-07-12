@@ -9,7 +9,7 @@ var Jolley = (function() {
         }
     }
   
-    // Haack namespace object.
+    // Jolley namespace object.
     return {
         ready: function(init) {
           if (document.readyState === "complete" || (document.readyState !== "loading" && !document.documentElement.doScroll)) {

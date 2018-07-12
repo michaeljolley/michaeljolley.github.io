@@ -1,4 +1,4 @@
-Jolley.ready( function() {
+jQuery.ready( function() {
 
     // Shows the number of search results.
     jQuery('#search-input').on('focus', function() {
