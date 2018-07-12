@@ -1,15 +1,15 @@
 <header class="post-header">
 	{% include post/meta.html %}
-    <h2 itemprop="name headline">{{ post.title }}</h2>
+    <h2 itemprop="name headline">{{ page.title }}</h2>
 </header>
 
 {% if index %}
     <div class="post-content">
-        {{ post.content | post.excerpt }}
-        {% if excerpted == 'true' %}<a href="{{ post.url }}" class="more-link">{{ site.excerpt_link }}</a>{% endif %}
+        {{ page.content | page.excerpt }}
+        {% if excerpted == 'true' %}<a href="{{ page.url }}" class="more-link">{{ site.excerpt_link }}</a>{% endif %}
     </div>
 {% else %}
     <div class="post-content">
-        {{ post.content }}
+        {{ page.content }}
     </div>
 {% endif %}
