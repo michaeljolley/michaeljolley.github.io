@@ -9,6 +9,7 @@ twitter_handler: michaeljolley
 analytics_code: UA-XXXXXXX-2
 comments:
   receiver: https://michaeljolley-comments.azurewebsites.net/api/PostComment
+emptyArray: []
 
 # Social Accounts
 social_networks:
