@@ -1,3 +1,5 @@
+svg4everybody();
+
 jQuery(document).ready( function() {
 
     // Shows the number of search results.
@@ -19,6 +21,17 @@ jQuery(document).ready( function() {
         }
     });
 
+    // Generates a quick link to the current heading section.
+    jQuery('.post-content').find(':header').on({
+        mouseenter: function() {
+            var headingID = jQuery(this).attr('id');
+            jQuery(this).append('<a class="heading-marker" href="#' + headingID + '">&#35;</a>');
+        },
+        mouseleave: function () {
+            jQuery(this).children('a').remove();
+        }
+    });
+
     // Automatically sets the first post image as a featured image on Facebook and Twitter.
     var firstImg = jQuery('.post.single').find('img:first-of-type');
     var firstImgSrc = firstImg.attr('src');
@@ -27,36 +40,21 @@ jQuery(document).ready( function() {
         jQuery('meta[name="twitter:image"]').attr('content', firstImgSrc);
     }
 
-    // Fixed sidebar or not!
+    // Menus Show/Hide
     var steveSidebar = jQuery('.user-profile');
-    var steveSidebarPos = steveSidebar.offset().top;
-
-    function fixedSidebar() {
-        var scrollPos = jQuery(window).scrollTop();
-        if (scrollPos >= steveSidebarPos) {
-            steveSidebar.css({'top': scrollPos - 80});
-        }
-        else if (scrollPos === 0) {
-            steveSidebar.css({'top': 0});
-        }
-    };
-
-    fixedSidebar();
-
-    jQuery(window).on('scroll', function () {
-        fixedSidebar();
-    });
-
     var viewportWidth = window.innerWidth;
-
-    if (viewportWidth > 768 && steveSidebar.hasClass('fixed')) {
-        fixedSidebar();
-    }
 
     jQuery(window).on('resize', function() {
         viewportWidth = window.innerWidth;
-        if (viewportWidth > 768 && steveSidebar.hasClass('fixed')) {
-            fixedSidebar();
+        if (viewportWidth > 768 && steveSidebar.hasClass('active')) {
+            steveSidebar.removeClass('active');
+            jQuery('.wrapper').removeClass('active');
+            jQuery('#toggleBurger').prop('checked', false);
         }
+    });
+
+    jQuery('.trigger').on('click', function() {
+        steveSidebar.toggleClass('active');
+        jQuery('.wrapper').toggleClass('active');
     });
 });
