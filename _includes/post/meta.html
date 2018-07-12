@@ -1,0 +1,26 @@
+<div class="meta">
+	<span class="date">{% include post/date.html %}{{ time }}</span>
+	<span class="tags">{% include post/categories.html %}</span>
+	{% include post/comments_link.html %}
+	<span class="edit">{% include post/edit.html %}</span>
+</div>
+
+<ul class="clear">
+    <li><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%-d %b, %Y" }}</time></li>
+    
+    {% if post.comments %}
+        {% capture post_default_slug %}{{ post.slug | default: (post.title | slugify) }}{% endcapture %}
+        {% capture slug %}{{ (post.slug | fallback: post_default_slug) | downcase }}{% endcapture %}
+        <li class="comments"><a href="{{ post.url }}#comments">{{ site.data.comments[slug] | size }} comments</a></span>
+    {% endif %}
+
+    {% if site.show_categories == 1 and page.category %}
+        {% if page.category %}
+        <li class="cats">
+            {% for category in page.category %}
+                <a href="{{site.baseurl}}/{{site.category_dir}}/{{category}}/">{{ category }}</a>
+            {% endfor %}
+        </li>
+        {% endif %}
+    {% endif %}
+</ul>

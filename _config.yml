@@ -7,7 +7,8 @@ avatar: https://cloud.githubusercontent.com/assets/1228996/16710684/31b6f3e4-45f
 favicon: /favicon.ico
 twitter_handler: michaeljolley
 analytics_code: UA-XXXXXXX-2
-disqus: michaeljolley
+comments:
+  receiver: https://michaeljolley-comments.azurewebsites.net/api/PostComment
 
 # Social Accounts
 social_networks:
