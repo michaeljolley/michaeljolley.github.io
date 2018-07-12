@@ -11,7 +11,7 @@
         {% if page.category %}
         <li class="cats">
             {% for category in page.category %}
-                <a href="{{site.baseurl}}/{{site.category_dir}}/{{category}}/">{{ category }}</a>
+                <a href="{{site.url}}/{{site.category_dir}}/{{category}}/">{{ category }}</a>
             {% endfor %}
         </li>
         {% endif %}

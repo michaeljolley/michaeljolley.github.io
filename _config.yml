@@ -56,7 +56,6 @@ defaults:
 
 # Serving
 url: "https://michaeljolley.com"
-baseurl: "http://michaeljolley.com/"
 
 # Includes
 include: ["_pages"]

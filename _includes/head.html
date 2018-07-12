@@ -15,7 +15,7 @@
     {% if site.twitter_handler %}
     <meta name="twitter:site" content="@{{site.twitter_handler}}" />
     {% endif %}
-    <meta property="og:url" content="{{page.url | prepend: site.baseurl | prepend: site.url}}" />
+    <meta property="og:url" content="{{page.url | site.url}}" />
 
     <meta property="og:image" content="" />
     <meta name="twitter:image" content="" />
@@ -28,9 +28,9 @@
     {% if {{site.favicon != blank}} %}
     <link href="{{ site.favicon }}" rel="shortcut icon" type="image/x-icon" />
     {% endif %}
-    <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl | prepend: site.url}}">
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.url}}">
 
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
 
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.url }}">
 </head>
