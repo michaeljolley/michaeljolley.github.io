@@ -8,11 +8,25 @@ title: Home
 <section class="post-list">
   <div class="container">
 
-    <h2>Writing..</h2>
+    <h2>Items...</h2>
 
     {% for post in paginator.posts %}
       <article class="post-item">
-        <p><span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>  — <strong><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></strong> — <span> {{ post.content | strip_html | truncatewords: 40 }}</span> <a class="post-link readmore" href="{{ post.url | prepend: site.baseurl }}">Read more</a></p>
+        <p>
+            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+            —
+            <strong>
+                <a class="post-link" href="{{ post.url | prepend: site.github.url }}">{{ post.title }}</a>
+            </strong>
+            <span>
+                {% for tag in post.tags %}
+                <a class="tag" href="{{ site.github.url }}/tags#{{ tag | slugify }}">{{ tag }}</a>
+                {% endfor %}
+            </span>
+            —
+            <span> {{ post.content | strip_html | truncatewords: 40 }}</span>
+            <a class="post-link readmore" href="{{ post.url | prepend: site.github.url }}">Read more</a>
+        </p>
       </article>
     {% endfor %}
   </div>

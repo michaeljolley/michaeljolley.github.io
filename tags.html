@@ -1,0 +1,37 @@
+---
+layout: default
+title: Tags
+permalink: /tags/
+---
+
+<section class="container">
+    <header class="page-header">
+        <h1 class="page-title">{{ page.title }}</h1>
+    </header>
+    <div class="page-content">
+        <div class="tag-cloud">
+            {% for tag in site.tags %}
+            <a href="#{{ tag | first | slugify }}" style="font-size: {{ tag | last | size | times: 80 | divided_by: site.posts.size | plus: 70  }}%">
+                {{ tag | first }}
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+
+<section class="post-list post">
+    <div class="container page-content">
+        {% for tag in site.tags %}
+        <h3 id="{{ tag | first | slugify }}">
+            <a href="#{{ tag | first | slugify }}" class="tag">{{ tag | first }}</a>
+        </h3>
+        {% capture tag_name %}{{ tag | first }}{% endcapture %}
+        <ul>
+            {% for post in site.tags[tag_name] %}
+            <li><a href="{{ post.url | prepend: site.github.url }}">{{ post.title }}</a></li>
+            {% endfor %}
+        </ul>
+        {% endfor %}
+    </div>
+</section>

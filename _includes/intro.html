@@ -1,6 +1,11 @@
 <section class="intro">
   <div class="container">
-    <p class="lead">Hi, I'm <strong class="author-name" itemprop="name">{{ site.author.name }}</strong>, a <em itemprop="jobTitle">{{ site.author.job }}</em>. <br>
-    {{ site.author.bio }} -- <a href="{{ '/about' | prepend: site.author.url }}" target="_blank">about me</a></p>
+    <p class="lead">Hi, I'm <a href="{{ '/about' | prepend: site.author.url }}" target="_blank">{{ site.author.name }}</a>, and this is <strong class="emphasise">Today I Learned</strong>. <br/>
+    This is a collection of concise write-ups on small things I learn day to day across a variety of topics, because:
+    <blockquote>
+         These are things that don't really warrant a full blog post. -- <a href="https://github.com/jbranchaud/til" target="_blank">@jbranchaud</a>
+    </blockquote>
+    {% include gh-fork-star.html %}
+    </p>
   </div>
 </section>

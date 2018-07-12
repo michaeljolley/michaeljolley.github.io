@@ -1,1 +1,55 @@
-theme: jekyll-theme-architect
+
+# SEO settings
+title: Today I Learned - Codinfox
+stylished_title: TodayI<span>Learned</span>
+description: "Snippets on what I learned today."
+keywords: "TIL, web, coding, machine learning, computer vision, neuroscience, math"
+url: http://codinfox.github.io
+baseurl: ""
+
+google_analytics: UA-50842645-1
+disqus_shortname: "codinfox"
+
+# Build settings
+permalink   : /:year/:title/
+markdown    : kramdown
+highlighter : rouge
+
+paginate: 5
+paginate_path: "/page/:num/"
+comments: true
+
+#source: source
+destination: _site
+
+# Sass configuration
+sass:
+  sass_dir: assets/scss
+  style: compressed # expanded
+
+# Author settings
+author:
+  name     : Codinfox
+  thumb    : https://en.gravatar.com/userimage/42626876/ff31b74f207c61cc9d2d1d9196fd0080.jpg?size=120
+  email    : li.zhihao@outlook.com
+  url      : http://codinfox.github.io
+  github   : http://github.com/codinfox
+#  twitter  : http://twitter.com/nandomoreirame
+#  facebook : http://facebook.com/fernando.dev
+  linkedin : http://linkedin.com/in/lizhihao
+
+# social settings
+# og_locale: "pt_BR"
+# twitter_card: "summary_large_image"
+# twitter_site: "@nandomoreirame"
+
+project:
+    repo: https://github.com/codinfox/TIL
+    name: TIL
+    author: codinfox
+
+gems:
+  #- bourbon
+  - jekyll-paginate
+
+exclude: ["gulp", "node_modules", "bower", "bower_components", "config.rb", "src", "Gemfile", "Gemfile.lock", ".rvmrc", ".rbenv-version", "package.json", "gulpfile.js", "README.md", "Rakefile", "changelog.md"]

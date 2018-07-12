@@ -76,7 +76,7 @@ hr {
 }
 
 .intro {
-  .author-name {
+  .emphasise {
     background-color: $action-color;
     color: $white-color;
     display: inline-block;
@@ -139,6 +139,7 @@ hr {
     font-weight: 700;
   }
 
+
   &:last-child {
     border-bottom: 0;
     margin-bottom: 0;
@@ -146,6 +147,22 @@ hr {
 
   .readmore {
     font-style: italic;
+  }
+}
+
+.post-meta, .post-item {
+  a.tag {
+    color: $medium-gray-color;
+    background: lighten($light-gray-color, 5%);
+    border-radius: 5px;
+    padding: .05em .75em;
+    font-size: .75em;
+    text-transform: capitalize;
+    transition: .5s all;
+    &:hover {
+        background: $light-gray-color;
+        color: darken($medium-gray-color, 5%);
+    }
   }
 }
 
@@ -158,6 +175,30 @@ hr {
 .post a,
 .page a {
   @extend .link;
+}
+
+.page-content {
+    .tag {
+        text-transform: capitalize;
+        text-decoration: none;
+        color: $base-font-color;
+        border: none;
+        &:hover {
+            &:after {
+                content: " ¶"
+            }
+        }
+    }
+    .tag-cloud {
+        text-transform: capitalize;
+        a {
+            margin-right: .5em;
+            display: inline-block;
+        }
+    }
+    ul {
+        margin-bottom: 2em;
+    }
 }
 
 .post {
