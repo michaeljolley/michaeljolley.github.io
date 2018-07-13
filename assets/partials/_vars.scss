@@ -21,7 +21,7 @@ $brand-instagram:       #815f4d;
 $brand-linkedin:        #007bb6;
 $brand-github:          $black;
 $brand-stack-overflow:  #FF9900;
-$brand-dribbble:        #C73B6F;
+$brand-dribbble:        #c73b6f;
 $brand-rss:             #FF6600;
 $brand-email:           $primary-color;
 
@@ -31,3 +31,5 @@ $on-smaller-tablets:    640px;
 $on-phone:				480px;
 
 $burger-cell-height:    2px;
+
+$confirm-color:         lighten($header-color, 20%);

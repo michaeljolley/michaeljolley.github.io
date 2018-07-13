@@ -94,39 +94,42 @@ Jolley.ready(function() {
       }
     }
 
-    Jolley.get('commentbutton').onclick = (e) => {
-      let status = Jolley.get('commentstatus')
-      status.innerText = ''
+    $('#commentbutton').click(function(e) {
+      let button = $('#commentbutton');
+      var status = $('#commentstatus')
+      status.text('');
 
-      let missing = Array.from(form.querySelectorAll('[data-required]')).filter(el => el.value === '').map(el => el.name)
+      var missing = Array.from(form.querySelectorAll('[data-required]')).filter(el => el.value === '').map(el => el.name);
       if (missing.length > 0) {
-        status.innerText = 'Some required fields are missing - (' + missing.join(', ') + ')'
-        return
+        status.text('Some required fields are missing - (' + missing.join(', ') + ')');
+        return;
       }
-      let button = e.target
-      if (button.innerText != 'Confirm comment') {
-        button.innerText = 'Confirm comment'
-        button.title = 'Click the button again to confirm the comment'
-        button.classList.add('confirm-button')
-        return
-      }
-      let name = Jolley.get('name')
-      let identity = Jolley.get('identity')
 
-      if (Jolley.get('remember').checked) {
+      if (button.text() != 'Confirm') {
+        button.attr('title', 'Click the button again to confirm the comment');
+        button.addClass('confirm-button');
+        button.text('Confirm');
+        return;
+      }
+
+      var name = Jolley.get('name')
+      var identity = Jolley.get('identity')
+
+      if ($('#remember').prop('checked')) {
         storeUser(name.value, identity.value)
       }
       else {
         storeUser('', '')
       }
-      Jolley.get('avatarInput').value = avatarPreview.src
+      $('#avatarInput').val(avatarPreview.src);
 
-      button.disabled = true
-      button.innerText = 'Posting...'
-      identity.value = ""
+      identity.value = "";
+      button.attr('disabled', 'disabled');
+      button.text('Posting...');
+      button.removeClass('confirm-button');
       form.action = form.dataset.action
       form.submit()
-    }
+    });
 
     // Load values from Local Storage.
     retrieveUser(Jolley.get('name'), Jolley.get('identity'), Jolley.get('remember'))

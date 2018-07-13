@@ -10,7 +10,7 @@
     {% if site.show_categories == 1 and page.category %}
         {% if page.category %}
         <li class="cats">
-            <svg title="tags" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ prepend: site.url }}/assets/svg/social-icons.svg#tag-icon"></use></svg>
+            <svg title="tags" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.url }}/assets/svg/social-icons.svg#tag-icon"></use></svg>
             {% for category in page.category %}
                 {{ category }}
             {% endfor %}

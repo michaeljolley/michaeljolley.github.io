@@ -196,8 +196,6 @@
 		}
 	}
 
-	.comments { position: relative; margin: 40px 0 0; padding: 40px; border: 1px solid $grey-color-lightest; background: $white; box-shadow: 0 2px 3px rgba($black,.05); }
-
 	.pagination { position: relative; margin: 40px 0 0;
 		.previous { float: left; }
 		.next { float: right; }
@@ -211,5 +209,5 @@
 .not-found { text-align: center;
 	&.post { padding: 40px; font-size: 16px; }
 }
-
+  
 @import "responsive";

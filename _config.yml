@@ -50,7 +50,11 @@ permalink: /archive/:year/:month/:day/:title/
 category_dir: categories
 
 # Plugins
-plugins: ['jekyll-paginate']
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-paginate
 
 # Pagination
 paginate: 10
