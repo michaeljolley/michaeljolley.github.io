@@ -88,10 +88,11 @@
 						&:before { content: none; }
 					}
 					&:before { position: absolute; top: 50%; left: 0; width: 3px; height: 3px; border-radius: 50%; background: $grey-color-lighter; content: ""; @include translate(0, -50%); }
-					&.cats a { color: $grey-color-light;
-						&:last-of-type:after { content: none; }
-						&:after { content: ","; }
-						&:hover { color: $primary-color; border-bottom: 1px solid $primary-color; }
+					&.cats svg {
+						fill: $grey-color-light;
+						margin-top: -3px;
+						float: left;
+						margin-right: 5px;
 					}
 				}
 			}

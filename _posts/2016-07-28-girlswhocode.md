@@ -8,7 +8,7 @@ category: [parenting]
 ---
 <figure >
     <img src="https://cloud.githubusercontent.com/assets/1228996/17200725/66d4554a-544d-11e6-82d7-ced84abd4123.jpg" />
-    <figcaption>Picture from <a href="www.ucdavis.edu" target="_blank">UC Davis Today</a></figcaption>
+    <figcaption>Picture from <a href="http://www.ucdavis.edu" target="_blank">UC Davis Today</a></figcaption>
 </figure>
 
 These days, the topic of women in technology is hot.  There have been numerous articles lamenting the shortage of women in our field and the lack of girls interested or pursuing education in **STEM** *(Science, Technology, Engineering and Mathematics)* fields.

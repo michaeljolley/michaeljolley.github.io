@@ -8,15 +8,16 @@ layout: default
         <ul class="clear">
             <li><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%-d %b, %Y" }}</time></li>
             {% if post.comments %}
-                {% capture post_default_slug %}{{ post.slug | default: (post.title | slugify) }}{% endcapture %}
-                {% capture slug %}{{ (post.slug | fallback: post_default_slug) | downcase }}{% endcapture %}
+                {% capture post_default_slug %}{{ post.slug }}{% endcapture %}
+                {% capture slug %}{{ post.slug | downcase }}{% endcapture %}
                 <li class="meta-comments"><a href="{{ post.url }}#comments">{{ site.data.comments[slug] | size }} comments</a></span>
             {% endif %}
     
             {% if site.show_categories == 1 and post.category %}
                 <li class="cats">
+                    <svg title="tags" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ prepend: site.url }}/assets/svg/social-icons.svg#tag-icon"></use></svg>
                     {% for category in post.category %}
-                        <a href="{{site.baseurl}}/{{site.category_dir}}/{{category}}/">{{ category }}</a>
+                        {{ category }}
                     {% endfor %}
                 </li>
             {% endif %}
@@ -47,15 +48,6 @@ layout: default
                 <li class="share-twitter"><a href="http://twitter.com/share?url={{post.url | prepend: site.url | escape}}&text={{ post.excerpt | strip_html | truncate: 140 }}&hashtags={% for tag in post.tags %}{{ tag }},{% endfor %}" rel="noreferrer" target="_blank" onclick="window.open(this.href, '','width=700,height=300');return false;"><svg title="" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl | prepend: site.url }}/assets/svg/social-icons.svg#twitter-icon"></use></svg></a></li>
             </ul>
         </div>
-        {% if site.show_tags == 1 and post.tags %}
-        <div class="tags">
-            <ul>
-                {% for tag in post.tags %}
-                <li><a href="{{ site.baseurl | prepend: site.url }}/tag/{{ tag }}">{{ tag }}</a></li>
-                {% endfor %}
-            </ul>
-        </div>
-        {% endif %}
     </footer>
 </article>
 {% endfor %}
