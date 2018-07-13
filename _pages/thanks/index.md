@@ -1,5 +1,6 @@
 ---
 layout: page
+permalink: thanks
 date: 2016-07-28 16:36
 title: "Thanks"
 description: "Thank you for your comment"
