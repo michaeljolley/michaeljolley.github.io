@@ -5,7 +5,7 @@ layout: default
 <article class="post single" itemscope itemtype="http://schema.org/BlogPosting">{% include article.html %}</article>
 
 {% if page.comments and site.show_comments == 1 %}
-<aside class="comments" role="complementary">
+<aside class="comments" id="comments" role="complementary">
     {% include comments.html %}
 </aside>
 {% endif %}

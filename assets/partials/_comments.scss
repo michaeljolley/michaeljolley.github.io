@@ -16,15 +16,20 @@
     padding: 0; 
   }
 
+  ol {
+    padding: 0;
+  }
+
   h3#comment-count, h2 {
     padding: 8px;
   }
 
   img.avatar {
     border-radius: 4px;
-    float: left;
+    float: left; 
     width: 48px;
     height: 48px;
+    border: 1px solid $grey-color-lightest;
   }
 
   #comments-list {
@@ -37,9 +42,11 @@
       font-size: 15px;
       line-height: 21px;
       margin-top: 8px;
+      border-bottom: 1px solid $grey-color-lightest;
 
       blockquote {
         margin-left: 60px;
+        margin-top: 0;
 
         cite {
           font-style: normal;
@@ -151,7 +158,7 @@
       position: relative;
       margin: 10px 0 0 0;
       padding: 5px 9px;
-      cursor: pointer;
+      cursor: pointer !important;
       height: 32px;
       color: #505050;
       border-radius: 4px;
