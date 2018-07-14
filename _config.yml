@@ -15,8 +15,8 @@ social_networks:
 -  { name: facebook, url: 'https://www.facebook.com/mike.jolley.940' }
 -  { name: twitter, url: 'https://twitter.com/michaeljolley' }
 -  { name: instagram, url: 'https://www.instagram.com/michaeljolley' }
--  { name: linkedin, url: 'https://www.linkedin.com/in/michaelwjolley' }
 -  { name: github, url: 'https://github.com/MichaelJolley' }
+-  { name: linkedin, url: 'https://www.linkedin.com/in/michaelwjolley' }
 -  { name: stack-overflow, url: 'http://stackoverflow.com/users/2019929/mike-jolley' }
 -  { name: dribbble, url: 'https://dribbble.com/michaeljolley' }
 
@@ -34,8 +34,8 @@ fixed_sidebar: 1
 defaults:
   -
     scope:
-      path: ""
-      type: "posts"
+      path: '_posts'
+      type: posts
     values:
       comments: "true"
 

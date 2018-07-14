@@ -10,9 +10,9 @@ $grey-color-light: 		#aaa;
 $grey-color-lighter: 	#ddd;
 $grey-color-lightest: 	#eee;
 
-$primary-color:			#1abc9c;
-$secondary-color:       #c73b6f;
-$header-color:			#454e57;
+$primary-color:			#61C7D5;
+$secondary-color:       #E04E59;
+$header-color:			#4F525B;
 
 // brand colors
 $brand-facebook:	    #3b5998;
@@ -25,8 +25,8 @@ $brand-dribbble:        #c73b6f;
 $brand-rss:             #FF6600;
 $brand-email:           $primary-color;
 
-$default-width:			1100px;
-$on-tablet:				768px;
+$default-width:			80%;
+$on-tablet:				1024px; // 768px;
 $on-smaller-tablets:    640px;
 $on-phone:				480px;
 

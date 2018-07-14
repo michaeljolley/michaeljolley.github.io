@@ -2,9 +2,9 @@
 ---
 @import "vars", "reset", "mixins", "comments";
 
-.wrapper { max-width: $default-width; margin: 0 auto; padding: 60px 20px; }
+.wrapper { max-width: $default-width; max-width: 1400px; margin: 0 auto; padding: 60px 20px; }
 
-.user-profile { position: absolute; top: 60px; width: 100%; max-width: 300px; text-align: center; @include transition(right .3s ease-in-out);
+.user-profile { position: absolute; top: 60px; width: 100%; max-width: 250px; text-align: center; @include transition(right .3s ease-in-out);
 	&.fixed { position: fixed; }
 	.compact-header {
 		.avatar { max-width: 140px; max-height: 140px; border-radius: 50%; margin: 0 auto 25px; }
@@ -56,7 +56,7 @@
 	}
 }
 
-.the-content { margin-left: 350px;
+.the-content { margin-left: 300px;
 	& > h1 { text-transform: uppercase; color: $grey-color-light; letter-spacing: 0.1em; font-size: 12px; font-weight: 400; margin: 0 0 20px; text-align: center; }
 	.search { position: relative; margin: 0 0 20px; border: 1px solid $grey-color-lightest; background: $white; box-shadow: 0 2px 3px rgba($black,.05), inset 6px 0 0 $grey-color-lightest; @include placeholder($grey-color-lighter, italic);
 		& > div { overflow: hidden;
