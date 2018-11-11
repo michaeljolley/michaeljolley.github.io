@@ -7,7 +7,9 @@ comments: true
 tags: [dev-ops, appveyor, octopus-deploy]
 ---
 
-<img src="https://user-images.githubusercontent.com/1228996/48307028-d709a500-e509-11e8-9bd6-b7cd12cbce90.png">
+<figure>
+  <img src="https://user-images.githubusercontent.com/1228996/48307028-d709a500-e509-11e8-9bd6-b7cd12cbce90.png">
+</figure>
 
 With multiple clients, projects, deadlines, release schedules running at once, it's hard to keep up with what features are being released in a build.  To help manage building release notes our team built a PowerShell script that accesses the GitHub &amp; Octopus Deploy API's to determine what commits have occurred between the latest deployed release and the current build.
 
