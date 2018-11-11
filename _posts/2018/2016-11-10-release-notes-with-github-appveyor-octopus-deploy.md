@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2018-11-11 03:00
+date: 2018-11-10 18:00
 title: "Automating release notes with GitHub, AppVeyor and Octopus Deploy"
 description: Utilizing a custom PowerShell script to generate deployment relase notes with GitHub, AppVeyor & Octopus Deploy
 comments: true

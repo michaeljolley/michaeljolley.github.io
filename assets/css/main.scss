@@ -154,8 +154,8 @@
 			figure {
 				margin: 10px;
 
-				img { border: 4px solid #c0C0C0; padding: 5px;}
-				figcaption { color: $grey-color-light; font-size: 13px; font-style: italic; padding-top: 10px; }
+				img { border: 2px solid #c0C0C0; padding: 5px;}
+				figcaption { color: $grey-color-light; font-size: 13px; font-style: italic; }
 			}
 
 			@import "syntax";
