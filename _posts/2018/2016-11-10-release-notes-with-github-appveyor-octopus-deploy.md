@@ -46,14 +46,14 @@ Like Octopus, we only need a few bits of info so we can access the GitHub API vi
 
 Our repositories will normally have a *build* folder with a release-gen.ps1 file.  Then, in our appveyor.yml, we'll add the following to each build process:
 
-``` yml
+<pre><code class="language-yaml">
 install:
   - ps: Invoke-Expression ./build/release-gen.ps1;
-```
+</pre></code>
 
 At the top of the release-gen.ps1 file are the variables that you'll need to set based on the items we mentioned above.
 
-```
+<pre><code class="language-powershell">
 $global:github_owner = "GitHub Owner Name Here"
 $global:github_repo = "GitHub Repo Name Here"
 $global:github_token = "GitHub Personal Access Token"
@@ -64,7 +64,7 @@ $global:octopus_password = ConvertTo-SecureString "Octopus Deploy Password" -AsP
 $global:octopus_apikey = "Octopus Deploy API Key"
 $global:octopus_projectName = "Octopus Deploy Project Name"
 $global:octopus_productionEnvironment = "Name of Production Environment in Octopus Deploy"
-```
+</pre></code>
 
 ## Bringing it all together
 
