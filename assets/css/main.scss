@@ -158,6 +158,8 @@
 				figcaption { color: $grey-color-light; font-size: 13px; font-style: italic; }
 			}
 
+			.code-toolbar { border: 1px solid #d9d9d9 !important; box-shadow: 0 2px 3px rgba(0,0,0,0.05) !important; }
+
 			@import "syntax";
 		}
 
