@@ -4,8 +4,7 @@ date: 2016-07-28 16:36
 title: "Girls Who Code"
 description: Thinking about our girls interest in STEM related fields.
 comments: true
-tags:
-- parenting
+tags: [parenting]
 ---
 <figure >
     <img src="https://cloud.githubusercontent.com/assets/1228996/17200725/66d4554a-544d-11e6-82d7-ced84abd4123.jpg" />
