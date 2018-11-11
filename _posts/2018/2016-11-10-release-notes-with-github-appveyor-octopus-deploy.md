@@ -46,15 +46,13 @@ Like Octopus, we only need a few bits of info so we can access the GitHub API vi
 
 Our repositories will normally have a *build* folder with a release-gen.ps1 file.  Then, in our appveyor.yml, we'll add the following to each build process:
 
-<pre><code class="language-yaml">
-install:
+<pre><code class="language-yaml">install:
   - ps: Invoke-Expression ./build/release-gen.ps1;
 </code></pre>
 
 At the top of the release-gen.ps1 file are the variables that you'll need to set based on the items we mentioned above.
 
-<pre><code class="language-powershell">
-$global:github_owner = "GitHub Owner Name Here"
+<pre><code class="language-powershell">$global:github_owner = "GitHub Owner Name Here"
 $global:github_repo = "GitHub Repo Name Here"
 $global:github_token = "GitHub Personal Access Token"
 
