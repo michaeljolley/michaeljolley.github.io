@@ -74,11 +74,15 @@ At the beginning of a build in AppVeyor, the script calls to your Octopus Deploy
 
 Then, with that list of commits we build both HTML &amp; markdown versions of the release notes.  The HTML version is passed to Octopus with the build artifacts.  The markdown version is sent to GitHub with the build artifacts.
 
-**Markdown version**
-<img src="https://user-images.githubusercontent.com/1228996/48307475-14befb80-e513-11e8-85fb-b50ec28751b2.png"/>
+<figure style="margin:10px;border:4px solid #C0C0C0;padding:5px">
+  <img src="https://user-images.githubusercontent.com/1228996/48307475-14befb80-e513-11e8-85fb-b50ec28751b2.png"/>
+  <figcaption>Markdown version</figcaption>
+</figure>
 
-**HTML version**
-<img src="https://user-images.githubusercontent.com/1228996/48307489-69fb0d00-e513-11e8-8f8c-a86359d90494.png"/>
+<figure style="margin:10px;border:4px solid #C0C0C0;padding:5px">
+  <img src="https://user-images.githubusercontent.com/1228996/48307489-69fb0d00-e513-11e8-8f8c-a86359d90494.png"/>
+  <figcaption>HTML version</figcaption>
+</figure>
 
 ## Important Notes
 
