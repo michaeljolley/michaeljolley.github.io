@@ -1,7 +1,7 @@
 # General Settings
 name: Mike Jolley
 job_title: 
-email: mikejolley@sparcapp.io
+email: mike@sparcapp.io
 description: I build things.<br/> Husband, daddy, believer, musician.
 avatar: https://user-images.githubusercontent.com/1228996/48304682-0bb63600-e4e3-11e8-93df-bd23ffe2c49b.png
 favicon: /favicon.ico
@@ -23,7 +23,6 @@ social_networks:
 # Modules Settings
 show_categories: 1
 show_tags: 1
-show_mood: 0
 show_email: 1
 show_rss: 1
 show_comments: 1
