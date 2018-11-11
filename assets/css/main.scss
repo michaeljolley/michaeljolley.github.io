@@ -154,7 +154,7 @@
 			figure {
 				margin: 10px;
 
-				img { border: 2px solid #c0C0C0; padding: 5px;}
+				img { border: 1px solid #eee; box-shadow: 0 2px 3px rgba(0,0,0,0.05); padding: 5px;}
 				figcaption { color: $grey-color-light; font-size: 13px; font-style: italic; }
 			}
 
