@@ -9,7 +9,7 @@
     <div class="tags">
         <ul>
             {% for tag in page.tags %}
-            <li><a href="{{ site.baseurl | prepend: site.url }}/tags/{{ tag }}">{{ tag }}</a></li>
+            <li>{{ tag }}</li>
             {% endfor %}
         </ul>
     </div>
