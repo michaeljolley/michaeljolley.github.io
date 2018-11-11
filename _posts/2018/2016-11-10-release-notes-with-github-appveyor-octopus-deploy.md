@@ -49,7 +49,7 @@ Our repositories will normally have a *build* folder with a release-gen.ps1 file
 <pre><code class="language-yaml">
 install:
   - ps: Invoke-Expression ./build/release-gen.ps1;
-</pre></code>
+</code></pre>
 
 At the top of the release-gen.ps1 file are the variables that you'll need to set based on the items we mentioned above.
 
@@ -64,7 +64,7 @@ $global:octopus_password = ConvertTo-SecureString "Octopus Deploy Password" -AsP
 $global:octopus_apikey = "Octopus Deploy API Key"
 $global:octopus_projectName = "Octopus Deploy Project Name"
 $global:octopus_productionEnvironment = "Name of Production Environment in Octopus Deploy"
-</pre></code>
+</code></pre>
 
 ## Bringing it all together
 
