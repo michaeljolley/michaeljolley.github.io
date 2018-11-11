@@ -17,7 +17,7 @@ As a dad of two daughters, I often think about what their futures hold.  Like mo
 
 Of course, we'll support them in whatever they choose to be when they grow up, but I still feel an urge to expose them to other ideas and skills and professions while they're young.  Even if it's nothing more than me letting them know "hey, it's okay to be a girl and like math or science or robots."  *Heck, who doesn't like robots?*
 
-<figure style="width:300px;float:right;margin:10px;border:4px solid #C0C0C0;padding:5px">
+<figure>
     <img src="https://cloud.githubusercontent.com/assets/1228996/17200845/439e9ce2-544e-11e6-9497-8f6883536914.jpg" />
     <figcaption>Picture from <a href="http://www.snapcircuits.net/" target="_blank">Snap Circuits</a></figcaption>
 </figure>
