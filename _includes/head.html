@@ -1,4 +1,13 @@
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-81841605-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-81841605-1');
+    </script>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,8 +26,8 @@
     {% endif %}
     <meta property="og:url" content="{{page.url | site.url}}" />
 
-    <meta property="og:image" content="" />
-    <meta name="twitter:image" content="" />
+    <meta property="og:image" content="{{page.image | site.avatar}}" />
+    <meta name="twitter:image" content="{{page.image | site.avatar}}" />
 
     <meta name="author" content="{{site.name}}" />
 
@@ -29,6 +38,7 @@
     <link href="{{ site.favicon }}" rel="shortcut icon" type="image/x-icon" />
     {% endif %}
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.url}}">
+    <link rel="stylesheet" href="{{ "/assets/css/prism.css" | prepend: site.url}}">
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
 
