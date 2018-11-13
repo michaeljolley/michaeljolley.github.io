@@ -44,7 +44,7 @@ url: "https://michaeljolley.com"
 include: ["_pages"]
 
 # Outputting
-permalink: /archive/:year/:month/:day/:title/
+permalink: /posts/:title/
 category_dir: categories
 
 # Plugins
