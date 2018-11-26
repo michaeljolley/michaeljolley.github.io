@@ -1,0 +1,21 @@
+id: e37480ce
+date: 2018-11-26T22:08:20.1054804Z
+name: Mike Jolley
+avatar: https://avatars.io/twitter/@michaeljolley/medium
+message: >+
+  @les, just to clarify, the .config/lxsession/LDXE-pi directory is in the home/pi directory.  So run:
+
+
+
+  ```
+
+  cd /home/pi/.config/lxsession/LXDE-pi
+
+  ```
+
+
+
+  I'll update the post to clear up any confusion.  Thanks for the feedback & question!
+
+
+
