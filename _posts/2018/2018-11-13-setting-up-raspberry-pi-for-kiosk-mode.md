@@ -40,7 +40,7 @@ We're going to launch Chromium after boot-up with the following settings:
 
 To do this we'll be editing the **autostart** file in **.config/lxsession/LXDE-pi/**.  So navigate to it with:
 
-<pre class="language-bash"><code>cd .config/lxsession/LXDE-pi/</code></pre>
+<pre class="language-bash"><code>cd /home/pi/.config/lxsession/LXDE-pi/</code></pre>
 
 Then edit it with nano like so:
 
