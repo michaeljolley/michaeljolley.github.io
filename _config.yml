@@ -17,6 +17,7 @@ social_networks:
 -  { name: github, url: 'https://github.com/MichaelJolley' }
 -  { name: linkedin, url: 'https://www.linkedin.com/in/michaelwjolley' }
 -  { name: stack-overflow, url: 'http://stackoverflow.com/users/2019929/mike-jolley' }
+-  { name: twitch, url: 'https://www.twitch.tv/themikejolley' }
 -  { name: dribbble, url: 'https://dribbble.com/michaeljolley' }
 
 # Modules Settings
