@@ -5,20 +5,17 @@ email: mike@sparcapp.io
 description: bald. bearded. builder.
 avatar: https://user-images.githubusercontent.com/1228996/48304682-0bb63600-e4e3-11e8-93df-bd23ffe2c49b.png
 favicon: /favicon.ico
-twitter_handler: michaeljolley
+twitter_handler: baldbeardbuild
 comments:
   receiver: https://michaeljolley-comments.azurewebsites.net/api/PostComment
 emptyArray: []
 
 # Social Accounts
 social_networks:
--  { name: twitter, url: 'https://twitter.com/michaeljolley' }
--  { name: instagram, url: 'https://www.instagram.com/michaeljolley' }
+-  { name: twitter, url: 'https://twitter.com/baldbeardbuild' }
 -  { name: github, url: 'https://github.com/MichaelJolley' }
 -  { name: linkedin, url: 'https://www.linkedin.com/in/michaelwjolley' }
--  { name: stack-overflow, url: 'http://stackoverflow.com/users/2019929/mike-jolley' }
 -  { name: twitch, url: 'https://www.twitch.tv/themikejolley' }
--  { name: dribbble, url: 'https://dribbble.com/michaeljolley' }
 
 # Modules Settings
 show_categories: 1
@@ -39,7 +36,7 @@ defaults:
       comments: "true"
 
 # Serving
-url: "https://michaeljolley.com"
+url: "https://baldbeardedbuilder.com"
 
 # Includes
 include: ["_pages"]
