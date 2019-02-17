@@ -32,10 +32,6 @@
     <ul class="socials">
         {% for social in site.social_networks %}{% if social.url != '' %}<li><a target="_blank" class="btn-{{social.name}}" href="{{social.url}}"><svg title="{{social.name}}" width="16" height="16" {% if social.name == 'applemusic' %} style="margin: 0 0 0 -2px" {% endif %}><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ prepend: site.url }}/assets/svg/social-icons.svg#{{social.name}}-icon"></use></svg></a></li>{% endif %}{% endfor %}
 
-        <!-- {% if site.email != blank and site.show_email == 1 %}
-            <li><a class="btn-email" href="mailto:{{site.email}}"><svg title="{{social.name}}" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ prepend: site.url }}/assets/svg/social-icons.svg#email-icon"></use></svg></a></li>
-        {% endif %} -->
-
         {% if site.show_rss == 1 %}
          <li><a target="_blank" class="btn-rss" href="{{ "/feed.xml" | prepend: site.url }}"><svg title="{{social.name}}" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.url }}/assets/svg/social-icons.svg#rss-icon"></use></svg></a></li>
         {% endif %}

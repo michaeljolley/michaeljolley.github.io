@@ -7,3 +7,22 @@
 <script src="{{ site.url }}/assets/js/comments.js"></script>
 <script src="{{ site.url }}/assets/js/clipboard.min.js"></script>
 <script src="{{ site.url }}/assets/js/prism.js"></script>
+<script src="{{ site.url }}/assets/js/cookieconsent.min.js"></script>
+
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#252e39"
+    },
+    "button": {
+      "background": "#14a7d0"
+    }
+  },
+  "theme": "classic",
+  "content": {
+    "message": "This website uses cookies to ensure you get the best experience."
+  }
+})});
+</script> 
