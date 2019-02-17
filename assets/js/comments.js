@@ -63,7 +63,7 @@ Jolley.ready(function() {
       if (identity.match(emailRegex)) {
         possibleAvatars.push('https://secure.gravatar.com/avatar/' + md5(identity) + '?s=80&d=identicon&r=pg')
       } else {
-        possibleAvatars.push('https://github.com/' + identity + '.png')
+        possibleAvatars.push('https://github.com/' + identity.replace('@','') + '.png')
         possibleAvatars.push('https://avatars.io/twitter/' + identity + '/medium')
       }
 
