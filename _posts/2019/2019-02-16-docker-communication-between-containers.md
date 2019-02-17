@@ -5,7 +5,7 @@ title: "Communication between containers using docker compose in Windows"
 image: https://user-images.githubusercontent.com/1228996/52905302-082afd00-31fe-11e9-9f0d-e1e02f2e58e9.png
 description: Using docker compose to start containers that can communicate with one another in Windows
 comments: true
-tags: [docker, vscode, windows, docker-compose]
+tags: [docker, vscode, windows, dockercompose]
 ---
 
 <figure>
