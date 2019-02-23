@@ -29,7 +29,7 @@ It is really helpful as I'm getting started to see the blog posts and content ge
 
 So without further delay:
 
-##Audio/Video Setup
+## Audio/Video Setup
 
 I'm still learning a lot about lighting and audio.  There is a lot of experimentation going on in these areas right now so a lot of what's below is subject to change.
 
@@ -46,7 +46,7 @@ I've been using the [Logitech C922x Webcam](https://amzn.to/2ErynLP) for my prim
 
 For the audio I'm using an [Audio-Technica AT2020](https://amzn.to/2E6Z9HS) condenser microphone with a pop filter. That runs into a [Focusrite Scarlett Solo](https://amzn.to/2U3ACKv) USB audio interface and into the PC from there.  I've been really happy with the mic.  Our company uses MS Teams heavily with its call/video recording and I use this mic exclusively now rather than a headset mic.
 
-##Other Hardware
+## Other Hardware
 
 My streams have really been focused on IoT development and I've found it difficult to display what's going on with my [Raspberry Pi](https://amzn.to/2EhMOkr)'s video onto the stream.  So far I've been limited to only displaying an SSH window to the Pi.  So a new addition to the family is the [Elgato HD60 Pro](https://amzn.to/2XhXwQl) game capture card.  This receives an HDMI input and shows in OBS as a video source that I can share on the stream.  This will get its first use in a few days on the stream.
 
@@ -60,7 +60,7 @@ This is a mini-keyboard with a built in touch pad that is a *MUST HAVE* if you w
 
 The final piece of hardware that I'm constantly finding uses for (even when not streaming) is the [Elgato Stream Deck](https://amzn.to/2Er27bE).  This little device is a wonder and with the new SDK released by Elgato I have a feeling an ecosystem of extensions/add-ons are about to spring up around this guy.
 
-##Software
+## Software
 
 I'm not using a ton of software, but here's the rundown:
 
