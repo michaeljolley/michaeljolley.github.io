@@ -17,6 +17,8 @@ If you're like me, there are certain commands that get run repeatedly throughout
 
 I was actually a little jealous of my friends using bash with their nice aliases, so I went hunting for a way to alias in PowerShell.  Turns out, it's really simple!
 
+<!--more-->
+
 ## This seat's taken
 
 PowerShell has built in commands that we don't want to step on.  I won't list them all (there are MANY), but if you get something wildly unexpected from your aliases then you can Google them.

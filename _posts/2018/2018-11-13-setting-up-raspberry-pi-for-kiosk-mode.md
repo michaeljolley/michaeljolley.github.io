@@ -16,6 +16,8 @@ Recently one of our clients approached us to develop an application that would r
 
 One of their requirements was the Pi shouldn't go to sleep and appear always-on to their users.  While we've already successfully launched the system, I have a feeling others will want to use this same functionality in the future.  So, without further ado, here are the steps we used in setting up each device to run in kiosk mode:
 
+<!--more-->
+
 ### Assumptions
 
 For our purposes, we're going to assume you've got your application running at http://localhost:5000 and deployed just fine.

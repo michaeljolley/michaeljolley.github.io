@@ -14,6 +14,8 @@ tags: [parenting]
 
 These days, the topic of women in technology is hot.  There have been numerous articles lamenting the shortage of women in our field and the lack of girls interested or pursuing education in **STEM** *(Science, Technology, Engineering and Mathematics)* fields.
 
+<!--more-->
+
 As a dad of two daughters, I often think about what their futures hold.  Like most parents, I don’t want them to feel pigeon-holed into a specific field of study or occupation.  During the course of a normal day, and usually depending on what TV show they watched last, they want to become actresses, musicians, artists, cooks, fashion designers, princesses, teachers or nurses.  Of course, at 7 and 10 years old, those are all fine aspirations.  But it sometimes puzzles me that I've never heard them say I want to be a scientist or software developer or engineer. 
 
 Of course, we'll support them in whatever they choose to be when they grow up, but I still feel an urge to expose them to other ideas and skills and professions while they're young.  Even if it's nothing more than me letting them know "hey, it's okay to be a girl and like math or science or robots."  *Heck, who doesn't like robots?*

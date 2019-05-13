@@ -18,6 +18,8 @@ I've been working on a project lately that includes a aspnetcore SPA using Angul
 
 In production, the application on the Pi communicates with a Restful API that lives at the clients main office.  However, while debugging we need to run them side-by-side.  So, docker-compose to the rescue (I think.)
 
+<!--more-->
+
 ## Setting up the Dockerfiles
 
 Most of our developers are using VS 2017 or 2019 so we used the built in functionality to add pre-built Dockerfile to the IoT application.
