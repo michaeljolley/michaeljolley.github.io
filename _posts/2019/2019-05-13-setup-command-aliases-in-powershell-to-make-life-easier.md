@@ -10,7 +10,7 @@ tags: [powershell, alias]
 
 
 <figure>
-  <img src="{{page.image}}"/> x
+  <img src="{{page.image}}"/>
 </figure>
 
 If you're like me, there are certain commands that get run repeatedly throughout your day. Between `git checkout`, `docker {whatever}` and navigating to frequent paths with `cd`, I've been wondering how much time I could save by shortening these commands and parameters.
