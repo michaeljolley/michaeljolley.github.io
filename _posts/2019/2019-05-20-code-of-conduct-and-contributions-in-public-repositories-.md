@@ -18,7 +18,7 @@ began to grow I realized there were a few things that I, and probably other repo
 maintainers, want to provide.  So, as always, when I learn something new, I write a 
 blog post.
 
-So my goal is to explain the benefits of acknowledging contributors, and providing them 
+My goal is to explain the benefits of acknowledging contributors and providing them 
 with contributing and code of conduct guidelines.
 
 <!--more-->
@@ -29,7 +29,7 @@ For the most part, contributors have seen my repositories on our [Twitch][twitch
 and wanted to help.  The benefit to the stream is that viewers can see the process we use 
 to submit pull requests, our branching strategies, etc. However, for those that want to 
 join in on the fun later, it's likely that their pull requests will be directed to the 
-wrong branch or perhaps for an issue that is in progress by another contributor.
+wrong branch or perhaps for an issue that is already in progress by another contributor.
 
 To help, I went on a search for example `CONTRIBUTING.md` files across GitHub.  There 
 were several great examples. A few are:
@@ -58,7 +58,7 @@ I'll admit I'm a little knew to this one. I'm not sure I've ever read a reposito
 Conduct before this week. It's easy to overlook when you expect the best from people and/or 
 haven't experienced the effects of poor conduct when participating in public repo communities. 
 But the fact that I've never personally experienced something doesn't mean I should overlook 
-the fact that bad behavior in the development community does exist. In fact, regardless of 
+that bad behavior in the development community does exist. In fact, regardless of 
 my personal experiences, I want everyone to feel included and safe to share ideas and collaborate. 
 
 Having a CODE_OF_CONDUCT.md in your public repository lets potential contributors know in 
