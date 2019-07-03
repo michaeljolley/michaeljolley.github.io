@@ -18,11 +18,11 @@ A few months ago, I experienced Winpocalypse 2019 and I’ve been very protectiv
 
 <!--more-->
 
-## Contributing Guidelines
-
 First off, let me be clear, I did install SQL Management Studio (SSMS) early on.  I use it frequently to access and monitor various databases.  The question was, do I need a full database engine running locally and the answer is an emphatic NO.
 I always learn best when working through a real-world problem so let’s address how to live SQL installation free in 2019.
+
 ## Real World Use Case
+
 We have a development SQL database hosted in Azure for one of our clients.  Occasionally they will send us a backup of the production database to restore over our copy to have more recent, clean data.  The normal process would be to load that .BAK file to Azure storage and do a backup restore into SQL Azure.  However, this backup contained a custom SQL login, which will prevent SQL Azure from restoring the backup.
 
 The solution? Restore the backup locally, remove the login, create a new backup and restore again.  But how to restore the backup without the SQL database engine installed?
