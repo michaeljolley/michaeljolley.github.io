@@ -19,17 +19,6 @@ jQuery(document).ready( function() {
         }
     });
 
-    // Generates a quick link to the current heading section.
-    jQuery('.post-content').find(':header').on({
-        mouseenter: function() {
-            var headingID = jQuery(this).attr('id');
-            jQuery(this).append('<a class="heading-marker" href="#' + headingID + '">&#35;</a>');
-        },
-        mouseleave: function () {
-            jQuery(this).children('a').remove();
-        }
-    });
-
     // Automatically sets the first post image as a featured image on Facebook and Twitter.
     var firstImg = jQuery('.post.single').find('img:first-of-type');
     var firstImgSrc = firstImg.attr('src');

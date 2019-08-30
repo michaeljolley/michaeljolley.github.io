@@ -10,7 +10,7 @@ sharing: false
 
 ## 2019
 
-### [https://gdgcloudauburndevfest19.firebaseapp.com/](GDG DevFest 2019)
+### <a href="https://gdgcloudauburndevfest19.firebaseapp.com/" target="_blank">GDG DevFest 2019</a>
 Think inside the box. Developing inside a container to avoid conflicts, improve security and speed up on-boarding<br/>
 2019 Sept 15<br/>
 Auburn, AL
