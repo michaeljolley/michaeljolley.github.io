@@ -1,0 +1,8 @@
+I"d<p>@les, just to clarify, the .config/lxsession/LDXE-pi directory is in the home/pi directory.  So run:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /home/pi/.config/lxsession/LXDE-pi
+</code></pre></div></div>
+
+<p>I’ll update the post to clear up any confusion.  Thanks for the feedback &amp; question!</p>
+
+:ET

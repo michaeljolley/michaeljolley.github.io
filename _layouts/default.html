@@ -1,15 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">    
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title> 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-81841605-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-81841605-1');
+    </script>
+
+    <meta charset="utf-8">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.name | escape }} {% if site.job_title %}&mdash; {{site.job_title | escape }} {% endif %}" />
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.name | escape }} {% if site.job_title %}&mdash; {{site.job_title | escape }} {% endif %}" />
+    <meta name="twitter:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    {% if site.twitter_handler %}
+    <meta name="twitter:site" content="@{{site.twitter_handler}}" />
+    {% endif %}
+
+    <meta property="og:url" content="{% if page.url %}{{ page.url }}{% else %}{{ site.url }}{% endif %}" />
+    <meta property="og:image" content="{% if page.image %}{{ page.image }}{% else %}{{ site.avatar }}{% endif %}" />
+    <meta name="twitter:image" content="{% if page.image %}{{ page.image }}{% else %}{{ site.avatar }}{% endif %}" />
+    <meta name="copyright" content="Copyright by {{site.name}}. All Rights Reserved." />
+
     <link rel="shortcut icon" href="{{ "/favicon.ico" | prepend: site.baseurl }}">
+
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic" />
     <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css" />
+
+
     <link rel="canonical" href="{{ page.url | replace:'/index.html','/' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }} Feed" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+
 </head>
 <body>
     <nav id="top" class="site-navigation">
@@ -26,7 +55,7 @@
                     <a class="{{ current }}" href="{{ link.url }}">{{ link.text }}</a>
                   </li>
                 {% endfor %}
-                </ul>        
+                </ul>
             </div><!-- .nav-menu -->
             <a class="subscribe-button fa-feed square fill-horizontal" href="{{site.baseurl}}/feed.xml"><span class="screen-reader-text">Subscribe</span></a>
         </div><!-- .inner -->
@@ -42,5 +71,24 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="{{ site.baseurl }}/js/plugins.js"></script>
     <script type="text/javascript" src="{{ site.baseurl }}/js/custom.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+    <script>
+    window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+        "palette": {
+        "popup": {
+            "background": "#efefef",
+            "text": "#404040"
+        },
+        "button": {
+            "background": "#8ec760",
+            "text": "#ffffff"
+        }
+        },
+        "theme": "classic",
+        "position": "top"
+    })});
+    </script>
 </body>
 </html>

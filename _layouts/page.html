@@ -6,10 +6,10 @@ layout: default
         <main class="site-main">
             <article class="post">
                 <header class="entry-header">
-                    <div class="entry-header-wrap">  
-                        {% if page.banner_image %}
+                    <div class="entry-header-wrap">
+                        {% if page.image %}
                         <div class="post-thumbnail">
-                            <img src="{{ "/images/" | append: page.banner_image | prepend: site.baseurl }}" alt="{% if page.banner_image_alt %}{{ page.banner_image_alt }}{% else %}{{ page.title }}{% endif %}">
+                            <img src="{{ "/images/" | append: page.image | prepend: site.baseurl }}" alt="{% if page.banner_image_alt %}{{ page.banner_image_alt }}{% else %}{{ page.title }}{% endif %}">
                         </div><!-- .post-thumbnail -->
                         {% endif %}
                         <h1 class="entry-title">{{page.title}}</h1>

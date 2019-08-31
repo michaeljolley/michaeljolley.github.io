@@ -17,8 +17,11 @@ tagline: "bald. bearded. builder."
 # The subpath of your site, e.g. /blog, for generating urls
 baseurl:
 
+emptyArray: []
+
 sass:
   sass_dir: _sass
+  style: compressed
 
 # The base hostname & protocol of your site for where absolute urls are needed
 url: "https://michaeljolley.com"
@@ -26,6 +29,17 @@ url: "https://michaeljolley.com"
 # Url for new comment submissions
 comments:
   receiver: https://michaeljolley-comments.azurewebsites.net/api/PostComment
+
+
+# Defaults
+defaults:
+  -
+    scope:
+      path: '_posts'
+      type: posts
+    values:
+      comments: "true"
+
 
 # Site navigation - each item must have a title and a url.
 navigation:
@@ -39,9 +53,6 @@ navigation:
   url: /style-guide/
 - text: Archives
   url: /tags/
-
-# The shortname for your Disqus site to enable comments.
-disqus:
 
 # Author information - author info at the bottom of the post
 author_name: "Michael Jolley"
@@ -70,7 +81,7 @@ paginate: 5
 paginate_path: '/blog/page:num/'
 plugins: [jekyll-paginate]
 
-permalink: pretty
+permalink: /posts/:title/
 markdown: kramdown
 kramdown:
     auto_ids: false
