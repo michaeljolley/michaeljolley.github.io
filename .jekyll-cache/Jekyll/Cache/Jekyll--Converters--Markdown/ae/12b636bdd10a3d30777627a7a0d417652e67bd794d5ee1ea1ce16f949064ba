@@ -1,0 +1,102 @@
+I"�<figure>
+  <img src="https://user-images.githubusercontent.com/1228996/48307028-d709a500-e509-11e8-9bd6-b7cd12cbce90.png" />
+</figure>
+
+<p>With multiple clients, projects, deadlines, release schedules running at once, it’s hard to keep up with what features are being released in a build.  To help manage building release notes our team built a PowerShell script that accesses the GitHub &amp; Octopus Deploy API’s to determine what commits have occurred between the latest deployed release and the current build.</p>
+
+<!--more-->
+
+<h2>The Background</h2>
+
+<p>In most cases, we use the same CI process for our clients.</p>
+
+<ul>
+  <li>Each commit is built in <a href="https://www.appveyor.com">AppVeyor</a></li>
+  <li>Depending on the branch/tag, the artifacts of the build are loaded to <a href="https://octopus.com/">Octopus Deploy</a></li>
+  <li>Octopus sends it all out to the appropriate environments</li>
+</ul>
+
+<h2>The Setup</h2>
+
+<p>To get everything working together, we have to setup each system to work together.</p>
+
+<h4>Octopus Deploy</h4>
+
+<p>I’ll assume you’ve already setup environments in Octopus Deploy so I won’t go into that.  The only thing you really need from Octopus is a few bits of data that we’ll use in the PowerShell script later.  You’ll need:</p>
+
+<ul>
+  <li>The url of your Octopus server</li>
+  <li>A username &amp; password</li>
+  <li>An API key</li>
+  <li>The name of the project we’ll be using for deployments</li>
+  <li>The name of the environment used for production</li>
+</ul>
+
+<h4>GitHub</h4>
+
+<p>Like Octopus, we only need a few bits of info so we can access the GitHub API via the PowerShell script.  You’ll need:</p>
+
+<ul>
+  <li>The name of the owner of the repository</li>
+  <li>The name of the repository</li>
+  <li>A personal access token (<a href="https://blog.github.com/2013-05-16-personal-api-tokens/">How-to from GitHub</a>)</li>
+</ul>
+
+<h4>The Repository</h4>
+
+<p>Our repositories will normally have a <em>build</em> folder with a release-gen.ps1 file.  Then, in our appveyor.yml, we’ll add the following to each build process:</p>
+
+<pre><code class="language-yaml">install:
+  - ps: Invoke-Expression ./build/release-gen.ps1;
+</code></pre>
+
+<p>At the top of the release-gen.ps1 file are the variables that you’ll need to set based on the items we mentioned above.</p>
+
+<pre><code class="language-powershell">$global:github_owner = "GitHub Owner Name Here"
+$global:github_repo = "GitHub Repo Name Here"
+$global:github_token = "GitHub Personal Access Token"
+
+$global:octopus_url = 'Url to Octopus Deploy'
+$global:octopus_username = "Octopus Deploy Username"
+$global:octopus_password = ConvertTo-SecureString "Octopus Deploy Password" -AsPlainText -Force
+$global:octopus_apikey = "Octopus Deploy API Key"
+$global:octopus_projectName = "Octopus Deploy Project Name"
+$global:octopus_productionEnvironment = "Name of Production Environment in Octopus Deploy"
+</code></pre>
+
+<h2>Bringing it all together</h2>
+
+<p>Now that everything is setup let’s talk about the script and what it does.  It’s actually a simple process that saves us a lot of time.</p>
+
+<p>At the beginning of a build in AppVeyor, the script calls to your Octopus Deploy API and identifies what version (which should correspond to a tag in GitHub) is deployed to the production environment.  It then calls the GitHub API and gets a list of all commits between the current commit or tag and the current version in the production environment.</p>
+
+<p>Then, with that list of commits we build both HTML &amp; markdown versions of the release notes.  The HTML version is passed to Octopus with the build artifacts.  The markdown version is sent to GitHub with the build artifacts.</p>
+
+<figure>
+  <img src="https://user-images.githubusercontent.com/1228996/48307475-14befb80-e513-11e8-85fb-b50ec28751b2.png" />
+  <figcaption>Markdown version</figcaption>
+</figure>
+
+<figure>
+  <img src="https://user-images.githubusercontent.com/1228996/48307489-69fb0d00-e513-11e8-8f8c-a86359d90494.png" />
+  <figcaption>HTML version</figcaption>
+</figure>
+
+<h2>Important Notes</h2>
+
+<h4>Skipping commit messages</h4>
+
+<p>There are certain commit messages that the script looks for and doesn’t add to your release notes.  Any commit that starts with “merge”, “merging” or “private” aren’t included.  This allows our developers to prefix any commits that don’t complete an issue with “Private:” to ensure they won’t get included in the release notes.</p>
+
+<p>When the final commit is made the developer will enter a quality commit message that describes exactly what their work has accomplished.</p>
+
+<h4>Issue numbers</h4>
+
+<p>Our team is committed to adding close messages to our final commits when they close an issue.  (i.e. Did some kind of fix.  Closes #430)</p>
+
+<p>The script identifies the pattern of Closes #{issue number} or Fixes #{issue number} and modifies it to make the issue number a link to that issue in GitHub.  So that line on the release notes will have both a link to the commit and links to any issues denoted in the commit message.</p>
+
+<h3>Download the full script</h3>
+
+<p>You can check out the full script at <a href="https://github.com/MichaelJolley/release-notes-script">https://github.com/MichaelJolley/release-notes-script</a>.  Feel free to PR any improvements you see that could help others.</p>
+:ET
