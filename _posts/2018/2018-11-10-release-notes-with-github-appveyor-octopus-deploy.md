@@ -5,7 +5,7 @@ title: "Automating release notes with GitHub, AppVeyor and Octopus Deploy"
 image: https://user-images.githubusercontent.com/1228996/48307028-d709a500-e509-11e8-9bd6-b7cd12cbce90.png
 description: Utilizing a custom PowerShell script to generate deployment relase notes with GitHub, AppVeyor & Octopus Deploy
 comments: true
-tags: [dev-ops, appveyor, octopus-deploy]
+tags: [devops, appveyor, octopus-deploy]
 ---
 
 <figure>
@@ -18,7 +18,7 @@ With multiple clients, projects, deadlines, release schedules running at once, i
 
 ## The Background
 
-In most cases, we use the same CI process for our clients.  
+In most cases, we use the same CI process for our clients.
 
 - Each commit is built in [AppVeyor](https://www.appveyor.com)
 - Depending on the branch/tag, the artifacts of the build are loaded to [Octopus Deploy](https://octopus.com/)
@@ -26,7 +26,7 @@ In most cases, we use the same CI process for our clients.
 
 ## The Setup
 
-To get everything working together, we have to setup each system to work together.  
+To get everything working together, we have to setup each system to work together.
 
 #### Octopus Deploy
 
@@ -91,7 +91,7 @@ Then, with that list of commits we build both HTML &amp; markdown versions of th
 
 #### Skipping commit messages
 
-There are certain commit messages that the script looks for and doesn't add to your release notes.  Any commit that starts with "merge", "merging" or "private" aren't included.  This allows our developers to prefix any commits that don't complete an issue with "Private:" to ensure they won't get included in the release notes.  
+There are certain commit messages that the script looks for and doesn't add to your release notes.  Any commit that starts with "merge", "merging" or "private" aren't included.  This allows our developers to prefix any commits that don't complete an issue with "Private:" to ensure they won't get included in the release notes.
 
 When the final commit is made the developer will enter a quality commit message that describes exactly what their work has accomplished.
 

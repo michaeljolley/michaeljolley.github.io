@@ -217,7 +217,7 @@ textarea {
     border-radius: 0;
     -webkit-box-sizing: border-box;
     -moz-box-sizing:    border-box;
-    box-sizing:         border-box; 
+    box-sizing:         border-box;
     color: lighten( $mine-shaft, 4% );
     font-size: 16px;
     max-width: 100%;
@@ -392,7 +392,7 @@ video {
     text-shadow: none;
 }
 
-/* Syntax Highlighter - Solarized Light 
+/* Syntax Highlighter - Solarized Light
 http://ethanschoonover.com/solarized
 
 SOLARIZED HEX      ROLE
@@ -510,7 +510,6 @@ green     #859900  operators, other keywords
 
 /* em dash styling */
 .author-info .author-title:before,
-.comments-title:before,
 .widget-title:before {
     content: "\2014";
     margin-right: 1%;

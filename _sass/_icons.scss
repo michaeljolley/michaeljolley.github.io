@@ -95,41 +95,11 @@
 .fa-instagram:before {
   content: "\f16d";
 }
-.fa-flickr:before {
-  content: "\f16e";
-}
-.fa-tumblr:before {
-  content: "\f173";
-}
 .fa-dribbble:before {
   content: "\f17d";
 }
-.fa-weibo:before {
-  content: "\f18a";
-}
-.fa-behance:before {
-  content: "\f1b4";
-}
-.fa-soundcloud:before {
-  content: "\f1be";
-}
-.fa-vine:before {
-  content: "\f1ca";
-}
 .fa-codepen:before {
   content: "\f1cb";
-}
-.fa-weixin:before {
-  content: "\f1d7";
-}
-.fa-pinterest-p:before {
-  content: "\f231";
-}
-.fa-whatsapp:before {
-  content: "\f232";
-}
-.fa-medium:before {
-  content: "\f23a";
 }
 .fa-500px:before {
   content: "\f26e";
@@ -137,8 +107,27 @@
 .fa-vimeo:before {
   content: "\f27d";
 }
-.fa-mixcloud:before {
-  content: "\f289";
+
+.fa-twitter {
+  background-color: $brand-twitter;
+}
+.fa-dribble {
+  background-color: $brand-dribbble;
+}
+.fa-github {
+  background-color: $brand-github;
+}
+.fa-linkedin {
+  background-color: $brand-linkedin;
+}
+.fa-codepen {
+  background-color: $brand-codepen;
+}
+.fa-twitch {
+  background-color: $brand-twitch;
+}
+.fa-feed {
+  background-color: $brand-rss;
 }
 
 

@@ -23,6 +23,10 @@ sass:
 # The base hostname & protocol of your site for where absolute urls are needed
 url: "https://michaeljolley.com"
 
+# Url for new comment submissions
+comments:
+  receiver: https://michaeljolley-comments.azurewebsites.net/api/PostComment
+
 # Site navigation - each item must have a title and a url.
 navigation:
 - text: Home
@@ -47,15 +51,14 @@ author_location: "Birmingham, AL"
 author_image: /images/michaeljolley.png
 
 # Sidebar Add banner
-banner_url: "#"
-banner_image: images/banner.jpg
+# banner_url: "#"
+# banner_image: images/banner.jpg
 
 # Sidebar newsletter widget - add your form action url for MailChimp signup form here
-mailchimp_url: "//"
+# mailchimp_url: "//"
 
 # Social links in the site footer
 twitter_username: "michaeljolley"
-facebook_username: "michaeljolley"
 github_username: "michaeljolley"
 codepen_username: "michaeljolley"
 dribbble_uername: "michaeljolley"
