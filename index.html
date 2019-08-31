@@ -14,8 +14,7 @@ layout: default
                         <h2 class="entry-title"><a href="{{ site.baseurl }}{{ post.url }}" rel="bookmark" title="Permanent Link to {{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h2>
                     </div><!-- .entry-header-wrap -->
                     <div class="entry-meta">
-                        {{ slug }}<br/>
-                        <time class="published" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %-d, %Y" }}</time> | <a href="{{ post.url }}#comments">{{ site.data.comments[slug] | size }} comments</a>
+                        <time class="published" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %-d, %Y" }}</time> | <a href="{{ post.url }}#comments">{{ site.data.comments[post.slug] | size }} comments</a>
                     </div><!-- .entry-meta -->
                 </header><!-- .entry-header -->
                 <div class="entry-content">
