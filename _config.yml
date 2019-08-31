@@ -1,68 +1,73 @@
-# General Settings
-name: Michael Jolley
-job_title: 
-email: mike@sparcapp.io
-description: bald. bearded. builder.
-avatar: https://user-images.githubusercontent.com/1228996/48304682-0bb63600-e4e3-11e8-93df-bd23ffe2c49b.png
-favicon: /favicon.ico
-twitter_handler: michaeljolley
-comments:
-  receiver: https://michaeljolley-comments.azurewebsites.net/api/PostComment
-emptyArray: []
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
-# Social Accounts
-social_networks:
--  { name: twitter, url: 'https://twitter.com/michaeljolley' }
--  { name: github, url: 'https://github.com/MichaelJolley' }
--  { name: linkedin, url: 'https://www.linkedin.com/in/michaelwjolley' }
--  { name: twitch, url: 'https://www.twitch.tv/themichaeljolley' }
+# Site title
+title: "Michael Jolley"
 
-# Modules Settings
-show_categories: 1
-show_tags: 1
-show_email: 1
-show_rss: 1
-show_comments: 1
-show_menu: 0
-fixed_sidebar: 1
+# A description of your site for social meta tag, search engines, and feed.xml
+description: "Michael is a bald, bearded, builder with a passion for helping others succeed. For nearly 20 years, he’s used his experience in software development and DevOps for clients ranging from start-ups to Fortune 500."
 
-# Defaults
-defaults:
-  -
-    scope:
-      path: '_posts'
-      type: posts
-    values:
-      comments: "true"
+# Tagline near the site title
+tagline: "bald. bearded. builder."
 
-# Serving
+# The subpath of your site, e.g. /blog, for generating urls
+baseurl:
+
+sass:
+  sass_dir: _sass
+
+# The base hostname & protocol of your site for where absolute urls are needed
 url: "https://michaeljolley.com"
 
-# Includes
-include: ["_pages"]
+# Site navigation - each item must have a title and a url.
+navigation:
+- text: Home
+  url: /
+- text: About
+  url: /about/
+- text: Talks
+  url: /talks/
+- text: Style Guides
+  url: /style-guide/
+- text: Archives
+  url: /tags/
 
-# Outputting
-permalink: /posts/:title/
-category_dir: categories
+# The shortname for your Disqus site to enable comments.
+disqus:
 
-# Plugins
-plugins:
-  - jekyll-sitemap
-  - jekyll-seo-tag
-  - jekyll-feed
-  - jekyll-paginate
+# Author information - author info at the bottom of the post
+author_name: "Michael Jolley"
+author_bio: "Michael is a bald, bearded, builder with a passion for helping others succeed. For nearly 20 years, he’s used his experience in software development and DevOps for clients ranging from start-ups to Fortune 500."
+author_url:  "https://michaeljolley.com"
+author_location: "Birmingham, AL"
+author_image: /images/michaeljolley.png
 
-# Pagination
-paginate: 10
-paginate_path: "/page:num/"
+# Sidebar Add banner
+banner_url: "#"
+banner_image: images/banner.jpg
 
-# Conversion
+# Sidebar newsletter widget - add your form action url for MailChimp signup form here
+mailchimp_url: "//"
+
+# Social links in the site footer
+twitter_username: "michaeljolley"
+facebook_username: "michaeljolley"
+github_username: "michaeljolley"
+codepen_username: "michaeljolley"
+dribbble_uername: "michaeljolley"
+linkedin_username: "michaelwjolley"
+twitch_username: "themichaeljolley"
+
+# http://jekyllrb.com/docs/pagination/
+paginate: 5
+paginate_path: '/blog/page:num/'
+plugins: [jekyll-paginate]
+
+permalink: pretty
 markdown: kramdown
-
-# Post Settings
-excerpt_separator: <!--more-->
-
-# Assets Settings
-sass:
-  sass_dir: assets/partials
-  style: compressed
+kramdown:
+    auto_ids: false
