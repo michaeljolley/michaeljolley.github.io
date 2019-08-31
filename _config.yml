@@ -49,8 +49,6 @@ navigation:
   url: /about/
 - text: Talks
   url: /talks/
-- text: Style Guides
-  url: /style-guide/
 - text: Archives
   url: /tags/
 

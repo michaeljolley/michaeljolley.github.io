@@ -38,11 +38,11 @@ layout: default
             <nav class="pagination">
                 <h2 class="screen-reader-text">Posts navigation</h2>
                 {% if paginator.previous_page %}
-                <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="newer-posts fa-chevron-left square fill-horizontal"><span class="screen-reader-text">Newer Posts</span></a>
+                <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="newer-posts fa fa-chevron-left square fill-horizontal"><span class="screen-reader-text">Newer Posts</span></a>
                 {% endif %}
                 <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
                 {% if paginator.next_page %}
-                <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="older-posts fa-chevron-right square fill-horizontal"><span class="screen-reader-text">Older Posts</span></a>
+                <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="older-posts fa fa-chevron-right square fill-horizontal"><span class="screen-reader-text">Older Posts</span></a>
                 {% endif %}
             </nav><!-- .pagination -->
             {% endif %}
