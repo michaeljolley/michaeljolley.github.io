@@ -5,6 +5,7 @@ layout: default
     <div class="inner">
         <main class="site-main">
             {% for post in paginator.posts %}
+            {% assign comment_count = site.data.comments[post.slug] | size %}
             <article class="post">
                 <header class="entry-header">
                     <div class="entry-header-wrap">
@@ -14,7 +15,7 @@ layout: default
                         <h2 class="entry-title"><a href="{{ site.baseurl }}{{ post.url }}" rel="bookmark" title="Permanent Link to {{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h2>
                     </div><!-- .entry-header-wrap -->
                     <div class="entry-meta">
-                        <time class="published" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %-d, %Y" }}</time> | <a href="{{ post.url }}#comments">{{ site.data.comments[post.slug] | size }} comments</a>
+                        <time class="published" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %-d, %Y" }}</time> | <a href="{{ post.url }}#comments">{% if comment_count == 1 %}One comment{% else %}{{ comment_count }} comments{% endif %}</a>
                     </div><!-- .entry-meta -->
                 </header><!-- .entry-header -->
                 <div class="entry-content">
