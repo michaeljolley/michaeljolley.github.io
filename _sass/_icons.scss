@@ -15,8 +15,8 @@
 }
 
 [class^="fa-"], [class*=" fa-"] {
-    /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'fontawesome' !important;
+    /* use to prevent issues with browser extensions that change fonts */
+    font-family: 'fontawesome';
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -57,7 +57,7 @@
   content: "\f099";
 }
 .fa-twitch:before {
-  content: "\ f1e8";
+  content: "\f1e8";
 }
 .fa-facebook:before {
   content: "\f09a";
@@ -112,26 +112,26 @@
 }
 
 .fa-twitter {
-  background-color: $brand-twitter !important;
+  background-color: $brand-twitter;
 }
 .fa-dribbble {
-  background-color: $brand-dribbble !important;
+  background-color: $brand-dribbble;
 }
-.fa-github {
-  background-color: $brand-github !important;
+.fa-github-alt {
+  background-color: $brand-github;
 }
 .fa-linkedin {
-  background-color: $brand-linkedin !important;
+  background-color: $brand-linkedin;
 }
 .fa-codepen {
-  background-color: $brand-codepen !important;
+  background-color: $brand-codepen;
 }
 .fa-twitch {
-  background-color: $brand-twitch !important;
+  background-color: $brand-twitch;
 }
 .fa-feed {
-  background-color: $brand-rss !important;
+  background-color: $brand-rss;
 }
-
-
-
+.fa-facebook {
+  background-color: $brand-facebook;
+}
