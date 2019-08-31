@@ -8,13 +8,9 @@ comments: true
 tags: [docker, vscode, windows, compose]
 ---
 
-<figure>
-  <img src="https://user-images.githubusercontent.com/1228996/52905302-082afd00-31fe-11e9-9f0d-e1e02f2e58e9.png">
-</figure>
+This definitely has to be filed under "remember this in the future."
 
-This definitely has to be filed under "remember this in the future."  
-
-I've been working on a project lately that includes a aspnetcore SPA using Angular.  It's being deployed to multiple Raspberry Pi's using a popular deployment tool.   However, as the number of devices used by the client grows the cost of the deployment tool is becoming prohibitive.  While exploring other options we landed on the Azure IoT Hub. 
+I've been working on a project lately that includes a aspnetcore SPA using Angular.  It's being deployed to multiple Raspberry Pi's using a popular deployment tool.   However, as the number of devices used by the client grows the cost of the deployment tool is becoming prohibitive.  While exploring other options we landed on the Azure IoT Hub.
 
 In production, the application on the Pi communicates with a Restful API that lives at the clients main office.  However, while debugging we need to run them side-by-side.  So, docker-compose to the rescue (I think.)
 
@@ -62,7 +58,7 @@ Notice the **links** flag in the iotapp service.  This lets Docker know that iot
 
 Pretty simple right?
 
-The missing piece of the puzzle for us was how to communicate between the two. 
+The missing piece of the puzzle for us was how to communicate between the two.
 
 For instance, in our iotapp code, it is hardcoded to communicate with `http://localhost:{port}/api`.  However, this won't be okay because the api & iotapp containers each have their own "localhost".  After much experimenting and several incorrect StackOverflow &amp; Google responses, we found you must call the name of the service specified in the docker-compose.  So any call in our iotapp to `http://localhost:{port}/api` needed to be changed to `http://api:{port}/api`.
 

@@ -8,10 +8,6 @@ comments: true
 tags: [docker, sql, linux, devops]
 ---
 
-<figure>
-  <img src="{{page.image}}"/>
-</figure>
-
 If you’ve ever used a Windows machine you’ve probably experienced a Winpocalypse.  You know… that moment when you need to completely re-install Windows down to reformatting the drive.  Everything is gone. (Hopefully you did a backup beforehand.)
 
 A few months ago, I experienced Winpocalypse 2019 and I’ve been very protective about what I re-install on my machine since.  Applications that were commonplace have undergone intense scrutiny when deciding whether to re-install.  One big target: SQL Server.  Even express & developer editions are bloated and introduce attack vectors on my local machine.

@@ -1,0 +1,65 @@
+I"<p>If you’re like me, there are certain commands that get run repeatedly throughout your day. Between <code class="highlighter-rouge">git checkout</code>, <code class="highlighter-rouge">docker {whatever}</code> and navigating to frequent paths with <code class="highlighter-rouge">cd</code>, I’ve been wondering how much time I could save by shortening these commands and parameters.</p>
+
+<p>I was actually a little jealous of my friends using bash with their nice aliases, so I went hunting for a way to alias in PowerShell.  Turns out, it’s really simple!</p>
+
+<!--more-->
+
+<h2>This seat’s taken</h2>
+
+<p>PowerShell has built in commands that we don’t want to step on.  I won’t list them all (there are MANY), but if you get something wildly unexpected from your aliases then you can Google them.</p>
+
+<h2>So show me already</h2>
+
+<p>Okay, okay. So first, let’s create a function in a <code class="highlighter-rouge">.ps1</code> file.</p>
+
+<pre><code class="language-PS">function goGoGadgetGitStatus {
+  git status
+}
+</code></pre>
+
+<p>The function above simply calls <code class="highlighter-rouge">git status</code>.  You can then setup an alias to call that function.</p>
+
+<pre><code class="language-PS">Set-Alias gs goGoGadgetGitStatus
+</code></pre>
+
+<p>Then from your PowerShell console you can type <code class="highlighter-rouge">gs</code> and it will run <code class="highlighter-rouge">git status</code>.</p>
+
+<p>That’s a very simplistic example but gives you an idea of what’s possible.</p>
+
+<h2>What about parameters</h2>
+
+<p>Great question!  We can define parameters in the function and then pass them in.</p>
+
+<pre><code class="language-PS">function goGoGadgetGit {
+  Param(
+    [Parameter(Mandatory = $true, Position = 0)]
+    [String]
+    $Cmd,
+
+    [Parameter(Mandatory = $false, ValueFromRemainingArguments = $true)]
+    [String[]]
+    $Params
+  )
+
+  Switch ($Cmd)
+  {
+    # status
+    's' { git status $Params }
+    # branch
+    'c' { git checkout $Params }
+  }
+}
+Set-Alias g goGoGadgetGit
+
+</code></pre>
+
+<p>Now in our console we can call <code class="highlighter-rouge">g s</code> to get <code class="highlighter-rouge">git status</code> or <code class="highlighter-rouge">g c master</code> to execute <code class="highlighter-rouge">git checkout master</code>.</p>
+
+<p>I’m not going to go into detail on how to write PowerShell functions or options for parameters.  There are plenty of resources out there for the two.  But hopefully this showed you a rudimentary way to set up command aliases for PowerShell.  Just add the code to your PowerShell profile.ps1 and you’re off to the races.</p>
+
+<h2>PowerShell Alias</h2>
+
+<p>I’ve actually created a repository at <a href="https://github.com/MichaelJolley/ps-alias">https://github.com/MichaelJolley/ps-alias</a> that has the PowerShell script that I include in my profile that gives many aliases for things like Docker, Git, etc. Feel free to fork &amp; PR any aliases that you think might help others.</p>
+
+<p>Got any other suggestions/corrections?  Leave a comment below.</p>
+:ET

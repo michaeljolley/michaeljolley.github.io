@@ -1,0 +1,83 @@
+I"�<p>Recently one of our clients approached us to develop an application that would run on a Raspberry Pi to use in kiosk’s throughout their facilities.  We ended up writing a web app in Angular that they would run via Chromium.</p>
+
+<p>One of their requirements was the Pi shouldn’t go to sleep and appear always-on to their users.  While we’ve already successfully launched the system, I have a feeling others will want to use this same functionality in the future.  So, without further ado, here are the steps we used in setting up each device to run in kiosk mode:</p>
+
+<!--more-->
+
+<h3>Assumptions</h3>
+
+<p>For our purposes, we’re going to assume you’ve got your application running at http://localhost:5000 and deployed just fine.</p>
+
+<p>We’ll also be using the Pi’s default OS of Raspian.</p>
+
+<h3>Prerequisites</h3>
+
+<p>First, let’s install some prerequisites.</p>
+
+<pre class="language-bash"><code>sudo apt-get install x11-xserver-utils unclutter</code></pre>
+
+<h3>Launch Chromium</h3>
+
+<p>We’re going to launch Chromium after boot-up with the following settings:</p>
+
+<ul>
+  <li>Incognito mode (so it doesn’t try to restart your last session after you inevitably kill the power)</li>
+  <li>Kiosk mode</li>
+  <li>Turn off pinch (so users can’t zoom in/out)</li>
+  <li>Overscroll history navigation (to disable a user from scrolling left/right to go back/forward in the browser)</li>
+</ul>
+
+<p>To do this we’ll be editing the <strong>autostart</strong> file in <strong>.config/lxsession/LXDE-pi/</strong>.  So navigate to it with:</p>
+
+<pre class="language-bash"><code>cd /home/pi/.config/lxsession/LXDE-pi/</code></pre>
+
+<p>Then edit it with nano like so:</p>
+
+<pre class="language-bash"><code>sudo nano autostart</code></pre>
+
+<p>Once you’re in there, add this line to the end of the file:</p>
+
+<pre class="language-bash"><code>@chromium-browser --kiosk --incognito --disable-pinch --overscroll-history-navigation=0 http://localhost:5000</code></pre>
+
+<p>This launches Chromium with the settings we mentioned above and directs it immediately to your site at http://localhost:5000.</p>
+
+<h3>Turn off the screen saver and hide the cursor</h3>
+
+<p>While you’re still editing the <strong>autostart</strong> file, add the following:</p>
+
+<pre class="language-bash"><code>@xset s noblank
+@xset s off
+@xset -dpms
+@unclutter -idle 0.1 -roo
+</code></pre>
+
+<p>Then save your changes and exit the <strong>autostart</strong> file.</p>
+
+<h3>Stay awake</h3>
+
+<p>Now to keep your Pi from falling asleep we’ll edit the <strong>lightdm.conf</strong> file.</p>
+
+<pre class="language-bash"><code>sudo nano /etc/lightdm/lightdm.conf</code></pre>
+
+<p>Modify the <strong>xserver-command</strong> line to read:</p>
+
+<pre class="language-bash"><code>xserver-command= X -s 0 -dpms</code></pre>
+
+<p>Then save and exit.</p>
+
+<h3>Disable power management on WiFi</h3>
+
+<p>The Pi’s WiFi will also go to sleep if we don’t change it.  Modify it by editing the <strong>rc.local</strong> file with:</p>
+
+<pre class="language-bash"><code>sudo nano /etc/rc.local</code></pre>
+
+<p>Add the following line before <em>exit 0</em> and save:</p>
+
+<pre class="language-bash"><code>iwconfig wlan0 power off</code></pre>
+
+<h3>You’re in business</h3>
+
+<p>All that’s left is to reboot your Pi.  Once it restarts you’ll load directly to Chromium viewing your local application.</p>
+
+<p>If you find any “gotchas” or improvements to the steps above be sure to leave a comment!</p>
+:ET

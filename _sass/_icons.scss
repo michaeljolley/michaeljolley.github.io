@@ -56,6 +56,9 @@
 .fa-twitter:before {
   content: "\f099";
 }
+.fa-twitch:before {
+  content: "\ f1e8";
+}
 .fa-facebook:before {
   content: "\f09a";
 }
@@ -109,25 +112,25 @@
 }
 
 .fa-twitter {
-  background-color: $brand-twitter;
+  background-color: $brand-twitter !important;
 }
-.fa-dribble {
-  background-color: $brand-dribbble;
+.fa-dribbble {
+  background-color: $brand-dribbble !important;
 }
 .fa-github {
-  background-color: $brand-github;
+  background-color: $brand-github !important;
 }
 .fa-linkedin {
-  background-color: $brand-linkedin;
+  background-color: $brand-linkedin !important;
 }
 .fa-codepen {
-  background-color: $brand-codepen;
+  background-color: $brand-codepen !important;
 }
 .fa-twitch {
-  background-color: $brand-twitch;
+  background-color: $brand-twitch !important;
 }
 .fa-feed {
-  background-color: $brand-rss;
+  background-color: $brand-rss !important;
 }
 
 

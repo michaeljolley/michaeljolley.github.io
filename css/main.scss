@@ -3,9 +3,10 @@
 ---
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import 
+@import
     "variables",
     "icons",
+    "comments",
     "reset",
     "general"
 ;
@@ -81,8 +82,8 @@
 
 .nav-menu li {
     float: left;
-    font-size: 12px;    
-    line-height: 1.5;    
+    font-size: 12px;
+    line-height: 1.5;
     padding: 16px 0;
     position: relative;
 }
@@ -95,7 +96,7 @@
     letter-spacing: 1px;
     padding: 0 15px;
     text-decoration: none;
-    text-transform: uppercase;    
+    text-transform: uppercase;
 }
 
 .nav-menu li:first-child > a {
@@ -156,7 +157,7 @@
 .site-description {
     color: #818181;
     float: left;
-    font-size: 14px;    
+    font-size: 14px;
     font-style: italic;
     line-height: 1.5;
     margin-bottom: 0;
@@ -245,7 +246,7 @@
     color: $white;
     float: left;
     font-size: 36px;
-    margin: 60px 0 0;    
+    margin: 60px 0 0;
     max-width: 75%;
     padding: 30px;
     -ms-word-wrap: break-word;
@@ -255,10 +256,10 @@
 .post-thumbnail + .entry-title {
     bottom: 0px;
     left: 0px;
-    position: absolute;    
+    position: absolute;
 }
 
-.entry-title a {    
+.entry-title a {
     color: $white;
     text-decoration: none;
 }
@@ -268,15 +269,15 @@
 }
 
 .entry-meta {
-    background-color: lighten( $picton-blue, 11% ); 
+    background-color: lighten( $picton-blue, 11% );
     clear: both;
     color: $white;
     font-size: 12px;
     float: left;
     letter-spacing: 1px;
     line-height: 1.5;
-    padding: 16px 30px;   
-    text-transform: uppercase;    
+    padding: 16px 30px;
+    text-transform: uppercase;
 }
 
 .entry-meta a {
@@ -330,7 +331,7 @@
 }
 
 .tag-links {
-    border-top: 2px solid $gallery;    
+    border-top: 2px solid $gallery;
     padding-top: 30px;
 }
 
@@ -394,7 +395,7 @@
 }
 
 .author-info .author-title {
-    font-size: 16px;    
+    font-size: 16px;
     letter-spacing: 1px;
     margin-bottom: 15px;
     text-transform: uppercase;
@@ -408,7 +409,7 @@
     font-weight: bold;
     letter-spacing: 1px;
     margin-right: 10px;
-    text-transform: uppercase;    
+    text-transform: uppercase;
 }
 
 .author-website a {
@@ -421,7 +422,7 @@
 
 /* Tags archive */
 .archive-tags-list {
-    margin-bottom: 24px;    
+    margin-bottom: 24px;
 }
 
 .archive-tags-list a,
@@ -430,7 +431,7 @@ a.archive-top-link {
     color: #818181;
     display: inline-block;
     letter-spacing: 1px;
-    line-height: 1.5;    
+    line-height: 1.5;
     padding: 4px 10px;
     text-decoration: none;
     text-transform: uppercase;
@@ -488,7 +489,7 @@ a.archive-top-link:hover {
     border-bottom: 2px solid $gallery;
     font-size: 20px;
     text-transform: uppercase;
-    letter-spacing: 1px; 
+    letter-spacing: 1px;
     padding-bottom: 30px;
     margin-bottom: 40px;
 }
@@ -536,7 +537,7 @@ a.archive-top-link:hover {
 .post-navigation .nav-next,
 .post-navigation .nav-previous {
     background-color: $tundora;
-    border-left: 3px solid $picton-blue; 
+    border-left: 3px solid $picton-blue;
     margin-bottom: 20px;
     padding-bottom: 50px;
     padding-top: 30px;
@@ -660,7 +661,7 @@ a.archive-top-link:hover {
     color: $silver;
     font-size: 14px;
     letter-spacing: 1px;
-    text-transform: uppercase; 
+    text-transform: uppercase;
 }
 
 .widget input[type="text"],
@@ -718,7 +719,7 @@ a.archive-top-link:hover {
     font-size: 10px;
     letter-spacing: 1px;
     margin: 0 4px 8px 0;
-    padding: 6px 8px;    
+    padding: 6px 8px;
     text-decoration: none;
     text-transform: uppercase;
     -webkit-transition: all 0.3s;
@@ -884,7 +885,7 @@ a.archive-top-link:hover {
 
     #menu-toggle.toggled-on:before {
         content: "\f00d";
-    }    
+    }
 }
 
 @media only screen and (max-width: 640px) {

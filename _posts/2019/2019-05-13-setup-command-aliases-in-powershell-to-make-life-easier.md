@@ -8,11 +8,6 @@ comments: true
 tags: [powershell, alias]
 ---
 
-
-<figure>
-  <img src="{{page.image}}"/>
-</figure>
-
 If you're like me, there are certain commands that get run repeatedly throughout your day. Between `git checkout`, `docker {whatever}` and navigating to frequent paths with `cd`, I've been wondering how much time I could save by shortening these commands and parameters.
 
 I was actually a little jealous of my friends using bash with their nice aliases, so I went hunting for a way to alias in PowerShell.  Turns out, it's really simple!
@@ -53,13 +48,13 @@ function goGoGadgetGit {
     [Parameter(Mandatory = $true, Position = 0)]
     [String]
     $Cmd,
-      
+
     [Parameter(Mandatory = $false, ValueFromRemainingArguments = $true)]
     [String[]]
     $Params
   )
 
-  Switch ($Cmd) 
+  Switch ($Cmd)
   {
     # status
     's' { git status $Params }

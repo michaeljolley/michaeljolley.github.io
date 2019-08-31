@@ -8,11 +8,7 @@ comments: true
 tags: [raspberry-pi, iot]
 ---
 
-<figure>
-  <img src="https://user-images.githubusercontent.com/1228996/48371127-af891880-e680-11e8-89aa-2dec4de4ef8a.png">
-</figure>
-
-Recently one of our clients approached us to develop an application that would run on a Raspberry Pi to use in kiosk's throughout their facilities.  We ended up writing a web app in Angular that they would run via Chromium.  
+Recently one of our clients approached us to develop an application that would run on a Raspberry Pi to use in kiosk's throughout their facilities.  We ended up writing a web app in Angular that they would run via Chromium.
 
 One of their requirements was the Pi shouldn't go to sleep and appear always-on to their users.  While we've already successfully launched the system, I have a feeling others will want to use this same functionality in the future.  So, without further ado, here are the steps we used in setting up each device to run in kiosk mode:
 
@@ -90,6 +86,6 @@ Add the following line before *exit 0* and save:
 
 ### You're in business
 
-All that's left is to reboot your Pi.  Once it restarts you'll load directly to Chromium viewing your local application.  
+All that's left is to reboot your Pi.  Once it restarts you'll load directly to Chromium viewing your local application.
 
 If you find any "gotchas" or improvements to the steps above be sure to leave a comment!
