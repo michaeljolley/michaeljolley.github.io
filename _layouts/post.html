@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+{% assign comment_count = site.data.comments[page.slug] | size %}
 <div class="site-content">
     <div class="inner">
         <main class="site-main">
@@ -15,7 +16,7 @@ layout: default
                         <h1 class="entry-title">{{page.title}}</h1>
                     </div><!-- .entry-header-wrap -->
                     <div class="entry-meta">
-                        <time class="published" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%B %-d, %Y" }}</time> | <a href="{{ post.url }}#comments">{{ site.data.comments[page.slug] | size }} comments</a>
+                        <time class="published" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%B %-d, %Y" }}</time> | <a href="{{ post.url }}#comments">{{ comment_count }} comments</a>
                     </div><!-- .entry-meta -->
                 </header><!-- .entry-header -->
                 <div class="entry-content">
