@@ -16,7 +16,7 @@ layout: default
                         <h1 class="entry-title">{{page.title}}</h1>
                     </div><!-- .entry-header-wrap -->
                     <div class="entry-meta">
-                        <time class="published" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%B %-d, %Y" }}</time> | <a href="{{ post.url }}#comments">{{ comment_count }} comments</a>
+                        <time class="published" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%B %-d, %Y" }}</time> | <a href="{{ post.url }}#comments">{% if comment_count == 1 %}1 comment{% else %}{{ comment_count }} comments{% endif %}</a>
                     </div><!-- .entry-meta -->
                 </header><!-- .entry-header -->
                 <div class="entry-content">
