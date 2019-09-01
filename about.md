@@ -10,7 +10,7 @@ nearly 20 years experience designing &amp; developing software, he loves sharing
 and watching them excel. While still building custom applications for clients today, Michael has been spending
 considerable time pouring into others via his live-coding sessions on Twitch and talks at conferences &amp; meet-ups.
 
-When not in `full-geek` mode, Michael is a husband of nearly 20 years, father to three awesome kids, musician,
+When not in *full-geek* mode, Michael is a husband of nearly 20 years, father to three awesome kids, musician,
 and football fanatic.
 
 ---
