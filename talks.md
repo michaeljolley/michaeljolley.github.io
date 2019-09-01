@@ -7,56 +7,34 @@ banner_image: talksPage.jpg
 
 # Coming Up
 
-## 2019
+### 2019
 
-<table>
 
-<tr>
-  <td>
-    **<a href="https://gdgcloudauburndevfest19.firebaseapp.com/" target="_blank">GDG DevFest 2019</a>**
-  </td>
-  <td>
-    **2019 Sept 15**
-  </td>
-</tr>
-<tr>
-  <td colspan="2">
-    Auburn, AL
-  </td>
-</tr>
-<tr>
-  <td colspan="2">
-    Think inside the box. Developing inside a container to avoid conflicts, improve security and speed up on-boarding
-  </td>
-</tr>
-
-</table>
+**2019 Sept 15** - **<a href="https://gdgcloudauburndevfest19.firebaseapp.com/" target="_blank">GDG DevFest 2019</a>**<br/>
+Auburn, AL<br/>
+Think inside the box. Developing inside a container to avoid conflicts, improve security and speed up on-boarding
 
 ---
 
-**<a href="https://www.dotnetconf.net/" target="_blank">.NET Conf 2019</a>**<br/>
-**2019 Sept 23-25**<br/>
+**2019 Sept 23-25** - **<a href="https://www.dotnetconf.net/" target="_blank">.NET Conf 2019</a>**<br/>
 Online<br/>
 Death to SQL Server! Long live SQL Server! How containerized SQL Server makes development easier
 
 ---
 
-**<a href="https://bsidesbham.org/" target="_blank">BSides Birmingham 2019</a>**<br/>
-**2019 Oct 12**<br/>
+**2019 Oct 12** - **<a href="https://bsidesbham.org/" target="_blank">BSides Birmingham 2019</a>**<br/>
 Birmingham, AL<br/>
 Think inside the box. Developing inside a container to avoid conflicts, improve security and speed up on-boarding
 
 ---
 
-**<a href="https://devopsdays.org/events/2019-chattanooga/welcome/" target="_blank">DevOpsDays 2019</a>**<br/>
-**2019 Nov 12**<br/>
+**2019 Nov 12** - **<a href="https://devopsdays.org/events/2019-chattanooga/welcome/" target="_blank">DevOpsDays 2019</a>**<br/>
 Chattanooga, TN<br/>
 Think inside the box. Developing inside a container to avoid conflicts, improve security and speed up on-boarding
 
 ---
 
-**<a href="https://www.meetup.com/Birmingham-NET-Meetup/" target="_blank">Birmingham .NET Meetup</a>**<br/>
-**2019 Nov 12**<br/>
+**2019 Nov 12** - **<a href="https://www.meetup.com/Birmingham-NET-Meetup/" target="_blank">Birmingham .NET Meetup</a>**<br/>
 Birmingham, AL<br/>
 Think inside the box. Developing inside a container to avoid conflicts, improve security and speed up on-boarding
 
