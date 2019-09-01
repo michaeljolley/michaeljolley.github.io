@@ -6,11 +6,11 @@ image: https://user-images.githubusercontent.com/1228996/64070619-28fef100-cc2a-
 ---
 
 From his early days with lincoln logs to building custom ERP systems, Michael has always been a builder. With
-nearly 20 years experience as a designing &amp; developing software, he loves sharing his knowledge with others
+nearly 20 years experience designing &amp; developing software, he loves sharing his knowledge with others
 and watching them excel. While still building custom applications for clients today, Michael has been spending
 considerable time pouring into others via his live-coding sessions on Twitch and talks at conferences &amp; meet-ups.
 
-When not in `full-geek` mode, Michael is a husband of nearly 20 years, father of three awesome kids, musician,
+When not in `full-geek` mode, Michael is a husband of nearly 20 years, father to three awesome kids, musician,
 and football fanatic.
 
 ---
@@ -35,18 +35,18 @@ the <a href="https://github.com/mtheoryx/heroines-of-javascript" target="_blank"
 
 (To the tune of The Fresh Prince of Bel-Air)
 
-Now, this is a story all about how
-My life got flipped-turned upside down
-And I'd like to take a minute
-Just sit right back
+Now, this is a story all about how<br/>
+My life got flipped-turned upside down<br/>
+And I'd like to take a minute<br/>
+Just sit right back<br/>
 I'll tell you how I became a dev for the full stack
 
-In east Alabama born and raised
-On the Compaq was where I spent most of my days
-Chillin' out maxin' chattin’ all cool
+In east Alabama born and raised<br/>
+On the Compaq was where I spent most of my days<br/>
+Chillin' out maxin' chattin’ all cool<br/>
 Dialed up to AOL, logged in after school
 
-Then some HTML when I was up really late
-Started showing gifs that would animate
-I made one little page and my mom’s voice raised
+Then some HTML when I was up really late<br/>
+Started showing gifs that would animate<br/>
+I made one little page and my mom’s voice raised<br/>
 She said 'You better use those tabs and stop with the spaces'
