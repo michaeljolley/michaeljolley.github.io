@@ -61,8 +61,8 @@ navigation:
   url: /about/
 - text: Talks
   url: /talks/
-- text: Archives
-  url: /tags/
+- text: Streams
+  url: /streams/
 
 # Author information - author info at the bottom of the post
 author_name: "Michael Jolley"
