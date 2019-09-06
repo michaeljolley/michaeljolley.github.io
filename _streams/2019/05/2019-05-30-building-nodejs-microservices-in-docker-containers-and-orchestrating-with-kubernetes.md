@@ -9,8 +9,6 @@ comments: true
 tags: [twitch, stream, nodejs, typescript, microservice, docker, container, kubernetes]
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [https://youtu.be/v8xR-RtTBJ0](https://youtu.be/v8xR-RtTBJ0)

@@ -8,8 +8,6 @@ comments: true
 tags: [twitch, stream, mongoose, nodejs, socket-io]
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [https://youtu.be/XLrmlyCa0BY](https://youtu.be/XLrmlyCa0BY)

@@ -8,8 +8,6 @@ comments: true
 tags: [twitch, stream, bugs, ngrok, nodejs, socks]
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [https://youtu.be/0zm9p55qBrE](https://youtu.be/0zm9p55qBrE)

@@ -8,8 +8,6 @@ comments: true
 tags: [twitch, stream, vs-code, javascript, theme, extension]
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [https://youtu.be/gHebGSg4VLE](https://youtu.be/gHebGSg4VLE)
@@ -56,7 +54,7 @@ Timestamp | Topic
 ## Next Steps
 
 - Need to get the `!theme {theme name}` command working
-- Get Azure DevOps to automate builds & deploying to the VS Marketplace 
+- Get Azure DevOps to automate builds & deploying to the VS Marketplace
 - Clean certain html tags from chat messages incoming to the chat overlay
 
 ---
@@ -65,10 +63,10 @@ Timestamp | Topic
 
 ### Subscribers
 
-- 
+-
 
 ### Cheers
 
 Compadre | Bits
 --- | ---
- | 
+ |

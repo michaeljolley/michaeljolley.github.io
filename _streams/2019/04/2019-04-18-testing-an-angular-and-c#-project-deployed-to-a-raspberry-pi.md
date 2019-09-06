@@ -8,8 +8,6 @@ comments: true
 tags: [c#, angular, raspberry-pi, testing, twitch, stream]
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [https://youtu.be/xZM1IckcP8Y](https://youtu.be/xZM1IckcP8Y)
@@ -23,7 +21,7 @@ Timestamp | Topic
 00:06 | Kick it off
 00:08 | Reviewing show notes & generating https://baldbeardedbuilder.com
 00:13 | Overviewing the application we're going to be testing
-00:36 | Testing & debugging our Angular application 
+00:36 | Testing & debugging our Angular application
 02:05 | Sub-love singing
 02:30 | Explaining the architecture of the Angular app using NGRX
 
@@ -37,12 +35,12 @@ Timestamp | Topic
 
 ## Things we learned
 
-- [@jtsom](https://github.com/jtsom) showed us that with the format below you can inject variables into strings like using `$"some text {variable}"` in C# 
+- [@jtsom](https://github.com/jtsom) showed us that with the format below you can inject variables into strings like using `$"some text {variable}"` in C#
 ```JS
 `some text ${variable}`
 ```
 - [@parithon](https://github.com/parithon) directed us to the awesome Peacock extension by John Papa at [https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-peacock](https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-peacock)
-- [@parithon](https://github.com/parithon) shared a link with a GitHub specific markdown cheatsheet: 
+- [@parithon](https://github.com/parithon) shared a link with a GitHub specific markdown cheatsheet:
 [https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links)
 
 ## Notes
@@ -73,4 +71,4 @@ Timestamp | Topic
 
 Compadre | Bits
 --- | ---
- | 
+ |

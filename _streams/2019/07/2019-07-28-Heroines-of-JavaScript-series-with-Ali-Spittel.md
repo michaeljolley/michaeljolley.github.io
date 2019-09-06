@@ -8,8 +8,6 @@ comments: true
 tags: [twitch, stream, heroines, javascript, ali, spittel, interview]
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [https://youtu.be/ZZpAePibX70](https://youtu.be/ZZpAePibX70)

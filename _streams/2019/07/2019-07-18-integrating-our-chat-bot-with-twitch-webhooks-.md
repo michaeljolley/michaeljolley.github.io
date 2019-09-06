@@ -8,8 +8,6 @@ comments: true
 tags: [twitch, stream, nodejs, ngrok]
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [https://youtu.be/ZT2xMhQSkYk](https://youtu.be/ZT2xMhQSkYk)

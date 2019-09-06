@@ -8,8 +8,6 @@ comments: true
 tags: [twitch, stream, nodejs, typescript, socket.io]
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [https://youtu.be/BZTGUXxY56k](https://youtu.be/BZTGUXxY56k)

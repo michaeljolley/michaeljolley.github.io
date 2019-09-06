@@ -8,8 +8,6 @@ comments: true
 tags: [twitch, stream, angular, mongodb, node.js]
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [https://youtu.be/Y9LU7N8TLg0](https://youtu.be/Y9LU7N8TLg0)

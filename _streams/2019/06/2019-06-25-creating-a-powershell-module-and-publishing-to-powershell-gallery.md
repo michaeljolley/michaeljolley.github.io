@@ -9,8 +9,6 @@ comments: true
 tags: [twitch, stream, powershell, devops, gallery, module, azure]
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [https://youtu.be/gVWIp6r6U20](https://youtu.be/gVWIp6r6U20)

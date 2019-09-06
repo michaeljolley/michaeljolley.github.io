@@ -8,8 +8,6 @@ comments: true
 tags: [twitch, stream, vscode, extension, chat, glitter, beard]
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [https://youtu.be/dUIWJOmWbp0](https://youtu.be/dUIWJOmWbp0)
@@ -41,7 +39,7 @@ tags: [twitch, stream, vscode, extension, chat, glitter, beard]
 
 ## Things to Review & Notes
 
-- 
+-
 
 ## Goals
 

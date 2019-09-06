@@ -8,8 +8,6 @@ comments: true
 tags: [twitch, stream, particle, iot, argon, xenon, c++, variables]
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [https://youtu.be/haeuG7Sf8KY](https://youtu.be/haeuG7Sf8KY)

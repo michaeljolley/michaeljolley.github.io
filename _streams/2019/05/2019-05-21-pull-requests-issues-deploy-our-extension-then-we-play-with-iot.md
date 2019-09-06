@@ -8,8 +8,6 @@ comments: true
 tags: [twitch, stream, iot, vs-code, extension, particle, c++, javascript]
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [https://youtu.be/KWj-dRIWDW4](https://youtu.be/KWj-dRIWDW4)

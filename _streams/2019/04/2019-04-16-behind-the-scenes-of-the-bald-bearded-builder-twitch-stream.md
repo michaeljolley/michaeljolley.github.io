@@ -8,8 +8,6 @@ comments: true
 tags: [twitch, stream, chatting]
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 Due to issues with the stream, our recording was lost.  So no replay for this one.
@@ -25,7 +23,7 @@ Timestamp | Topic
 00:26 | Checklists
 00:39 | Candles to code by (& tobacco to chew by)
 00:44 | Stream notes
-01:15 | Bluetooth throat-punched the stream 
+01:15 | Bluetooth throat-punched the stream
 01:40 | RamblingGeek joined us & we totally de-railed with fun
 
 ---

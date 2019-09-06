@@ -9,8 +9,6 @@ tags: [twitch, stream, dockerfile, node, javascript]
 replay: https://youtu.be/GKn2y8U0FBY
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [{{page.replay}}]({{page.replay}})

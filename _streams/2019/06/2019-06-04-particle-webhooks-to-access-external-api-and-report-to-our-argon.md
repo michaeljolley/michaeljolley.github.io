@@ -8,8 +8,6 @@ comments: true
 tags: [twitch, stream, particle, xenon, argon, api, hardware, cplusplus]
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [https://youtu.be/ABZu-un1guQ](https://youtu.be/ABZu-un1guQ)

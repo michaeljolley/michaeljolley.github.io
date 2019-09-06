@@ -9,8 +9,6 @@ tags: [twitch, stream, nodejs, socket-io, docker]
 replay: https://youtu.be/9rNdbd-h6lE
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [{{page.replay}}]({{page.replay}})

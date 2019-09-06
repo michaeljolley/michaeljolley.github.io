@@ -8,8 +8,6 @@ comments: true
 tags: [twitch, stream, vs-code, javascript, theme, extension, azure, devops]
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [https://youtu.be/mXtMFcS-wsQ](https://youtu.be/mXtMFcS-wsQ)

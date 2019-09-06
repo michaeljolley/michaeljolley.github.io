@@ -9,8 +9,6 @@ tags: [twitch, stream, azure, pull-requests, javascript]
 replay: https://youtu.be/ueUE7cNkch8
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [{{page.replay}}]({{page.replay}})

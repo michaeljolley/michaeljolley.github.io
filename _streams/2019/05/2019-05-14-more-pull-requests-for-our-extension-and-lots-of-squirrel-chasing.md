@@ -8,8 +8,6 @@ comments: true
 tags: [twitch, stream, vs-code, extension]
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [https://youtu.be/0j0QVGbfw_E](https://youtu.be/0j0QVGbfw_E)
@@ -40,7 +38,7 @@ tags: [twitch, stream, vs-code, extension]
 
 ## Things to Review & Notes
 
-- 
+-
 
 ## Goals
 
@@ -49,7 +47,7 @@ tags: [twitch, stream, vs-code, extension]
 
 ## Next Steps
 
-- 
+-
 
 ---
 

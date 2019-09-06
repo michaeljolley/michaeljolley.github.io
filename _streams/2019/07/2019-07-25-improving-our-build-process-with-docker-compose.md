@@ -8,8 +8,6 @@ comments: true
 tags: [twitch, stream, docker, docker-compose]
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [https://youtu.be/aFSPhaymkKo](https://youtu.be/aFSPhaymkKo)
@@ -38,7 +36,7 @@ tags: [twitch, stream, docker, docker-compose]
 
 ### Things We Learned
 
-- [D4RKCIDE](https://twitch.tv/d4rkcide): shared https://bitcornproject.com. a project they're working on, on stream. 
+- [D4RKCIDE](https://twitch.tv/d4rkcide): shared https://bitcornproject.com. a project they're working on, on stream.
 
 ---
 

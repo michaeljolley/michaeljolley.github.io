@@ -8,8 +8,6 @@ comments: true
 tags: [twitch, stream, micro-service, design, planning]
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [https://youtu.be/PGlUMMvimK8](https://youtu.be/PGlUMMvimK8)

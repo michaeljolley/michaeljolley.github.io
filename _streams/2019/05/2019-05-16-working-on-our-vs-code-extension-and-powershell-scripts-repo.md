@@ -8,8 +8,6 @@ comments: true
 tags: [twitch, stream, vs-code, extension, powershell, pull-request]
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [https://youtu.be/YJ3dAl2ccpE](https://youtu.be/YJ3dAl2ccpE)
@@ -41,7 +39,7 @@ tags: [twitch, stream, vs-code, extension, powershell, pull-request]
 
 ## Things to Review & Notes
 
-- 
+-
 
 ## Goals
 

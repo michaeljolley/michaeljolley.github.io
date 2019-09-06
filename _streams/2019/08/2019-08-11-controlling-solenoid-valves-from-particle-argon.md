@@ -9,8 +9,6 @@ tags: [twitch, stream, particle, argon, xenon, breadboard, solenoid, valve, iot]
 replay: https://youtu.be/8YhOWqLVoTc
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [{{page.replay}}]({{page.replay}})

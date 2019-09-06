@@ -8,8 +8,6 @@ comments: true
 tags: [twitch, stream, nodejs, cosmosdb, obs, state, microservice]
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [https://youtu.be/uE6QZU7BCJY](https://youtu.be/uE6QZU7BCJY)

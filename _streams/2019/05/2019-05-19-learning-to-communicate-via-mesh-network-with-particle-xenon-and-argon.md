@@ -8,8 +8,6 @@ comments: true
 tags: [twitch, stream, iot, particle, xenon, argon, c++, mesh]
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [https://youtu.be/nfx_fNtTIUI](https://youtu.be/nfx_fNtTIUI)
@@ -41,7 +39,7 @@ tags: [twitch, stream, iot, particle, xenon, argon, c++, mesh]
 
 ## Things to Review & Notes
 
-- 
+-
 
 ## Goals
 

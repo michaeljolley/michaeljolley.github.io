@@ -8,8 +8,6 @@ comments: true
 tags: [twitch, stream, dotnet, dotnetcore, api, microservice]
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [https://youtu.be/EHhs2jQ3AyU](https://youtu.be/EHhs2jQ3AyU)

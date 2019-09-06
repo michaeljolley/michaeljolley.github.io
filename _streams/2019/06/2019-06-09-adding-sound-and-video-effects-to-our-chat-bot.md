@@ -8,8 +8,6 @@ comments: true
 tags: [twitch, stream, Node.js, chat, audio, video]
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [https://youtu.be/mhkji0izoGE](https://youtu.be/mhkji0izoGE)

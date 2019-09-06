@@ -8,8 +8,6 @@ comments: true
 tags: [twitch, stream, heroines, javascript, diana, rodriguez, interview]
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [https://youtu.be/M6PgSeoMCAE](https://youtu.be/M6PgSeoMCAE)

@@ -9,8 +9,6 @@ tags: [twitch, stream, javascript, css, chat, comic]
 replay: https://youtu.be/jko-punrksY
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [{{page.replay}}]({{page.replay}})

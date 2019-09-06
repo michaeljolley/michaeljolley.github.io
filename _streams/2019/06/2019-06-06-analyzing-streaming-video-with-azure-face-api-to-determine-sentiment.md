@@ -8,8 +8,6 @@ comments: true
 tags: [twitch, stream, azure, agora, ai, machine-learning, face-api, sentiment]
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [https://youtu.be/nNEHBUTJ8_4](https://youtu.be/nNEHBUTJ8_4)

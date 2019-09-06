@@ -8,8 +8,6 @@ comments: true
 tags: [twitch, stream, heroines, javascript, stanimira, vlaeva, interview]
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [https://youtu.be/k4K9EC7EHDE](https://youtu.be/k4K9EC7EHDE)

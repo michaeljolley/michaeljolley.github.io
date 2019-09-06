@@ -48,6 +48,7 @@ defaults:
     scope:
       path: '_streams'
       type: streams
+      sort_by: date
     values:
       layout: "stream"
 

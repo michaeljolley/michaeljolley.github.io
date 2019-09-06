@@ -8,8 +8,6 @@ comments: true
 tags: [twitch, stream, vs-code, extension]
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [https://youtu.be/q0yhJlofS0k](https://youtu.be/q0yhJlofS0k)
@@ -21,7 +19,7 @@ tags: [twitch, stream, vs-code, extension]
 Timestamp | Topic
 --- | ---
 00:11 | Kick it off
-00:20 | Audio clips working & theme song revealed   
+00:20 | Audio clips working & theme song revealed
 00:13 | Overviewing the application we're going to be testing
 00:35 | Showing off new sub badges & emotes
 00:38 | Starting to create our new extension based off Clarkio's VS Code Twitch Highlighter

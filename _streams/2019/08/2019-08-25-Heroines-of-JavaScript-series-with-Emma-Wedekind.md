@@ -9,8 +9,6 @@ tags: [twitch, stream, heroines, javascript, emma, wedekind, interview]
 replay: https://youtu.be/cK3Z7CASHl0
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [{{page.replay}}]({{page.replay}})

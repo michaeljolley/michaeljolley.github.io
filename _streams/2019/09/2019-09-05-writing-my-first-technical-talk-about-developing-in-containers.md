@@ -9,8 +9,6 @@ tags: [twitch, stream, containers, talk, planning]
 replay: https://youtu.be/0nMdnPhE8ms
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [{{page.replay}}]({{page.replay}})

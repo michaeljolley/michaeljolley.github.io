@@ -8,8 +8,6 @@ comments: true
 tags: [twitch, stream, vue, jen looper, heroines, javascript, interview]
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [https://youtu.be/GTRGZYol2Bg](https://youtu.be/GTRGZYol2Bg)

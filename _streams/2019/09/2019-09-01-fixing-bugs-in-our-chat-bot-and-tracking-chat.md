@@ -9,8 +9,6 @@ tags: [twitch, stream, javascript, mongo]
 replay: https://youtu.be/7nNML4-DeHU
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [{{page.replay}}]({{page.replay}})

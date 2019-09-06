@@ -9,8 +9,6 @@ tags: [twitch, stream, chat, nodejs, javascript, pull-request]
 replay: https://youtu.be/hNZevfJEfJM
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [{{page.replay}}]({{page.replay}})

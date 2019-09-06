@@ -8,8 +8,6 @@ comments: true
 tags: [twitch, stream, c#, signal-r]
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [https://youtu.be/aEOzjVVO71s](https://youtu.be/aEOzjVVO71s)
@@ -46,7 +44,7 @@ tags: [twitch, stream, c#, signal-r]
 - Heroine interviews on Sunday afternoons starting with the awesome [Jen Looper](https://twitter.com/jenlooper) of [Vue Vixens](https://vuevixens.org/)
 - [Twitch Themer](https://marketplace.visualstudio.com/items?itemName=MichaelJolley.vscode-twitch-themer) extension is now in the VS Marketplace.
 - Join our [Discord](https://discord.gg/XSG7HJm) to continue the discussions/fun off stream
-- All of the code we work on is available on GitHub at [https://github.com/MichaelJolley](https://github.com/MichaelJolley) 
+- All of the code we work on is available on GitHub at [https://github.com/MichaelJolley](https://github.com/MichaelJolley)
 
 
 ## Goals
@@ -59,7 +57,7 @@ tags: [twitch, stream, c#, signal-r]
 
 ## Next Steps
 
-- 
+-
 
 
 ---

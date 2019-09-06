@@ -9,8 +9,6 @@ tags: [twitch, stream, nodejs, vscode, extension]
 replay: https://youtu.be/-yO-LAG8fLk
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [{{page.replay}}]({{page.replay}})

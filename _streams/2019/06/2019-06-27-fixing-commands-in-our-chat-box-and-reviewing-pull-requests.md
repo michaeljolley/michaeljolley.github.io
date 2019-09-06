@@ -8,8 +8,6 @@ comments: true
 tags: [twitch, stream, nodejs, cosmosdb, mongoose]
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [https://youtu.be/uMfLdnotKZ4](https://youtu.be/uMfLdnotKZ4)

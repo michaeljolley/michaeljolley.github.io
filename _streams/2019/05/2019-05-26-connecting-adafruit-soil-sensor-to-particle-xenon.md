@@ -8,8 +8,6 @@ comments: true
 tags: [twitch, stream, particle, adafruit, stemma, iot, xenon]
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [https://youtu.be/ZvMu6JhRnOQ](https://youtu.be/ZvMu6JhRnOQ)

@@ -8,8 +8,6 @@ comments: true
 tags: [twitch, stream, heroines, javascript, natalia, tepluhina, interview]
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [https://youtu.be/f9cyf9QWSoI](https://youtu.be/f9cyf9QWSoI)

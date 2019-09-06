@@ -8,8 +8,6 @@ comments: true
 tags: [twitch, stream, vscode, extension, terminal]
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [https://youtu.be/FN9cv7ERmnY](https://youtu.be/FN9cv7ERmnY)
@@ -37,7 +35,7 @@ tags: [twitch, stream, vscode, extension, terminal]
 ## Things we learned
 
 - People really hate HotDog Stand theme. :)
-- Parithon is a genius and tirelessly works to keep us on track. 
+- Parithon is a genius and tirelessly works to keep us on track.
 
 ## Things to Review & Notes
 

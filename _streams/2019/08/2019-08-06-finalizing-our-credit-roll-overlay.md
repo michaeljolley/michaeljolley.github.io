@@ -9,8 +9,6 @@ tags: [twitch, stream, nodejs, javascript, css]
 replay: https://youtu.be/lSVfIgxmO3k
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [{{page.replay}}]({{page.replay}})

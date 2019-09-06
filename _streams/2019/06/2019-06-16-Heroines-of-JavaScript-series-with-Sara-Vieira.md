@@ -8,8 +8,6 @@ comments: true
 tags: [twitch, stream, heroines, javascript, sara, vieira, interview]
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [https://youtu.be/t7FdGHgsVVY](https://youtu.be/t7FdGHgsVVY)

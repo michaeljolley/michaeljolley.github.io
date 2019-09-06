@@ -8,8 +8,6 @@ comments: true
 tags: [twitch, stream, iot, brandon-satrom, baldy-and-bugs, hardware]
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [https://youtu.be/DaKfogMQCs0](https://youtu.be/DaKfogMQCs0)
@@ -65,7 +63,7 @@ Timestamp | Topic
 
 ### Subscribers
 
-- 
+-
 
 ### Cheers
 

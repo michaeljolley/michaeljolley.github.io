@@ -8,8 +8,6 @@ comments: true
 tags: [twitch, stream, solder, electronics]
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [https://youtu.be/0O0ydtWWhz0](https://youtu.be/0O0ydtWWhz0)
