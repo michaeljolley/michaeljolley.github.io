@@ -3,6 +3,8 @@ layout: page
 title: Bald. Bearded. Builder.
 description: Show notes from the bald. bearded. builder. Twitch stream at https://twitch.tv/themichaeljolley
 image: https://user-images.githubusercontent.com/1228996/64070917-6916a180-cc33-11e9-87df-a5917f886ed4.png
+paginate:
+  collection: streams
 ---
 {% for post in site.streams %}
 <article class="post">
