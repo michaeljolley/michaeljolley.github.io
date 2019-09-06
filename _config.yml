@@ -30,6 +30,11 @@ url: "https://michaeljolley.com"
 comments:
   receiver: https://michaeljolley-comments.azurewebsites.net/api/PostComment
 
+# Collections
+collections:
+  streams:
+    output: true
+    permalink: /streams/:title/
 
 # Defaults
 defaults:
@@ -39,6 +44,12 @@ defaults:
       type: posts
     values:
       comments: "true"
+  -
+    scope:
+      path: '_streams'
+      type: streams
+    values:
+      layout: "stream"
 
 
 # Site navigation - each item must have a title and a url.
