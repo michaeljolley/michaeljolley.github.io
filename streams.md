@@ -7,6 +7,7 @@ paginate:
   collection: streams
   per_page: 5
   limit: false
+  reversed: true
 ---
 {% for post in paginator.streams %}
 <article class="post">
