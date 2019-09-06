@@ -86,13 +86,6 @@ dribbble_uername: "michaeljolley"
 linkedin_username: "michaelwjolley"
 twitch_username: "themichaeljolley"
 
-# http://jekyllrb.com/docs/pagination/
-paginate:
-  per_page: 5
-  limit: false
-  permalink: '/blog/page:num/'
-  reversed: true
-
 plugins: [octopress-paginate]
 
 permalink: /posts/:title/
