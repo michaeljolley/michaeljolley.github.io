@@ -7,9 +7,8 @@ paginate:
   collection: streams
   per_page: 5
   limit: false
-  reversed: true
 ---
-{% for post in site.streams %}
+{% for post in paginator.posts %}
 <article class="post">
     <header class="entry-header">
         <div class="entry-header-wrap">
