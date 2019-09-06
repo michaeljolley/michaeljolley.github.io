@@ -748,6 +748,52 @@ a.archive-top-link:hover {
 }
 
 /**
+* User table styles
+* ----------------------------------------------------------------------------
+*/
+
+table.user {
+
+	width: 100%;
+
+	tbody {
+		width: 100%;
+	}
+
+	tr {
+		display: flex;
+	}
+
+	td {
+		width: 25%;
+		display: flex;
+		margin-bottom: 20px;
+
+		span {
+			margin-top: 5px;
+			line-height: 1.5;
+
+			a {
+				color: #333 !important;
+				border-bottom: 0px !important;
+				margin-right: 10px;
+				font-size: 18px
+			}
+		}
+	}
+
+	img.profile {
+		width: 60px;
+		height: 60px;
+		border: 2px solid #ac85c4;
+		margin: 0 10px 0 0;
+		background: #000;
+		border-radius: 50%;
+	}
+}
+
+
+/**
  * 6. Media Queries
  * ----------------------------------------------------------------------------
  */
