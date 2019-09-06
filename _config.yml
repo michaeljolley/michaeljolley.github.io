@@ -88,8 +88,8 @@ twitch_username: "themichaeljolley"
 
 # http://jekyllrb.com/docs/pagination/
 paginate:
-  collection: posts
-  limit: 5
+  per_page: 5
+  limit: false
   permalink: '/blog/page:num/'
   reversed: true
 
