@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2019-04-16 18:00
-title: "April 16, 2019 - Behind the scenes of the bald. bearded. builder. Twitch stream."
+title: "Behind the scenes of the bald. bearded. builder. Twitch stream."
 image: https://user-images.githubusercontent.com/1228996/56236917-5e76b980-6050-11e9-98f2-9fccbf461bd8.png
 description: "We're talking inside baseball today. How do we manage scripts, scenes, planning etc. for each stream of the bald. bearded. builder."
 comments: true

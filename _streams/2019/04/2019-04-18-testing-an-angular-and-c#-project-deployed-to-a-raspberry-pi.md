@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2019-04-18 18:00
-title: "April 18, 2019 - Testing an Angular/C# application deployed to a Raspberry Pi."
+title: "Testing an Angular/C# application deployed to a Raspberry Pi."
 image: https://user-images.githubusercontent.com/1228996/56391870-95d29b00-61f5-11e9-9e02-157507f0681e.png
 description: "Today we're testing a client application written in C# & Angular.  The application is normally deployed to a Raspberry Pi, but we'll be testing it in the Visual Studio 2019 debugger."
 comments: true
