@@ -810,6 +810,16 @@ a.archive-top-link:hover {
 
 }
 
+.post {
+    ul, ol {
+        list-style: none;
+        padding-left: 0px;
+    }
+}
+
+.task-list-item-checkbox {
+    margin-right: 10px;
+}
 
 /**
  * 6. Media Queries
