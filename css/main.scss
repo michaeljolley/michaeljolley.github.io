@@ -754,18 +754,18 @@ a.archive-top-link:hover {
 
 .user {
     display: inline-block;
-    width: 200px;
+    width: 220px;
     padding: 5px;
     border-bottom: none;
+    line-height: 1;
+    margin: 5px 5px 0 0;
 
 	span {
-        margin-top: 5px;
-        line-height: 1;
+        font-size: 16px;
 
         a {
             color: none;
             margin-right: 10px;
-            font-size: 14px;
 
             &:hover {
                 color: none;
@@ -784,17 +784,17 @@ a.archive-top-link:hover {
     }
 
     .fa-twitter,
-    .fa-github-alt,
+    .fa-github,
     .fa-linkedin,
     .fa-twitch {
-        background-color: none;
+        background-color: inherit !important;
     }
 
 
     .fa-twitter {
         color: $brand-twitter;
     }
-    .fa-github-alt {
+    .fa-github {
         color: $brand-github;
     }
     .fa-linkedin {
