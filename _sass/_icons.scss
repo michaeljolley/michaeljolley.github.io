@@ -3,7 +3,11 @@
  * ----------------------------------------------------------------------------
  */
 
-.fa {
+.fa, .fab {
+  line-height: 2.9 !important;
+}
+
+.share-post .fab {
   line-height: 2.9 !important;
 }
 
