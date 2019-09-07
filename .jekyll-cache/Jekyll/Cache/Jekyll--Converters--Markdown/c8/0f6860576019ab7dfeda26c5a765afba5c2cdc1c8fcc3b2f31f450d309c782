@@ -1,8 +1,0 @@
-I"}<p>So. I like this tutorial, however, there is no longer an lxsession directory in the user home directory. The only directories in .config are chromium, lxpanel, and lxterminal.</p>
-
-<p>The is an lxsession directory in /etc/xdg/. Should I be editing this file? It seems that wouldn’t be true since it appears to be a global setting.</p>
-
-<p>Please advise.</p>
-
-<p>Thank you</p>
-:ET
