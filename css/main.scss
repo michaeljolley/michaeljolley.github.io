@@ -752,50 +752,44 @@ a.archive-top-link:hover {
 * ----------------------------------------------------------------------------
 */
 
-table.user {
-
-    width: 100%;
+.user {
+    display: inline-block;
+    width: 200px;
+    padding: 5px;
     border-bottom: none;
 
-	tbody {
-		width: 100%;
-	}
+	span {
+        margin-top: 5px;
+        line-height: 1;
 
-	tr {
-		display: flex;
-	}
+        a {
+            color: none;
+            margin-right: 10px;
+            font-size: 14px;
 
-	td {
-		width: 25%;
-		display: flex;
-        margin-bottom: 20px;
-        border-top: none;
+            &:hover {
+                color: none;
+            }
+        }
+    }
 
 		span {
 			margin-top: 5px;
 			line-height: 1.5;
 
-			a {
-				color: none;
-				margin-right: 10px;
-				font-size: 18px;
-
-                &:hover {
-                    color: none;
-                }
-            }
 
 		}
 	}
 
-	img.profile {
-		width: 60px;
-		height: 60px;
-		border: 2px solid #ac85c4;
-		margin: 0 10px 0 0;
-		background: #000;
-		border-radius: 50%;
-    }
+    img.profile {
+        width: 30px;
+        height: 30px;
+        border: 1px solid #ac85c4;
+        margin: 0 10px 0 0;
+        background: #000;
+        border-radius: 50%;
+        float: left;
+      }
 
 
     .fa-twitter,
