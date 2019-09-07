@@ -174,7 +174,7 @@ replay: https://youtu.be/0nMdnPhE8ms
 ### Contributors
 
 <div class="users">
-  <div>
+  <div class="user">
         <img class="profile" src="https://static-cdn.jtvnw.net/jtv_user_pictures/965f629b-2e51-482e-85b4-292d5eccfbf6-profile_image-300x300.png"/>
         <span>mholloway24<br/>
         <a href="https://twitch.tv/mholloway24" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a>
@@ -281,8 +281,8 @@ replay: https://youtu.be/0nMdnPhE8ms
         <span>RamblingGeek<br/>
         <a href="https://twitch.tv/ramblinggeek" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a>
         </span>
-      </td>
-      <td>
+      </div>
+  <div class="user">
         <img class="profile" src="https://static-cdn.jtvnw.net/user-default-pictures/bb97f7e6-f11a-4194-9708-52bf5a5125e8-profile_image-300x300.jpg"/>
         <span>RishabhDeepSingh<br/>
         <a href="https://twitch.tv/rishabhdeepsingh" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a>
