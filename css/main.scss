@@ -748,6 +748,80 @@ a.archive-top-link:hover {
 }
 
 /**
+* User table styles
+* ----------------------------------------------------------------------------
+*/
+
+.user {
+    display: inline-block;
+    width: 220px;
+    padding: 5px;
+    border-bottom: none;
+    line-height: 1;
+    margin: 5px 5px 0 0;
+
+	span {
+        font-size: 16px;
+
+        a {
+            color: none;
+            margin-right: 10px;
+
+            &:hover {
+                color: none;
+            }
+
+            .fab {
+                line-height: 1 !important;
+            }
+        }
+    }
+
+    img.profile {
+        width: 30px;
+        height: 30px;
+        border: 1px solid #ac85c4;
+        margin: 0 10px 0 0;
+        background: #000;
+        border-radius: 50%;
+        float: left;
+    }
+
+    .fa-twitter,
+    .fa-github,
+    .fa-linkedin,
+    .fa-twitch {
+        background-color: inherit !important;
+    }
+
+
+    .fa-twitter {
+        color: $brand-twitter;
+    }
+    .fa-github {
+        color: $brand-github;
+    }
+    .fa-linkedin {
+        color: $brand-linkedin;
+    }
+    .fa-twitch {
+        color: $brand-twitch;
+    }
+
+}
+
+.post {
+    ul, ol {
+        list-style: none;
+        padding-left: 0px;
+    }
+}
+
+.task-list-item-checkbox {
+    margin-right: 10px;
+}
+
+/**
  * 6. Media Queries
  * ----------------------------------------------------------------------------
  */

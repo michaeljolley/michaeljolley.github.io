@@ -33,7 +33,6 @@
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic" />
     <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css" />
 
-
     <link rel="canonical" href="{{ page.url | replace:'/index.html','/' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }} Feed" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 
@@ -57,7 +56,7 @@
                 {% endfor %}
                 </ul>
             </div><!-- .nav-menu -->
-            <a target="_blank" class="subscribe-button fa fa-feed square fill-horizontal" href="{{site.baseurl}}/feed.xml"><span class="screen-reader-text">Subscribe</span></a>
+            <a target="_blank" class="subscribe-button fas fa-rss square fill-horizontal" href="{{site.baseurl}}/feed.xml"><span class="screen-reader-text">Subscribe</span></a>
         </div><!-- .inner -->
     </nav><!-- .site-navigation -->
     <header class="site-header">
@@ -68,7 +67,7 @@
     </header>
     {{content}}
     {% include footer.html %}
-    <script src="https://use.fontawesome.com/f27a665930.js"></script>
+    <script src="https://kit.fontawesome.com/f0e1e36b5e.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="{{ site.baseurl }}/js/plugins.js"></script>
     <script type="text/javascript" src="{{ site.baseurl }}/js/custom.js"></script>

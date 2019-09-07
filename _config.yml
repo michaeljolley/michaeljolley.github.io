@@ -30,6 +30,11 @@ url: "https://michaeljolley.com"
 comments:
   receiver: https://michaeljolley-comments.azurewebsites.net/api/PostComment
 
+# Collections
+collections:
+  streams:
+    output: true
+    permalink: /streams/:title/
 
 # Defaults
 defaults:
@@ -39,6 +44,13 @@ defaults:
       type: posts
     values:
       comments: "true"
+  -
+    scope:
+      path: '_streams'
+      type: streams
+      sort_by: date
+    values:
+      layout: "stream"
 
 
 # Site navigation - each item must have a title and a url.
@@ -49,8 +61,8 @@ navigation:
   url: /about/
 - text: Talks
   url: /talks/
-- text: Archives
-  url: /tags/
+- text: Streams
+  url: /streams/
 
 # Author information - author info at the bottom of the post
 author_name: "Michael Jolley"
@@ -74,10 +86,7 @@ dribbble_uername: "michaeljolley"
 linkedin_username: "michaelwjolley"
 twitch_username: "themichaeljolley"
 
-# http://jekyllrb.com/docs/pagination/
-paginate: 5
-paginate_path: '/blog/page:num/'
-plugins: [jekyll-paginate]
+plugins: [octopress-paginate]
 
 permalink: /posts/:title/
 markdown: kramdown

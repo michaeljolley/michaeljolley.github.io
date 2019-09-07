@@ -1,14 +1,16 @@
 ---
 layout: default
+description: Show notes from the bald. bearded. builder. Twitch stream at https://twitch.tv/themichaeljolley
 paginate:
-    per_page: 5
-    limit: false
+  collection: streams
+  per_page: 5
+  limit: false
+  reversed: true
 ---
 <div class="site-content">
     <div class="inner">
         <main class="site-main">
-            {% for post in paginator.posts %}
-            {% assign comment_count = site.data.comments[post.slug] | size %}
+            {% for post in paginator.streams %}
             <article class="post">
                 <header class="entry-header">
                     <div class="entry-header-wrap">
@@ -18,7 +20,7 @@ paginate:
                         <h2 class="entry-title"><a href="{{ site.baseurl }}{{ post.url }}" rel="bookmark" title="Permanent Link to {{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h2>
                     </div><!-- .entry-header-wrap -->
                     <div class="entry-meta">
-                        <time class="published" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %-d, %Y" }}</time> | <a href="{{ post.url }}#comments">{% if comment_count == 1 %}1 comment{% else %}{{ comment_count }} comments{% endif %}</a>
+                        <time class="published" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %-d, %Y" }}</time>
                     </div><!-- .entry-meta -->
                 </header><!-- .entry-header -->
                 <div class="entry-content">
@@ -50,6 +52,7 @@ paginate:
                 {% endif %}
             </nav><!-- .pagination -->
             {% endif %}
+
         </main><!-- .site-main -->
         {% include sidebar.html %}
     </div><!-- .inner -->

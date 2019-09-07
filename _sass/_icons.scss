@@ -3,8 +3,20 @@
  * ----------------------------------------------------------------------------
  */
 
-.fa {
+.fa, .fab {
   line-height: 2.9 !important;
+}
+
+.share-post .fab {
+  line-height: 2.9 !important;
+}
+
+.social-links .fab, .social-links .fas {
+  line-height: 3.9 !important;
+}
+
+.site-navigation .fas {
+  line-height: 3.3 !important;
 }
 
 .fa-chevron-up {
@@ -32,9 +44,14 @@
 .fa-twitch {
   background-color: $brand-twitch;
 }
-.fa-feed {
+.fa-rss {
   background-color: $brand-rss;
 }
-.fa-facebook {
+.fa-facebook-f {
   background-color: $brand-facebook;
+}
+
+.share-post a.fa-facebook-f:hover {
+    background-color: $brand-facebook;
+    color: $white;
 }
