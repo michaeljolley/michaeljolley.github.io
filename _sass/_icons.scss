@@ -15,6 +15,10 @@
   line-height: 3.9 !important;
 }
 
+.site-navigation .fas {
+  line-height: 3.3 !important;
+}
+
 .fa-chevron-up {
   line-height: 3.5 !important;
 }
@@ -40,9 +44,14 @@
 .fa-twitch {
   background-color: $brand-twitch;
 }
-.fa-feed {
+.fa-rss {
   background-color: $brand-rss;
 }
-.fa-facebook {
+.fa-facebook-f {
   background-color: $brand-facebook;
+}
+
+.share-post a.fa-facebook-f:hover {
+    background-color: $brand-facebook;
+    color: $white;
 }
