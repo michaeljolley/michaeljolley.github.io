@@ -754,7 +754,8 @@ a.archive-top-link:hover {
 
 table.user {
 
-	width: 100%;
+    width: 100%;
+    border-bottom: none;
 
 	tbody {
 		width: 100%;
@@ -767,18 +768,23 @@ table.user {
 	td {
 		width: 25%;
 		display: flex;
-		margin-bottom: 20px;
+        margin-bottom: 20px;
+        border-top: none;
 
 		span {
 			margin-top: 5px;
 			line-height: 1.5;
 
 			a {
-				color: #333 !important;
-				border-bottom: 0px !important;
+				color: none;
 				margin-right: 10px;
-				font-size: 18px
-			}
+				font-size: 18px;
+
+                &:hover {
+                    color: none;
+                }
+            }
+
 		}
 	}
 
@@ -789,7 +795,30 @@ table.user {
 		margin: 0 10px 0 0;
 		background: #000;
 		border-radius: 50%;
-	}
+    }
+
+
+    .fa-twitter,
+    .fa-github-alt,
+    .fa-linkedin,
+    .fa-twitch {
+        background-color: none;
+    }
+
+
+    .fa-twitter {
+        color: $brand-twitter;
+    }
+    .fa-github-alt {
+        color: $brand-github;
+    }
+    .fa-linkedin {
+        color: $brand-linkedin;
+    }
+    .fa-twitch {
+        color: $brand-twitch;
+    }
+
 }
 
 

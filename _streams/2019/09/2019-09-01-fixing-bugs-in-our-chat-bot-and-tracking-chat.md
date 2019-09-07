@@ -63,6 +63,8 @@ replay: https://youtu.be/7nNML4-DeHU
         <a href="https://twitch.tv/sorskoot" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a>
         </span>
       </td>
+    </tr>
+    <tr>
       <td>
         <img class="profile" src="https://static-cdn.jtvnw.net/user-default-pictures/bb97f7e6-f11a-4194-9708-52bf5a5125e8-profile_image-300x300.jpg"/>
         <span>Taumee412<br/>
@@ -95,18 +97,18 @@ replay: https://youtu.be/7nNML4-DeHU
         <a href="https://twitch.tv/codingisundercover" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a>
         </span>
       </td>
-      <td>
-        <img class="profile" src="https://static-cdn.jtvnw.net/jtv_user_pictures/3c435956-3fc3-4ccd-bac5-1c4e1671500b-profile_image-300x300.png"/>
-        <span>phrakberg<br/>
-        <a href="https://twitch.tv/phrakberg" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a>
-        </span>
-      </td>
     </tr>
     <tr>
       <td>
         <img class="profile" src="https://static-cdn.jtvnw.net/jtv_user_pictures/6654d342-e3b6-45c4-83fe-32b523bdc7e2-profile_image-300x300.png"/>
         <span>roberttables<br/>
         <a href="https://twitch.tv/roberttables" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a><a href="https://github.com/mtheoryx" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a>
+        </span>
+      </td>
+      <td>
+        <img class="profile" src="https://static-cdn.jtvnw.net/jtv_user_pictures/3c435956-3fc3-4ccd-bac5-1c4e1671500b-profile_image-300x300.png"/>
+        <span>phrakberg<br/>
+        <a href="https://twitch.tv/phrakberg" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a>
         </span>
       </td>
     </tr>
@@ -151,18 +153,18 @@ replay: https://youtu.be/7nNML4-DeHU
         <a href="https://twitch.tv/iamnotmyself" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a>
         </span>
       </td>
-      <td>
-        <img class="profile" src="https://static-cdn.jtvnw.net/jtv_user_pictures/6654d342-e3b6-45c4-83fe-32b523bdc7e2-profile_image-300x300.png"/>
-        <span>roberttables<br/>
-        <a href="https://twitch.tv/roberttables" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a><a href="https://github.com/mtheoryx" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a>
-        </span>
-      </td>
     </tr>
     <tr>
       <td>
         <img class="profile" src="https://static-cdn.jtvnw.net/jtv_user_pictures/abd243dc-3790-4a73-b7b4-1269f89ce083-profile_image-300x300.png"/>
         <span>parithon<br/>
         <a href="https://twitch.tv/parithon" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a>
+        </span>
+      </td>
+      <td>
+        <img class="profile" src="https://static-cdn.jtvnw.net/jtv_user_pictures/6654d342-e3b6-45c4-83fe-32b523bdc7e2-profile_image-300x300.png"/>
+        <span>roberttables<br/>
+        <a href="https://twitch.tv/roberttables" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a><a href="https://github.com/mtheoryx" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a>
         </span>
       </td>
     </tr>
@@ -192,12 +194,6 @@ replay: https://youtu.be/7nNML4-DeHU
         <a href="https://twitch.tv/iamnotmyself" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a>
         </span>
       </td>
-      <td>
-        <img class="profile" src="https://static-cdn.jtvnw.net/jtv_user_pictures/8e4eab31-0a66-4b1a-a0df-ca962e4a9b8e-profile_image-300x300.jpeg"/>
-        <span>Lannonbr<br/>
-        <a href="https://twitch.tv/lannonbr" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a>
-        </span>
-      </td>
     </tr>
     <tr>
       <td>
@@ -216,12 +212,6 @@ replay: https://youtu.be/7nNML4-DeHU
         <img class="profile" src="https://static-cdn.jtvnw.net/jtv_user_pictures/a390873e-0dff-4ae6-a798-93c1e9516616-profile_image-300x300.png"/>
         <span>RamblingGeek<br/>
         <a href="https://twitch.tv/ramblinggeek" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a>
-        </span>
-      </td>
-      <td>
-        <img class="profile" src="https://static-cdn.jtvnw.net/jtv_user_pictures/3c435956-3fc3-4ccd-bac5-1c4e1671500b-profile_image-300x300.png"/>
-        <span>phrakberg<br/>
-        <a href="https://twitch.tv/phrakberg" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a>
         </span>
       </td>
     </tr>
@@ -244,12 +234,6 @@ replay: https://youtu.be/7nNML4-DeHU
         <a href="https://twitch.tv/lampewebdev" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a>
         </span>
       </td>
-      <td>
-        <img class="profile" src="https://static-cdn.jtvnw.net/jtv_user_pictures/6654d342-e3b6-45c4-83fe-32b523bdc7e2-profile_image-300x300.png"/>
-        <span>roberttables<br/>
-        <a href="https://twitch.tv/roberttables" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a><a href="https://github.com/mtheoryx" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a>
-        </span>
-      </td>
     </tr>
     <tr>
       <td>
@@ -268,12 +252,6 @@ replay: https://youtu.be/7nNML4-DeHU
         <img class="profile" src="https://static-cdn.jtvnw.net/jtv_user_pictures/095ad31c-6075-40b9-ad89-be9a01a0bf58-profile_image-300x300.png"/>
         <span>BixxPlays<br/>
         <a href="https://twitch.tv/bixxplays" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a>
-        </span>
-      </td>
-      <td>
-        <img class="profile" src="https://static-cdn.jtvnw.net/user-default-pictures/bb97f7e6-f11a-4194-9708-52bf5a5125e8-profile_image-300x300.jpg"/>
-        <span>Telluuu<br/>
-        <a href="https://twitch.tv/telluuu" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a>
         </span>
       </td>
     </tr>
@@ -296,12 +274,6 @@ replay: https://youtu.be/7nNML4-DeHU
         <a href="https://twitch.tv/tuesdaylte" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a>
         </span>
       </td>
-      <td>
-        <img class="profile" src="https://static-cdn.jtvnw.net/user-default-pictures/bb97f7e6-f11a-4194-9708-52bf5a5125e8-profile_image-300x300.jpg"/>
-        <span>Taumee412<br/>
-        <a href="https://twitch.tv/taumee412" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a>
-        </span>
-      </td>
     </tr>
     <tr>
       <td>
@@ -320,6 +292,40 @@ replay: https://youtu.be/7nNML4-DeHU
         <img class="profile" src="https://static-cdn.jtvnw.net/jtv_user_pictures/abd243dc-3790-4a73-b7b4-1269f89ce083-profile_image-300x300.png"/>
         <span>parithon<br/>
         <a href="https://twitch.tv/parithon" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a>
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <img class="profile" src="https://static-cdn.jtvnw.net/jtv_user_pictures/8e4eab31-0a66-4b1a-a0df-ca962e4a9b8e-profile_image-300x300.jpeg"/>
+        <span>Lannonbr<br/>
+        <a href="https://twitch.tv/lannonbr" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a>
+        </span>
+      </td>
+      <td>
+        <img class="profile" src="https://static-cdn.jtvnw.net/user-default-pictures/bb97f7e6-f11a-4194-9708-52bf5a5125e8-profile_image-300x300.jpg"/>
+        <span>Taumee412<br/>
+        <a href="https://twitch.tv/taumee412" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a>
+        </span>
+      </td>
+      <td>
+        <img class="profile" src="https://static-cdn.jtvnw.net/user-default-pictures/bb97f7e6-f11a-4194-9708-52bf5a5125e8-profile_image-300x300.jpg"/>
+        <span>Telluuu<br/>
+        <a href="https://twitch.tv/telluuu" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a>
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <img class="profile" src="https://static-cdn.jtvnw.net/jtv_user_pictures/6654d342-e3b6-45c4-83fe-32b523bdc7e2-profile_image-300x300.png"/>
+        <span>roberttables<br/>
+        <a href="https://twitch.tv/roberttables" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a><a href="https://github.com/mtheoryx" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a>
+        </span>
+      </td>
+      <td>
+        <img class="profile" src="https://static-cdn.jtvnw.net/jtv_user_pictures/3c435956-3fc3-4ccd-bac5-1c4e1671500b-profile_image-300x300.png"/>
+        <span>phrakberg<br/>
+        <a href="https://twitch.tv/phrakberg" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a>
         </span>
       </td>
     </tr>
