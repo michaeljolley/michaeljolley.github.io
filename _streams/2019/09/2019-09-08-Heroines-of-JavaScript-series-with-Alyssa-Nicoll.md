@@ -2,11 +2,11 @@
 layout: post
 date: 2019-09-08 18:09
 title: "Heroines of JavaScript series: Lauryn & Layla interview Alyssa Nicoll"
-image:
-description: ""
+image: https://user-images.githubusercontent.com/1228996/64550317-43a32b00-d2f8-11e9-9577-ffc08b8f4927.png
+description: "As part of our Heroines of JavaScript series, Lauryn & Layla interview Alyssa Nicoll."
 comments: true
-tags: [twitch, stream]
-replay:
+tags: [twitch, stream, heroines, javascript, alyssa, nicoll, interview]
+replay: https://youtu.be/qapOJX_LjZw
 ---
 
 <img src="{{page.image}}"/>
@@ -21,9 +21,11 @@ replay:
 
 | Timestamp | Topic
 | ---       | ---
-| [00:41]({{page.replay}}?t=2471.379) | mdxdeck https://github.com/jxnblk/mdx-deck |
-| [01:02]({{page.replay}}?t=3740.659) | @dare_devel_ops won the Heroines of JavaScript card deck |
-| [04:00]({{page.replay}}?t=14443.271) | Wrapping up and raid to [sushiday](https://twitch.tv/sushiday) |
+| [00:07]({{page.replay}}?t=660)      | Kicking it off                                                                                          |
+| [00:18]({{page.replay}}?t=1080)     | Interview with Alyssa Nicoll                                                                            |
+| [01:02]({{page.replay}}?t=3740)     | [dare_devel_ops](https://twitch.tv/dare_devel_ops) won the Heroines of JavaScript card deck             |
+| [01:20]({{page.replay}}?t=4800)     | Starting to work on our presentation slides                                                             |
+| [04:00]({{page.replay}}?t=14443)    | Wrapping up and raid to [sushiday](https://twitch.tv/sushiday)                                          |
 
 ---
 
@@ -35,13 +37,14 @@ replay:
 
 ### Goals
 
+- [x] Interview with Alyssa Nicoll
 
 ### Things We Learned
 
-- <a href="https://twitch.tv/snoopaloopy" target="_blank">snoopaloopy</a>: shared music to code by at http://mtcb.pwop.com 
-- <a href="https://twitch.tv/phrakberg" target="_blank">phrakberg</a>: gets praise for his suggestion on the scene for the heroines interviews 
-- <a href="https://twitch.tv/snoopaloopy" target="_blank">snoopaloopy</a>: shared https://eng.uber.com/introducing-kraken/ 
-- <a href="https://twitch.tv/react" target="_blank">react</a>: mdx deck website https://mdx-deck.jxnblk.com 
+- <a href="https://twitch.tv/snoopaloopy" target="_blank">snoopaloopy</a>: shared <a href="http://mtcb.pwop.com" target="_blank">Music to Code By</a>
+- <a href="https://twitch.tv/phrakberg" target="_blank">phrakberg</a>: gets praise for his suggestion on the scene for the heroines interviews
+- <a href="https://twitch.tv/snoopaloopy" target="_blank">snoopaloopy</a>: shared <a href="https://eng.uber.com/introducing-kraken/" target="_blank">https://eng.uber.com/introducing-kraken/</a>
+- <a href="https://twitch.tv/roberttables" target="_blank">roberttables</a>: shared <a href="https://mdx-deck.jxnblk.com" target="_blank">MDX Deck</a>
 
 ---
 
@@ -65,7 +68,6 @@ replay:
     <span>MatthewDGroves<br/>
       <a href="https://twitch.tv/matthewdgroves" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a>
   </div>
-
 </div>
 
 ### Raids
@@ -76,7 +78,6 @@ replay:
     <span>Seekaplayer<br/>
       <a href="https://twitch.tv/seekaplayer" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a>
   </div>
-
 </div>
 
 ### Moderators
@@ -112,7 +113,6 @@ replay:
     <span>codephobia<br/>
       <a href="https://twitch.tv/codephobia" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a>
   </div>
-
 </div>
 
 ### Contributors
@@ -268,6 +268,4 @@ replay:
     <span>bl3nd865<br/>
       <a href="https://twitch.tv/bl3nd865" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a>
   </div>
-
 </div>
-
