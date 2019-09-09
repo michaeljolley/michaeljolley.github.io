@@ -9,8 +9,6 @@ tags: [twitch, stream, heroines, javascript, alyssa, nicoll, interview]
 replay: https://youtu.be/qapOJX_LjZw
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [{{page.replay}}]({{page.replay}})
