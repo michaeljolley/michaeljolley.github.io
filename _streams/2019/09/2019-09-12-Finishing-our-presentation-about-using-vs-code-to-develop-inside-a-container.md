@@ -186,7 +186,7 @@ replay: https://youtu.be/Igsg3ZvaMl4
   <div class="user">
     <img class="profile" src="https://static-cdn.jtvnw.net/jtv_user_pictures/cae6564a-76f1-4dc9-8d47-1d810a807def-profile_image-300x300.png"/>
     <span>CalvinAAllen<br/>
-      <a href="https://twitch.tv/calvinaallen" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a>
+      <a href="https://twitch.tv/calvinaallen" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a></span>
   </div>
   <div class="user">
     <img class="profile" src="https://static-cdn.jtvnw.net/jtv_user_pictures/926c0d6b-bc04-4dba-88a6-915dc6c6bb54-profile_image-300x300.png"/>
