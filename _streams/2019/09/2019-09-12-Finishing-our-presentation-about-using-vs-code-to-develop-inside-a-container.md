@@ -2,14 +2,12 @@
 layout: post
 date: 2019-09-12 18:09
 title: "Finishing our presentation about using VS Code to develop inside a container"
-image:
-description: ""
+image: https://user-images.githubusercontent.com/1228996/64827687-ec68b900-d58a-11e9-9672-e20e103c90c8.png
+description: "Wrapping up the design for our presentation on developing within a container."
 comments: true
-tags: [twitch, stream]
-replay:
+tags: [twitch, stream, powerpoint, presentation, talk]
+replay: https://youtu.be/Igsg3ZvaMl4
 ---
-
-<img src="{{page.image}}"/>
 
 ## Stream Replay Link
 
@@ -21,20 +19,17 @@ replay:
 
 | Timestamp | Topic
 | ---       | ---
-| [00:24]({{page.replay}}?t=1461.717) | Reviewing the talk outline |
-| [00:51]({{page.replay}}?t=3103.395) | Mike burns his fingers |
-| [02:38]({{page.replay}}?t=9522.264) | Wrapping up and raid to [roberttables](https://twitch.tv/roberttables) |
+| [00:24]({{page.replay}}?t=1461.717)     | Reviewing the talk outline |
+| [00:37]({{page.replay}}?t=2220)         | Starting to design the presentation     |
+| [00:51]({{page.replay}}?t=3103.395)     | Mike burns his fingers |
+| [02:03]({{page.replay}}?t=7380)         | Starting to review what to cover in our demo    |
+| [02:38]({{page.replay}}?t=9522.264)     | Wrapping up and raid to [roberttables](https://twitch.tv/roberttables) |
 
 ---
 
 ### Today's Candle To Code By
 
 <a href="https://amzn.to/30ttzO6" target="_blank">Whiskey and Cigar (The Den)</a>
-
----
-
-### Goals
-
 
 ---
 
@@ -48,7 +43,6 @@ replay:
     <span>LampeWebDev<br/>
       <a href="https://twitch.tv/lampewebdev" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a>
   </div>
-
 </div>
 
 ### Raids
@@ -59,7 +53,6 @@ replay:
     <span>CopperBeardy<br/>
       <a href="https://twitch.tv/copperbeardy" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a><a href="https://twitter.com/copperbeardy" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a><a href="https://github.com/copperbeardy" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a>
   </div>
-
 </div>
 
 ### Moderators
@@ -90,7 +83,6 @@ replay:
     <span>RamblingGeek<br/>
       <a href="https://twitch.tv/ramblinggeek" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a><a href="https://twitter.com/rgeekuk" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a><a href="https://github.com/ramblinggeekuk" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a>
   </div>
-
 </div>
 
 ### Contributors
@@ -211,6 +203,4 @@ replay:
     <span>Unh0ly_Tigg<br/>
       <a href="https://twitch.tv/unh0ly_tigg" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a>
   </div>
-
 </div>
-
