@@ -12,7 +12,7 @@ banner_image: talksPage.jpg
 
 **2019 Sept 15** - **<a href="https://gdgcloudauburndevfest19.firebaseapp.com/" target="_blank">GDG DevFest 2019</a>**<br/>
 Auburn, AL<br/>
-<a href="/devfest2019">Slides, source & links</a><br/>
+<a href="/talks/devfest2019">Slides, source & links</a><br/>
 Think inside the box. Developing inside a container to avoid conflicts, improve security and speed up on-boarding
 
 ---
