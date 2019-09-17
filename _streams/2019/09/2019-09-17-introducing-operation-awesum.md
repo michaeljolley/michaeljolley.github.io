@@ -9,8 +9,6 @@ tags: [twitch, stream, awesum]
 replay: https://youtu.be/6XJipzoUJpU
 ---
 
-<img src="{{page.image}}"/>
-
 ## Stream Replay Link
 
 [{{page.replay}}]({{page.replay}})
