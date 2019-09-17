@@ -33,7 +33,7 @@ Think inside the box. Developing inside a container to avoid conflicts, improve 
 
 ---
 
-# Past
+# Previous
 
 ### 2019
 
