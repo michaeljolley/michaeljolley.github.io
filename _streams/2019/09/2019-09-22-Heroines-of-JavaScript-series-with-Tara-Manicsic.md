@@ -2,11 +2,11 @@
 layout: post
 date: 2019-09-22 18:09
 title: "Heroines of JavaScript series: Lauryn & Layla interview Tara Manicsic"
-image:
-description: ""
+image: https://user-images.githubusercontent.com/1228996/65442777-72d69380-ddf2-11e9-93e3-3a2104c53edd.png
+description: "As part of our Heroines of JavaScript series, Lauryn & Layla interview Tara Manicsic."
 comments: true
-tags: [twitch, stream]
-replay:
+tags: [twitch, stream, heroines, javascript, tara, manicsic, interview]
+replay: https://youtu.be/xlncOANHqls
 ---
 
 ## Stream Replay Link
@@ -19,18 +19,16 @@ replay:
 
 | Timestamp | Topic
 | ---       | ---
-| [02:57]({{page.replay}}?t=10646.379) | Wrapping up and raid to [codephobia](https://twitch.tv/codephobia) |
+| [00:13]({{page.replay}}?t=780)        | Kicking it off                                                      |
+| [00:23]({{page.replay}}?t=1380)       | Lauryn & Layla interview Tara Manicsic                              |
+| [02:13]({{page.replay}}?t=7980)       | Working on our IO chat bot                                          |
+| [02:57]({{page.replay}}?t=10646.379)  | Wrapping up and raid to [codephobia](https://twitch.tv/codephobia)  |
 
 ---
 
 ### Today's Candle To Code By
 
 <a href="https://amzn.to/2GSsMxX" target="_blank">Warm Tobacco Pipe</a>
-
----
-
-### Goals
-
 
 ---
 
@@ -44,7 +42,6 @@ replay:
     <span>RamblingGeek<br/>
       <a href="https://twitch.tv/ramblinggeek" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a><a href="https://twitter.com/rgeekuk" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a><a href="https://github.com/ramblinggeekuk" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a></span>
   </div>
-
 </div>
 
 ### Raids
@@ -55,7 +52,6 @@ replay:
     <span>CopperBeardy<br/>
       <a href="https://twitch.tv/copperbeardy" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a><a href="https://twitter.com/copperbeardy" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a><a href="https://github.com/copperbeardy" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a></span>
   </div>
-
 </div>
 
 ### Moderators
@@ -86,7 +82,6 @@ replay:
     <span>RamblingGeek<br/>
       <a href="https://twitch.tv/ramblinggeek" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a><a href="https://twitter.com/rgeekuk" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a><a href="https://github.com/ramblinggeekuk" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a></span>
   </div>
-
 </div>
 
 ### Contributors
@@ -197,6 +192,4 @@ replay:
     <span>afallenhope<br/>
       <a href="https://twitch.tv/afallenhope" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a></span>
   </div>
-
 </div>
-
