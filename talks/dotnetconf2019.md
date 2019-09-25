@@ -18,3 +18,7 @@ Hi! Thanks for attending my talk!
 ### Additional Resources
 
 <a href="https://www.docker.com/" target="_blank">Docker</a>
+
+<a href="https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017&pivots=cs1-powershell" target="_blank">Quickstart: Run SQL Server container images with Docker</a>
+
+<a href="https://github.com/Microsoft/mssql-docker" target="_blank">SQL Server in Docker GitHub repo</a>
