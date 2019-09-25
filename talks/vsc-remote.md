@@ -9,7 +9,7 @@ Hi! Thanks for attending my talk!
 
 ### Slide Deck
 
-<a href="http://bit.ly/2mAh3hc" target="_blank">http://bit.ly/2mAh3hc</a>
+<a href="http://bit.ly/vscode-remote" target="_blank">http://bit.ly/vscode-remote</a>
 
 ### Demo Code
 

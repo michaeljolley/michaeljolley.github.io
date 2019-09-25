@@ -9,7 +9,7 @@ Hi! Thanks for attending my talk!
 
 ### Slide Deck
 
-<a href="" target="_blank"></a>
+<a href="http://bit.ly/sql-docker" target="_blank">http://bit.ly/sql-docker</a>
 
 ### Demo Code
 
