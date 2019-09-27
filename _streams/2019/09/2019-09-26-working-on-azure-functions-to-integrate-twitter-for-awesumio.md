@@ -2,11 +2,11 @@
 layout: post
 date: 2019-09-26 18:09
 title: "Awesum.io | Working on the Azure Functions and integrating with Twitter"
-image:
-description: ""
+image: https://user-images.githubusercontent.com/1228996/65778333-59dc2400-e10b-11e9-93ab-77032bdbcd39.png
+description: "Modified our Azure Functions to be durable functions for Awesum.io"
 comments: true
-tags: [twitch, stream]
-replay:
+tags: [twitch, stream, azure, functions, durable, twitter]
+replay: https://youtu.be/GZ_BOM4jpqw
 ---
 
 ## Stream Replay Link
@@ -19,9 +19,10 @@ replay:
 
 | Timestamp | Topic
 | ---       | ---
-| [04:11]({{page.replay}}?t=15065.518) | Wrapping up and raid to [cpayette](https://twitch.tv/cpayette) |
-
----
+| [00:09]({{page.replay}}?t=540) | Kicking it off with Nate telling jokes |
+| [00:15]({{page.replay}}?t=900) | Discussing the new Twitch UI &amp; my talk at DotNetConf 2019 |
+| [00:28]({{page.replay}}?t=1680) | Starting to work on awesum.io |
+| [04:11]({{page.replay}}?t=15065) | Wrapping up and raid to [cpayette](https://twitch.tv/cpayette) |
 
 ### Today's Candle To Code By
 
@@ -31,12 +32,14 @@ replay:
 
 ### Goals
 
+- [] Finalize our Azure Functions
 
 ### Things We Learned
 
-- <a href="https://twitch.tv/lannonbr" target="_blank">Lannonbr</a>: shared suz/fritz wired article 
-- <a href="https://twitch.tv/lannonbr" target="_blank">Lannonbr</a>: shared https://www.wired.com/story/want-free-coding-lessons-twitch-real-time/ 
-- <a href="https://twitch.tv/lannonbr" target="_blank">Lannonbr</a>: wired article 
+- <a href="https://twitch.tv/lannonbr" target="_blank">Lannonbr</a>: shared the <a href="https://www.wired.com/story/want-free-coding-lessons-twitch-real-time/" target="blank">WIRED article</a> featuring noopkat, csharpfritz & SushiDay
+- <a href="https://twitch.tv/cmjchrisjones" target="_blank">cmjchrisjones</a>: shared <a href="https://stackoverflow.com/questions/46553687/azure-function-run-code-on-startup" target="_blank">a link that describes dependancy injection in Azure Functions</a>
+- <a href="https://twitch.tv/RamblingGeek" target="_blank">RamblingGeek</a>: shared the new <a href="https://www.elgato.com/en/gaming/multi-mount" target="_blank">Multi-mount products</a> from Elgato
+- <a href="https://twitch.tv/parithon" target="_blank"><a/> shared a <a href="https://stackoverflow.com/questions/46315734/how-to-call-another-function-with-in-an-azure-function" target="_blank">StackOverflow</a> question that discusses using Durable Functions in Azure
 
 ---
 
@@ -50,7 +53,6 @@ replay:
     <span>cpayette<br/>
       <a href="https://twitch.tv/cpayette" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a></span>
   </div>
-
 </div>
 
 ### Raids
@@ -61,7 +63,6 @@ replay:
     <span>sorskoot<br/>
       <a href="https://twitch.tv/sorskoot" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a></span>
   </div>
-
 </div>
 
 ### Moderators
@@ -97,7 +98,6 @@ replay:
     <span>cpayette<br/>
       <a href="https://twitch.tv/cpayette" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a></span>
   </div>
-
 </div>
 
 ### Contributors
@@ -313,6 +313,4 @@ replay:
     <span>warpaint<br/>
       <a href="https://twitch.tv/warpaint" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a></span>
   </div>
-
 </div>
-
