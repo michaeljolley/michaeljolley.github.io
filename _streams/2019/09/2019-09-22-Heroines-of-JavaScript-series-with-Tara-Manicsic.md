@@ -6,7 +6,7 @@ image: https://user-images.githubusercontent.com/1228996/65442777-72d69380-ddf2-
 description: "As part of our Heroines of JavaScript series, Lauryn & Layla interview Tara Manicsic."
 comments: true
 tags: [twitch, stream, heroines, javascript, tara, manicsic, interview]
-replay: https://youtu.be/xlncOANHqls
+replay: https://youtu.be/7aXox3Ijm04
 ---
 
 ## Stream Replay Link
