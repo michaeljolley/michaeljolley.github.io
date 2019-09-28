@@ -67,20 +67,23 @@ h6 {
     text-transform: uppercase;
 }
 
+.users {
+    margin: 15px 0px 24px;
+}
+
 .entry-content {
     h2, h3 {
         padding: 10px 20px;
         transform: skewY(-2deg);
         transform-origin: top left;
         color: #fff;
-        margin: 6px -80px 24px;
-        margin-top: 24px !important;
+        margin: 0px -80px !important;
     }
     h2 {
         background-color: #22b3eb;
     }
     h3 {
-        background-color: #474747;
+        background-color: #646464;
     }
 }
 
