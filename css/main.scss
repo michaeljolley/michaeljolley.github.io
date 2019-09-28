@@ -831,15 +831,15 @@ a.archive-top-link:hover {
         margin-left: 0;
         margin-right: 0;
     }
-}
-
-@media only screen and (max-width: 960px) {
 
     .entry-content {
         h2, h3 {
             margin: 0 -30px 24px;
         }
     }
+}
+
+@media only screen and (max-width: 960px) {
 
     .sidebar,
     .site-main {
