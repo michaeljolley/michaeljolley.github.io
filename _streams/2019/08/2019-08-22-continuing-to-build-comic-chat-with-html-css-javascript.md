@@ -9,7 +9,7 @@ tags: [twitch, stream, javascript, css, chat, comic]
 replay: https://youtu.be/jko-punrksY
 ---
 
-## Stream Replay Link
+### Stream Replay Link
 
 [{{page.replay}}]({{page.replay}})
 
@@ -26,13 +26,9 @@ replay: https://youtu.be/jko-punrksY
 | [01:58]({{page.replay}}?t=7080)       | Special guest-host Nate joins us for a bit                        |
 | [02:50]({{page.replay}}?t=10258.642)  | Wrapping up and raid to [sorskoot](https://twitch.tv/sorskoot)    |
 
----
-
 ### Today's Candle To Code By
 
 [Whiskey and Cigar (The Den)](https://amzn.to/30ttzO6)
-
----
 
 ### Goals
 
@@ -42,8 +38,6 @@ replay: https://youtu.be/jko-punrksY
 ### Things We Learned
 
 - [Julll](https://twitch.tv/julll): shared https://www.sassmeister.com for compiling sass in the browser
-
----
 
 ## Today's stream brought to you by
 

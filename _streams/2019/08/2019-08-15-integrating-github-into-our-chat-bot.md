@@ -9,7 +9,7 @@ tags: [twitch, stream, github, nodejs, javascript, typescript]
 replay: https://youtu.be/E-MsCYsSBGw
 ---
 
-## Stream Replay Link
+### Stream Replay Link
 
 [{{page.replay}}]({{page.replay}})
 
@@ -26,13 +26,9 @@ replay: https://youtu.be/E-MsCYsSBGw
 | 00:38     | Starting to work on integrating GitHub                    |
 | 04:23     | Wrapping up and raid to [Lana_Lux](https://twitch.tv/lana_lux)    |
 
----
-
 ### Today's Candle To Code By
 
 [Whiskey and Cigar (The Den)](https://amzn.to/30ttzO6)
-
----
 
 ### Goals
 

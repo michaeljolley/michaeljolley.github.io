@@ -9,7 +9,7 @@ tags: [twitch, stream, awesum, faunadb, graphql]
 replay: https://youtu.be/E2YP4v5eT4Q
 ---
 
-## Stream Replay Link
+### Stream Replay Link
 
 [{{page.replay}}]({{page.replay}})
 
@@ -24,19 +24,13 @@ replay: https://youtu.be/E2YP4v5eT4Q
 | [00:42]({{page.replay}}?t=2520) | Starting to review FaunaDb for the data side of our project |
 | [02:47]({{page.replay}}?t=10045.182) | Wrapping up and raid to [sorskoot](https://twitch.tv/sorskoot) |
 
----
-
 ### Today's Candle To Code By
 
 <a href="https://amzn.to/320cEn1" target="_blank">Unicorn Dust</a>
 
----
-
 ### Things We Learned
 
 - <a href="https://twitch.tv/roberttables" target="_blank">roberttables</a>: shared <a href="https://javascript30.com" target="_blank">https://javascript30.com</a>
-
----
 
 ## Today's stream brought to you by
 

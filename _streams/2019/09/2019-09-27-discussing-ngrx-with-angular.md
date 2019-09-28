@@ -9,7 +9,7 @@ tags: [twitch, stream, angular, ngrx]
 replay: https://youtu.be/gzX75G9xWOs
 ---
 
-## Stream Replay Link
+### Stream Replay Link
 
 [{{page.replay}}]({{page.replay}})
 
@@ -22,13 +22,9 @@ replay: https://youtu.be/gzX75G9xWOs
 | [00:07]({{page.replay}}?t=433.364) | Kicking it off &amp; the demo begins |
 | [04:39]({{page.replay}}?t=16758.616) | Wrapping up and raid to [chrisbiscardi](https://twitch.tv/chrisbiscardi) |
 
----
-
 ### Today's Candle To Code By
 
 <a href="https://amzn.to/320cEn1" target="_blank">Unicorn Dust</a>
-
----
 
 ## Today's stream brought to you by
 

@@ -9,7 +9,7 @@ tags: [twitch, stream, aspnet, jquery, css, html]
 replay: https://youtu.be/94V5-QOfFNo
 ---
 
-## Stream Replay Link
+### Stream Replay Link
 
 [{{page.replay}}]({{page.replay}})
 
@@ -29,14 +29,10 @@ replay: https://youtu.be/94V5-QOfFNo
 
 <a href="https://amzn.to/30ttzO6" target="_blank">Whiskey and Cigar (The Den)</a>
 
----
-
 ### Things We Learned
 
 - <a href="https://twitch.tv/roberttables" target="_blank">roberttables</a>: new lyrics to the tune of killing me softly - strumming my console errors with his finger, singing my type errors with his song, killing me softly, with his "reliance on a type system for javascript"
 - <a href="https://twitch.tv/accordingtobo" target="_blank">AccordingToBo</a>: shared the cynical developer podcast at <a href="https://cynicaldeveloper.com" target="_blank">https://cynicaldeveloper.com</a>
-
----
 
 ## Today's stream brought to you by
 

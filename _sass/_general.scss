@@ -82,7 +82,13 @@ table {
         color: #fff;
         margin: 0 -80px 24px;
     }
+
+    h2 + h3 {]
+        margin-top: 0px;
+    }
+
     h2 {
+        margin-bottom: 0px;
         background-color: #22b3eb;
     }
     h3 {

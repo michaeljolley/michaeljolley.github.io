@@ -9,7 +9,7 @@ tags: [twitch, stream, awesum]
 replay: https://youtu.be/6XJipzoUJpU
 ---
 
-## Stream Replay Link
+### Stream Replay Link
 
 [{{page.replay}}]({{page.replay}})
 
@@ -25,13 +25,9 @@ replay: https://youtu.be/6XJipzoUJpU
 | [02:36]({{page.replay}}?t=9361.536) | Squirreled again by keyboards! |
 | [03:18]({{page.replay}}?t=11912.735) | Wrapping up and raid to [roberttables](https://twitch.tv/roberttables) |
 
----
-
 ### Today's Candle To Code By
 
 <a href="https://stinkycandlecompany.com/product/wet-grass-candle" target="_blank">Wet Grass</a>
-
----
 
 ### Things We Learned
 

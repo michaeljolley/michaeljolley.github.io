@@ -9,7 +9,7 @@ tags: [twitch, stream, powerpoint, presentation, talk]
 replay: https://youtu.be/Igsg3ZvaMl4
 ---
 
-## Stream Replay Link
+### Stream Replay Link
 
 [{{page.replay}}]({{page.replay}})
 
@@ -25,13 +25,9 @@ replay: https://youtu.be/Igsg3ZvaMl4
 | [02:03]({{page.replay}}?t=7380)         | Starting to review what to cover in our demo    |
 | [02:38]({{page.replay}}?t=9522.264)     | Wrapping up and raid to [roberttables](https://twitch.tv/roberttables) |
 
----
-
 ### Today's Candle To Code By
 
 <a href="https://amzn.to/30ttzO6" target="_blank">Whiskey and Cigar (The Den)</a>
-
----
 
 ## Today's stream brought to you by
 

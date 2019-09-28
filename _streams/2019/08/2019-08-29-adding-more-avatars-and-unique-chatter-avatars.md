@@ -9,7 +9,7 @@ tags: [twitch, stream, javascript, css, html, chat]
 replay: https://youtu.be/1Wmw5NFN4kI
 ---
 
-## Stream Replay Link
+### Stream Replay Link
 
 [{{page.replay}}]({{page.replay}})
 
@@ -26,20 +26,14 @@ replay: https://youtu.be/1Wmw5NFN4kI
 | [01:07]({{page.replay}}?t=4067.978) | Start coding |
 | [02:37]({{page.replay}}?t=9476.977) | Wrapping up and raid to [roberttables](https://twitch.tv/roberttables) |
 
----
-
 ### Today's Candle To Code By
 
 [Unicorn Dust](https://amzn.to/320cEn1)
-
----
 
 ### Goals
 
 - [x] Adding more generic characters to chat
 - [x] Add ability for viewers to have their own avatar
-
----
 
 ## Today's stream brought to you by
 

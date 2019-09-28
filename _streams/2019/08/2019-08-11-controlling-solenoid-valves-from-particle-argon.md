@@ -9,7 +9,7 @@ tags: [twitch, stream, particle, argon, xenon, breadboard, solenoid, valve, iot]
 replay: https://youtu.be/8YhOWqLVoTc
 ---
 
-## Stream Replay Link
+### Stream Replay Link
 
 [{{page.replay}}]({{page.replay}})
 
@@ -27,20 +27,14 @@ replay: https://youtu.be/8YhOWqLVoTc
 | 02:15     | Debugging why our signal isn't getting through our transistor to the valve      |
 | 02:43     | Wrapping up and raid to [cmgriffing](https://twitch.tv/cmgriffing)              |
 
----
-
 ### Today's Candle To Code By
 
 [Old Factory Straight Razor](https://amzn.to/2IHHPNJ)
-
----
 
 ### Goals
 
 - [x] Step up voltage coming from the Argon (3.3v) to 12v so we can power the valve
 - [ ] Actuate the valve from code
-
----
 
 ## Today's stream brought to you by
 
