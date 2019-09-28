@@ -1,12 +1,12 @@
 ---
 layout: post
 date: 2019-09-27 17:09
-title: "Pop-up stream discussing NGRX with Angular"
-image:
-description: ""
+title: "Discussing NGRX with Angular"
+image: https://user-images.githubusercontent.com/1228996/65810951-fd165300-e176-11e9-8686-47aba1521afb.png
+description: "Just a quick intro/demo to using NGRX with Angular for a few viewers who needed a walkthrough."
 comments: true
-tags: [twitch, stream]
-replay:
+tags: [twitch, stream, angular, ngrx]
+replay: https://youtu.be/gzX75G9xWOs
 ---
 
 ## Stream Replay Link
@@ -19,7 +19,7 @@ replay:
 
 | Timestamp | Topic
 | ---       | ---
-| [00:07]({{page.replay}}?t=433.364) | Kicking it off |
+| [00:07]({{page.replay}}?t=433.364) | Kicking it off &amp; the demo begins |
 | [04:39]({{page.replay}}?t=16758.616) | Wrapping up and raid to [chrisbiscardi](https://twitch.tv/chrisbiscardi) |
 
 ---
@@ -27,11 +27,6 @@ replay:
 ### Today's Candle To Code By
 
 <a href="https://amzn.to/320cEn1" target="_blank">Unicorn Dust</a>
-
----
-
-### Goals
-
 
 ---
 
@@ -181,4 +176,3 @@ replay:
   </div>
 
 </div>
-
