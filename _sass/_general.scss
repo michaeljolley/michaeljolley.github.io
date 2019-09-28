@@ -50,6 +50,7 @@ h2 {
 
 h3 {
     font-size: 24px;
+
 }
 
 h4 {
@@ -64,6 +65,23 @@ h6 {
     font-size: 16px;
     letter-spacing: 1px;
     text-transform: uppercase;
+}
+
+.entry-content {
+    h2, h3 {
+        padding: 10px 20px;
+        transform: skewY(-2deg);
+        transform-origin: top left;
+        color: #fff;
+        margin: 6px -80px 24px;
+        margin-top: 24px !important;
+    }
+    h2 {
+        background-color: #22b3eb;
+    }
+    h3 {
+        background-color: #474747;
+    }
 }
 
 address {
