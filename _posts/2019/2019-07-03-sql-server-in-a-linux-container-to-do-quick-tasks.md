@@ -31,7 +31,7 @@ Microsoft has released several Docker images for SQL Server, including one that 
 
 Let’s go through the command to get everything running and then detail what each parameter is for.
 
-{% highlight ps %}
+{% highlight powershell %}
 
 docker run -e 'ACCEPT_EULA=Y' `
 -e 'SA_PASSWORD=<YourStrong!Passw0rd>' `
