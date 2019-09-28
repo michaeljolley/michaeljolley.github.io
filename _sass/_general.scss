@@ -71,19 +71,23 @@ h6 {
     margin: 15px 0px 24px;
 }
 
+table {
+    margin: 6px -80px 24px;
+}
+
 .entry-content {
+
     h2, h3 {
         padding: 10px 20px;
-        transform: skewY(-2deg);
-        transform-origin: top left;
         color: #fff;
-        margin: 0px -80px !important;
+        margin: 0 -80px 24px;
     }
     h2 {
         background-color: #22b3eb;
     }
     h3 {
-        background-color: #646464;
+        background-color: #c0c0c0;
+        color: #666666;
     }
 }
 

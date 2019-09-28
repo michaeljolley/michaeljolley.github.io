@@ -834,6 +834,13 @@ a.archive-top-link:hover {
 }
 
 @media only screen and (max-width: 960px) {
+
+    .entry-content {
+        h2, h3 {
+            margin: 0 -30px 24px;
+        }
+    }
+
     .sidebar,
     .site-main {
         float: none;
