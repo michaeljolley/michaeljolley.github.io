@@ -121,7 +121,6 @@ p {
 
 pre {
     border-top: 2px solid $gallery;
-    background: $alabaster;
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 24px;
@@ -133,7 +132,7 @@ pre {
 }
 
 pre:before {
-    background-color: $gallery;
+    background-color: #555555;
     content: "\f121";
     font-family: 'fontawesome' !important;
     font-size: 14px;
