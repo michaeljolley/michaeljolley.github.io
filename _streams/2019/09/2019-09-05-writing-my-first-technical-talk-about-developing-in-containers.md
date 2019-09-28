@@ -9,7 +9,7 @@ tags: [twitch, stream, containers, talk, planning]
 replay: https://youtu.be/0nMdnPhE8ms
 ---
 
-## Stream Replay Link
+### Stream Replay Link
 
 [{{page.replay}}]({{page.replay}})
 
@@ -26,13 +26,9 @@ replay: https://youtu.be/0nMdnPhE8ms
 | [00:23]({{page.replay}}?t=10500)        | Back to writing the outline of the talk
 | [04:41]({{page.replay}}?t=16909.619)    | Wrapping up and raid to [codephobia](https://twitch.tv/codephobia) |
 
----
-
 ### Today's Candle To Code By
 
 [Whiskey and Cigar (The Den)](https://amzn.to/30ttzO6)
-
----
 
 ### Goals
 

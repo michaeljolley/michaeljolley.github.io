@@ -9,7 +9,7 @@ tags: [twitch, stream, dockerfile, node, javascript]
 replay: https://youtu.be/GKn2y8U0FBY
 ---
 
-## Stream Replay Link
+### Stream Replay Link
 
 [{{page.replay}}]({{page.replay}})
 
@@ -32,13 +32,9 @@ replay: https://youtu.be/GKn2y8U0FBY
 | [03:53]({{page.replay}}?t=14000.475) | its all going off now |
 | [04:09]({{page.replay}}?t=14945.366) | Wrapping up and raid to [callowcreation](https://twitch.tv/callowcreation) |
 
----
-
 ### Today's Candle To Code By
 
 [Christmas Tree](https://amzn.to/2Djr7R0)
-
----
 
 ### Things We Learned
 

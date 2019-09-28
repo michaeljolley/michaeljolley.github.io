@@ -32,7 +32,8 @@ While the wind-up for this post has been huge, actually getting the docker-compo
 
 Firstly, add your two services in the docker compose like so:
 
-``` YML
+{% highlight yaml %}
+
 version 3.4
 
 services:
@@ -52,7 +53,8 @@ services:
       dockerfile: *path to your api Dockerfile here*
     ports:
        - {external port}:{internal port}
-```
+
+{% endhighlight %}
 
 Notice the **links** flag in the iotapp service.  This lets Docker know that iotapp will need to be able to communicate with the api project.
 

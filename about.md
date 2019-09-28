@@ -13,8 +13,6 @@ considerable time pouring into others via his live-coding sessions on Twitch and
 When not in *full-geek* mode, Michael is a husband of nearly 20 years, father to three awesome kids, musician,
 and football fanatic.
 
----
-
 {% include image_full.html imageurl="https://user-images.githubusercontent.com/1228996/64070917-6916a180-cc33-11e9-87df-a5917f886ed4.png" caption="Screenshot of Twitch channel" %}
 
 ## Bald. Bearded. Builder.
@@ -28,10 +26,7 @@ Each stream Michael and viewers work on projects using .NET, JavaScript, TypeScr
 Every other Sunday, the stream is taken over by Michael's 13 &amp; 10 year old daughters as they interview
 the <a href="https://github.com/mtheoryx/heroines-of-javascript" target="_blank">Heroines of JavaScript</a>.
 
-
----
-
-## Want to know more?
+### Want to know more?
 
 (To the tune of The Fresh Prince of Bel-Air)
 

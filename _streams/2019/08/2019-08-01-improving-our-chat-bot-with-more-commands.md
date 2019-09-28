@@ -9,7 +9,7 @@ tags: [twitch, stream, nodejs, socket-io, docker]
 replay: https://youtu.be/9rNdbd-h6lE
 ---
 
-## Stream Replay Link
+### Stream Replay Link
 
 [{{page.replay}}]({{page.replay}})
 
@@ -26,13 +26,9 @@ replay: https://youtu.be/9rNdbd-h6lE
 | [01:19]({{page.replay}}?t=4747.694) | Nate joins us before his nap |
 | [03:09]({{page.replay}}?t=11340) | Wrapping up and raid to [roberttables](https://twitch.tv/roberttables)     |
 
----
-
 ### Today's Candle To Code By
 
 [Christmas Tree](https://amzn.to/2Djr7R0)
-
----
 
 ### Goals
 
@@ -40,8 +36,6 @@ replay: https://youtu.be/9rNdbd-h6lE
 
 - [codeman_codes](https://twitch.tv/codeman_codes): shared twitch api info about shutdown of legacy version 3 at [https://discuss.dev.twitch.tv/t/twitch-api-v3-shutdown-timeline/21931](https://discuss.dev.twitch.tv/t/twitch-api-v3-shutdown-timeline/21931)
 - [IAmNotMyself](https://twitch.tv/iamnotmyself): shows us how to delete a property of a json object [https://stackoverflow.com/a/21735614](https://stackoverflow.com/a/21735614)
-
----
 
 ## Today's stream brought to you by
 

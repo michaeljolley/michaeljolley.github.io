@@ -17,34 +17,36 @@ A few months ago, I experienced Winpocalypse 2019 and I’ve been very protectiv
 First off, let me be clear, I did install SQL Management Studio (SSMS) early on.  I use it frequently to access and monitor various databases.  The question was, do I need a full database engine running locally and the answer is an emphatic NO.
 I always learn best when working through a real-world problem so let’s address how to live SQL installation free in 2019.
 
-## Real World Use Case
+### Real World Use Case
 
 We have a development SQL database hosted in Azure for one of our clients.  Occasionally they will send us a backup of the production database to restore over our copy to have more recent, clean data.  The normal process would be to load that .BAK file to Azure storage and do a backup restore into SQL Azure.  However, this backup contained a custom SQL login, which will prevent SQL Azure from restoring the backup.
 
 The solution? Restore the backup locally, remove the login, create a new backup and restore again.  But how to restore the backup without the SQL database engine installed?
 
-## Docker, Docker, Docker
+### Docker, Docker, Docker
 
 Microsoft has released several Docker images for SQL Server, including one that runs on Linux.  Since my Docker for Windows is configured for Linux containers that seemed like a great place to start.  First, I needed to find an image I could pull.  My Google-Fu turned up several options, but I decided on `mcr.microsoft.com/mssql/server:2017-latest`.
 
-### Docker Run
+#### Docker Run
 
 Let’s go through the command to get everything running and then detail what each parameter is for.
 
-```PS
+{% highlight powershell %}
+
 docker run -e 'ACCEPT_EULA=Y' `
 -e 'SA_PASSWORD=<YourStrong!Passw0rd>' `
 -p 1433:1433 `
 -v <C:/HostPath>:/var/opts/mssql/data `
 --name sql1 `
 -d mcr.microsoft.com/mssql/server:2017-latest
-```
+
+{% endhighlight %}
 
 This command will create and run a Docker container based on the latest SQL Server 2017 Linux container image.  You could connect to the server running in this container via SSMS now.  Just use 127.0.0.1,1433 with SA and your password.  Any databases you create will be saved to the host path specified in the `-v` command.
 
 When you’re done with the container just delete it and clean up any images you don’t want.  Just like that you’ve used SQL Server without installing it on your machine and have no residual muck that lives on post-uninstall.
 
-### Get to the deets of the command
+#### Get to the deets of the command
 
 #### -e 'ACCEPT_EULA=Y'
 
@@ -71,6 +73,6 @@ An easy to remember name for the container.  If not specified, you’ll have to 
 
 Specifies what image to build the container from.
 
-## Down With SQL Server, Long Live SQL Server
+### Down With SQL Server, Long Live SQL Server
 
 Was that easy or what?  Now that you can spin up an instance of SQL Server in a container and destroy it when you're done why would you ever manually install the SQL engine on your development machine?  No really, let me know some use cases that might not be served by running SQL in a container.

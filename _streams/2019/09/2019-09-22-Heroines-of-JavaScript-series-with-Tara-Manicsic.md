@@ -9,7 +9,7 @@ tags: [twitch, stream, heroines, javascript, tara, manicsic, interview]
 replay: https://youtu.be/7aXox3Ijm04
 ---
 
-## Stream Replay Link
+### Stream Replay Link
 
 [{{page.replay}}]({{page.replay}})
 
@@ -24,13 +24,9 @@ replay: https://youtu.be/7aXox3Ijm04
 | [02:13]({{page.replay}}?t=7980)       | Working on our IO chat bot                                          |
 | [02:57]({{page.replay}}?t=10646.379)  | Wrapping up and raid to [codephobia](https://twitch.tv/codephobia)  |
 
----
-
 ### Today's Candle To Code By
 
 <a href="https://amzn.to/2GSsMxX" target="_blank">Warm Tobacco Pipe</a>
-
----
 
 ## Today's stream brought to you by
 

@@ -14,7 +14,7 @@ I was actually a little jealous of my friends using bash with their nice aliases
 
 <!--more-->
 
-## This seat's taken
+### This seat's taken
 
 PowerShell has built in commands that we don't want to step on.  I won't list them all (there are MANY), but if you get something wildly unexpected from your aliases then you can Google them.
 
@@ -22,27 +22,32 @@ PowerShell has built in commands that we don't want to step on.  I won't list th
 
 Okay, okay. So first, let's create a function in a `.ps1` file.
 
-```PS
+{% highlight powershell %}
+
 function goGoGadgetGitStatus {
   git status
 }
-```
+
+{% endhighlight %}
 
 The function above simply calls `git status`.  You can then setup an alias to call that function.
 
-```PS
+{% highlight powershell %}
+
 Set-Alias gs goGoGadgetGitStatus
-```
+
+{% endhighlight %}
 
 Then from your PowerShell console you can type `gs` and it will run `git status`.
 
 That's a very simplistic example but gives you an idea of what's possible.
 
-## What about parameters
+### What about parameters
 
 Great question!  We can define parameters in the function and then pass them in.
 
-```PS
+{% highlight powershell %}
+
 function goGoGadgetGit {
   Param(
     [Parameter(Mandatory = $true, Position = 0)]
@@ -64,13 +69,13 @@ function goGoGadgetGit {
 }
 Set-Alias g goGoGadgetGit
 
-```
+{% endhighlight %}
 
 Now in our console we can call `g s` to get `git status` or `g c master` to execute `git checkout master`.
 
 I'm not going to go into detail on how to write PowerShell functions or options for parameters.  There are plenty of resources out there for the two.  But hopefully this showed you a rudimentary way to set up command aliases for PowerShell.  Just add the code to your PowerShell profile.ps1 and you're off to the races.
 
-## PowerShell Alias
+### PowerShell Alias
 
 I've actually created a repository at [https://github.com/MichaelJolley/ps-alias](https://github.com/MichaelJolley/ps-alias) that has the PowerShell script that I include in my profile that gives many aliases for things like Docker, Git, etc. Feel free to fork &amp; PR any aliases that you think might help others.
 

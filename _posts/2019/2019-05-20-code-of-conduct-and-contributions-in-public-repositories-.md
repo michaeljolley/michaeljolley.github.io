@@ -19,7 +19,7 @@ with contributing and code of conduct guidelines.
 
 <!--more-->
 
-## Contributing Guidelines
+### Contributing Guidelines
 
 For the most part, contributors have seen my repositories on our [Twitch][twitch] stream
 and wanted to help.  The benefit to the stream is that viewers can see the process we use
@@ -48,7 +48,7 @@ This basic information gives potential contributors a little more confidence abo
 submitting that pull request by alleviating the fear they'll be blasted for using the
 wrong base branch.
 
-## Code of Conduct
+### Code of Conduct
 
 I'll admit I'm a little knew to this one. I'm not sure I've ever read a repositories Code of
 Conduct before this week. It's easy to overlook when you expect the best from people and/or
@@ -62,7 +62,7 @@ advance how they can expect to be treated by the community and maintainers.
 [Contributor Covenant](https://www.contributor-covenant.org/) is a great resource for a Code
 of Conduct for your repository.
 
-## Acknowledging Contributions
+### Acknowledging Contributions
 
 I love new contributors! It makes my day when I get a notification that someone created an
 issue, submitted a pull request or even just forked the repository. There are several ways to
@@ -86,6 +86,5 @@ It's a fun way to give credit where it's due and encourage others to participate
 ## Wrap it up Mike
 
 That's my TED Talk for today.  Do you have ideas on how to help new contributors join in? Let me hear them!
-
 
 [twitch]: https://twitch.tv/themichaeljolley
