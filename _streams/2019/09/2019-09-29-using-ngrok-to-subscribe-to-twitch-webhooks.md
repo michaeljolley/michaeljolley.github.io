@@ -168,11 +168,6 @@ replay: https://youtu.be/LjlWm_eAuko
       <a href="https://twitch.tv/roberttables" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a><a href="https://github.com/mtheoryx" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a></span>
   </div>
   <div class="user">
-    <img class="profile" src="https://static-cdn.jtvnw.net/user-default-pictures/0ecbb6c3-fecb-4016-8115-aa467b7c36ed-profile_image-300x300.jpg"/>
-    <span>5e351d922f7a462<br/>
-      <a href="https://twitch.tv/5e351d922f7a462" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a></span>
-  </div>
-  <div class="user">
     <img class="profile" src="https://static-cdn.jtvnw.net/user-default-pictures/b83b1794-7df9-4878-916c-88c2ad2e4f9f-profile_image-300x300.jpg"/>
     <span>estrangedHD<br/>
       <a href="https://twitch.tv/estrangedhd" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a></span>
