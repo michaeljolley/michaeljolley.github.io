@@ -2,11 +2,11 @@
 layout: post
 date: 2019-10-01 17:10
 title: "Subscribing to Twitch webhooks from our chat bot with Ngrok"
-image:
-description: ""
+image: https://user-images.githubusercontent.com/1228996/66014639-3a3f5580-e495-11e9-8b25-c9204fb0434a.png
+description: "Troubleshooting issues with our webhooks service using ngrok and Twitch API."
 comments: true
-tags: [twitch, stream]
-replay:
+tags: [twitch, stream, ngrok, webhook, nodejs]
+replay: https://youtu.be/l2HpPx4RTjw
 ---
 
 ### Stream Replay Link
@@ -15,21 +15,13 @@ replay:
 
 <!--more-->
 
-### Segments
-
-| Timestamp | Topic
-| ---       | ---
-
 ### Today's Candle To Code By
 
 <a href="https://amzn.to/320cEn1" target="_blank">Unicorn Dust</a>
 
-### Goals
-
-
 ### Things We Learned
 
-- <a href="https://twitch.tv/fulesnabel" target="_blank">FuleSnabel</a>: shared a finnish bluegrass cover band that covered nothing else matters by metallica at https://www.youtube.com/watch?v=3jfb_aon6rc 
+- <a href="https://twitch.tv/fulesnabel" target="_blank">FuleSnabel</a>: shared a finnish bluegrass cover band that covered nothing else matters by metallica at <a href="https://www.youtube.com/watch?v=3jfb_aon6rc" target="_blank">https://www.youtube.com/watch?v=3jfb_aon6rc</a>
 
 ## Today's stream brought to you by
 
@@ -362,4 +354,3 @@ replay:
       <a href="https://twitch.tv/lycan1534" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a></span>
   </div>
 </div>
-
