@@ -9,7 +9,7 @@ tags: [twitch, stream, nodejs, javascript, css]
 replay: https://youtu.be/lSVfIgxmO3k
 ---
 
-## Stream Replay Link
+### Stream Replay Link
 
 [{{page.replay}}]({{page.replay}})
 
@@ -26,13 +26,9 @@ replay: https://youtu.be/lSVfIgxmO3k
 | [02:29]({{page.replay}}?t=8975.13) | Still working on it but it's looking a little wonky |
 | 04:21 | Wrapping up and raid to [csharpfritz](https://twitch.tv/csharpfritz)  |
 
----
-
 ### Today's Candle To Code By
 
 [Old Factory Leather](https://amzn.to/2IHHPNJ)
-
----
 
 ### Goals
 

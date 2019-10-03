@@ -8,7 +8,8 @@
     "reset",
     "general",
     "icons",
-    "comments"
+    "comments",
+    "syntax"
 ;
 
 /**
@@ -831,9 +832,16 @@ a.archive-top-link:hover {
         margin-left: 0;
         margin-right: 0;
     }
+
+    .entry-content {
+        h2, h3 {
+            margin: 0 -30px 24px;
+        }
+    }
 }
 
 @media only screen and (max-width: 960px) {
+
     .sidebar,
     .site-main {
         float: none;

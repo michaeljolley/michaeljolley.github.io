@@ -9,7 +9,7 @@ tags: [twitch, stream, azure, pull-requests, javascript]
 replay: https://youtu.be/ueUE7cNkch8
 ---
 
-## Stream Replay Link
+### Stream Replay Link
 
 [{{page.replay}}]({{page.replay}})
 
@@ -27,20 +27,14 @@ replay: https://youtu.be/ueUE7cNkch8
 | [02:06]({{page.replay}}?t=7589.759) | RIP gnat |
 | [04:37]({{page.replay}}?t=16638.718) | Roll the credits and raid to [quiltoni](https://twitch.tv/quiltoni) |
 
----
-
 ### Today's Candle To Code By
 
 [Whiskey and Cigar (The Den)](https://amzn.to/30ttzO6)
-
----
 
 ### Goals
 
 - [ ] Move the chat bot to Azure
 - [x] Review PR's from the community
-
----
 
 ## Today's stream brought to you by
 

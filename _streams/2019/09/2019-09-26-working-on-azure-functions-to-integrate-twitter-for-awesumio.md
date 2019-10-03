@@ -9,7 +9,7 @@ tags: [twitch, stream, azure, functions, durable, twitter]
 replay: https://youtu.be/GZ_BOM4jpqw
 ---
 
-## Stream Replay Link
+### Stream Replay Link
 
 [{{page.replay}}]({{page.replay}})
 
@@ -27,8 +27,6 @@ replay: https://youtu.be/GZ_BOM4jpqw
 ### Today's Candle To Code By
 
 <a href="https://amzn.to/320cEn1" target="_blank">Unicorn Dust</a>
-
----
 
 ### Goals
 

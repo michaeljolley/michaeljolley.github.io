@@ -9,7 +9,7 @@ tags: [twitch, stream, chat, nodejs, javascript, pull-request]
 replay: https://youtu.be/hNZevfJEfJM
 ---
 
-## Stream Replay Link
+### Stream Replay Link
 
 [{{page.replay}}]({{page.replay}})
 
@@ -26,13 +26,9 @@ replay: https://youtu.be/hNZevfJEfJM
 | 02:07     | @codephobia saves the day                                         |
 | 02:35     | Wrapping up and raid to [SushiDay](https://twitch.tv/sushiday)    |
 
----
-
 ### Today's Candle To Code By
 
 [Warm Tobacco Pipe](https://amzn.to/2GSsMxX)
-
----
 
 ### Goals
 
@@ -42,8 +38,6 @@ replay: https://youtu.be/hNZevfJEfJM
 ### Things We Learned
 
 - [codephobia](https://twitch.tv/codephobia): showed us a great css alternative to the marquee tag at [https://stackoverflow.com/questions/31951282/why-is-marquee-deprecated-and-what-is-the-best-alternative](https://stackoverflow.com/questions/31951282/why-is-marquee-deprecated-and-what-is-the-best-alternative)
-
----
 
 ## Today's stream brought to you by
 

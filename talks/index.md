@@ -5,7 +5,7 @@ description: Upcoming and past talks
 banner_image: talksPage.jpg
 ---
 
-# Coming Up
+## Coming Up
 
 ### 2019
 
@@ -28,7 +28,7 @@ Think inside the box. Developing inside a container to avoid conflicts, improve 
 
 ---
 
-# Previous
+## Previous
 
 ### 2019
 

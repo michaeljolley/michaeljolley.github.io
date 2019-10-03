@@ -9,7 +9,7 @@ tags: [twitch, stream, javascript, css, html, comic, chat]
 replay: https://youtu.be/KfLTlxgHPcc
 ---
 
-## Stream Replay Link
+### Stream Replay Link
 
 [{{page.replay}}]({{page.replay}})
 
@@ -26,19 +26,13 @@ replay: https://youtu.be/KfLTlxgHPcc
 | [01:00]({{page.replay}}?t=3600)     | Starting to build a comic chat for our Twitch chat with codesandbox.io  |
 | [02:14]({{page.replay}}?t=8080.002) | Wrapping up and raid to [roberttables](https://twitch.tv/roberttables)  |
 
----
-
 ### Today's Candle To Code By
 
 [Whiskey and Cigar (The Den)](https://amzn.to/30ttzO6)
 
----
-
 ### Goals
 
 - [x] Start working on our MS Comic Chat clone for Twitch chat
-
----
 
 ## Today's stream brought to you by
 

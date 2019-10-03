@@ -10,7 +10,7 @@ replay1: https://youtu.be/mAjWZQsWcG8
 replay2: https://youtu.be/mPbJVAkLrMw
 ---
 
-## Stream Replay Link
+### Stream Replay Link
 
 Two parts today due to technical difficulties.
 
@@ -30,13 +30,9 @@ Two parts today due to technical difficulties.
 | [02:30]({{page.replay1}}?t=9000) | Stream dropped due to green screen of death |
 | [05:33]({{page.replay2}}?t=10378.91) | Wrapping up and raid to [visualstudio](https://twitch.tv/visualstudio) |
 
----
-
 ### Today's Candle To Code By
 
 <a href="https://amzn.to/2Djr7R0" target="_blank">Christmas Tree</a>
-
----
 
 ### Goals
 

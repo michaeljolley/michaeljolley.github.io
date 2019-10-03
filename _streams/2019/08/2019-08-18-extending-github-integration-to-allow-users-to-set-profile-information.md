@@ -9,7 +9,7 @@ tags: [twitch, stream, node, javascript, typescript]
 replay: https://youtu.be/rTzUKqL5k40
 ---
 
-## Stream Replay Link
+### Stream Replay Link
 
 [{{page.replay}}]({{page.replay}})
 
@@ -29,13 +29,9 @@ replay: https://youtu.be/rTzUKqL5k40
 | [04:32]({{page.replay}}?t=16330.225)  | theMichaelJolley gives up on code and plays a 13K JavaScript game             |
 | [04:45]({{page.replay}}?t=17110.53)   | Wrapping up and raid to [fiercekittenz](https://twitch.tv/fiercekittenz)      |
 
----
-
 ### Today's Candle To Code By
 
 [Whiskey and Cigar (The Den)](https://amzn.to/30ttzO6)
-
----
 
 ### Goals
 

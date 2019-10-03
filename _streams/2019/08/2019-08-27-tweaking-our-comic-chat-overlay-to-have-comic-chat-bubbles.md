@@ -9,7 +9,7 @@ tags: [twitch, stream, javascript, css, html, chat, comic]
 replay: https://youtu.be/xQPFNAwSvQc
 ---
 
-## Stream Replay Link
+### Stream Replay Link
 
 [{{page.replay}}]({{page.replay}})
 
@@ -26,19 +26,13 @@ replay: https://youtu.be/xQPFNAwSvQc
 | [00:20]({{page.replay}}?t=1200)       | Starting to work on our comic chat overlay |
 | [04:12]({{page.replay}}?t=15157.553)  | Wrapping up and raid to [SudoKid](https://twitch.tv/sudokid) |
 
----
-
 ### Today's Candle To Code By
 
 [Warm Tobacco Pipe](https://amzn.to/2GSsMxX)
 
----
-
 ### Goals
 
 - [ ] Don't auto-shoutout Mike when he chats
-
----
 
 ## Today's stream brought to you by
 

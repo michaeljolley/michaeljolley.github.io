@@ -9,7 +9,7 @@ tags: [twitch, stream, heroines, javascript, emma, wedekind, interview]
 replay: https://youtu.be/cK3Z7CASHl0
 ---
 
-## Stream Replay Link
+### Stream Replay Link
 
 [{{page.replay}}]({{page.replay}})
 
@@ -24,19 +24,13 @@ replay: https://youtu.be/cK3Z7CASHl0
 | [01:04]({{page.replay}}?t=3840)       | Starting to work on our comic chat overlays                       |
 | [02:43]({{page.replay}}?t=9834.107)   | Wrapping up and raid to [sorskoot](https://twitch.tv/sorskoot)    |
 
----
-
 ### Today's Candle To Code By
 
 [Unicorn Dust](https://amzn.to/320cEn1)
 
----
-
 ### Goals
 
 - [x] Interview with Emma Wedekind
-
----
 
 ## Today's stream brought to you by
 

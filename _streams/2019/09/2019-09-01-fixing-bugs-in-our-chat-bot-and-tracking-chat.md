@@ -9,7 +9,7 @@ tags: [twitch, stream, javascript, mongo]
 replay: https://youtu.be/7nNML4-DeHU
 ---
 
-## Stream Replay Link
+### Stream Replay Link
 
 [{{page.replay}}]({{page.replay}})
 
@@ -24,19 +24,13 @@ replay: https://youtu.be/7nNML4-DeHU
 | [00:26]({{page.replay}}?t=1615.302) | Starting to write some code |
 | [02:39]({{page.replay}}?t=9578.431) | Wrapping up and raid to [luckynos7evin](https://twitch.tv/luckynos7evin) |
 
----
-
 ### Today's Candle To Code By
 
 [Unicorn Dust](https://amzn.to/320cEn1)
 
----
-
 ### Goals
 
 - [x] Flag chatters as contributors on the stream
-
----
 
 ## Today's stream brought to you by
 

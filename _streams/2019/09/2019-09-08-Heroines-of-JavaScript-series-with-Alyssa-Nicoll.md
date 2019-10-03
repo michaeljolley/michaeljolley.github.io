@@ -9,7 +9,7 @@ tags: [twitch, stream, heroines, javascript, alyssa, nicoll, interview]
 replay: https://youtu.be/qapOJX_LjZw
 ---
 
-## Stream Replay Link
+### Stream Replay Link
 
 [{{page.replay}}]({{page.replay}})
 
@@ -25,13 +25,9 @@ replay: https://youtu.be/qapOJX_LjZw
 | [01:20]({{page.replay}}?t=4800)     | Starting to work on our presentation slides                                                             |
 | [04:00]({{page.replay}}?t=14443)    | Wrapping up and raid to [sushiday](https://twitch.tv/sushiday)                                          |
 
----
-
 ### Today's Candle To Code By
 
 <a href="https://amzn.to/2GSsMxX" target="_blank">Warm Tobacco Pipe</a>
-
----
 
 ### Goals
 
