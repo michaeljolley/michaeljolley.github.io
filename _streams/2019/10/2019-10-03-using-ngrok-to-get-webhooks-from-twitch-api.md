@@ -2,25 +2,21 @@
 layout: post
 date: 2019-10-03 20:10
 title: "Using Ngrok with our chat bot to catch Twitch webhooks for alerts"
-image:
-description: ""
+image: https://user-images.githubusercontent.com/1228996/66170644-9ecff100-e60a-11e9-919e-56c331768a9e.png
+description: "Troubleshooting issues with our webhooks service using ngrok and Twitch API."
 comments: true
-tags: [twitch, stream]
-replay:
+tags: [twitch, stream, ngrok, webhook, nodejs]
+replay1: https://youtu.be/GNl2Rr3qdk0
+replay2: https://youtu.be/XW0U8kAy6SA
 ---
 
 ### Stream Replay Link
 
-[{{page.replay}}]({{page.replay}})
+[{{page.replay1}}]({{page.replay1}})
+
+[{{page.replay2}}]({{page.replay2}})
 
 <!--more-->
-
-### Segments
-
-| Timestamp | Topic
-| ---       | ---
-| [0-2:0-5]({{page.replay}}?t=-7521.298) | Kicking it off |
-| [01:37]({{page.replay}}?t=5872.525) | Wrapping up and raid to [sorskoot](https://twitch.tv/sorskoot) |
 
 ### Today's Candle To Code By
 
@@ -28,6 +24,7 @@ replay:
 
 ### Goals
 
+- [x] Get chat bot recognizing new followers and displaying alerts for them
 
 ### Things We Learned
 
@@ -222,16 +219,6 @@ replay:
     <img class="profile" src="https://static-cdn.jtvnw.net/jtv_user_pictures/ultramark-profile_image-558610eb6ca06e43-300x300.png"/>
     <span>UltraMark<br/>
       <a href="https://twitch.tv/ultramark" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a></span>
-  </div>
-</div>
-
-### Followers
-
-<div class="users">
-  <div class="user">
-    <img class="profile" src="https://static-cdn.jtvnw.net/user-default-pictures-uv/ead5c8b2-a4c9-4724-b1dd-9f00b46cbd3d-profile_image-300x300.png"/>
-    <span>ebi<br/>
-      <a href="https://twitch.tv/ebi" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a></span>
   </div>
 </div>
 
