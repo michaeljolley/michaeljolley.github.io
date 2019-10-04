@@ -7,6 +7,10 @@ image: https://user-images.githubusercontent.com/1228996/65446541-31e27d00-ddfa-
 
 Hi! Thanks for attending my talk!
 
+### Recording
+
+<a href="https://www.youtube.com/watch?v=17aI3KZxmxw" target="_blank">https://www.youtube.com/watch?v=17aI3KZxmxw</a>
+
 ### Slide Deck
 
 <a href="http://bit.ly/sql-docker" target="_blank">http://bit.ly/sql-docker</a>
