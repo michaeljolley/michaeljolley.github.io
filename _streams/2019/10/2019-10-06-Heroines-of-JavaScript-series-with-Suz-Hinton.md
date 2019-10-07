@@ -2,11 +2,11 @@
 layout: post
 date: 2019-10-06 18:10
 title: "Heroines of JavaScript series: Lauryn & Layla interview Suz Hinton"
-image:
-description: ""
+image: https://user-images.githubusercontent.com/1228996/66279346-8237f100-e876-11e9-8e83-e16425821010.png
+description: "As part of our Heroines of JavaScript series, Lauryn & Layla interview Suz Hinton."
 comments: true
-tags: [twitch, stream]
-replay:
+tags: [twitch, stream, heroines, javascript, suz, hinton, noopkat, interview]
+replay: https://youtu.be/NKuV4iwGklk
 ---
 
 ### Stream Replay Link
@@ -20,6 +20,8 @@ replay:
 | Timestamp | Topic
 | ---       | ---
 | [00:06]({{page.replay}}?t=368.127) | Kicking it off |
+| [00:13]({{page.replay}}?t=780) | Interview with Suz Hinton |
+| [01:38]({{page.replay}}?t=5880) | Starting to work on Awesum.io |
 | [03:05]({{page.replay}}?t=11140.923) | Wrapping up and raid to [luckynos7evin](https://twitch.tv/luckynos7evin) |
 
 ### Today's Candle To Code By
@@ -28,15 +30,14 @@ replay:
 
 ### Goals
 
+- [x] Interview with Suz Hinton
 
 ### Things We Learned
 
-- <a href="https://twitch.tv/iamfletcher_" target="_blank">IAmFletcher_</a>: shared https://a11yproject.com to learn more about web accessibility 
-- <a href="https://twitch.tv/dare_devel_ops" target="_blank">dare_devel_ops</a>: shared about the science of plant communication at https://www.theguardian.com/science/2018/may/02/plants-talk-to-each-other-through-their-roots 
-- <a href="https://twitch.tv/sorskoot" target="_blank">sorskoot</a>: shared https://accessibilityinsights.io/ 
-- <a href="https://twitch.tv/knitcodemonkey" target="_blank">knitcodemonkey</a>: shared https://www.deque.com/axe/ 
-- <a href="https://twitch.tv/fboucheros" target="_blank">FBoucheros</a>: shared a presentation of @noopkat doing a live coder demo against the clock 
-- <a href="https://twitch.tv/parithon" target="_blank">parithon</a>: shared how to paste special in vs to paste json as c# classes 
+- <a href="https://twitch.tv/iamfletcher_" target="_blank">IAmFletcher_</a>: shared <a href="https://a11yproject.com" target="_blank">https://a11yproject.com</a> to learn more about web accessibility 
+- <a href="https://twitch.tv/dare_devel_ops" target="_blank">dare_devel_ops</a>: shared about the science of plant communication at <a href="https://www.theguardian.com/science/2018/may/02/plants-talk-to-each-other-through-their-roots " target="_blank">https://www.theguardian.com/science/2018/may/02/plants-talk-to-each-other-through-their-roots </a>
+- <a href="https://twitch.tv/sorskoot" target="_blank">sorskoot</a>: shared <a href="https://accessibilityinsights.io/" target="_blank">https://accessibilityinsights.io/</a>
+- <a href="https://twitch.tv/knitcodemonkey" target="_blank">knitcodemonkey</a>: shared <a href="https://www.deque.com/axe/" target="_blank">https://www.deque.com/axe/</a> 
 
 ## Today's stream brought to you by
 
@@ -614,4 +615,3 @@ replay:
       <a href="https://twitch.tv/gopiratehardware" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a></span>
   </div>
 </div>
-
