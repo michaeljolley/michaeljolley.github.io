@@ -2,11 +2,11 @@
 layout: post
 date: 2019-10-10 18:10
 title: "Working on the awesum.io front-end to add Twitter auth and DevOps to deploy"
-image:
-description: ""
+image: https://user-images.githubusercontent.com/1228996/66677152-aad13980-ec2e-11e9-84b6-db156f7a53ea.png
+description: "Adding the ability to authenticate with Twitter using Auth0 on a static page."
 comments: true
-tags: [twitch, stream]
-replay:
+tags: [twitch, stream, awesum-io, twitter, auth0, authentication]
+replay: https://youtu.be/jlVcQtoohtw
 ---
 
 ### Stream Replay Link
@@ -20,6 +20,10 @@ replay:
 | Timestamp | Topic
 | ---       | ---
 | [00:12]({{page.replay}}?t=762.796) | Kicking it off |
+| [00:32]({{page.replay}}?t=1920) | Quick overview of awesum.io and testing the sending of anonymous tweets |
+| [00:50]({{page.replay}}?t=3000) | Adding moderation of anonymous tweets |
+| [01:18]({{page.replay}}?t=4680) | Adding Twitter authentication via Auth0 |
+| [03:15]({{page.replay}}?t=11700) | Wrapping up and raid to <a href="https://twitch.tv/TimBeaudet" target="_blank">TimBeaudet</a> |
 
 ### Today's Candle To Code By
 
@@ -27,6 +31,7 @@ replay:
 
 ### Goals
 
+- [x] Add Twitter authentication with Auth0
 
 ### Things We Learned
 
