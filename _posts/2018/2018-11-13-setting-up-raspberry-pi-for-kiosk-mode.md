@@ -54,11 +54,12 @@ This launches Chromium with the settings we mentioned above and directs it immed
 
 While you're still editing the **autostart** file, add the following:
 
-<pre class="language-bash"><code>@xset s noblank
+{% highlight bash %}
+@xset s noblank
 @xset s off
 @xset -dpms
 @unclutter -idle 0.1 -roo
-</code></pre>
+{% endhighlight %}
 
 Then save your changes and exit the **autostart** file.
 
@@ -66,11 +67,15 @@ Then save your changes and exit the **autostart** file.
 
 Now to keep your Pi from falling asleep we'll edit the **lightdm.conf** file.
 
-<pre class="language-bash"><code>sudo nano /etc/lightdm/lightdm.conf</code></pre>
+{% highlight bash %}
+sudo nano /etc/lightdm/lightdm.conf
+{% endhighlight %}
 
 Modify the **xserver-command** line to read:
 
-<pre class="language-bash"><code>xserver-command= X -s 0 -dpms</code></pre>
+{% highlight bash %}
+xserver-command= X -s 0 -dpms
+{% endhighlight %}
 
 Then save and exit.
 
@@ -78,11 +83,15 @@ Then save and exit.
 
 The Pi's WiFi will also go to sleep if we don't change it.  Modify it by editing the **rc.local** file with:
 
-<pre class="language-bash"><code>sudo nano /etc/rc.local</code></pre>
+{% highlight bash %}
+sudo nano /etc/rc.local
+{% endhighlight %}
 
 Add the following line before *exit 0* and save:
 
-<pre class="language-bash"><code>iwconfig wlan0 power off</code></pre>
+{% highlight bash %}
+iwconfig wlan0 power off
+{% endhighlight %}
 
 ### You're in business
 

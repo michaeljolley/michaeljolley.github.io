@@ -23,4 +23,4 @@ Hi! Thanks for attending my talk!
 
 <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack" target="_blank">Remote Development Extension</a>
 
-<a href="https://code.visualstudio.com/docs/remote/remote-overview" target="_blank">VS Code Remote Development Documenation</a>
+<a href="https://code.visualstudio.com/docs/remote/remote-overview" target="_blank">VS Code Remote Development Documentation</a>
