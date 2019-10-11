@@ -54,7 +54,7 @@ My streams have really been focused on IoT development and I've found it difficu
 
 Speaking of working on IoT devices, I've often had the problem of connecting keyboards & mice to them and then having to rewire everything as I switched devices or put it away.  Then [Scott Hanselman](https://www.hanselman.com/) turned me on to the [iPazzPort Wireless Mini Handheld Keyboard/Touchpad](https://amzn.to/2Npx0jt).
 
-This is a mini-keyboard with a built in touch pad that is a *MUST HAVE* if you work with devices like the Rapsberry Pi at all.  It's only $14 so it was a no-brainer purchase.
+This is a mini-keyboard with a built in touch pad that is a *MUST HAVE* if you work with devices like the Raspberry Pi at all.  It's only $14 so it was a no-brainer purchase.
 
 The final piece of hardware that I'm constantly finding uses for (even when not streaming) is the [Elgato Stream Deck](https://amzn.to/2Er27bE).  This little device is a wonder and with the new SDK released by Elgato I have a feeling an ecosystem of extensions/add-ons are about to spring up around this guy.
 
