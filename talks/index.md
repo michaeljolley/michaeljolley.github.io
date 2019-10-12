@@ -9,13 +9,6 @@ banner_image: talksPage.jpg
 
 ### 2019
 
-**2019 Oct 12** - **<a href="https://bsidesbham.org/" target="_blank">BSides Birmingham 2019</a>**<br/>
-Birmingham, AL<br/>
-<a href="/talks/bsides-bhm-2019">Slides, source & links</a><br/>
-Think inside the box. Developing inside a container to avoid conflicts, improve security and speed up on-boarding
-
----
-
 **2019 Nov 12** - **<a href="https://devopsdays.org/events/2019-chattanooga/welcome/" target="_blank">DevOpsDays 2019</a>**<br/>
 Chattanooga, TN<br/>
 Think inside the box. Developing inside a container to avoid conflicts, improve security and speed up on-boarding
@@ -43,5 +36,12 @@ Think inside the box. Developing inside a container to avoid conflicts, improve 
 Online<br/>
 <a href="/talks/dotnetconf2019">Slides, source & links</a><br/>
 Death to SQL Server! Long live SQL Server! How containerized SQL Server makes development easier
+
+---
+
+**2019 Oct 12** - **<a href="https://bsidesbham.org/" target="_blank">BSides Birmingham 2019</a>**<br/>
+Birmingham, AL<br/>
+<a href="/talks/bsides-bhm-2019">Slides, source & links</a><br/>
+Think inside the box. Developing inside a container to avoid conflicts, improve security and speed up on-boarding
 
 ---
