@@ -2,11 +2,11 @@
 layout: post
 date: 2019-10-13 17:10
 title: "Adding to the front-end of awesum.io to display messages once logged in"
-image:
-description: ""
+image: https://user-images.githubusercontent.com/1228996/66760944-aee89b80-ee68-11e9-8c02-2d23ca8532a6.png
+description: "Adding moderation requirements to display and send gramercies from the AwesumIO twitter account and finalizing the UI to list gramercies for a user."
 comments: true
-tags: [twitch, stream]
-replay:
+tags: [twitch, stream, html, js, azure, faunadb]
+replay: https://youtu.be/2UjrCaS2qTI
 ---
 
 ### Stream Replay Link
@@ -20,14 +20,12 @@ replay:
 | Timestamp | Topic
 | ---       | ---
 | [00:06]({{page.replay}}?t=403.216) | Kicking it off |
+| [00:50]({{page.replay}}?t=3000) | Starting to work on moderation of gramercies and removing retweets |
 | [03:10]({{page.replay}}?t=11424.981) | Wrapping up and raid to [luckynos7evin](https://twitch.tv/luckynos7evin) |
 
 ### Today's Candle To Code By
 
 <a href="https://amzn.to/320cEn1" target="_blank">Unicorn Dust</a>
-
-### Goals
-
 
 ## Today's stream brought to you by
 
@@ -275,4 +273,3 @@ replay:
       <a href="https://twitch.tv/retro_crt" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a></span>
   </div>
 </div>
-
