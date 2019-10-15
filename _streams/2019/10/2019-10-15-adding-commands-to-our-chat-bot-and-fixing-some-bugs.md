@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2019-10-15 18:10
-title: "Finalizing our awesum.io MVP and launching to the world"
+title: "Adding commands to our chat bot and fixing some bugs"
 image: https://user-images.githubusercontent.com/1228996/66876092-22c49a00-ef76-11e9-991c-afa1bbfaf4b7.png
 description: "We added several new commands to our chat bot and fixed a few bugs that were lurking about."
 comments: true
