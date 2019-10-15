@@ -2,11 +2,11 @@
 layout: post
 date: 2019-10-15 18:10
 title: "Finalizing our awesum.io MVP and launching to the world"
-image:
-description: ""
+image: https://user-images.githubusercontent.com/1228996/66876092-22c49a00-ef76-11e9-991c-afa1bbfaf4b7.png
+description: "We added several new commands to our chat bot and fixed a few bugs that were lurking about."
 comments: true
-tags: [twitch, stream]
-replay:
+tags: [twitch, stream, nodejs, typescript]
+replay: https://youtu.be/x3jFFgvA2uY
 ---
 
 ### Stream Replay Link
@@ -19,20 +19,15 @@ replay:
 
 | Timestamp | Topic
 | ---       | ---
-| [00:23]({{page.replay}}?t=1402.057) | Kicking it off |
+| [00:10]({{page.replay}}?t=600) | Kicking it off |
 | [01:01]({{page.replay}}?t=3697.301) | We had the debut of @cldubya's raid into music courtesy of @ToeFrog |
 | [01:15]({{page.replay}}?t=4509.113) | Mike's talk on water |
-| [01:15]({{page.replay}}?t=4529.812) | Ted talk about water adulteration robert68Ted |
-| [02:01]({{page.replay}}?t=7316.453) |  |
 | [02:03]({{page.replay}}?t=7436.912) | Michael explained the !mark command |
 | [03:33]({{page.replay}}?t=12830.664) | Wrapping up and raid to [roberttables](https://twitch.tv/roberttables) |
 
 ### Today's Candle To Code By
 
 <a href="https://amzn.to/2GSsMxX" target="_blank">Warm Tobacco Pipe</a>
-
-### Goals
-
 
 ## Today's stream brought to you by
 
