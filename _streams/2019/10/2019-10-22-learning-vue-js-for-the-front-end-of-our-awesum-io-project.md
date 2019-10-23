@@ -2,11 +2,11 @@
 layout: post
 date: 2019-10-22 17:10
 title: "Learning Vue.js for the front end of our awesum.io project"
-image:
-description: ""
+image: https://user-images.githubusercontent.com/1228996/67418010-9f1b3680-f58f-11e9-94e9-61d7659c0fc3.png
+description: "Converting our static HTML front-end to Vue.js so we can add more features."
 comments: true
-tags: [twitch, stream]
-replay:
+tags: [twitch, stream, vuejs, awesum-io]
+replay: https://youtu.be/xwDHDtk8YUE
 ---
 
 ### Stream Replay Link
@@ -17,11 +17,14 @@ replay:
 
 ### Segments
 
-| Timestamp | Topic
-| ---       | ---
-| [00:07]({{page.replay}}?t=465.55) | Kicking it off |
-| [02:05]({{page.replay}}?t=7504.174) | the part of the stream where we stopped coding and started fiddling with eslint/prettier config. |
-| [05:06]({{page.replay}}?t=18392.584) | Wrapping up and raid to [atomikjaye](https://twitch.tv/atomikjaye) |
+| Timestamp                            | Topic                                                                                           |
+| ------------------------------------ | ----------------------------------------------------------------------------------------------- |
+| [00:07]({{page.replay}}?t=465.55)    | Kicking it off                                                                                  |
+| [00:22]({{page.replay}}?t=1320)      | Explaining what awesum.io is                                                                    |
+| [00:24]({{page.replay}}?t=1440)      | Continuing to build out front-end while learning Vue.js                                         |
+| [02:05]({{page.replay}}?t=7504.174)  | The part of the stream where we stopped coding and started fiddling with eslint/prettier config |
+| [02:12]({{page.replay}}?t=7920)      | Back to writing code                                                                            |
+| [05:06]({{page.replay}}?t=18392.584) | Wrapping up and raid to [atomikjaye](https://twitch.tv/atomikjaye)                              |
 
 ### Today's Candle To Code By
 
@@ -29,11 +32,10 @@ replay:
 
 ### Goals
 
-
 ### Things We Learned
 
-- <a href="https://twitch.tv/codinggarden" target="_blank">CodingGarden</a>: shared the vue/bootstrap plugin https://bootstrap-vue.js.org 
-- <a href="https://twitch.tv/cmjchrisjones" target="_blank">cmjchrisjones</a>: shared that in bootstrap 4 panels are now cards https://getbootstrap.com/docs/4.3/migration/#panels 
+- <a href="https://twitch.tv/codinggarden" target="_blank">CodingGarden</a>: shared the vue/bootstrap plugin at <a href="https://bootstrap-vue.js.org" target="_blank">https://bootstrap-vue.js.org</a>
+- <a href="https://twitch.tv/cmjchrisjones" target="_blank">cmjchrisjones</a>: shared that in bootstrap 4 panels are now cards. Reference: <a href="https://getbootstrap.com/docs/4.3/migration/#panels" target="_blank">https://getbootstrap.com/docs/4.3/migration/#panels</a>
 
 ## Today's stream brought to you by
 
@@ -551,4 +553,3 @@ replay:
       <a href="https://twitch.tv/vacillate1" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a></span>
   </div>
 </div>
-
