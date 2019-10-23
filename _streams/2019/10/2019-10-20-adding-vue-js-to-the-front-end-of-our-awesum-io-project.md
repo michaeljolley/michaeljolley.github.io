@@ -1,12 +1,12 @@
 ---
 layout: post
 date: 2019-10-20 18:10
-title: "Finalizing our awesum.io MVP and launching to the world"
-image:
-description: ""
+title: "Adding Vue.js to the front-end of our awesum.io project"
+image: https://user-images.githubusercontent.com/1228996/67416750-02579980-f58d-11e9-8960-a0fd2c07d753.png
+description: "Starting to add a UI for manual moderation of our gramercies."
 comments: true
-tags: [twitch, stream]
-replay:
+tags: [twitch, stream, awesum-io, vuejs]
+replay: https://youtu.be/Z_7pWA89xpU
 ---
 
 ### Stream Replay Link
@@ -17,10 +17,12 @@ replay:
 
 ### Segments
 
-| Timestamp | Topic
-| ---       | ---
-| [00:10]({{page.replay}}?t=652.739) | Kicking it off |
-| [03:29]({{page.replay}}?t=12585.393) | Wrapping up and raid to [cmgriffing](https://twitch.tv/cmgriffing) |
+| Timestamp                            | Topic                                                                |
+| ------------------------------------ | -------------------------------------------------------------------- |
+| [00:10]({{page.replay}}?t=652.739)   | Kicking it off                                                       |
+| [00:24]({{page.replay}}?t=1440)      | Attempting to setup custom domains to a static site in Azure storage |
+| [01:00]({{page.replay}}?t=3600)      | Moving the front-end to Vue.js                                       |
+| [03:29]({{page.replay}}?t=12585.393) | Wrapping up and raid to [cmgriffing](https://twitch.tv/cmgriffing)   |
 
 ### Today's Candle To Code By
 
@@ -33,8 +35,8 @@ replay:
 
 ### Things We Learned
 
-- <a href="https://twitch.tv/johanb" target="_blank">JohanB</a>: shared the dotnetcore vue starter template at https://github.com/trilonio/aspnetcore-vue-starter 
-- <a href="https://twitch.tv/neven8775" target="_blank">Neven8775</a>: shared the dotnetcore vue starter template at https://github.com/trilonio/aspnetcore-vue-starter 
+- <a href="https://twitch.tv/johanb" target="_blank">JohanB</a>: shared the dotnetcore vue starter template at <a href="https://github.com/trilonio/aspnetcore-vue-starter" target="_blank">https://github.com/trilonio/aspnetcore-vue-starter</a>
+- <a href="https://twitch.tv/neven8775" target="_blank">Neven8775</a>: shared the dotnetcore vue starter template at <a href="https://github.com/trilonio/aspnetcore-vue-starter" target="_blank">https://github.com/trilonio/aspnetcore-vue-starter</a>
 
 ## Today's stream brought to you by
 
@@ -327,4 +329,3 @@ replay:
       <a href="https://twitch.tv/tbdgamer" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a><a href="https://twitter.com/terryburnsdyson" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a><a href="https://github.com/tbd-develop" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a></span>
   </div>
 </div>
-
