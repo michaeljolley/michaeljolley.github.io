@@ -1,12 +1,12 @@
 ---
 layout: post
 date: 2019-10-24 17:10
-title: "Learning Vue.js for the front end of our awesum.io project"
-image:
-description: ""
+title: "Adding role claims of our Auth0 token for the awesum.io project"
+image: https://user-images.githubusercontent.com/1228996/67591459-1e8d3f00-f723-11e9-8ff3-7da10c0fd414.png
+description: "In able to support role based routing in the Vue.js application, we added roles to our Auth0 token with the help of Bobby Johnson."
 comments: true
-tags: [twitch, stream]
-replay:
+tags: [twitch, stream, auth0, token, claim, role, awesum-io]
+replay: https://youtu.be/sdHnRouxgwM
 ---
 
 ### Stream Replay Link
@@ -17,15 +17,17 @@ replay:
 
 ### Segments
 
-| Timestamp | Topic
-| ---       | ---
+| Timestamp | Topic                                                                                                             |
+| --------- | ----------------------------------------------------------------------------------------------------------------- |
+| 00:12     | Kicking it off                                                                                                    |
+| 00:19     | Reviewing awesum.io and where to go next                                                                          |
+| 00:57     | Joined by <a href="https://twitch.tv/iamnotmyself" target="_blank">Bobby Johnson</a>, Developer Advocate at Auth0 |
+| 02:45     | Working on adding moderation and statuses to gramercies                                                           |
+| 03:33     | Wrapping up and raid to <a href="https://twitch.tv/roberttables" target="_blank">roberttables</a>                 |
 
 ### Today's Candle To Code By
 
 <a href="https://amzn.to/2GSsMxX" target="_blank">Warm Tobacco Pipe</a>
-
-### Goals
-
 
 ## Today's stream brought to you by
 
@@ -278,4 +280,3 @@ replay:
       <a href="https://twitch.tv/chancedev" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a></span>
   </div>
 </div>
-
