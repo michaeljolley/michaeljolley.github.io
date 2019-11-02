@@ -2,11 +2,11 @@
 layout: post
 date: 2019-10-29 18:10
 title: "Adding auth to our Azure Functions with Auth0 for our awesum.io project"
-image:
-description: ""
+image: https://user-images.githubusercontent.com/1228996/68077295-4cabf800-fd8f-11e9-9767-735b4f93b3a9.png
+description: "Working to authorize requests to our Azure functions using Auth0."
 comments: true
-tags: [twitch, stream]
-replay:
+tags: [twitch, stream, auth0, azure, function, awesum-io]
+replay: https://youtu.be/_VYMrDoevRw
 ---
 
 ### Stream Replay Link
@@ -17,22 +17,21 @@ replay:
 
 ### Segments
 
-| Timestamp | Topic
-| ---       | ---
+| Timestamp                           | Topic                                                            |
+| ----------------------------------- | ---------------------------------------------------------------- |
+| [00:08]({{page.replay}}?t=480)      | Kicking it off                                                   |
+| [00:18]({{page.replay}}?t=1080)     | Learning to validate JWT's in our Azure Function                 |
 | [03:00]({{page.replay}}?t=10858.85) | Wrapping up and raid to [jitterted](https://twitch.tv/jitterted) |
 
 ### Today's Candle To Code By
 
 <a href="https://amzn.to/30ttzO6" target="_blank">Whiskey and Cigar (The Den)</a>
 
-### Goals
-
-
 ### Things We Learned
 
-- <a href="https://twitch.tv/iamnotmyself" target="_blank">IAmNotMyself</a>: shared custom security bindings for azure functions at https://github.com/benmorris/functionscustomsercuity 
-- <a href="https://twitch.tv/iamnotmyself" target="_blank">IAmNotMyself</a>: shared custom security bindings for azure functions at https://www.ben-morris.com/custom-token-authentication-in-azure-functions-using-bindings/ 
-- <a href="https://twitch.tv/themichaeljolley" target="_blank">theMichaelJolley</a>: found https://liftcodeplay.com/2017/11/25/validating-auth0-jwt-tokens-in-azure-functions-aka-how-to-use-auth0-with-azure-functions/ 
+- <a href="https://twitch.tv/iamnotmyself" target="_blank">IAmNotMyself</a>: shared custom security bindings for azure functions at https://github.com/benmorris/functionscustomsercuity
+- <a href="https://twitch.tv/iamnotmyself" target="_blank">IAmNotMyself</a>: shared custom security bindings for azure functions at https://www.ben-morris.com/custom-token-authentication-in-azure-functions-using-bindings/
+- <a href="https://twitch.tv/themichaeljolley" target="_blank">theMichaelJolley</a>: found https://liftcodeplay.com/2017/11/25/validating-auth0-jwt-tokens-in-azure-functions-aka-how-to-use-auth0-with-azure-functions/
 
 ## Today's stream brought to you by
 
@@ -295,4 +294,3 @@ replay:
       <a href="https://twitch.tv/retro_crt" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a></span>
   </div>
 </div>
-
