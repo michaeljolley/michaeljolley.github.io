@@ -2,11 +2,11 @@
 layout: post
 date: 2019-10-31 18:10
 title: "Adding overlays to our stream and adding an admin service to the chat bot."
-image:
-description: ""
+image: https://user-images.githubusercontent.com/1228996/68077361-64d04700-fd90-11e9-845c-2ba86b0407ab.png
+description: "Adding an overlay with our stream goals using socket.io, node.js and a little css/html/js."
 comments: true
-tags: [twitch, stream]
-replay:
+tags: [twitch, stream, socket-io, nodejs, css, html, overlay]
+replay: https://youtu.be/kmh25LnCGs4
 ---
 
 ### Stream Replay Link
@@ -17,8 +17,11 @@ replay:
 
 ### Segments
 
-| Timestamp | Topic
-| ---       | ---
+| Timestamp                            | Topic                                                                    |
+| ------------------------------------ | ------------------------------------------------------------------------ |
+| [00:09]({{page.replay}}?t=540)       | Kicking it off                                                           |
+| [00:16]({{page.replay}}?t=960)       | Discussing changes to how we track streams in the bot                    |
+| [00:25]({{page.replay}}?t=1500)      | Working to add an overlay to display goals                               |
 | [03:36]({{page.replay}}?t=13004.081) | Wrapping up and raid to [luckynos7evin](https://twitch.tv/luckynos7evin) |
 
 ### Today's Candle To Code By
@@ -27,19 +30,7 @@ replay:
 
 ### Goals
 
-- [ ] Add goal checklist overlay
-- [ ] This is just a test
-- [ ] this is a new goal
-- [ ] this is a new goal
-- [ ] this is a new goal
-- [ ] this is a test
-- [ ] test it out
-- [ ] test it out numero 4
-- [ ] test it out
-- [ ] test it out again
-- [ ] test
-- [ ] test
-- [ ] test goal again
+- [x] Add goal checklist overlay
 
 ## Today's stream brought to you by
 
@@ -387,4 +378,3 @@ replay:
       <a href="https://twitch.tv/clancey" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a></span>
   </div>
 </div>
-
