@@ -11,6 +11,7 @@ banner_image: talksPage.jpg
 
 **2019 Nov 12** - **<a href="https://devopsdays.org/events/2019-chattanooga/welcome/" target="_blank">DevOpsDays 2019</a>**<br/>
 Chattanooga, TN<br/>
+<a href="/talks/devopsdays2019">Slides, source & links</a><br/>
 Think inside the box. Developing inside a container to avoid conflicts, improve security and speed up on-boarding
 
 ---
