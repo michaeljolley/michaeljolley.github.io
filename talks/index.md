@@ -2,7 +2,7 @@
 layout: page
 title: Talks
 description: Upcoming and past talks
-image: https://user-images.githubusercontent.com/1228996/68732447-0a599680-0599-11ea-940e-3082523a3727.jpg
+b-image: https://user-images.githubusercontent.com/1228996/68732447-0a599680-0599-11ea-940e-3082523a3727.jpg
 ---
 
 ## Coming Up
