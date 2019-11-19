@@ -11,6 +11,7 @@ banner-image: https://user-images.githubusercontent.com/1228996/68732447-0a59968
 
 **2019 Nov 19** - **<a href="https://www.meetup.com/Birmingham-NET-Meetup/" target="_blank">Birmingham .NET Meetup</a>**<br/>
 Birmingham, AL<br/>
+<a href="/talks/bhmnet">Slides, source & links</a><br/>
 Think inside the box. Developing inside a container to avoid conflicts, improve security and speed up on-boarding
 
 ---
