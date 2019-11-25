@@ -156,6 +156,7 @@
           button.attr("title", "Click the button again to confirm the comment");
           button.addClass("confirm-button");
           button.text("Confirm");
+          changeAvatar();
           return;
         }
 
