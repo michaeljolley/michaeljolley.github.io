@@ -76,7 +76,7 @@
 
       function changeAvatar() {
         let image = avatarPreview;
-        image.possible = buildPossibleAvatars($("#identity")[0].value);
+        image.possible = buildPossibleAvatars($("#identity").val());
         image.currentIndex = 0;
         tryLoad(image);
       }
