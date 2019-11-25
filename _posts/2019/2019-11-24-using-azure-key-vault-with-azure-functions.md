@@ -70,4 +70,4 @@ You can now access that secret as an environment variable from within your Azure
 
 ### Wrap it up
 
-Hopefully this quick walk-through helps save you time in the future when trying fight this battle yourself.
+Hopefully this quick walk-through helps save you time in the future when trying to fight this battle yourself.
