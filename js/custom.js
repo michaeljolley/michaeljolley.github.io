@@ -32,7 +32,7 @@
       e.preventDefault();
     });
 
-    let form = $("commentform")[0];
+    let form = $("#commentform");
 
     if (form) {
       // Set up any content editors
@@ -69,14 +69,14 @@
 
       // Set up other stuff
       var emailRegex = /[^@\s]+@[^@\s]+\.[^@\s]+$/;
-      var avatarPreview = $("avatarPreview")[0];
+      var avatarPreview = $("#avatarPreview")[0];
       avatarPreview.onerror = e => {
         tryLoad(e.target, 1);
       };
 
       function changeAvatar() {
         let image = avatarPreview;
-        image.possible = buildPossibleAvatars($("identity")[0].value);
+        image.possible = buildPossibleAvatars($("#identity")[0].value);
         image.currentIndex = 0;
         tryLoad(image);
       }
@@ -113,7 +113,7 @@
         return possibleAvatars;
       }
 
-      $("identity").onchange = () => {
+      $("#identity").onchange = () => {
         changeAvatar();
       };
 
@@ -159,8 +159,8 @@
           return;
         }
 
-        var name = $("name")[0];
-        var identity = $("identity")[0];
+        var name = $("#name")[0];
+        var identity = $("#identity")[0];
 
         if ($("#remember").prop("checked")) {
           storeUser(name.value, identity.value);
@@ -178,7 +178,7 @@
       });
 
       // Load values from Local Storage.
-      retrieveUser($("name")[0], $("identity")[0], $("remember")[0]);
+      retrieveUser($("#name")[0], $("#identity")[0], $("#remember")[0]);
       changeAvatar(); // initial load of avatar
     }
   });
