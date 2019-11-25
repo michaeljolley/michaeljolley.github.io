@@ -110,7 +110,7 @@
         var status = $("#commentstatus");
         status.text("");
 
-        var missing = Array.from(form.querySelectorAll("[data-required]"))
+        var missing = Array.from(document.querySelectorAll("[data-required]"))
           .filter(el => el.value === "")
           .map(el => el.name);
         if (missing.length > 0) {
