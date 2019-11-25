@@ -5,7 +5,7 @@ title: "Environment Variables in Azure Functions with Key Vault"
 image: https://user-images.githubusercontent.com/1228996/69502090-f4b96a80-0ed0-11ea-95fd-8c51ac152b14.png
 description: Accessing environment variables from your Azure Key Vault is simple for normal Azure App Services, but a little more involved for Azure Function App Services.
 comments: true
-tags: [azure, key-vault, function, environment, app-service, variable]
+tags: [azure, key-vault, functions]
 ---
 
 While working on a project that used a mixture of Azure App Services and Functions, I needed to use environment variables. Having read about Azure Key Vault, I knew that it held all the answers (or secrets.)
