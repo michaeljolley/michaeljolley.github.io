@@ -32,7 +32,7 @@
       e.preventDefault();
     });
 
-    let form = $("#commentform");
+    let form = $("#commentform")[0];
 
     if (form) {
       // Set up any content editors
