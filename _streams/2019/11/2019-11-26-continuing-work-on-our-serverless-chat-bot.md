@@ -1,12 +1,12 @@
 ---
 layout: post
 date: 2019-11-26 19:11
-title: "Continuing to build our serverless chat bot with JS, Azure Functions, socket.io, containers & FaunaDB."
-image:
-description: ""
+title: "Building a serverless Twitch chat-bot with Azure, FaunaDB, JavaScript & Docker"
+image: https://user-images.githubusercontent.com/1228996/69680927-11d96f00-1072-11ea-871b-d99b249e6def.png
+description: "Continuing to build our serverless chat bot with JS, Azure Functions, socket.io, containers & FaunaDB."
 comments: true
-tags: [twitch, stream]
-replay:
+tags: [twitch, stream, vulcan, javascript, azure, containers, faunadb]
+replay: https://youtu.be/DnbI77mbwps
 ---
 
 ### Stream Replay Link
@@ -15,22 +15,13 @@ replay:
 
 <!--more-->
 
-### Segments
-
-| Timestamp | Topic
-| ---       | ---
-| [03:01]({{page.replay}}?t=10882.62) | Wrapping up and raid to [codephobia](https://twitch.tv/codephobia) |
-
 ### Today's Candle To Code By
 
 <a href="https://amzn.to/320cEn1" target="_blank">Unicorn Dust</a>
 
-### Goals
-
-
 ### Things We Learned
 
-- <a href="https://twitch.tv/1kevgriff" target="_blank">1kevgriff</a>: shared gridsome, a vue.js based static site generator. https://gridsome.org/ 
+- <a href="https://twitch.tv/1kevgriff" target="_blank">1kevgriff</a>: shared <a href="https://gridsome.org/" target="_blank">Gridsome</a>, a vue.js based static site generator.
 
 ## Today's stream brought to you by
 
@@ -308,4 +299,3 @@ replay:
       <a href="https://twitch.tv/ninjacoder88" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a><a href="https://github.com/ninjacoder88" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a></span>
   </div>
 </div>
-
