@@ -2,11 +2,11 @@
 layout: post
 date: 2019-11-05 19:11
 title: "Building an IoT conference badge then working on Azure functions"
-image:
-description: ""
+image: https://user-images.githubusercontent.com/1228996/69594004-9370c480-0fc0-11ea-889f-f34f68df359d.png
+description: "We built an IoT conference badge and then continued working on Azure functions"
 comments: true
-tags: [twitch, stream]
-replay:
+tags: [twitch, stream, iot, badge, azure, functions]
+replay: https://youtu.be/z8JR6gZJRnc
 ---
 
 ### Stream Replay Link
@@ -15,20 +15,9 @@ replay:
 
 <!--more-->
 
-### Segments
-
-| Timestamp | Topic
-| ---       | ---
-| [00:07]({{page.replay}}?t=448.345) | Kicking it off |
-| [00:35]({{page.replay}}?t=2111.626) | Function time |
-| [03:17]({{page.replay}}?t=11820.459) | Wrapping up and raid to [roberttables](https://twitch.tv/roberttables) |
-
 ### Today's Candle To Code By
 
 <a href="https://amzn.to/30ttzO6" target="_blank">Whiskey and Cigar (The Den)</a>
-
-### Goals
-
 
 ## Today's stream brought to you by
 
@@ -351,4 +340,3 @@ replay:
       <a href="https://twitch.tv/mrbalrog" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a></span>
   </div>
 </div>
-
