@@ -1,12 +1,12 @@
 ---
 layout: post
 date: 2019-11-24 19:11
-title: "Writing a quick blog post on Azure Key Vault and then working on our serverless chat bot Vulcan"
-image:
-description: ""
+title: "A quick blog post on Azure Key Vault then working on our chat bot Vulcan"
+image: https://user-images.githubusercontent.com/1228996/69595341-e0569a00-0fc4-11ea-96e0-69d99a901741.png)
+description: "Writing a quick blog post on Azure Key Vault and then working on our serverless chat bot Vulcan"
 comments: true
-tags: [twitch, stream]
-replay:
+tags: [twitch, stream, azure, key-vault, functions, app-service, blog, vulcan]
+replay: https://youtu.be/2qMtaezexo8
 ---
 
 ### Stream Replay Link
@@ -17,29 +17,25 @@ replay:
 
 ### Segments
 
-| Timestamp | Topic
-| ---       | ---
-| [00:08]({{page.replay}}?t=483.835) | Kicking it off |
-| [00:24]({{page.replay}}?t=1476.337) | Michael showing off the mark command |
-| [00:27]({{page.replay}}?t=1658.418) | useful blog VS code extensions |
-| [01:20]({{page.replay}}?t=4852.498) | @theMichaelJolley got bored and played @sorskoot JS13K game! |
-| [01:21]({{page.replay}}?t=4918.326) | game over! |
-| [01:46]({{page.replay}}?t=6381.414) | Nate goes to bed! |
-| [03:17]({{page.replay}}?t=11827.207) | Starting work on Vulcan |
-| [05:52]({{page.replay}}?t=21171.337) | Wrapping up and raid to [jitterted](https://twitch.tv/jitterted) |
+| Timestamp                            | Topic                                                          |
+| ------------------------------------ | -------------------------------------------------------------- |
+| [00:08]({{page.replay}}?t=483.835)   | Kicking it off                                                 |
+| [00:24]({{page.replay}}?t=1476.337)  | Michael showing off the mark command                           |
+| [00:27]({{page.replay}}?t=1658.418)  | useful blog VS code extensions                                 |
+| [01:20]({{page.replay}}?t=4852.498)  | @theMichaelJolley got bored and played @sorskoot JS13K game!   |
+| [01:21]({{page.replay}}?t=4918.326)  | game over!                                                     |
+| [01:46]({{page.replay}}?t=6381.414)  | Nate goes to bed!                                              |
+| [03:17]({{page.replay}}?t=11827.207) | Starting work on Vulcan                                        |
 | [05:53]({{page.replay}}?t=21208.083) | Wrapping up and raid to [tbdgamer](https://twitch.tv/tbdgamer) |
 
 ### Today's Candle To Code By
 
 <a href="https://amzn.to/2GSsMxX" target="_blank">Warm Tobacco Pipe</a>
 
-### Goals
-
-
 ### Things We Learned
 
-- <a href="https://twitch.tv/themichaeljolley" target="_blank">theMichaelJolley</a>: shared some useful links for vs code blogging https://bit.ly/2xfhfff https://bit.ly/2xfhmkz https://bit.ly/2kkcp4h 
-- <a href="https://twitch.tv/cmjchrisjones" target="_blank">cmjchrisjones</a>: shared https://bit.ly/2d8vksz 
+- <a href="https://twitch.tv/themichaeljolley" target="_blank">theMichaelJolley</a>: shared some useful links for vs code blogging https://bit.ly/2xfhfff https://bit.ly/2xfhmkz https://bit.ly/2kkcp4h
+- <a href="https://twitch.tv/cmjchrisjones" target="_blank">cmjchrisjones</a>: shared https://bit.ly/2d8vksz
 
 ## Today's stream brought to you by
 
@@ -382,4 +378,3 @@ replay:
       <a href="https://twitch.tv/luckynos7evin" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a></span>
   </div>
 </div>
-
