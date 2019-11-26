@@ -2,11 +2,11 @@
 layout: post
 date: 2019-11-19 18:11
 title: "Learning Blazor!  Can we make a component? C# skills activate!"
-image:
-description: ""
+image: https://user-images.githubusercontent.com/1228996/69594726-d7fd5f80-0fc2-11ea-85ba-a3610d69acd0.png
+description: "We want to build a custom Blazor component, but first we have to learn Blazor."
 comments: true
-tags: [twitch, stream]
-replay:
+tags: [twitch, stream, dotnet, blazor]
+replay: https://youtu.be/5axkn0ZHjSc
 ---
 
 ### Stream Replay Link
@@ -15,18 +15,9 @@ replay:
 
 <!--more-->
 
-### Segments
-
-| Timestamp | Topic
-| ---       | ---
-| [03:00]({{page.replay}}?t=10810.982) | Wrapping up and raid to [roberttables](https://twitch.tv/roberttables) |
-
 ### Today's Candle To Code By
 
 <a href="https://stinkycandlecompany.com/product/wet-grass-candle" target="_blank">Wet Grass</a>
-
-### Goals
-
 
 ## Today's stream brought to you by
 
@@ -354,4 +345,3 @@ replay:
       <a href="https://twitch.tv/theorxplays" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a></span>
   </div>
 </div>
-
