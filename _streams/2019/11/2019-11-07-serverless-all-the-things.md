@@ -2,11 +2,11 @@
 layout: post
 date: 2019-11-07 19:11
 title: "Serverless all the things!  We're moving the bot to the cloud with Azure Functions, CosmosDB, Containers."
-image:
-description: ""
+image: https://user-images.githubusercontent.com/1228996/69594185-24e03680-0fc1-11ea-8aff-12b2f407d9d1.png
+description: "Building a new project named Vulcan.  It will be a serverless chat bot using Azure Functions, CosmosDB and containers."
 comments: true
-tags: [twitch, stream]
-replay:
+tags: [twitch, stream, vulcan, functions, cosmosdb, docker]
+replay: https://youtu.be/cCmi-jp6TBc
 ---
 
 ### Stream Replay Link
@@ -15,19 +15,9 @@ replay:
 
 <!--more-->
 
-### Segments
-
-| Timestamp | Topic
-| ---       | ---
-| [00:22]({{page.replay}}?t=1331.978) | Starting to talk about Vulcan |
-| [03:22]({{page.replay}}?t=12149.768) | Wrapping up and raid to [luckynos7evin](https://twitch.tv/luckynos7evin) |
-
 ### Today's Candle To Code By
 
 <a href="https://amzn.to/2GSsMxX" target="_blank">Warm Tobacco Pipe</a>
-
-### Goals
-
 
 ## Today's stream brought to you by
 
@@ -370,4 +360,3 @@ replay:
       <a href="https://twitch.tv/therealcaseyw" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a></span>
   </div>
 </div>
-
