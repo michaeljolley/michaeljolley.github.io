@@ -1,12 +1,12 @@
 ---
 layout: post
 date: 2019-11-21 18:11
-title: "Working on our servless chat bot Vulcan | JS, FaunaDB, Azure, socket.io"
-image:
-description: ""
+title: "Working on our serverless chat bot Vulcan | JS, FaunaDB, Azure, socket.io"
+image: https://user-images.githubusercontent.com/1228996/69594945-886b6380-0fc3-11ea-8ce6-8fc9dcff9098.png
+description: "Working on our serverless chat bot Vulcan"
 comments: true
-tags: [twitch, stream]
-replay:
+tags: [twitch, stream, javascript, faunadb, socket-io, azure]
+replay: https://youtu.be/2Q6fojOFtlA
 ---
 
 ### Stream Replay Link
@@ -15,20 +15,9 @@ replay:
 
 <!--more-->
 
-### Segments
-
-| Timestamp | Topic
-| ---       | ---
-| [00:34]({{page.replay}}?t=2098.707) | phrakberg trolls Mike |
-| [01:16]({{page.replay}}?t=4584.241) | give-a-way winner @fishingdev |
-| [03:43]({{page.replay}}?t=13439.474) | Wrapping up and raid to [luckynos7evin](https://twitch.tv/luckynos7evin) |
-
 ### Today's Candle To Code By
 
 <a href="https://amzn.to/2GSsMxX" target="_blank">Warm Tobacco Pipe</a>
-
-### Goals
-
 
 ## Today's stream brought to you by
 
@@ -296,4 +285,3 @@ replay:
       <a href="https://twitch.tv/fork04_" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a></span>
   </div>
 </div>
-
