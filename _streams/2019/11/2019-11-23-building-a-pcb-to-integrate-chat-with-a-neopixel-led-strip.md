@@ -2,11 +2,11 @@
 layout: post
 date: 2019-11-23 21:11
 title: "Building a PCB to integrate our chat bot with a NeoPixel LED strip"
-image:
-description: ""
+image: https://user-images.githubusercontent.com/1228996/69595125-40007580-0fc4-11ea-82d8-164a1724cf76.png
+description: "Building a PCB to integrate our chat bot with a NeoPixel LED strip"
 comments: true
-tags: [twitch, stream]
-replay:
+tags: [twitch, stream, pcb, oshpark, eaglecad, neopixel, led]
+replay: https://youtu.be/Umh4TuSRlc0
 ---
 
 ### Stream Replay Link
@@ -14,14 +14,6 @@ replay:
 [{{page.replay}}]({{page.replay}})
 
 <!--more-->
-
-### Segments
-
-| Timestamp | Topic
-| ---       | ---
-
-### Goals
-
 
 ## Today's stream brought to you by
 
@@ -94,4 +86,3 @@ replay:
       <a href="https://twitch.tv/steamsnaiperis" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a></span>
   </div>
 </div>
-
