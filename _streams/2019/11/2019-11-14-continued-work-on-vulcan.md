@@ -2,11 +2,11 @@
 layout: post
 date: 2019-11-14 18:11
 title: "Continued work on Vulcan, our serverless chat bot.  "
-image:
-description: ""
+image: https://user-images.githubusercontent.com/1228996/69594370-bcde2000-0fc1-11ea-81a1-02e023868f4f.png
+description: "Continuing to work on our serverless chat bot Vulcan."
 comments: true
-tags: [twitch, stream]
-replay:
+tags: [twitch, stream, vulcan, node.js, functions, azure]
+replay: https://youtu.be/_yDTuEXkSEk
 ---
 
 ### Stream Replay Link
@@ -15,19 +15,9 @@ replay:
 
 <!--more-->
 
-### Segments
-
-| Timestamp | Topic
-| ---       | ---
-| [00:34]({{page.replay}}?t=2090.837) | actually starting to code |
-| [03:27]({{page.replay}}?t=12442.232) | Wrapping up and raid to [roberttables](https://twitch.tv/roberttables) |
-
 ### Today's Candle To Code By
 
 <a href="https://amzn.to/2GSsMxX" target="_blank">Warm Tobacco Pipe</a>
-
-### Goals
-
 
 ## Today's stream brought to you by
 
@@ -285,4 +275,3 @@ replay:
       <a href="https://twitch.tv/fork04_" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a></span>
   </div>
 </div>
-
