@@ -2,7 +2,7 @@
 layout: post
 date: 2019-11-17 18:11
 title: "Putting our chat bot services in containers and testing in Azure."
-image:https://user-images.githubusercontent.com/1228996/69594539-4988de00-0fc2-11ea-8829-81414b4a7af9.png
+image: https://user-images.githubusercontent.com/1228996/69594539-4988de00-0fc2-11ea-8829-81414b4a7af9.png
 description: "Now that we have some Node.js apps, we put them in containers so we can run them in Azure."
 comments: true
 tags: [twitch, stream, vulcan, containers, azure]

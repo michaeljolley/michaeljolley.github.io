@@ -2,7 +2,7 @@
 layout: post
 date: 2019-11-24 19:11
 title: "A quick blog post on Azure Key Vault then working on our chat bot Vulcan"
-image: https://user-images.githubusercontent.com/1228996/69595341-e0569a00-0fc4-11ea-96e0-69d99a901741.png)
+image: https://user-images.githubusercontent.com/1228996/69595341-e0569a00-0fc4-11ea-96e0-69d99a901741.png
 description: "Writing a quick blog post on Azure Key Vault and then working on our serverless chat bot Vulcan"
 comments: true
 tags: [twitch, stream, azure, key-vault, functions, app-service, blog, vulcan]
