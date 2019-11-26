@@ -2,11 +2,11 @@
 layout: post
 date: 2019-11-17 18:11
 title: "Putting our chat bot services in containers and testing in Azure."
-image:
-description: ""
+image:https://user-images.githubusercontent.com/1228996/69594539-4988de00-0fc2-11ea-8829-81414b4a7af9.png
+description: "Now that we have some Node.js apps, we put them in containers so we can run them in Azure."
 comments: true
-tags: [twitch, stream]
-replay:
+tags: [twitch, stream, vulcan, containers, azure]
+replay: https://youtu.be/eN1uGfL5lZE
 ---
 
 ### Stream Replay Link
@@ -15,19 +15,9 @@ replay:
 
 <!--more-->
 
-### Segments
-
-| Timestamp | Topic
-| ---       | ---
-| [01:08]({{page.replay}}?t=4099.865) | Kicking it off |
-| [04:54]({{page.replay}}?t=17670.252) | Wrapping up and raid to [ramblinggeek](https://twitch.tv/ramblinggeek) |
-
 ### Today's Candle To Code By
 
 <a href="https://amzn.to/2GSsMxX" target="_blank">Warm Tobacco Pipe</a>
-
-### Goals
-
 
 ## Today's stream brought to you by
 
@@ -285,4 +275,3 @@ replay:
       <a href="https://twitch.tv/romerocesar" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a></span>
   </div>
 </div>
-
