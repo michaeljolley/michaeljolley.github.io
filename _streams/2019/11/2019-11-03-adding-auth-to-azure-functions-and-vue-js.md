@@ -2,11 +2,11 @@
 layout: post
 date: 2019-11-03 18:11
 title: "Adding auth to communications between our Azure Functions and Vue.js site"
-image:
-description: ""
+image: https://user-images.githubusercontent.com/1228996/69593812-fca40800-0fbf-11ea-80fd-f09d85c44d79.png
+description: "Working to add authentication between our Azure functions and Vue.js site."
 comments: true
-tags: [twitch, stream]
-replay:
+tags: [twitch, stream, azure, functions, vue-js]
+replay: https://youtu.be/CRC5YbfnXmk
 ---
 
 ### Stream Replay Link
@@ -15,20 +15,9 @@ replay:
 
 <!--more-->
 
-### Segments
-
-| Timestamp | Topic
-| ---       | ---
-| [00:13]({{page.replay}}?t=838.292) | Kicking it off |
-| [00:59]({{page.replay}}?t=3561.04) | Kicking it off |
-| [01:14]({{page.replay}}?t=4440.218) | Wrapping up and raid to [talk2megooseman](https://twitch.tv/talk2megooseman) |
-
 ### Today's Candle To Code By
 
 <a href="https://stinkycandlecompany.com/product/wet-grass-candle" target="_blank">Wet Grass</a>
-
-### Goals
-
 
 ## Today's stream brought to you by
 
@@ -186,4 +175,3 @@ replay:
       <a href="https://twitch.tv/seppytw" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a></span>
   </div>
 </div>
-
