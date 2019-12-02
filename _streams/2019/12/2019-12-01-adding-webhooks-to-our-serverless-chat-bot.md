@@ -1,12 +1,12 @@
 ---
 layout: post
 date: 2019-12-01 18:12
-title: "Adding webhooks to our serverless chat-bot.  | Azure, FaunaDB, Socket.IO, Containers & JS."
-image:
-description: ""
+title: "Adding webhooks to our serverless chat-bot"
+image: https://user-images.githubusercontent.com/1228996/69931419-c7e6f380-148c-11ea-9c4e-759f9fb308ee.png
+description: "Added a new service to our chat bot that allows calling web hooks based on socket.io events.  Then spent the rest of the stream attempting to add a volume mount to our Azure app service from our storage account."
 comments: true
-tags: [twitch, stream]
-replay:
+tags: [twitch, stream, azure, faunadb, socket-io, javascript, webhook]
+replay: https://youtu.be/tRS_95po8z0
 ---
 
 ### Stream Replay Link
@@ -15,19 +15,14 @@ replay:
 
 <!--more-->
 
-### Segments
-
-| Timestamp | Topic
-| ---       | ---
-| [00:11]({{page.replay}}?t=685.987) | Kicking it off |
-| [00:32]({{page.replay}}?t=1928.764) | Kicking it off |
-
 ### Today's Candle To Code By
 
 <a href="https://stinkycandlecompany.com/product/leather-candle/" target="_blank">Leather</a>
 
 ### Goals
 
+- [x] Add webhook type to our GraphQL schema and load to FaunaDB
+- [x] Add webhook service to call webhooks based off socket.io events
 
 ## Today's stream brought to you by
 
@@ -355,4 +350,3 @@ replay:
       <a href="https://twitch.tv/krangence" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a></span>
   </div>
 </div>
-
