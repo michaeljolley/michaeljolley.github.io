@@ -2,11 +2,11 @@
 layout: post
 date: 2019-12-05 19:12
 title: "Using Twitch chat & API to trigger events in Socket.IO"
-image:
-description: ""
+image: https://user-images.githubusercontent.com/1228996/70284946-7a6bce80-178b-11ea-84e1-7dd124dcb939.png
+description: "Triggering cheer, raid & subscription events in Socket.IO based on information from Twitch chat."
 comments: true
-tags: [twitch, stream]
-replay:
+tags: [twitch, stream, javascript, socket-io, vulcan]
+replay: https://youtu.be/4mIU9X6_HxM
 ---
 
 ### Stream Replay Link
@@ -15,25 +15,14 @@ replay:
 
 <!--more-->
 
-### Segments
-
-| Timestamp | Topic
-| ---       | ---
-| [02:13]({{page.replay}}?t=7998.414) | Mike explaining the IO bot |
-| [04:09]({{page.replay}}?t=14975.622) | Wrapping up and raid to [sorskoot](https://twitch.tv/sorskoot) |
-
 ### Today's Candle To Code By
 
 <a href="https://amzn.to/320cEn1" target="_blank">Unicorn Dust</a>
 
-### Goals
-
-- [ ] add more event handling
-
 ### Things We Learned
 
-- <a href="https://twitch.tv/ramblinggeek" target="_blank">RamblingGeek</a>: shared the link to cascadia code font at https://github.com/microsoft/cascadia-code 
-- <a href="https://twitch.tv/luckynos7evin" target="_blank">LuckyNoS7evin</a>: recommended the twitch stream markers api 
+- <a href="https://twitch.tv/ramblinggeek" target="_blank">RamblingGeek</a>: shared the link to Cascadia Code font at <a href="https://github.com/microsoft/cascadia-code" target="_blank">https://github.com/microsoft/cascadia-code</a> 
+- <a href="https://twitch.tv/luckynos7evin" target="_blank">LuckyNoS7evin</a>: recommended the Twitch stream markers API  
 
 ## Today's stream brought to you by
 
@@ -60,21 +49,16 @@ replay:
     <span>Kershoc<br/>
       <a href="https://twitch.tv/kershoc" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a></span>
   </div>
-  <div class="user">
-    <img class="profile" src="https://static-cdn.jtvnw.net/jtv_user_pictures/kershoc-profile_image-be83643ea5351531-300x300.png"/>
-    <span>Kershoc<br/>
-      <a href="https://twitch.tv/kershoc" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a></span>
-  </div>
-  <div class="user">
-    <img class="profile" src="https://static-cdn.jtvnw.net/jtv_user_pictures/kershoc-profile_image-be83643ea5351531-300x300.png"/>
-    <span>Kershoc<br/>
-      <a href="https://twitch.tv/kershoc" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a></span>
-  </div>
 </div>
 
 ### Raids
 
 <div class="users">
+  <div class="user">
+    <img class="profile" src="https://static-cdn.jtvnw.net/jtv_user_pictures/0ff49305-4539-4359-8670-8e26a04314da-profile_image-300x300.jpg"/>
+    <span>MatthewDGroves<br/>
+      <a href="https://twitch.tv/matthewdgroves" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a></span>
+  </div>
   <div class="user">
     <img class="profile" src="https://static-cdn.jtvnw.net/jtv_user_pictures/0198f666-880a-416c-9cd2-6df5e33a2541-profile_image-300x300.png"/>
     <span>AstrocastsLive<br/>
