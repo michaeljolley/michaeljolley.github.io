@@ -6,7 +6,7 @@ image: https://user-images.githubusercontent.com/1228996/70284946-7a6bce80-178b-
 description: "Triggering cheer, raid & subscription events in Socket.IO based on information from Twitch chat."
 comments: true
 tags: [twitch, stream, javascript, socket-io, vulcan]
-replay: https://youtu.be/4mIU9X6_HxM
+replay: https://youtu.be/TAkvQnfthlc
 ---
 
 ### Stream Replay Link
