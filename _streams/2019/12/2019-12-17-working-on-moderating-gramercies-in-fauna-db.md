@@ -2,11 +2,11 @@
 layout: post
 date: 2019-12-17 19:12
 title: "Back to work on Awesum.io with Vue.js, Azure functions, Auth0 and FaunaDB. #awesum"
-image:
-description: ""
+image: https://user-images.githubusercontent.com/1228996/71315715-857c5b00-2429-11ea-90e9-0665524dc108.png
+description: "Working on awesum.io again.  Adding authentication to requests for moderation."
 comments: true
-tags: [twitch, stream]
-replay:
+tags: [twitch, stream, fauna, vuejs, auth0, awesum-io]
+replay: https://youtu.be/Rg8rzVoKSPU
 ---
 
 ### Stream Replay Link
@@ -15,20 +15,9 @@ replay:
 
 <!--more-->
 
-### Segments
-
-| Timestamp | Topic
-| ---       | ---
-| [00:08]({{page.replay}}?t=496.286) | Kicking it off |
-| [00:22]({{page.replay}}?t=1359.727) | Explaining the awesum.io project |
-| [03:41]({{page.replay}}?t=13310.099) | Wrapping up and raid to [roberttables](https://twitch.tv/roberttables) |
-
 ### Today's Candle To Code By
 
 <a href="https://amzn.to/2GSsMxX" target="_blank">Warm Tobacco Pipe</a>
-
-### Goals
-
 
 ## Today's stream brought to you by
 
