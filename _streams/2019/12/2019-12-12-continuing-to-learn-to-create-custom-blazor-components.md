@@ -2,11 +2,11 @@
 layout: post
 date: 2019-12-12 19:12
 title: "Learning Blazor to create custom components"
-image:
-description: ""
+image: https://user-images.githubusercontent.com/1228996/71315690-f707d980-2428-11ea-88eb-8dc6d16aa8c6.png
+description: "Continuing to learn Blazor with a goal to create a custom component"
 comments: true
-tags: [twitch, stream]
-replay:
+tags: [twitch, stream, blazor, component]
+replay: https://youtu.be/Z-yKjthJ6Ak
 ---
 
 ### Stream Replay Link
@@ -15,17 +15,9 @@ replay:
 
 <!--more-->
 
-### Segments
-
-| Timestamp | Topic
-| ---       | ---
-| [02:58]({{page.replay}}?t=10706.423) | Wrapping up and raid to [sorskoot](https://twitch.tv/sorskoot) |
-
 ### Today's Candle To Code By
 
 <a href="https://stinkycandlecompany.com/product/wet-grass-candle" target="_blank">Wet Grass</a>
-
-### Goals
 
 
 ## Today's stream brought to you by
