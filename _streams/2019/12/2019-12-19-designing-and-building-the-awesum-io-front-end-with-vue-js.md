@@ -2,11 +2,11 @@
 layout: post
 date: 2019-12-19 19:12
 title: "Designing & building the awesum.io front-end with Vue.js"
-image:
-description: ""
+image: https://user-images.githubusercontent.com/1228996/71315741-f7ed3b00-2429-11ea-8c11-27b4792926ea.png
+description: "Designing and starting to work on the front-end for awesum.io"
 comments: true
-tags: [twitch, stream]
-replay:
+tags: [twitch, stream, awesum-io, vuejs]
+replay: https://youtu.be/gVSwkjajK7s
 ---
 
 ### Stream Replay Link
@@ -15,21 +15,9 @@ replay:
 
 <!--more-->
 
-### Segments
-
-| Timestamp | Topic
-| ---       | ---
-| [00:45]({{page.replay}}?t=2701.704) | not coding - video editing |
-| [01:40]({{page.replay}}?t=6007.65) | Explaining awesum.io |
-| [03:17]({{page.replay}}?t=11879.897) | Kicking it off |
-| [03:23]({{page.replay}}?t=12222.345) | Wrapping up and raid to [luckynos7evin](https://twitch.tv/luckynos7evin) |
-
 ### Today's Candle To Code By
 
 <a href="https://stinkycandlecompany.com/product/wet-grass-candle" target="_blank">Wet Grass</a>
-
-### Goals
-
 
 ## Today's stream brought to you by
 
