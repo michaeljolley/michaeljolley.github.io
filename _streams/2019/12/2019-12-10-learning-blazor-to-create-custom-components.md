@@ -2,11 +2,11 @@
 layout: post
 date: 2019-12-10 19:12
 title: "Learning Blazor to create custom components"
-image:
-description: ""
+image: https://user-images.githubusercontent.com/1228996/71315653-2e29bb00-2428-11ea-8b82-d1c0ec6770fa.png
+description: "Trying to learn how to create custom Blazor components"
 comments: true
-tags: [twitch, stream]
-replay:
+tags: [twitch, stream, learning, blazor, component]
+replay: https://youtu.be/Wc-I9orq-20
 ---
 
 ### Stream Replay Link
@@ -15,19 +15,9 @@ replay:
 
 <!--more-->
 
-### Segments
-
-| Timestamp | Topic
-| ---       | ---
-| [00:09]({{page.replay}}?t=541.156) | Kicking it off |
-| [03:11]({{page.replay}}?t=11464.83) | Wrapping up and raid to [jitterted](https://twitch.tv/jitterted) |
-
 ### Today's Candle To Code By
 
 <a href="https://stinkycandlecompany.com/product/leather-candle/" target="_blank">Leather</a>
-
-### Goals
-
 
 ### Things We Learned
 
@@ -318,4 +308,3 @@ replay:
       <a href="https://twitch.tv/gahlekzis" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a></span>
   </div>
 </div>
-
