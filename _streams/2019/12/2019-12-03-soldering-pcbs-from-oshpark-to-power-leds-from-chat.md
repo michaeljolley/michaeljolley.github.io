@@ -2,11 +2,11 @@
 layout: post
 date: 2019-12-03 19:12
 title: "Soldering custom PCBs from OSHPark to power LEDs from chat"
-image:
-description: ""
+image: https://user-images.githubusercontent.com/1228996/71315599-1dc51080-2427-11ea-9b6c-853bb3deb6e4.png
+description: "Working to solder our custom PCB's from OSHPark so we can control LEDs from Twitch chat."
 comments: true
-tags: [twitch, stream]
-replay:
+tags: [twitch, stream, pcb, solder, oshpark, led]
+replay: https://youtu.be/7cksua1hakc
 ---
 
 ### Stream Replay Link
@@ -15,22 +15,13 @@ replay:
 
 <!--more-->
 
-### Segments
-
-| Timestamp | Topic
-| ---       | ---
-| [03:15]({{page.replay}}?t=11740.04) | Wrapping up and raid to [jitterted](https://twitch.tv/jitterted) |
-
 ### Today's Candle To Code By
 
 <a href="https://stinkycandlecompany.com/product/wet-grass-candle" target="_blank">Wet Grass</a>
 
-### Goals
-
-
 ### Things We Learned
 
-- <a href="https://twitch.tv/roberttables" target="_blank">roberttables</a>: shared the type of safety/magnification glasses he and @themichaeljolley use - https://www.amazon.com/gp/product/b01lmc9y56/ref=ppx_yo_dt_b_search_asin_title?ie=utf8&psc=1 
+- <a href="https://twitch.tv/roberttables" target="_blank">roberttables</a>: shared the type of <a href="https://www.amazon.com/gp/product/b01lmc9y56/ref=ppx_yo_dt_b_search_asin_title?ie=utf8&psc=1" target="_blank">safety/magnification glasses</a> he and Michael Jolley uses
 
 ## Today's stream brought to you by
 
