@@ -1,0 +1,21 @@
+{
+    "id": "35f67871-db44-4f42-affb-7205f0c904ca",
+    "name": "Clause Inc.",
+    "links": [
+        {
+            "href": "https://localhost:5001/api/clients",
+            "rel": "all",
+            "type": "GET"
+        },
+        {
+            "href": "https://localhost:5001/api/clients/35f67871-db44-4f42-affb-7205f0c904ca",
+            "rel": "_self",
+            "type": "GET"
+        },
+        {
+            "href": "https://localhost:5001/api/clients/35f67871-db44-4f42-affb-7205f0c904ca/addresses",
+            "rel": "addresses",
+            "type": "GET"
+        }
+    ]
+}
