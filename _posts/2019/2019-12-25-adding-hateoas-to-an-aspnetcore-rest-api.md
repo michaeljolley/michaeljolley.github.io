@@ -15,37 +15,54 @@ realizing it.
 
 Let's look at two responses from RESTful APIs:
 
-<figure>
+<figure style="margin-bottom:20px;">
     <img alt="Example code of a JSON result from a RESTful and RESTful + HATEOAS API" src="https://res.cloudinary.com/dk3rdh3yo/image/upload/v1577158190/header-templatssse_uzfqri.png" />
 </figure>
 
-In the example responses, you can see that by just adding the `links` property to your object, adding HATEOAS 
-data to your responses can greatly increase the discover-ability of your RESTful APIs.
+In the example responses, you can see that by adding the `links` property to your object, you can greatly increase the discover-ability of your RESTful APIs.
 
-Let's look at how to add a rudimentary implementation of HATEOAS in an ASP.NET Core web API.
+Let's add a rudimentary implementation of HATEOAS in an ASP.NET Core web API.
 
 <!--more-->
 
-First, download the sample code at <a href="https://github.com/MichaelJolley/aspnetcore-hateoas" target="blank">https://github.com/MichaelJolley/aspnetcore-hateoas</a>.  The solution contains two C# projects: BaldBeardedBuilder.HATEOAS.Lib (Lib) and BaldBeardedBuilder.HATEOAS (API).  The Lib project contains a very basic Entity Framework Core DbContext with two related DbSets; Clients and Addresses.
+## Getting Started
 
+First, download the sample code at <a href="https://github.com/MichaelJolley/aspnetcore-hateoas" target="blank">https://github.com/MichaelJolley/aspnetcore-hateoas</a>.
 
+The solution contains two C# projects: BaldBeardedBuilder.HATEOAS.Lib (Lib) and BaldBeardedBuilder.HATEOAS (API).  The 
+Lib project contains a very basic Entity Framework Core DbContext with two related DbSets; Clients and Addresses.
 
+### BaldBeardedBuilder.HATEOAS.Lib (Lib)
+
+We're not going to go into much detail about the Lib project, but I want to provide a little context to how it's used. 
+Its sole purpose is to provide an example data access layer.  The Lib project contains a small Entity Framework Core DbContext 
+with two related DbSets; Clients and Addresses.  The solution will use an In-Memory database and will seed it each time you debug.  
+
+### BaldBeardedBuilder.HATEOAS (API)
+
+The API project is where all of our HATEOAS magic happens, but before we get into those details, let's take care of some housekeeping.
+
+As we mentioned previously, we're using an In-Memory database for Entity Framework Core (EF).  We're also using AutoMapper to map our EF entities to the API models.  To get those things setup we'll first add an `AutoMapping.cs` file to the root of the API project with the following code:
 
 {% highlight csharp %}
 
-public class Link
+public class AutoMapping : Profile
 {
-    public Link(string href, string rel, string type)
+    public AutoMapping()
     {
-        Href = href;
-        Rel = rel;
-        Type = type;
+        CreateMap<Address, AddressModel>();
+        CreateMap<Client, ClientModel>();
     }
-
-    public string Href { get; private set; }
-    public string Rel { get; private set; }
-    public string Type { get; private set; }
-
 }
+
+{% endhighlight %}
+
+This code will create the AutoMapper maps between our EF entities and models.  With that file in place, we'll update our `Startup.cs`'s `ConfigureServices` method with the following:
+
+{% highlight csharp %}
+
+services.AddAutoMapper(typeof(Startup));
+services.AddDbContext<BBBContext>(options => 
+    options.UseInMemoryDatabase(databaseName: "bbb"));
 
 {% endhighlight %}
