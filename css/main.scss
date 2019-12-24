@@ -1133,10 +1133,6 @@ a.archive-top-link:hover {
   }
 }
 
-.highlight {
-  pre {
-    :before {
-      font-family: "Font Awesome 5 Pro" !important;
-    }
-  }
+.highlight pre:before {
+  font-family: "Font Awesome 5 Pro" !important;
 }
