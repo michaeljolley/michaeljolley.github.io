@@ -35,13 +35,13 @@ The solution contains two C# projects: BaldBeardedBuilder.HATEOAS.Lib (Lib) and 
 
 We're not going to go into much detail about the Lib project, but I want to provide a little context to how it's used. 
 Its sole purpose is to provide an example data access layer.  The Lib project contains a small Entity Framework Core DbContext 
-with two related DbSets; Clients and Addresses.  The solution will use an In-Memory database and will seed it each time you debug.  
+with two related DbSets; Clients and Addresses.  The solution will use an in-memory database and will seed it each time you debug.  
 
 ### BaldBeardedBuilder.HATEOAS (API)
 
 The API project is where all of our HATEOAS magic happens, but before we get into those details, let's take care of some housekeeping.
 
-As we mentioned previously, we're using an In-Memory database for Entity Framework Core (EF).  We're also using AutoMapper to map our EF entities to the API models.  To get those things setup we'll first add an `AutoMapping.cs` file to the root of the API project with the following code:
+As we mentioned previously, we're using an in-memory database for Entity Framework Core (EF).  We're also using AutoMapper to map our EF entities to the API models.  To get those things setup we'll first add an `AutoMapping.cs` file to the root of the API project with the following code:
 
 {% highlight csharp %}
 
@@ -125,7 +125,7 @@ public RestControllerBase(
 
 {% endhighlight %}
 
-Next we'll add a method that will create URI's for each link. The `URLLink` method receives the relation as a string that you will specify. Examples would be "_self", "addresses", etc.  It also takes in the name of the route in MVC.  These will be defined later when we build our API controllers.  Finally, the method takes in an object of values that will contain our route values.  Add the following to the `RestControllerBase.cs`.
+Next we'll add a method that will create URIs for each link. The `URLLink` method receives the relation as a string that you will specify. Examples would be "_self", "addresses", etc.  It also takes in the name of the route in MVC.  These will be defined later when we build our API controllers.  Finally, the method takes in an object of values that will contain our route values.  Add the following to the `RestControllerBase.cs`.
 
 {% highlight csharp %}
 
