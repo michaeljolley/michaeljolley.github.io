@@ -29,8 +29,7 @@ Let's add a rudimentary implementation of HATEOAS in an ASP.NET Core web API.
 
 First, download the sample code at <a href="https://github.com/MichaelJolley/aspnetcore-hateoas" target="blank">https://github.com/MichaelJolley/aspnetcore-hateoas</a>.
 
-The solution contains two C# projects: BaldBeardedBuilder.HATEOAS.Lib (Lib) and BaldBeardedBuilder.HATEOAS (API).  The 
-Lib project contains a very basic Entity Framework Core DbContext with two related DbSets; Clients and Addresses.
+The solution contains two C# projects: BaldBeardedBuilder.HATEOAS.Lib (Lib) and BaldBeardedBuilder.HATEOAS (API).
 
 ### BaldBeardedBuilder.HATEOAS.Lib (Lib)
 
@@ -66,3 +65,42 @@ services.AddDbContext<BBBContext>(options =>
     options.UseInMemoryDatabase(databaseName: "bbb"));
 
 {% endhighlight %}
+
+### Let the fun begin
+
+Before we can add links to our models, we need to define what they look like.  Many times objects will have links that 
+allow for navigation to related objects.  You may even see links related to functionality like CRUD and other operations. 
+In our example, we'll add links for relational objects, including `_self`. The `_self` link will define the path to that 
+specific object.  In the `Models` directory of the API project, let's add a `Link.cs` file with the following class:
+
+{% highlight csharp %}
+
+public class Link
+{
+    public Link(string href, string rel, string type)
+    {
+        Href = href;
+        Rel = rel;
+        Type = type;
+    }
+
+    public string Href { get; private set; }
+    public string Rel { get; private set; }
+    public string Type { get; private set; }
+}
+
+{% endhighlight %}
+
+Next we'll add a base class that our future models will inherit from.  Add a new `RestModelBase.cs` file to the `Models` folder of the API project with the following:
+
+{% highlight csharp %}
+
+public abstract class RestModelBase
+{
+    public List<Link> Links { get; set; } = new List<Link>();
+}
+
+{% endhighlight %}
+
+With that base class in place, we'll inherit it in our `AddressModel` and `ClientModel` classes.
+
