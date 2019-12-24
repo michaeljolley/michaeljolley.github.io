@@ -115,7 +115,9 @@ Now add a constructor that receives an IActionDescriptorCollectionProvider and I
 private readonly IReadOnlyList<ActionDescriptor> _routes;
 private readonly IMapper _mapper;
 
-public RestControllerBase(IActionDescriptorCollectionProvider actionDescriptorCollectionProvider, IMapper mapper)
+public RestControllerBase(
+    IActionDescriptorCollectionProvider actionDescriptorCollectionProvider, 
+    IMapper mapper)
 {
     _routes = actionDescriptorCollectionProvider.ActionDescriptors.Items;
     _mapper = mapper;
@@ -129,8 +131,13 @@ Next we'll add a method that will create URI's for each link. The `URLLink` meth
 
 internal Link UrlLink(string relation, string routeName, object values)
 {
-    var route = _routes.FirstOrDefault(f => f.AttributeRouteInfo.Name.Equals(routeName));
-    var method = route.ActionConstraints.OfType<HttpMethodActionConstraint>().First().HttpMethods.First();
+    var route = _routes.FirstOrDefault(f => 
+                            f.AttributeRouteInfo.Name.Equals(routeName));
+    var method = route.ActionConstraints.
+                            OfType<HttpMethodActionConstraint>()
+                            .First()
+                            .HttpMethods
+                            .First();
     var url = Url.Link(routeName, values).ToLower();
     return new Link(url, relation, method);
 }
@@ -173,7 +180,11 @@ Now that our base controller is done, let's add a `ClientController.cs` that inh
 private readonly ILogger<ClientController> _logger;
 private readonly BBBContext _bbbContext;
 
-public ClientController(ILogger<ClientController> logger, IActionDescriptorCollectionProvider actionDescriptorCollectionProvider, BBBContext bbbContext, IMapper mapper)
+public ClientController(
+    ILogger<ClientController> logger, 
+    IActionDescriptorCollectionProvider actionDescriptorCollectionProvider, 
+    BBBContext bbbContext, 
+    IMapper mapper)
     : base(actionDescriptorCollectionProvider, mapper)
 {
     _logger = logger;
@@ -190,7 +201,8 @@ Now we can access our database to retrieve data and return it using the `Restful
 public IActionResult GetClients()
 {
     IEnumerable<Client> clients = _bbbContext.Clients;
-    IEnumerable<ClientModel> clientModels = clients.Select(f => RestfulClient(f));
+    IEnumerable<ClientModel> clientModels = clients
+                                            .Select(f => RestfulClient(f));
     
     return Ok(clientModels);
 }
@@ -221,8 +233,11 @@ public IActionResult GetAddressesByClient(Guid id)
         return BadRequest();
     }
 
-    IEnumerable<Address> addresses = _bbbContext.Addresses.Where(w => w.ClientId.Equals(id));
-    IEnumerable<AddressModel> addressModels = addresses.Select(f => RestfulAddress(f));
+    IEnumerable<Address> addresses = _bbbContext.Addresses
+                                                .Where(w => 
+                                                    w.ClientId.Equals(id));
+    IEnumerable<AddressModel> addressModels = addresses.Select(f => 
+                                                            RestfulAddress(f));
 
     return Ok(addressModels);
 }
@@ -237,7 +252,8 @@ Our `AddressController` will also inherit our `RestControllerBase` and its const
 public IActionResult GetAddresses()
 {
     IEnumerable<Address> addresses = _bbbContext.Addresses;
-    IEnumerable<AddressModel> addressModels = addresses.Select(f => RestfulAddress(f));
+    IEnumerable<AddressModel> addressModels = addresses.Select(f => 
+                                                          RestfulAddress(f));
     
     return Ok(addressModels);
 }
@@ -261,3 +277,21 @@ public async Task<IActionResult> GetAddressAsync(Guid id)
 }
 
 {% endhighlight %}
+
+One thing to notice on these controller methods: each is provided a `Name` attribute.  These names 
+correspond to the `routeName`'s we pass into the `UrlLink` method.  The `UrlLink` method will use 
+that method's template to generate the URL to that route.
+
+### Wrap It Up
+
+Now that everything is in place, we can run the application and navigate to the `/api/clients` route 
+to retrieve a list of clients.  Those clients should have a `links` property with links you can follow 
+to retrieve additional data or perform various actions.  
+
+Remember that links don't only have to provide URI's to related data, but can also provide URI's to 
+perform tasks.  Some implementations include links for CRUD operations with relations like `client-update`, 
+`client-delete`, etc.
+
+Hopefully, this basic implementation of HATEOAS gives you some ideas of how you can implement something 
+similar in your own API's to improve their discoverability.  Have any questions or suggestions to improve it? 
+Leave a comment below!
