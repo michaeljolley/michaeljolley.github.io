@@ -2,11 +2,11 @@
 layout: post
 date: 2019-12-22 19:12
 title: "Joined by Michael Heap to learn more about GitHub Actions"
-image:
-description: ""
+image: https://user-images.githubusercontent.com/1228996/71425329-ee014d00-2660-11ea-9842-7ae4b2da5dc5.png
+description: "Learning how GitHub Actions can be used for a lot more than CI/CD processes with special guest, Michael Heap."
 comments: true
-tags: [twitch, stream]
-replay:
+tags: [twitch, stream, github, actions, michael, heap]
+replay: https://youtu.be/P7Ht2-hMLVk
 ---
 
 ### Stream Replay Link
@@ -15,18 +15,9 @@ replay:
 
 <!--more-->
 
-### Segments
-
-| Timestamp | Topic
-| ---       | ---
-| [03:37]({{page.replay}}?t=13044.004) | Wrapping up and raid to [timbeaudet](https://twitch.tv/timbeaudet) |
-
 ### Today's Candle To Code By
 
 <a href="https://amzn.to/320cEn1" target="_blank">Unicorn Dust</a>
-
-### Goals
-
 
 ## Today's stream brought to you by
 
