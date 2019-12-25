@@ -8,6 +8,8 @@ comments: true
 tags: [aspnetcore, hateoas, api, json, dotnet, c#]
 ---
 
+> I am insanely thankful to be included in <a href="https://crosscuttingconcerns.com/The-Third-Annual-csharp-Advent" target="_blank">C# Advent</a> this year. This is the 3rd year of C# Advent and I always enjoy the dozens of posts by everyone in the community.  Be sure to follow the link above and check out the other posts and watch `#csadvent` on Twitter for updates.
+
 RESTful APIs are very popular these days. When used consistently, they provide a great way to make our APIs easier 
 for users to consume.  But how can we make discovering endpoints and capabilities easier? One way is to implement 
 Hypermedia as the Engine of Application State (HATEOAS).  You may have seen HATEOAS used in other APIs without 
@@ -301,5 +303,4 @@ perform tasks.  Some implementations include links for CRUD operations with rela
 `client-delete`, etc.
 
 Hopefully, this basic implementation of HATEOAS gives you some ideas of how you can implement something 
-similar in your own API's to improve their discoverability.  Have any questions or suggestions to improve it? 
-Leave a comment below!
+similar in your own API's to improve their discoverability.  Have any questions or suggestions to improve it? Leave a comment below!
