@@ -15,6 +15,8 @@ for users to consume.  But how can we make discovering endpoints and capabilitie
 Hypermedia as the Engine of Application State (HATEOAS).  You may have seen HATEOAS used in other APIs without 
 realizing it.
 
+<!--more-->
+
 Let's look at two responses from RESTful APIs:
 
 <figure style="margin-bottom:20px;">
@@ -24,8 +26,6 @@ Let's look at two responses from RESTful APIs:
 In the example responses, you can see that by adding the `links` property to your object, you can greatly increase the discover-ability of your RESTful APIs.
 
 Let's add a rudimentary implementation of HATEOAS in an ASP.NET Core web API.
-
-<!--more-->
 
 ## Getting Started
 
