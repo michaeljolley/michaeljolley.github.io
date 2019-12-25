@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2019-12-23 01:00
+date: 2019-12-25 01:00
 title: "Adding HATEOAS to an ASP.NET Core API"
 image: https://res.cloudinary.com/dk3rdh3yo/image/upload/v1577158217/71390264-4256ef00-25c5-11ea-890b-6614ed7fd9a9_xjzxer.png
 description: Implement simple JSON HATEOAS support to an ASP.NET Core web API
