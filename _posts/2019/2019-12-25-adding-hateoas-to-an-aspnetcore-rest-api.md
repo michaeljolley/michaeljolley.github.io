@@ -154,13 +154,19 @@ internal ClientModel RestfulClient(Client client)
     ClientModel clientModel = _mapper.Map<ClientModel>(client);
 
     clientModel.Links.Add(
-        UrlLink("all", "GetClients", null));
+        UrlLink("all", 
+                "GetClients", 
+                null));
 
     clientModel.Links.Add(
-        UrlLink("_self", "GetClientAsync", new { id = clientModel.Id }));
+        UrlLink("_self", 
+                "GetClientAsync", 
+                new { id = clientModel.Id }));
 
     clientModel.Links.Add(
-        UrlLink("addresses", "GetAddressesByClient", new { id = clientModel.Id }));
+        UrlLink("addresses", 
+                "GetAddressesByClient", 
+                new { id = clientModel.Id }));
 
     return clientModel;
 }
@@ -236,8 +242,9 @@ public IActionResult GetAddressesByClient(Guid id)
     IEnumerable<Address> addresses = _bbbContext.Addresses
                                                 .Where(w => 
                                                     w.ClientId.Equals(id));
-    IEnumerable<AddressModel> addressModels = addresses.Select(f => 
-                                                            RestfulAddress(f));
+    IEnumerable<AddressModel> addressModels = addresses
+                                                .Select(f => 
+                                                    RestfulAddress(f));
 
     return Ok(addressModels);
 }
@@ -252,8 +259,9 @@ Our `AddressController` will also inherit our `RestControllerBase` and its const
 public IActionResult GetAddresses()
 {
     IEnumerable<Address> addresses = _bbbContext.Addresses;
-    IEnumerable<AddressModel> addressModels = addresses.Select(f => 
-                                                          RestfulAddress(f));
+    IEnumerable<AddressModel> addressModels = addresses
+                                                .Select(f => 
+                                                    RestfulAddress(f));
     
     return Ok(addressModels);
 }
