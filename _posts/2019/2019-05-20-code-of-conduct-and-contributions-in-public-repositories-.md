@@ -91,4 +91,4 @@ It's a fun way to give credit where it's due and encourage others to participate
 
 That's my TED Talk for today.  Do you have ideas on how to help new contributors join in? Let me hear them!
 
-[twitch]: https://twitch.tv/themichaeljolley
+[twitch]: https://twitch.tv/BaldBeardedBuilder
