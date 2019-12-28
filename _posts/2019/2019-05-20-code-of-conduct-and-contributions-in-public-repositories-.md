@@ -79,7 +79,7 @@ An example from our VS Code extension is:
 <figure>
   <img src="https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/58047645-3cb89880-7b0e-11e9-8270-7fd116460102_ve78fr.jpg"
   alt="Example of the bottom of our README's with contributors."
-  class="cld-responsive"
+  class="cld-responsive lazyload"
   />
 </figure>
 

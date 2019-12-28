@@ -23,7 +23,7 @@ Let's look at two responses from RESTful APIs:
 <figure style="margin-bottom:20px;">
     <img alt="Example code of a JSON result from a RESTful and RESTful + HATEOAS API" src="https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/header-templatssse_uzfqri.jpg"
     alt="Comparison of REST and REST plus HATEOAS JSON responses"
-    class="cld-responsive" />
+    class="cld-responsive lazyload" />
 </figure>
 
 In the example responses, you can see that by adding the `links` property to your object, you can greatly increase the discover-ability of your RESTful APIs.

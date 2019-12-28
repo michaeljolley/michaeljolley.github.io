@@ -27,7 +27,7 @@ To access Key Vault secrets as environment variables in your Azure App Service, 
 
 <figure style="width:400px;float:right;margin-left:15px">
     <img src="https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/69500724-393e0980-0ec3-11ea-8ac5-c859956c3a12_tylwgx.jpg"
-    class="cld-responsive"
+    class="cld-responsive lazyload"
     alt="Identity blade of Azure app service in portal" />
 </figure>
 
@@ -38,7 +38,7 @@ Set the "Status" control to "On" and press Save. This will register your app ser
 <figure style="width:300px;float:right;margin-left:15px">
     <img src="https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/69500821-2ed03f80-0ec4-11ea-959c-94e540cfa40f_qlsmbm.jpg"
     alt="Azure Key Vault's Access Policies blade"
-    class="cld-responsive"
+    class="cld-responsive lazyload"
     />
 </figure>
 
@@ -49,7 +49,7 @@ On the add access policy page, set any permissions for keys, secrets and/or cert
 <figure style="width:400px;float:right;margin-left:15px">
     <img src="https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/69501029-82438d00-0ec6-11ea-825d-c346edc624d4_lynncg.jpg"
     alt="Add access policy window within Azure portal"
-    class="cld-responsive"
+    class="cld-responsive lazyload"
     />
 </figure>
 

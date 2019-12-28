@@ -35,7 +35,7 @@ I'm still learning a lot about lighting and audio.  There is a lot of experiment
 Above my monitors I have two [Elgato Key Light](https://amzn.to/2Te5LOd) panels.  Both are set to provide more yellow light than blue to offset the blue light coming from my 3 24" monitors.
 <figure>
    <img data-src="https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/53291179-d9b89f00-3774-11e9-8aca-ade57af31e10_ef90ia.jpg"
-    class="cld-responsive"
+    class="cld-responsive lazyload"
     alt="Two Elgato key lights" />
 </figure>
 
@@ -53,7 +53,7 @@ My streams have really been focused on IoT development and I've found it difficu
 
 <figure style="float:right;">
   <img src="https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/53291452-36b65400-3779-11e9-946d-5afe7562919c_ybbzr0.jpg"
-    class="cld-responsive"
+    class="cld-responsive lazyload"
     alt="iPazzPort Handheld keyboard">
 </figure>
 

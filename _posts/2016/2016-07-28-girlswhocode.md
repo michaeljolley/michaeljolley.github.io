@@ -19,7 +19,7 @@ Of course, we'll support them in whatever they choose to be when they grow up, b
 
 <figure style="width:300px;float:right;">
     <img data-src="https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/439e9ce2-544e-11e6-9497-8f6883536914_f8rjzk.jpg"
-    class="cld-responsive" />
+    class="cld-responsive lazyload" />
     <figcaption>Picture from <a href="http://www.snapcircuits.net/" target="_blank">Snap Circuits</a></figcaption>
 </figure>
 

@@ -9,7 +9,7 @@ layout: default
                     <div class="entry-header-wrap">
                         {% if page.image %}
                         <div class="post-thumbnail">
-                            <img data-src="{{ page.image }}" class="cld-responsive"
+                            <img data-src="{{ page.image }}" class="cld-responsive lazyload"
                                 alt="{% if page.banner_image_alt %}{{ page.banner_image_alt }}{% else %}{{ page.title }}{% endif %}">
                         </div><!-- .post-thumbnail -->
                         {% endif %}

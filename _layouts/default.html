@@ -12,6 +12,8 @@
     gtag("config", "UA-81841605-1");
   </script>
 
+  <link rel="preload" href="https://kit-free.fontawesome.com">
+
   <meta charset="utf-8" />
   <title>
     {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
@@ -37,8 +39,7 @@
   <meta name="twitter:image" content="{% if page.image %}{{ page.image }}{% else %}{{ site.avatar }}{% endif %}" />
   <meta name="copyright" content="Copyright by {{site.title}}. All Rights Reserved." />
 
-  <link rel="shortcut icon" href="{{ "/favicon.ico" | prepend: site.baseurl
-    }}">
+  <link rel="shortcut icon" href="{{ "/favicon.ico" | prepend: site.baseurl }}">
 
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic" />
   <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css" />

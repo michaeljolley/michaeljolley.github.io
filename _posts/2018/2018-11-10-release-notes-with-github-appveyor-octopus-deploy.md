@@ -81,13 +81,13 @@ Then, with that list of commits we build both HTML &amp; markdown versions of th
 
 <figure>
   <img data-src="https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/48307475-14befb80-e513-11e8-85fb-b50ec28751b2_nndjdm.jpg"
-  class="cld-responsive" alt="Sample Markdown look at generated release notes" />
+  class="cld-responsive lazyload" alt="Sample Markdown look at generated release notes" />
   <figcaption>Markdown version</figcaption>
 </figure>
 
 <figure>
   <img data-src="https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/48307489-69fb0d00-e513-11e8-8f8c-a86359d90494_snm6ke.jpg"
-  class="cld-responsive" alt="Sample HTML look at generated release notes" />
+  class="cld-responsive lazyload" alt="Sample HTML look at generated release notes" />
   <figcaption>HTML version</figcaption>
 </figure>
 
