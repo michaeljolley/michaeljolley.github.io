@@ -2,7 +2,8 @@
 layout: post
 date: 2016-07-28 16:36
 title: "Girls Who Code"
-image: https://cloud.githubusercontent.com/assets/1228996/17200725/66d4554a-544d-11e6-82d7-ced84abd4123.jpg
+image: https://res.cloudinary.com/dk3rdh3yo/image/upload/v1577501609/66d4554a-544d-11e6-82d7-ced84abd4123_afjjdd.jpg
+banner_image_alt: Girls in a classroom watching a robot they've built.
 description: Thinking about our girls interest in STEM related fields.
 comments: true
 tags: [parenting]
@@ -17,7 +18,8 @@ As a dad of two daughters, I often think about what their futures hold.  Like mo
 Of course, we'll support them in whatever they choose to be when they grow up, but I still feel an urge to expose them to other ideas and skills and professions while they're young.  Even if it's nothing more than me letting them know "hey, it's okay to be a girl and like math or science or robots."  *Heck, who doesn't like robots?*
 
 <figure style="width:300px;float:right;">
-    <img src="https://cloud.githubusercontent.com/assets/1228996/17200845/439e9ce2-544e-11e6-9497-8f6883536914.jpg" />
+    <img data-src="https://res.cloudinary.com/dk3rdh3yo/image/upload/v1577501503/439e9ce2-544e-11e6-9497-8f6883536914_f8rjzk.jpg"
+    class="cld-responsive" />
     <figcaption>Picture from <a href="http://www.snapcircuits.net/" target="_blank">Snap Circuits</a></figcaption>
 </figure>
 

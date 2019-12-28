@@ -2,7 +2,8 @@
 layout: post
 date: 2019-12-02 01:00
 title: "Using Azure File Storage as Container Volume Mounts in App Services"
-image: https://user-images.githubusercontent.com/1228996/69994336-4be3be80-1513-11ea-92a1-381658ceef5f.png
+image: https://res.cloudinary.com/dk3rdh3yo/image/upload/v1577503054/69994336-4be3be80-1513-11ea-92a1-381658ceef5f_grxpqn.png
+banner_image_alt: Azure App Service, Docker and Azure Storage logos on an Azure portal background
 description: How to mount Azure File Storage as a persistent volume in your multi-container App Services.
 comments: true
 tags: [azure, app-service, docker, volume, storage, container]
@@ -19,7 +20,9 @@ But what happens when you move to the cloud? Specifically, let's talk about Azur
 ### Azure File Storage
 
 <figure style="width:300px;float:right;margin-left:15px">
-    <img src="https://res.cloudinary.com/dk3rdh3yo/image/upload/v1575314189/69987799-ef2dd700-1505-11ea-92bf-d93f604bfa8a_gvi1ya.png" />
+    <img src="https://res.cloudinary.com/dk3rdh3yo/image/upload/v1577503114/69987799-ef2dd700-1505-11ea-92bf-d93f604bfa8a_gvi1ya_ufkv0d.png"
+    class="cld-responsive"
+    alt="Azure Add File Share window" />
 </figure>
 
 First, let's setup Azure File Storage. If you already have File Storage you'd like to use, then skip to the next section.
@@ -29,7 +32,9 @@ From your Azure Portal, add a new Storage Account. In your Storage Account, clic
 ### Configuring Your Azure App Service
 
 <figure style="width:300px;float:right;margin-left:15px">
-    <img src="https://res.cloudinary.com/dk3rdh3yo/image/upload/v1575314903/69988604-919a8a00-1507-11ea-802a-b9a7f0c03d53_vqnrgy.png" />
+    <img src="https://res.cloudinary.com/dk3rdh3yo/image/upload/v1577503152/69988604-919a8a00-1507-11ea-802a-b9a7f0c03d53_vqnrgy_rr3l92.png"
+    class="cld-responsive"
+    alt="Azure App Service path mappings interface" />
 </figure>
 
 We'll assume you already have an Azure App Service you're ready to configure.
@@ -39,7 +44,9 @@ In your App Service, click on the "Configuration" blade. Then click the "Path ma
 Let's review the "New Azure Storage Mount" interface.
 
 <figure style="width:300px;float:right;margin-left:15px">
-    <img src="https://res.cloudinary.com/dk3rdh3yo/image/upload/v1575314961/69988677-b8f15700-1507-11ea-8a4d-8f57a0e7dee3_q6v30k.png" />
+    <img src="https://res.cloudinary.com/dk3rdh3yo/image/upload/v1577503190/69988677-b8f15700-1507-11ea-8a4d-8f57a0e7dee3_q6v30k_neodqw.png"
+    class="cld-responsive"
+    alt="Azure New Storage Mount interface" />
 </figure>
 
 **Name** is important. This is the name you'll use to reference this mount later in your docker-compose.yml

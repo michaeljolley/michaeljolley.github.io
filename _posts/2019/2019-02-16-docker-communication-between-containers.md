@@ -2,7 +2,8 @@
 layout: post
 date: 2019-02-16 01:00
 title: "Communication between containers using docker compose in Windows"
-image: https://user-images.githubusercontent.com/1228996/52905302-082afd00-31fe-11e9-9f0d-e1e02f2e58e9.png
+image: https://res.cloudinary.com/dk3rdh3yo/image/upload/v1577502366/52905302-082afd00-31fe-11e9-9f0d-e1e02f2e58e9_uysuaw.png
+banner_image_alt: Octopus holding containers and a Windows logo over a code editor.
 description: Using docker compose to start containers that can communicate with one another in Windows
 comments: true
 tags: [docker, vscode, windows, compose]
@@ -10,7 +11,7 @@ tags: [docker, vscode, windows, compose]
 
 This definitely has to be filed under "remember this in the future."
 
-I've been working on a project lately that includes a aspnetcore SPA using Angular.  It's being deployed to multiple Raspberry Pi's using a popular deployment tool.   However, as the number of devices used by the client grows the cost of the deployment tool is becoming prohibitive.  While exploring other options we landed on the Azure IoT Hub.
+I've been working on a project lately that includes an ASPNETCore SPA using Angular.  It's being deployed to multiple Raspberry Pi's using a popular deployment tool.   However, as the number of devices used by the client grows the cost of the deployment tool is becoming prohibitive.  While exploring other options we landed on the Azure IoT Hub.
 
 In production, the application on the Pi communicates with a Restful API that lives at the clients main office.  However, while debugging we need to run them side-by-side.  So, docker-compose to the rescue (I think.)
 
