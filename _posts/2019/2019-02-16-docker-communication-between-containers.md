@@ -2,7 +2,7 @@
 layout: post
 date: 2019-02-16 01:00
 title: "Communication between containers using docker compose in Windows"
-image: https://res.cloudinary.com/dk3rdh3yo/image/upload/v1577502366/52905302-082afd00-31fe-11e9-9f0d-e1e02f2e58e9_uysuaw.png
+image: https://res.cloudinary.com/dk3rdh3yo/image/upload/v1577502366/52905302-082afd00-31fe-11e9-9f0d-e1e02f2e58e9_uysuaw.wdp
 banner_image_alt: Octopus holding containers and a Windows logo over a code editor.
 description: Using docker compose to start containers that can communicate with one another in Windows
 comments: true

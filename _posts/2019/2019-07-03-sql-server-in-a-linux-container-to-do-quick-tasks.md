@@ -2,7 +2,7 @@
 layout: post
 date: 2019-07-03 01:00
 title: "Using SQL Server in Docker containers for basic tasks"
-image: https://res.cloudinary.com/dk3rdh3yo/image/upload/v1577502811/60616825-fbb3d500-9d97-11e9-8214-d3b90aecafe9_ebpx8l.png
+image: https://res.cloudinary.com/dk3rdh3yo/image/upload/v1577502811/60616825-fbb3d500-9d97-11e9-8214-d3b90aecafe9_ebpx8l.wdp
 banner_image_alt: Docker, Linux and SQL Server logos on a Powershell background
 description: Don't want to install SQL instances on your personal or work machine?  No problem, because you no longer need to.  Let's learn how to spin up a Docker container and access it with SQL Management Studio.
 comments: true
