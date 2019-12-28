@@ -5,26 +5,22 @@ layout: null
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>{{ site.url }}</loc>
-        <lastmod>{{ site.time | date: "%m/%d/%Y" }}</lastmod>
         <changefreq>daily</changefreq>
         <priority>1</priority>
     </url>
     <url>
         <loc>{{ site.url }}/about/</loc>
-        <lastmod>{{ site.time | date: "%m/%d/%Y" }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.3</priority>
     </url>
     <url>
         <loc>{{ site.url }}/talks/</loc>
-        <lastmod>{{ site.time | date: "%m/%d/%Y" }}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
     </url>
     {% for post in site.posts limit:20 %}
     <url>
         <loc>{{ post.url | prepend: site.baseurl | prepend: site.url }}</loc>
-        <lastmod>{{ post.date | date: "%m/%d/%Y" }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -32,7 +28,6 @@ layout: null
     {% for stream in site.streams limit:40 %}
     <url>
         <loc>{{ stream.url | prepend: site.baseurl | prepend: site.url }}</loc>
-        <lastmod>{{ stream.date | date: "%m/%d/%Y" }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
