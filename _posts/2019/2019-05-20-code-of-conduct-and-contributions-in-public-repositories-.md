@@ -2,7 +2,8 @@
 layout: post
 date: 2019-05-20 01:00
 title: "Using a CONTRIBUTING & CODE_OF_CONDUCT to assist others in contributing to public repositories"
-image: https://user-images.githubusercontent.com/1228996/58047500-f400df80-7b0d-11e9-917c-b4b1cd4a8d2b.png
+image: https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/58047500-f400df80-7b0d-11e9-917c-b4b1cd4a8d2b_b3iim4.jpg
+banner_image_alt: Woman working on laptop leaned against a brick wall.
 description: Helping other contribute to public repositories on GitHub by providing contributing and code of conduct guidelines.
 comments: true
 tags: [github, contributions, code-of-conduct]
@@ -76,7 +77,10 @@ on our README.md.
 An example from our VS Code extension is:
 
 <figure>
-  <img src="https://user-images.githubusercontent.com/1228996/58047645-3cb89880-7b0e-11e9-8270-7fd116460102.png"/>
+  <img src="https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/58047645-3cb89880-7b0e-11e9-8270-7fd116460102_ve78fr.jpg"
+  alt="Example of the bottom of our README's with contributors."
+  class="cld-responsive lazyload"
+  />
 </figure>
 
 Not all contributions are code.  Using All Contributors, I can recognize contributors for everything from ideas, questions, documentation, tests, examples and more.  A full listing of options is available on their [emoji key](https://allcontributors.org/docs/en/emoji-key).

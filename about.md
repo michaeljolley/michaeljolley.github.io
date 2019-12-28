@@ -2,7 +2,7 @@
 layout: page
 title: About Michael Jolley
 description: Who is Michael Jolley?
-image: https://user-images.githubusercontent.com/1228996/64070619-28fef100-cc2a-11e9-8e32-837e130722ca.png
+image: https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/64070619-28fef100-cc2a-11e9-8e32-837e130722ca_mjexti.png
 ---
 
 From his early days with lincoln logs to building custom ERP systems, Michael has always been a builder. With
@@ -13,12 +13,12 @@ considerable time pouring into others via his live-coding sessions on Twitch and
 When not in *full-geek* mode, Michael is a husband of nearly 20 years, father to three awesome kids, musician,
 and football fanatic.
 
-{% include image_full.html imageurl="https://user-images.githubusercontent.com/1228996/64070917-6916a180-cc33-11e9-87df-a5917f886ed4.png" caption="Screenshot of Twitch channel" %}
+{% include image_full.html imageurl="https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/64070917-6916a180-cc33-11e9-87df-a5917f886ed4_d0xfct.png" caption="Screenshot of Twitch channel" %}
 
 ## Bald. Bearded. Builder.
 
 Every Sunday, Tuesday, and Thursday at 2pm ET/6pm UTC, you can find Michael hosting a live-coding Twitch
-stream at <a href="https://twitch.tv/theMichaelJolley" target="_blank">https://twitch.tv/theMichaelJolley</a>.
+stream at <a href="https://twitch.tv/BaldBeardedBuilder" target="_blank">https://twitch.tv/BaldBeardedBuilder</a>.
 Each stream Michael and viewers work on projects using .NET, JavaScript, TypeScript, C++ and more.
 
 ### Heroines of JavaScript

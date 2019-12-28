@@ -2,7 +2,8 @@
 layout: post
 date: 2018-11-13 18:00
 title: "Setting up Raspberry Pi for use in kiosk mode with Chromium"
-image: https://user-images.githubusercontent.com/1228996/48371127-af891880-e680-11e8-89aa-2dec4de4ef8a.png
+image: https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/48371127-af891880-e680-11e8-89aa-2dec4de4ef8a_xwpry3.jpg
+banner_image_alt: Mash-up of Raspberry Pi & Chromium logos.
 description: Using Chromium on a Raspberry Pi to provide a kiosk experience for users.
 comments: true
 tags: [raspberry-pi, iot]
@@ -24,8 +25,11 @@ We'll also be using the Pi's default OS of Raspian.
 
 First, let's install some prerequisites.
 
-<pre class="language-bash"><code>sudo apt-get install x11-xserver-utils unclutter</code></pre>
+{% highlight bash %}
 
+sudo apt-get install x11-xserver-utils unclutter
+
+{% endhighlight %}
 
 ### Launch Chromium
 
@@ -38,15 +42,27 @@ We're going to launch Chromium after boot-up with the following settings:
 
 To do this we'll be editing the **autostart** file in **.config/lxsession/LXDE-pi/**.  So navigate to it with:
 
-<pre class="language-bash"><code>cd /home/pi/.config/lxsession/LXDE-pi/</code></pre>
+{% highlight bash %}
+
+cd /home/pi/.config/lxsession/LXDE-pi/
+
+{% endhighlight %}
 
 Then edit it with nano like so:
 
-<pre class="language-bash"><code>sudo nano autostart</code></pre>
+
+{% highlight bash %}
+
+sudo nano autostart
+{% endhighlight %}
 
 Once you’re in there, add this line to the end of the file:
 
-<pre class="language-bash"><code>@chromium-browser --kiosk --incognito --disable-pinch --overscroll-history-navigation=0 http://localhost:5000</code></pre>
+
+{% highlight bash %}
+
+@chromium-browser --kiosk --incognito --disable-pinch --overscroll-history-navigation=0 http://localhost:5000
+{% endhighlight %}
 
 This launches Chromium with the settings we mentioned above and directs it immediately to your site at http://localhost:5000.
 

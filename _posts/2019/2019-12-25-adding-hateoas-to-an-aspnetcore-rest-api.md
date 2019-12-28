@@ -2,7 +2,8 @@
 layout: post
 date: 2019-12-25 01:00
 title: "Adding HATEOAS to an ASP.NET Core API"
-image: https://res.cloudinary.com/dk3rdh3yo/image/upload/v1577158217/71390264-4256ef00-25c5-11ea-890b-6614ed7fd9a9_xjzxer.png
+image: https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/71390264-4256ef00-25c5-11ea-890b-6614ed7fd9a9_xjzxer.jpg
+banner_image_alt: Christmas tree decorations with ASP.NET Core logo
 description: Implement simple JSON HATEOAS support to an ASP.NET Core web API
 comments: true
 tags: [aspnetcore, hateoas, api, json, dotnet, c#]
@@ -20,7 +21,9 @@ realizing it.
 Let's look at two responses from RESTful APIs:
 
 <figure style="margin-bottom:20px;">
-    <img alt="Example code of a JSON result from a RESTful and RESTful + HATEOAS API" src="https://res.cloudinary.com/dk3rdh3yo/image/upload/v1577158190/header-templatssse_uzfqri.png" />
+    <img alt="Example code of a JSON result from a RESTful and RESTful + HATEOAS API" src="https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/header-templatssse_uzfqri.jpg"
+    alt="Comparison of REST and REST plus HATEOAS JSON responses"
+    class="cld-responsive lazyload" />
 </figure>
 
 In the example responses, you can see that by adding the `links` property to your object, you can greatly increase the discover-ability of your RESTful APIs.

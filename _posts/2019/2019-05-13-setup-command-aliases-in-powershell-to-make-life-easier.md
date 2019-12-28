@@ -2,7 +2,8 @@
 layout: post
 date: 2019-05-13 01:00
 title: "Adding command aliases to PowerShell"
-image: https://user-images.githubusercontent.com/1228996/57646611-96591a00-7586-11e9-8b7a-68f7736e2c28.png
+image: https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/57646611-96591a00-7586-11e9-8b7a-68f7736e2c28_vc6upr.jpg
+banner_image_alt: Powershell code
 description: How to make your life easier by adding aliases for commands you run frequently in PowerShell.
 comments: true
 tags: [powershell, alias]
