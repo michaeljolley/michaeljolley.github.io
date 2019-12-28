@@ -66,7 +66,7 @@ layout: default
                 <div class="nav-previous">
                     <div class="nav-inside">
                         {% if page.previous.banner_image %}
-                        <a href="{{ site.baseurl }}{{page.previous.url}}" class="nav-thumb"
+                        <a href="{{ site.baseurl }}{{page.previous.url}}" class="nav-thumb cld-responsive lazyload"
                             style="background-image: url({{ "/images/posts/" | append: page.previous.banner_image }})"></a>
                         {% endif %}
                         <div class="nav-before">Previous</div>
@@ -80,7 +80,7 @@ layout: default
                 <div class="nav-next">
                     <div class="nav-inside">
                         {% if page.next.banner_image %}
-                        <a href="{{ site.baseurl }}{{page.next.url}}" class="nav-thumb"
+                        <a href="{{ site.baseurl }}{{page.next.url}}" class="nav-thumb cld-responsive lazyload"
                             style="background-image: url({{ "/images/posts/" | append: page.next.banner_image }})"></a>
                         {% endif %}
                         <div class="nav-before">Next</div>
