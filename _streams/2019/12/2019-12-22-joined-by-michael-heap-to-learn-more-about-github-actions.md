@@ -2,7 +2,7 @@
 layout: post
 date: 2019-12-22 19:12
 title: "Joined by Michael Heap to learn more about GitHub Actions"
-image: https://user-images.githubusercontent.com/1228996/71425329-ee014d00-2660-11ea-9842-7ae4b2da5dc5.png
+image: https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/71425329-ee014d00-2660-11ea-9842-7ae4b2da5dc5_usyiap.png
 description: "Learning how GitHub Actions can be used for a lot more than CI/CD processes with special guest, Michael Heap."
 comments: true
 tags: [twitch, stream, github, actions, michael, heap]
