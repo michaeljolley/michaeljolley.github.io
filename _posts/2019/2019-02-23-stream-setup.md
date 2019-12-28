@@ -2,7 +2,7 @@
 layout: post
 date: 2019-02-23 01:00
 title: "Current Twitch live-coding stream setup"
-image: https://res.cloudinary.com/dk3rdh3yo/image/upload/v1577502467/53290137-aa4e6600-3765-11e9-8115-961de3633562_mxq7og.wdp
+image: https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/53290137-aa4e6600-3765-11e9-8115-961de3633562_mxq7og.jpg
 banner_image_alt: Header used on Bald Bearded Builder stream
 description: Hardware & software setup for live-coding streams
 comments: true
@@ -34,7 +34,7 @@ I'm still learning a lot about lighting and audio.  There is a lot of experiment
 
 Above my monitors I have two [Elgato Key Light](https://amzn.to/2Te5LOd) panels.  Both are set to provide more yellow light than blue to offset the blue light coming from my 3 24" monitors.
 <figure>
-   <img data-src="https://res.cloudinary.com/dk3rdh3yo/image/upload/v1577502545/53291179-d9b89f00-3774-11e9-8aca-ade57af31e10_ef90ia.wdp"
+   <img data-src="https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/53291179-d9b89f00-3774-11e9-8aca-ade57af31e10_ef90ia.jpg"
     class="cld-responsive"
     alt="Two Elgato key lights" />
 </figure>
@@ -52,7 +52,7 @@ For the audio I'm using an [Audio-Technica AT2020](https://amzn.to/2E6Z9HS) cond
 My streams have really been focused on IoT development and I've found it difficult to display what's going on with my [Raspberry Pi](https://amzn.to/2EhMOkr)'s video onto the stream.  So far I've been limited to only displaying an SSH window to the Pi.  So a new addition to the family is the [Elgato HD60 Pro](https://amzn.to/2XhXwQl) game capture card.  This receives an HDMI input and shows in OBS as a video source that I can share on the stream.  This will get its first use in a few days on the stream.
 
 <figure style="float:right;">
-  <img src="https://res.cloudinary.com/dk3rdh3yo/image/upload/v1577502601/53291452-36b65400-3779-11e9-946d-5afe7562919c_ybbzr0.wdp"
+  <img src="https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/53291452-36b65400-3779-11e9-946d-5afe7562919c_ybbzr0.jpg"
     class="cld-responsive"
     alt="iPazzPort Handheld keyboard">
 </figure>
