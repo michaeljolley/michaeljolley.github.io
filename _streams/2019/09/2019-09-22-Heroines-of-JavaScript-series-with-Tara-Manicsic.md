@@ -1,5 +1,4 @@
 ---
-layout: post
 date: 2019-09-22 18:09
 title: "Heroines of JavaScript series: Lauryn & Layla interview Tara Manicsic"
 image: https://user-images.githubusercontent.com/1228996/65442777-72d69380-ddf2-11e9-93e3-3a2104c53edd.png

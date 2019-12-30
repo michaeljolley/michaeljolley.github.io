@@ -1,5 +1,4 @@
 ---
-layout: post
 date: 2019-10-13 17:10
 title: "Adding to the front-end of awesum.io to display messages once logged in"
 image: https://user-images.githubusercontent.com/1228996/66760944-aee89b80-ee68-11e9-8c02-2d23ca8532a6.png

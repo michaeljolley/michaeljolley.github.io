@@ -1,5 +1,4 @@
 ---
-layout: post
 date: 2019-10-01 17:10
 title: "Subscribing to Twitch webhooks from our chat bot with Ngrok"
 image: https://user-images.githubusercontent.com/1228996/66014639-3a3f5580-e495-11e9-8b25-c9204fb0434a.png

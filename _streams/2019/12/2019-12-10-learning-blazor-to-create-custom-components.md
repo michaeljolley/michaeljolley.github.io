@@ -1,5 +1,4 @@
 ---
-layout: post
 date: 2019-12-10 19:12
 title: "Learning Blazor to create custom components"
 image: https://user-images.githubusercontent.com/1228996/71315653-2e29bb00-2428-11ea-8b82-d1c0ec6770fa.png

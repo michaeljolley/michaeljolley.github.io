@@ -1,5 +1,4 @@
 ---
-layout: post
 date: 2019-12-17 19:12
 title: "Back to work on Awesum.io with Vue.js, Azure functions, Auth0 and FaunaDB. #awesum"
 image: https://user-images.githubusercontent.com/1228996/71315715-857c5b00-2429-11ea-90e9-0665524dc108.png

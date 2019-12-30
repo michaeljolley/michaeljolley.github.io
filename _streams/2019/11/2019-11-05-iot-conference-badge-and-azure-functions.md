@@ -1,5 +1,4 @@
 ---
-layout: post
 date: 2019-11-05 19:11
 title: "Building an IoT conference badge then working on Azure functions"
 image: https://user-images.githubusercontent.com/1228996/69594004-9370c480-0fc0-11ea-889f-f34f68df359d.png

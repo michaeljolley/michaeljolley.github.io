@@ -1,5 +1,4 @@
 ---
-layout: post
 date: 2019-12-05 19:12
 title: "Using Twitch chat & API to trigger events in Socket.IO"
 image: https://user-images.githubusercontent.com/1228996/70284946-7a6bce80-178b-11ea-84e1-7dd124dcb939.png

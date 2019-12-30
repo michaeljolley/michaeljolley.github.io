@@ -1,5 +1,4 @@
 ---
-layout: post
 date: 2019-10-31 18:10
 title: "Adding overlays to our stream and adding an admin service to the chat bot."
 image: https://user-images.githubusercontent.com/1228996/68077361-64d04700-fd90-11e9-845c-2ba86b0407ab.png

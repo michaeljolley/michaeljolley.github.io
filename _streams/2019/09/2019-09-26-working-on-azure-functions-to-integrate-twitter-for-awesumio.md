@@ -1,5 +1,4 @@
 ---
-layout: post
 date: 2019-09-26 18:09
 title: "Awesum.io | Working on the Azure Functions and integrating with Twitter"
 image: https://user-images.githubusercontent.com/1228996/65778333-59dc2400-e10b-11e9-93ab-77032bdbcd39.png

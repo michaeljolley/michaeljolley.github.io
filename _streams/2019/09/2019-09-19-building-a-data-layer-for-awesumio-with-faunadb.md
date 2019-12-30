@@ -1,5 +1,4 @@
 ---
-layout: post
 date: 2019-09-19 17:09
 title: "Building a data layer for awesum.io with FaunaDb"
 image: https://user-images.githubusercontent.com/1228996/65381758-e1b1d080-dcbc-11e9-9dd5-01dfb9199768.png

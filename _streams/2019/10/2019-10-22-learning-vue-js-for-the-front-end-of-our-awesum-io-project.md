@@ -1,5 +1,4 @@
 ---
-layout: post
 date: 2019-10-22 17:10
 title: "Learning Vue.js for the front end of our awesum.io project"
 image: https://user-images.githubusercontent.com/1228996/67418010-9f1b3680-f58f-11e9-94e9-61d7659c0fc3.png

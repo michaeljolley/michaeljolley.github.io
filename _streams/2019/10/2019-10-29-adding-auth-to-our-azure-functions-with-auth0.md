@@ -1,5 +1,4 @@
 ---
-layout: post
 date: 2019-10-29 18:10
 title: "Adding auth to our Azure Functions with Auth0 for our awesum.io project"
 image: https://user-images.githubusercontent.com/1228996/68077295-4cabf800-fd8f-11e9-9767-735b4f93b3a9.png

@@ -1,5 +1,4 @@
 ---
-layout: post
 date: 2019-09-17 18:09
 title: "Introducing OPERATION: AWESUM"
 image: https://user-images.githubusercontent.com/1228996/65087247-7e513700-d97a-11e9-8348-63b1e2a9f951.png

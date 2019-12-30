@@ -1,5 +1,4 @@
 ---
-layout: post
 date: 2019-11-07 19:11
 title: "Serverless all the things!  We're moving the bot to the cloud with Azure Functions, CosmosDB, Containers."
 image: https://user-images.githubusercontent.com/1228996/69594185-24e03680-0fc1-11ea-8aff-12b2f407d9d1.png

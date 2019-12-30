@@ -1,5 +1,4 @@
 ---
-layout: post
 date: 2019-10-24 17:10
 title: "Adding role claims of our Auth0 token for the awesum.io project"
 image: https://user-images.githubusercontent.com/1228996/67591459-1e8d3f00-f723-11e9-8ff3-7da10c0fd414.png

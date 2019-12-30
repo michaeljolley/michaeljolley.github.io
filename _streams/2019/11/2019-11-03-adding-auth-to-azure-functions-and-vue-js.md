@@ -1,5 +1,4 @@
 ---
-layout: post
 date: 2019-11-03 18:11
 title: "Adding auth to communications between our Azure Functions and Vue.js site"
 image: https://user-images.githubusercontent.com/1228996/69593812-fca40800-0fbf-11ea-80fd-f09d85c44d79.png

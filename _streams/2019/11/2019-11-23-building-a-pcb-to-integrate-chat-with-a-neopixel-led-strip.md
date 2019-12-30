@@ -1,5 +1,4 @@
 ---
-layout: post
 date: 2019-11-23 21:11
 title: "Building a PCB to integrate our chat bot with a NeoPixel LED strip"
 image: https://user-images.githubusercontent.com/1228996/69595125-40007580-0fc4-11ea-82d8-164a1724cf76.png

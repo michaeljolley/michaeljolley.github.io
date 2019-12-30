@@ -1,5 +1,4 @@
 ---
-layout: post
 date: 2019-09-01 17:09
 title: "Playing with Node.js and making chat more interactive"
 image: https://user-images.githubusercontent.com/1228996/64084956-7e540480-ccf5-11e9-8ec0-72a0d750574a.png

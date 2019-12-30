@@ -1,5 +1,4 @@
 ---
-layout: post
 date: 2019-10-03 20:10
 title: "Using Ngrok with our chat bot to catch Twitch webhooks for alerts"
 image: https://user-images.githubusercontent.com/1228996/66170644-9ecff100-e60a-11e9-919e-56c331768a9e.png

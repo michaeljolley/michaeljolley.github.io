@@ -1,5 +1,4 @@
 ---
-layout: post
 date: 2019-10-20 18:10
 title: "Adding Vue.js to the front-end of our awesum.io project"
 image: https://user-images.githubusercontent.com/1228996/67416750-02579980-f58d-11e9-8960-a0fd2c07d753.png

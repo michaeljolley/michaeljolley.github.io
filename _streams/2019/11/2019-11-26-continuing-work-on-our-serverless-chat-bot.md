@@ -1,5 +1,4 @@
 ---
-layout: post
 date: 2019-11-26 19:11
 title: "Building a serverless Twitch chat-bot with Azure, FaunaDB, JavaScript & Docker"
 image: https://user-images.githubusercontent.com/1228996/69680927-11d96f00-1072-11ea-871b-d99b249e6def.png
