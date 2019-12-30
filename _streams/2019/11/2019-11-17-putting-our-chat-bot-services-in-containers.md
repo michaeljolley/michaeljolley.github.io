@@ -1,5 +1,4 @@
 ---
-layout: post
 date: 2019-11-17 18:11
 title: "Putting our chat bot services in containers and testing in Azure."
 image: https://user-images.githubusercontent.com/1228996/69594539-4988de00-0fc2-11ea-8829-81414b4a7af9.png

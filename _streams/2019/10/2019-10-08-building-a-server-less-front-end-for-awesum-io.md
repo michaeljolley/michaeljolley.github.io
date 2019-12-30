@@ -1,5 +1,4 @@
 ---
-layout: post
 date: 2019-10-08 17:10
 title: "Building a server-less front-end to Awesum.io with Azure Functions and C#"
 image: https://user-images.githubusercontent.com/1228996/66675293-a7d44a00-ec2a-11e9-9295-248946b7c1b4.png

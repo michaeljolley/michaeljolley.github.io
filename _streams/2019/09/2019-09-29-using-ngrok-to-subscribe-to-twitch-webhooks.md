@@ -1,5 +1,4 @@
 ---
-layout: post
 date: 2019-09-29 18:09
 title: "Using Ngrok, Node.js & TypeScript to subscribe to Twitch webhooks"
 image: https://user-images.githubusercontent.com/1228996/65899033-7630c880-e378-11e9-9cd0-32cde2c01298.png

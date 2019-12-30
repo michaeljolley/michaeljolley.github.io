@@ -1,5 +1,4 @@
 ---
-layout: post
 date: 2019-09-27 17:09
 title: "Discussing NGRX with Angular"
 image: https://user-images.githubusercontent.com/1228996/65810951-fd165300-e176-11e9-8686-47aba1521afb.png

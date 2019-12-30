@@ -1,5 +1,4 @@
 ---
-layout: post
 date: 2019-11-21 18:11
 title: "Working on our serverless chat bot Vulcan | JS, FaunaDB, Azure, socket.io"
 image: https://user-images.githubusercontent.com/1228996/69594945-886b6380-0fc3-11ea-8ce6-8fc9dcff9098.png

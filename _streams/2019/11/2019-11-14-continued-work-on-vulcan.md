@@ -1,5 +1,4 @@
 ---
-layout: post
 date: 2019-11-14 18:11
 title: "Continued work on Vulcan, our serverless chat bot.  "
 image: https://user-images.githubusercontent.com/1228996/69594370-bcde2000-0fc1-11ea-81a1-02e023868f4f.png

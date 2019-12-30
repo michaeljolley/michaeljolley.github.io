@@ -1,5 +1,4 @@
 ---
-layout: post
 date: 2019-09-24 17:09
 title: "Building out the architecture of awesum.io with .NET Core 3, Azure Functions and Docker."
 image: https://user-images.githubusercontent.com/1228996/65564614-0f905280-df13-11e9-8172-ddb7978ffa30.png

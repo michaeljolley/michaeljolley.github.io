@@ -1,5 +1,4 @@
 ---
-layout: post
 date: 2019-11-24 19:11
 title: "A quick blog post on Azure Key Vault then working on our chat bot Vulcan"
 image: https://user-images.githubusercontent.com/1228996/69595341-e0569a00-0fc4-11ea-96e0-69d99a901741.png

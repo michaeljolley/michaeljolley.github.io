@@ -1,5 +1,4 @@
 ---
-layout: post
 date: 2019-09-12 18:09
 title: "Finishing our presentation about using VS Code to develop inside a container"
 image: https://user-images.githubusercontent.com/1228996/64827687-ec68b900-d58a-11e9-9672-e20e103c90c8.png

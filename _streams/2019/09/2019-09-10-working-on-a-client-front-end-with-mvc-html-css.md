@@ -1,5 +1,4 @@
 ---
-layout: post
 date: 2019-09-10 17:09
 title: "Working on a client front-end with ASP.NET MVC, jQuery, CSS & HTML"
 image: https://user-images.githubusercontent.com/1228996/64826788-6bf48900-d587-11e9-804c-2e1c6dc87da3.png

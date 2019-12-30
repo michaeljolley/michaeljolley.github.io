@@ -1,5 +1,4 @@
 ---
-layout: post
 date: 2019-09-08 18:09
 title: "Heroines of JavaScript series: Lauryn & Layla interview Alyssa Nicoll"
 image: https://user-images.githubusercontent.com/1228996/64550317-43a32b00-d2f8-11e9-9577-ffc08b8f4927.png

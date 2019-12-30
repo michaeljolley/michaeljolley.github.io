@@ -1,5 +1,4 @@
 ---
-layout: post
 date: 2019-12-01 18:12
 title: "Adding webhooks to our serverless chat-bot"
 image: https://user-images.githubusercontent.com/1228996/69931419-c7e6f380-148c-11ea-9c4e-759f9fb308ee.png

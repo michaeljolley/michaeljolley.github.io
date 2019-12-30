@@ -1,5 +1,4 @@
 ---
-layout: post
 date: 2019-10-06 18:10
 title: "Heroines of JavaScript series: Lauryn & Layla interview Suz Hinton"
 image: https://user-images.githubusercontent.com/1228996/66279346-8237f100-e876-11e9-8e83-e16425821010.png

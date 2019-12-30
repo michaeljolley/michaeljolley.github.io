@@ -1,5 +1,4 @@
 ---
-layout: post
 date: 2019-09-05 17:09
 title: "Writing my first technical talk about developing in containers"
 image: https://user-images.githubusercontent.com/1228996/64449649-0ba4a980-d0a6-11e9-8130-914fdb3b6bfb.png

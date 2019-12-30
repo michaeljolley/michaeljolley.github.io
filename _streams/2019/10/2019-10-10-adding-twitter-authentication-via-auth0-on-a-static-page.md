@@ -1,5 +1,4 @@
 ---
-layout: post
 date: 2019-10-10 18:10
 title: "Working on the awesum.io front-end to add Twitter auth and DevOps to deploy"
 image: https://user-images.githubusercontent.com/1228996/66677152-aad13980-ec2e-11e9-84b6-db156f7a53ea.png

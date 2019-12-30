@@ -1,5 +1,4 @@
 ---
-layout: post
 date: 2019-12-19 19:12
 title: "Designing & building the awesum.io front-end with Vue.js"
 image: https://user-images.githubusercontent.com/1228996/71315741-f7ed3b00-2429-11ea-8c11-27b4792926ea.png

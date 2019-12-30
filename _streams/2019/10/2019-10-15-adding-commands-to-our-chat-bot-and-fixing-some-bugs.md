@@ -1,5 +1,4 @@
 ---
-layout: post
 date: 2019-10-15 18:10
 title: "Adding commands to our chat bot and fixing some bugs"
 image: https://user-images.githubusercontent.com/1228996/66876092-22c49a00-ef76-11e9-991c-afa1bbfaf4b7.png
