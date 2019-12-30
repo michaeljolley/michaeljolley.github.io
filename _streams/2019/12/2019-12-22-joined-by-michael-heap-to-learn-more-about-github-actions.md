@@ -1,5 +1,4 @@
 ---
-layout: post
 date: 2019-12-22 19:12
 title: "Joined by Michael Heap to learn more about GitHub Actions"
 image: https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/71425329-ee014d00-2660-11ea-9842-7ae4b2da5dc5_usyiap.png
