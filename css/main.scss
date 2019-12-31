@@ -49,6 +49,11 @@
   font-size: 16px;
   margin-bottom: 30px;
   width: 21.666%;
+
+  h1, h2, h3, h4, h5 {
+    border-bottom: none;
+    padding-bottom: 0px;
+  }
 }
 
 /**
@@ -800,14 +805,6 @@ a.archive-top-link:hover {
   }
   .fa-twitch {
     color: $brand-twitch;
-  }
-}
-
-.post {
-  ul,
-  ol {
-    // list-style: none;
-    // padding-left: 0px;
   }
 }
 
