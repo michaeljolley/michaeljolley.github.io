@@ -1,0 +1,5 @@
+id: 1f7d12bc
+date: 2020-01-05T03:11:53.6172558Z
+name: Michael Jolley
+avatar: https://avatars.io/twitter/baldbeardbuild/medium
+message: "Nice question! \r\n\r\nI lean pretty hard in the camp that says display all links whether the user can access that or not.  Doing so makes it easier to maintain for developers and can open ideas up in the clients mind of what may be available. The latter is especially nice if the client pays for the additional access.  It makes for a great upsell opportunity.\r\n\r\nThat being said, showing all links requires to ensure two things:\r\n\r\n1. That auth logic works correctly and someone can't accidentally access something they shouldn't be able to.\r\n2. When someone attempts to access something they are unauthorized for, you respond with a 403 so they can easily identify they don't have permission.\r\n\r\n\r\n"
