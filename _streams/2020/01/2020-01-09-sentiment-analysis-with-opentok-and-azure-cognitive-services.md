@@ -2,11 +2,11 @@
 layout: post
 date: 2020-01-09 19:01
 title: "Live video sentiment analysis with OpenTok & Azure Cognitive Services"
-image:
-description: ""
+image: https://res.cloudinary.com/dk3rdh3yo/image/upload/v1578690136/72186145-2a031480-33ba-11ea-9b25-be61f19149b7_enjp7o.png
+description: "Using OpenTok to allow viewers to co-host with me and Azure Face API to determine their sentiment."
 comments: true
-tags: [twitch, stream]
-replay:
+tags: [twitch, stream, opentok, azure, face, sentiment]
+replay: https://youtu.be/KKaR52yRL2c
 ---
 
 ### Stream Replay Link
@@ -15,18 +15,9 @@ replay:
 
 <!--more-->
 
-### Segments
-
-| Timestamp | Topic
-| ---       | ---
-| [00:07]({{page.replay}}?t=455.025) | Kicking it off |
-
 ### Today's Candle To Code By
 
 <a href="https://amzn.to/320cEn1" target="_blank">Morning Coffee</a>
-
-### Goals
-
 
 ## Today's stream brought to you by
 
@@ -384,4 +375,3 @@ replay:
       <a href="https://twitch.tv/goobygoobler" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a></span>
   </div>
 </div>
-
