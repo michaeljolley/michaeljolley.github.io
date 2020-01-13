@@ -23,9 +23,9 @@ how to inject your mappings into ASP.NET Core APIs.
 
 Like most .NET libraries, you can install the `AutoMapper` package from Nuget.
 
-<% highlight PS %>
+{% highlight PS %}
 Install-Package AutoMapper
-<% endhighlight %>
+{% endhighlight %}
 
 ## Default Mappings
 
