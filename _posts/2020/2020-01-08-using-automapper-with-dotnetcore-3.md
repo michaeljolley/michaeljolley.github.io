@@ -27,6 +27,29 @@ Like most .NET libraries, you can install the `AutoMapper` package from Nuget.
 Install-Package AutoMapper
 {% endhighlight %}
 
+For our purposes, we'll focus on two classes that are related; `Client` and `ClientDTO`.
+
+{% highlight csharp %}
+
+public class Client
+{
+public Guid Id { get; set; }
+public string Name { get; set; }
+}
+
+public class ClientDTO
+{
+public Guid Id { get; set; }
+public string Name { get; set; }
+}
+
+{% endhighlight %}
+
+var config = new MapperConfiguration(cfg => cfg.CreateMap<Client, ClientDTO>());
+
+var mapper = config.CreateMapper();
+ClientDTO clientDTO = mapper.Map<ClientDTO>(client)
+
 ## Default Mappings
 
 ## Custom Mappings
