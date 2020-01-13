@@ -116,9 +116,9 @@ constructor.
 {% highlight csharp %}
 public class UserManagementProfile : Profile
 {
-	public UserManagementProfile()
-	{
-		CreateMap<User, UserDTO>()
+    public UserManagementProfile()
+    {
+        CreateMap<User, UserDTO>()
             .ForMember(dest => dest.BirthYear, 
             opt => opt.MapFrom(src => src.BirthDate.Year));
 
@@ -127,7 +127,7 @@ public class UserManagementProfile : Profile
 
         // CreateMap<Role, RoleDTO>();
         // CreateMap<Permission, PermissionDTO>();
-	}
+    }
 }
 {% endhighlight %}
 
@@ -167,17 +167,17 @@ your controllers.
 
 public class UsersController
 {
-	private readonly IMapper _mapper;
+    private readonly IMapper _mapper;
 
-	public UsersController(IMapper mapper) => _mapper = mapper;
+    public UsersController(IMapper mapper) => _mapper = mapper;
 
-	// use _mapper.Map
+    // use _mapper.Map
 }
 
 {% endhighlight %}
 
 With the `IMapper` you can now map your objects to their DTO equivalents using the `.Map` 
-method. 
+method.
 
 # Wrap It Up
 
@@ -188,6 +188,5 @@ without further configuration.
 Of course, we didn't cover all of the features of AutoMapper so I'd suggest checking out their documentation for more information about their capabilities.  Hopefully this post gave you 
 enough information to start trying AutoMapper yourself.  Let me know in the comments how you 
 use AutoMapper in your applications.
-
 
 [automapper]: https://automapper.org/
