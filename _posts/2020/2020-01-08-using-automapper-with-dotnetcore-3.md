@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2020-01-12 01:00
+date: 2020-01-13 01:00
 title: "Using AutoMapper with ASP.NET Core 3"
 image: https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/header_wtvp67.png
 banner_image_alt: Metamorphosis of a butterfly with the .NET core and AutoMapper logos
