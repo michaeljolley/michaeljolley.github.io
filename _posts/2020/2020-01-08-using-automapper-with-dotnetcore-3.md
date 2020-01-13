@@ -27,7 +27,7 @@ Like most .NET libraries, you can install the `AutoMapper` package from Nuget.
 Install-Package AutoMapper
 {% endhighlight %}
 
-For our purposes, we'll focus on two classes that are related; `Client` and `ClientDTO`.
+For our purposes, we'll focus on two classes that are related; `User` and `UserDTO`.
 
 {% highlight csharp %}
 
@@ -103,19 +103,89 @@ UserDTO userDTO = mapper.Map<UserDTO>(user);
 {% endhighlight %}
 
 The resulting `userDTO` object will be similar to our first example, but this time will 
-include the `BirthYear` property of 2000. 
+include the `BirthYear` property of 2000.
+
+## Profiles
+
+A clean way to organize and maintain your mapping configurations is with profiles. Many 
+times these `Profile` classes will encapsulate business areas (e.g. Ordering, Shipping). To 
+start, create a class that inherits from `Profile` and put the configuration in the 
+constructor.
+
+{% highlight csharp %}
+public class UserManagementProfile : Profile
+{
+	public UserManagementProfile()
+	{
+		CreateMap<User, UserDTO>()
+            .ForMember(dest => dest.BirthYear, opt => opt.MapFrom(src => src.BirthDate.Year));
+
+        // Configurations for other classes in this business 
+        // area can be included here as well, like below:
+
+        // CreateMap<Role, RoleDTO>();
+        // CreateMap<Permission, PermissionDTO>();
+	}
+}
+{% endhighlight %}
+
+For added isolation, you could create a project just for your `Profile` configurations. Using 
+profiles helps keeps your configurations more manageable as your application grows.
 
 # Dependency Injection
 
+Dependency injection is baked into ASP.NET Core, but to use AutoMapper with it you'll need 
+additional configuration and an additional Nuget package. Add the  
+`AutoMapper.Extensions.Microsoft.DependencyInjection` to your ASP.NET Core project. 
 
+{% highlight PS %}
+Install-Package AutoMapper.Extensions.Microsoft.DependencyInjection
+{% endhighlight %}
 
+## Register AutoMapper
 
+Once installed, you can define the configuration using profiles. In the `Startup.ConfigureServices` 
+method, use can use the `AddAutoMapper` extension method on the `IServiceCollection` object as 
+shown below:
 
+{% highlight csharp %}
+// By Marker
+services.AddAutoMapper(typeof(ProfileTypeFromAssembly1) /*, ...*/);
 
+// or by Assembly
+services.AddAutoMapper(profileAssembly1, profileAssembly2 /*, ...*/);
+{% endhighlight %}
 
+## Inject AutoMapper
 
-<figure style="width:250px;float:right;margin: 0 0 10px 10px">
-    <img src="https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/53030755_2228476424037910_6307370620143831616_n_igcxrg.jpg" alt="Our new dining room table.">
-</figure>
+With AutoMapper registered and its configurations set, you can now inject an `IMapper` into 
+your controllers.
+
+{% highlight csharp %}
+
+public class UsersController
+{
+	private readonly IMapper _mapper;
+
+	public UsersController(IMapper mapper) => _mapper = mapper;
+
+	// use _mapper.Map
+}
+
+{% endhighlight %}
+
+With the `IMapper` you can now map your objects to their DTO equivalents using the `.Map` 
+method. 
+
+# Wrap It Up
+
+Now that ASP.NET Core is injecting AutoMapper to your controllers, you can add configurations 
+to your profiles or create new profiles for new business areas and still map appropriately 
+without further configuration.  
+
+Of course, we didn't cover all of the features of AutoMapper so I'd suggest checking out their documentation for more information about their capabilities.  Hopefully this post gave you 
+enough information to start trying AutoMapper yourself.  Let me know in the comments how you 
+use AutoMapper in your applications.
+
 
 [automapper]: https://automapper.org/
