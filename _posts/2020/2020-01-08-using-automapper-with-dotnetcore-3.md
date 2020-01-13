@@ -31,30 +31,88 @@ For our purposes, we'll focus on two classes that are related; `Client` and `Cli
 
 {% highlight csharp %}
 
-public class Client
+public class User
 {
-public Guid Id { get; set; }
-public string Name { get; set; }
+    public Guid Id { get; set; }
+    public string Name { get; set; }
+    public string FavoriteFood { get; set; }
+    public DateTime BirthDate { get; set; }
 }
 
-public class ClientDTO
+public class UserDTO
 {
-public Guid Id { get; set; }
-public string Name { get; set; }
+    public Guid Id { get; set; }
+    public string Name { get; set; }
+    public int BirthYear { get; set; }
 }
 
 {% endhighlight %}
 
-var config = new MapperConfiguration(cfg => cfg.CreateMap<Client, ClientDTO>());
+## Default Mappings
+
+These classes will services as source and destination types that we can work with. 
+Without specific configuration, AutoMapper will match properties based on their name. 
+By default, it will ignore null reference exceptions when mapping source and destination 
+types. Below is a snippet mapping the source and destination types using the default 
+configuration.
+
+{% highlight csharp %}
+
+var config = new MapperConfiguration(cfg => cfg.CreateMap<User, UserDTO>());
+
+var user = new User() 
+{
+    Id = Guid.NewGuid(),
+    Name = "Joe Bruiser",
+    FavoriteFood = "Curry",
+    BirthDate = new DateTime(2000, 10, 12)
+};
 
 var mapper = config.CreateMapper();
-ClientDTO clientDTO = mapper.Map<ClientDTO>(client)
+UserDTO userDTO = mapper.Map<UserDTO>(user);
 
-## Default Mappings
+{% endhighlight %}
+
+The above will create a `UserDTO` object with an `Id` and `Name` that matches the original 
+`user` object, but no error is thrown as a result of not having the `FavoriteFood` property 
+on the `UserDTO` type. Also, the `BirthYear` property of the `UserDTO` will be null.
 
 ## Custom Mappings
 
+We can use projection to translate properties as they are mapped. For instance, the code snippet 
+below shows how we can map the `BirthDate` property of the `User` type to the `BirthYear` 
+property of the `UserDTO` type.
+
+{% highlight csharp %}
+
+var config = new MapperConfiguration(cfg =>
+    cfg.CreateMap<User, UserDTO>()
+        .ForMember(dest => dest.BirthYear, opt => opt.MapFrom(src => src.BirthDate.Year));
+
+var user = new User() 
+{
+    Id = Guid.NewGuid(),
+    Name = "Joe Bruiser",
+    FavoriteFood = "Curry",
+    BirthDate = new DateTime(2000, 10, 12)
+};
+
+var mapper = config.CreateMapper();
+UserDTO userDTO = mapper.Map<UserDTO>(user);
+
+{% endhighlight %}
+
+The resulting `userDTO` object will be similar to our first example, but this time will 
+include the `BirthYear` property of 2000. 
+
 # Dependency Injection
+
+
+
+
+
+
+
 
 <figure style="width:250px;float:right;margin: 0 0 10px 10px">
     <img src="https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/53030755_2228476424037910_6307370620143831616_n_igcxrg.jpg" alt="Our new dining room table.">
