@@ -75,7 +75,7 @@ UserDTO userDTO = mapper.Map<UserDTO>(user);
 
 The above will create a `UserDTO` object with an `Id` and `Name` that matches the original 
 `user` object, but no error is thrown as a result of not having the `FavoriteFood` property 
-on the `UserDTO` type. Also, the `BirthYear` property of the `UserDTO` will be null.
+on the `UserDTO` type. Also, the `BirthYear` property of the `UserDTO` will be zero.
 
 ## Custom Mappings
 
@@ -87,7 +87,8 @@ property of the `UserDTO` type.
 
 var config = new MapperConfiguration(cfg =>
     cfg.CreateMap<User, UserDTO>()
-        .ForMember(dest => dest.BirthYear, opt => opt.MapFrom(src => src.BirthDate.Year));
+        .ForMember(dest => dest.BirthYear, 
+                   opt => opt.MapFrom(src => src.BirthDate.Year));
 
 var user = new User() 
 {
@@ -118,7 +119,8 @@ public class UserManagementProfile : Profile
 	public UserManagementProfile()
 	{
 		CreateMap<User, UserDTO>()
-            .ForMember(dest => dest.BirthYear, opt => opt.MapFrom(src => src.BirthDate.Year));
+            .ForMember(dest => dest.BirthYear, 
+            opt => opt.MapFrom(src => src.BirthDate.Year));
 
         // Configurations for other classes in this business 
         // area can be included here as well, like below:
