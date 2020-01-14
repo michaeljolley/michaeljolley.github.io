@@ -15,13 +15,13 @@ and it does the job nicely.
 
 In the past, I've used it exclusively with ASP.NET APIs. However, the method for utilizing it via
 dependency injection has changed. So let's review how to get started, how to define mappings and
-how to inject your mappings into ASP.NET Core APIs.
+how to inject our mappings into ASP.NET Core APIs.
 
 <!--more-->
 
 # Getting Started
 
-Like most .NET libraries, you can install the `AutoMapper` package from Nuget.
+Like most .NET libraries, we can install the `AutoMapper` package from Nuget.
 
 {% highlight PS %}
 Install-Package AutoMapper
@@ -48,9 +48,10 @@ public class UserDTO
 
 {% endhighlight %}
 
+These classes will serve as source and destination types that we can work with.
+
 ## Default Mappings
 
-These classes will services as source and destination types that we can work with. 
 Without specific configuration, AutoMapper will match properties based on their name. 
 By default, it will ignore null reference exceptions when mapping source and destination 
 types. Below is a snippet mapping the source and destination types using the default 
@@ -103,14 +104,14 @@ UserDTO userDTO = mapper.Map<UserDTO>(user);
 
 {% endhighlight %}
 
-The resulting `userDTO` object will be similar to our first example, but this time will 
+The resulting `userDTO` object will be similar to our first example, but this time it will  
 include the `BirthYear` property of 2000.
 
 ## Profiles
 
-A clean way to organize and maintain your mapping configurations is with profiles. Many 
+A clean way to organize and maintain our mapping configurations is with profiles. Many 
 times these `Profile` classes will encapsulate business areas (e.g. Ordering, Shipping). To 
-start, create a class that inherits from `Profile` and put the configuration in the 
+start, we'll create a class that inherits from `Profile` and put the configuration in the 
 constructor.
 
 {% highlight csharp %}
@@ -131,14 +132,13 @@ public class UserManagementProfile : Profile
 }
 {% endhighlight %}
 
-For added isolation, you could create a project just for your `Profile` configurations. Using 
-profiles helps keeps your configurations more manageable as your application grows.
+For added isolation, we can create a project just for our `Profile` configurations. Using 
+profiles helps us keep configurations more manageable as our application grows.
 
 # Dependency Injection
 
-Dependency injection is baked into ASP.NET Core, but to use AutoMapper with it you'll need 
-additional configuration and an additional Nuget package. Add the  
-`AutoMapper.Extensions.Microsoft.DependencyInjection` to your ASP.NET Core project. 
+Dependency injection is baked into ASP.NET Core, but to use AutoMapper with it we'll need 
+additional configuration and an additional Nuget package.  
 
 {% highlight PS %}
 Install-Package AutoMapper.Extensions.Microsoft.DependencyInjection
@@ -146,8 +146,8 @@ Install-Package AutoMapper.Extensions.Microsoft.DependencyInjection
 
 ## Register AutoMapper
 
-Once installed, you can define the configuration using profiles. In the `Startup.ConfigureServices` 
-method, use can use the `AddAutoMapper` extension method on the `IServiceCollection` object as 
+Once installed, we can define the configuration using profiles. In the `Startup.ConfigureServices` 
+method, we can use the `AddAutoMapper` extension method on the `IServiceCollection` object as 
 shown below:
 
 {% highlight csharp %}
@@ -160,8 +160,8 @@ services.AddAutoMapper(profileAssembly1, profileAssembly2 /*, ...*/);
 
 ## Inject AutoMapper
 
-With AutoMapper registered and its configurations set, you can now inject an `IMapper` into 
-your controllers.
+With AutoMapper registered and its configurations set, we can now inject an `IMapper` into 
+our controllers.
 
 {% highlight csharp %}
 
@@ -176,13 +176,13 @@ public class UsersController
 
 {% endhighlight %}
 
-With the `IMapper` you can now map your objects to their DTO equivalents using the `.Map` 
+With the `IMapper` we can map our objects to their DTO equivalents using the `.Map` 
 method.
 
 # Wrap It Up
 
-Now that ASP.NET Core is injecting AutoMapper to your controllers, you can add configurations 
-to your profiles or create new profiles for new business areas and still map appropriately 
+Now that ASP.NET Core is injecting AutoMapper to our controllers, we can add configurations 
+to our profiles or create new profiles for new business areas and still map appropriately 
 without further configuration.  
 
 Of course, we didn't cover all of the features of AutoMapper so I'd suggest checking out their documentation for more information about their capabilities.  Hopefully this post gave you 
