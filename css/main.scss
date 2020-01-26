@@ -122,7 +122,7 @@
 .github-button {
   color: $white;
   position: absolute;
-  right: 55;
+  right: 55px;
   top: 0;
 }
 
@@ -1129,6 +1129,11 @@ a.archive-top-link:hover {
     display: block;
     margin: 30px auto 0;
     position: static;
+  }
+    
+  .github-button {
+    height: 45px;
+    padding-top: 5px;
   }
 }
 
