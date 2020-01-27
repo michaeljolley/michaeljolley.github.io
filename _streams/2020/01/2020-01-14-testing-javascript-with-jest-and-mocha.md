@@ -2,11 +2,11 @@
 layout: post
 date: 2020-01-14 19:01
 title: "How the heck do we test JavaScript? Let's learn Jest & Mocha"
-image:
-description: ""
+image: https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/73208156-921c5f00-410b-11ea-9201-1d7649604610_vfxeba.png
+description: "Learning how to use Jest & Mocha to test JavaScript."
 comments: true
-tags: [twitch, stream]
-replay:
+tags: [twitch, stream, javascript, jest, mocha]
+replay: https://youtu.be/ZL8Ogng9MyM
 ---
 
 ### Stream Replay Link
@@ -15,18 +15,9 @@ replay:
 
 <!--more-->
 
-### Segments
-
-| Timestamp | Topic
-| ---       | ---
-| [00:10]({{page.replay}}?t=610.847) | Kicking it off |
-
 ### Today's Candle To Code By
 
 <a href="https://amzn.to/2GSsMxX" target="_blank">Warm Tobacco Pipe</a>
-
-### Goals
-
 
 ## Today's stream brought to you by
 
