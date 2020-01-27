@@ -2,11 +2,11 @@
 layout: post
 date: 2020-01-26 19:01
 title: "MOAR GitHub Actions with TypeScript"
-image:
-description: ""
+image: https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/73210334-ab270f00-410f-11ea-9522-b15648295c73_yumlcq.png
+description: "Continuing to build our code-community GitHub Action"
 comments: true
-tags: [twitch, stream]
-replay:
+tags: [twitch, stream, github, actions]
+replay: https://youtu.be/sGrefk-JdBQ
 ---
 
 ### Stream Replay Link
@@ -15,23 +15,13 @@ replay:
 
 <!--more-->
 
-### Segments
-
-| Timestamp | Topic
-| ---       | ---
-| [00:07]({{page.replay}}?t=460.348) | Kicking it off |
-| [00:29]({{page.replay}}?t=1741.872) | Kicking it off |
-
 ### Today's Candle To Code By
 
 <a href="https://amzn.to/2GSsMxX" target="_blank">Warm Tobacco Pipe</a>
 
-### Goals
-
-
 ### Things We Learned
 
-- <a href="https://twitch.tv/pardel" target="_blank">pardel</a>: shared sizzy.co for developing responsive pages 
+- <a href="https://twitch.tv/pardel" target="_blank">pardel</a>: shared <a href="http://sizzy.co" target="_blank"> for developing responsive pages.
 
 ## Today's stream brought to you by
 
