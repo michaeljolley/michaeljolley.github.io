@@ -1,12 +1,12 @@
 ---
 layout: post
 date: 2020-01-19 19:01
-title: "Repo maintenace, MS MVP unboxing and GitHub Actions in TypeScript"
-image:
-description: ""
+title: "Repo maintenance, MS MVP unboxing and GitHub Actions in TypeScript"
+image: https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/73209955-e37a1d80-410e-11ea-9d2e-90e8a942d95e_fwuq1d.png
+description: "Writing a new GitHub extension"
 comments: true
-tags: [twitch, stream]
-replay:
+tags: [twitch, stream, github, actions]
+replay: https://youtu.be/3gSSoPM491A
 ---
 
 ### Stream Replay Link
@@ -15,17 +15,9 @@ replay:
 
 <!--more-->
 
-### Segments
-
-| Timestamp | Topic
-| ---       | ---
-
 ### Today's Candle To Code By
 
 <a href="https://amzn.to/320cEn1" target="_blank">Unicorn Dust</a>
-
-### Goals
-
 
 ## Today's stream brought to you by
 
