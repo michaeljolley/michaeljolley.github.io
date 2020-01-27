@@ -2,11 +2,11 @@
 layout: post
 date: 2020-01-16 19:01
 title: "Facial recognition on live video with JavaScript"
-image:
-description: ""
+image: https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/73209458-e294bc00-410d-11ea-8ade-44d30e0b6cc3_okqk9n.png
+description: "Adding facial recognition to an OpenTok video using Azure Face API"
 comments: true
-tags: [twitch, stream]
-replay:
+tags: [twitch, stream, opentok, azure, sentiment, face-api]
+replay: https://youtu.be/5kCYw0qqiI8
 ---
 
 ### Stream Replay Link
@@ -22,15 +22,11 @@ replay:
 | [00:44]({{page.replay}}?t=2669.259) | Kicking it off |
 | [00:45]({{page.replay}}?t=2703.888) | I'm the king of the swingers yeah, jungle VIP |
 | [00:45]({{page.replay}}?t=2728.982) | me James, I WILL become King |
-| [00:49]({{page.replay}}?t=2940.396) | Kicking it off |
 | [02:51]({{page.replay}}?t=10306.166) | battle of the bat men |
 
 ### Today's Candle To Code By
 
 <a href="https://stinkycandlecompany.com/product/wet-grass-candle" target="_blank">Wet Grass</a>
-
-### Goals
-
 
 ## Today's stream brought to you by
 
