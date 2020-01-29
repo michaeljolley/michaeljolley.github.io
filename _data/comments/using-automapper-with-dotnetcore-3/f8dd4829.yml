@@ -1,0 +1,11 @@
+id: f8dd4829
+date: 2020-01-29T08:02:25.6999213Z
+name: Cedric
+avatar: https://avatars.io/twitter/http://github.com/ranouf/medium
+message: >+
+  In startup, I use:
+
+
+
+              services.AddAutoMapper(typeof(MyProject).Assembly);
+
