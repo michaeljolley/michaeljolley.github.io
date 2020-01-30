@@ -1,0 +1,28 @@
+// For format details, see https://aka.ms/vscode-remote/devcontainer.json or this file's README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.99.2/containers/javascript-node-12
+{
+	"name": "Node.js 12",
+	"dockerFile": "Dockerfile",
+
+	// Use 'settings' to set *default* container specific settings.json values on container create. 
+	// You can edit these settings after create using File > Preferences > Settings > Remote.
+	"settings": { 
+		"terminal.integrated.shell.linux": "/bin/bash"
+	},
+
+	// Use 'forwardPorts' (in extension v0.98.0+) to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Uncomment the next line to run commands after the container is created.
+	// "postCreateCommand": "yarn install",
+
+	// Uncomment the next line to have VS Code connect as an existing non-root user in the container. 
+	// On Linux, by default, the container user's UID/GID will be updated to match your local user. See
+	// https://aka.ms/vscode-remote/containers/non-root for details on adding a non-root user if none exist.
+	// "remoteUser": "node",
+
+	// Add the IDs of extensions you want installed when the container is created in the array below.
+	"extensions": [
+		"dbaeumer.vscode-eslint"
+	]
+}

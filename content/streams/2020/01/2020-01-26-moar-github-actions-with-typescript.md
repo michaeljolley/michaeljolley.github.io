@@ -10,7 +10,7 @@ replay: https://youtu.be/sGrefk-JdBQ
 
 ### Stream Replay Link
 
-[{{page.replay}}]({{page.replay}})
+[{{$page.stream.replay}}]({{$page.stream.replay}})
 
 <!--more-->
 
