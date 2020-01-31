@@ -1,12 +1,12 @@
 <template>
   <Layout>
-    <PostSummary v-for="post in $page.posts.edges" :key="post.node.id" :post="post.node" />
+    <PostSummary v-for="post in $page.tag.belongsTo.edges" :key="post.node.id" :post="post.node" />
 
-    <nav class="pagination" v-if="$page.posts.pageInfo.totalPages > 1">
+    <nav class="pagination" v-if="$page.tag.belongsTo.pageInfo.totalPages > 1">
       <h2 class="screen-reader-text">Posts navigation</h2>
       <g-link
         :to="'/' + previousPage"
-        v-if="!$page.posts.pageInfo.isFirst"
+        v-if="!$page.tag.belongsTo.pageInfo.isFirst"
         class="newer-posts square fill-horizontal"
       >
         <font-awesome :icon="['fa', 'chevron-left']" swap-opacity></font-awesome>
@@ -15,11 +15,11 @@
 
       <span
         class="page-number"
-      >Page {{ $page.posts.pageInfo.currentPage }} of {{ $page.posts.pageInfo.totalPages }}</span>
+      >Page {{ $page.tag.belongsTo.pageInfo.currentPage }} of {{ $page.tag.belongsTo.pageInfo.totalPages }}</span>
 
       <g-link
-        :to="'/' + ($page.posts.pageInfo.currentPage + 1)"
-        v-if="!$page.posts.pageInfo.isLast"
+        :to="'/' + ($page.tag.belongsTo.pageInfo.currentPage + 1)"
+        v-if="!$page.tag.belongsTo.pageInfo.isLast"
         class="older-posts square fill-horizontal"
       >
         <font-awesome :icon="['fa', 'chevron-right']" swap-opacity></font-awesome>
@@ -30,9 +30,10 @@
 </template>
 
 <page-query>
-  query Posts ($page: Int) {
-    posts: allPost (perPage: 5, page: $page) @paginate {
-      totalCount
+query Tag($id: ID!) {
+  tag (id: $id) {
+    title
+    belongsTo {
       pageInfo {
         totalPages
         currentPage
@@ -41,6 +42,7 @@
       }
       edges {
         node {
+          ...on Post {
           id
           title
           description
@@ -48,13 +50,17 @@
           date (format: "MMMM D, YYYY")
           image
           path
-          tags
+          tags {
+            id
+          }
           content
           banner_image_alt
+          }
         }
       }
     }
   }
+}
 </page-query>
 <script>
 import PostSummary from "../components/PostSummary";
@@ -65,10 +71,10 @@ export default {
   },
   computed: {
     previousPage: function() {
-      if (this.$page.posts.pageInfo.currentPage === 2) {
+      if (this.$page.tag.belongsTo.pageInfo.currentPage === 2) {
         return "";
       }
-      return this.$page.posts.pageInfo.currentPage - 1;
+      return this.$page.tag.belongsTo.pageInfo.currentPage - 1;
     }
   }
 };

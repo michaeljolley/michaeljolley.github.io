@@ -47,8 +47,10 @@
           timeToRead
           date (format: "MMMM D, YYYY")
           image
+          tags {
+            id
+          }
           path
-          tags
           content
           banner_image_alt
         }

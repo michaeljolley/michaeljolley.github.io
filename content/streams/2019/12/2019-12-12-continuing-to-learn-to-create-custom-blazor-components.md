@@ -1,6 +1,6 @@
 ---
 date: 2019-12-12 
-title: "Learning Blazor to create custom components"
+title: "Continuing to Learn Blazor to Create Custom Blazor Components"
 image: https://user-images.githubusercontent.com/1228996/71315690-f707d980-2428-11ea-88eb-8dc6d16aa8c6.png
 description: "Continuing to learn Blazor with a goal to create a custom component"
 comments: true

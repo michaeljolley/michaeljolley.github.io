@@ -1,6 +1,6 @@
 <template>
   <span>
-    <g-link v-for="tag in tags" :key="tag" :to="'/tags/#' + tag" rel="tag">{{ tag }}</g-link>
+    <g-link v-for="tag in tags" :key="tag.id" :to="'/tags/' + tag.id" rel="tag">{{ tag.id }}</g-link>
   </span>
 </template>
 <script>

@@ -10,7 +10,7 @@
         <g-link :title="title" :to="path">{{title}}</g-link>
       </h2>
     </div>
-    <div class="entry-meta">
+    <div class="entry-meta" v-if="date">
       <time class="published" :datetime="date">{{ date }}</time>
       <span v-if="showComments">
         |

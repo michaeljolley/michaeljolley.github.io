@@ -13,6 +13,13 @@ function addStyleResource(rule) {
 module.exports = {
   siteName: 'Bald. Bearded. Builder.',
   siteUrl: 'https://baldbeardedbuilder.com',
+  siteDescription: 'Michael is a bald, bearded, builder with a passion for helping others succeed. For nearly 20 years, he’s used his experience in software development and DevOps for clients ranging from start-ups to Fortune 500.<br/><br/>When not in full-geek mode, he’s a husband, father of 3, musician and football fanatic.',
+  templates: {
+    Post: '/posts/:title',
+    Stream: '/streams/:title',
+    Tag: '/tags/:title',
+    Talk: '/talks/:slug'
+  },
   plugins: [
     {
       use: '@gridsome/plugin-google-analytics',
@@ -25,19 +32,19 @@ module.exports = {
       options: {
         resources: [
           './src/assets/_sass/_variables.scss',
-          './src/assets/_sass/_reset.scss',
-          './src/assets/_sass/_general.scss',
-          './src/assets/_sass/_icons.scss',
-          './src/assets/_sass/_comments.scss',
-          './src/assets/_sass/_syntax.scss',
+          // './src/assets/_sass/_reset.scss',
+          // './src/assets/_sass/_general.scss',
+          // './src/assets/_sass/_icons.scss',
+          // './src/assets/_sass/_comments.scss',
+          // './src/assets/_sass/_syntax.scss',
         ]
       }
     },
     {
       use: '@gridsome/source-filesystem',
       options: {
-        typeName: 'Post',
         path: './content/posts/**/*.md',
+        typeName: 'Post',
         refs: {
           tags: {
             typeName: 'Tag',
@@ -52,22 +59,85 @@ module.exports = {
         typeName: 'Stream',
         path: './content/streams/**/*.md'
       }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Talk',
+        path: './content/talks/**/*.md'
+      }
+    },
+    {
+      use: 'gridsome-plugin-feed',
+      options: {
+        contentTypes: ['Post', 'Talk', 'Stream'],
+        feedOptions: {
+          title: "Bald Bearded Builder",
+          description: 'Michael is a bald, bearded, builder with a passion for helping others succeed. For nearly 20 years, he’s used his experience in software development and DevOps for clients ranging from start-ups to Fortune 500.<br/><br/>When not in full-geek mode, he’s a husband, father of 3, musician and football fanatic.',
+          link: 'https://baldbeardedbuilder.com/',
+          language: 'en'
+        },
+        rss: {
+          enabled: true,
+          output: '/feed.xml'
+        },
+        atom: {
+          enabled: false,
+          output: '/feed.atom'
+        },
+        json: {
+          enabled: false,
+          output: '/feed.json'
+        },
+        // Optional: an array of properties passed to `Feed.addItem()` that will be parsed for
+        // URLs in HTML (ensures that URLs are full `http` URLs rather than site-relative).
+        // To disable this functionality, set to `null`.
+        htmlFields: ['description', 'content'],
+        // Optional: if you wish to enforce trailing slashes for site URLs
+        enforceTrailingSlashes: true,
+        // Optional: a method that accepts a node and returns true (include) or false (exclude)
+        // Example: only past-dated nodes: `filterNodes: (node) => node.date <= new Date()`
+        filterNodes: (node) => true,
+        // Optional: a method that accepts a node and returns an object for `Feed.addItem()`
+        // See https://www.npmjs.com/package/feed#example for available properties
+        // NOTE: `date` field MUST be a Javascript `Date` object
+        nodeToFeedItem: (node) => ({
+          title: node.title,
+          author: 'Michael Jolley',
+          date: node.date || node.fields.date,
+          content: node.content
+        })
+      }
+    },
+    {
+      use: "@gridsome/plugin-sitemap",
+      options: {
+        cacheTime: 600000, // default
+        config: {
+          "/posts/*": {
+            changefreq: "daily",
+            priority: 0.6
+          },
+          "/about/": {
+            changefreq: "monthly",
+            priority: 0.7
+          },
+          "/talks/": {
+            changefreq: "daily",
+            priority: 0.4
+          },
+          "/talks/*": {
+            changefreq: "weekly",
+            priority: 0.6
+          },
+          "/streams/*": {
+            changefreq: "daily",
+            priority: 0.5
+          }
+        }
+      }
     }
   ],
-  templates: {
-    Post: [
-      {
-        path: '/posts/:title',
-        component: './src/templates/Post.vue'
-      }
-    ],
-    Stream: [
-      {
-        path: '/streams/:title',
-        component: './src/templates/Stream.vue'
-      }
-    ]
-  },
   transformers: {
     //Add markdown support to all file-system sources
     remark: {
