@@ -4,6 +4,7 @@ title: BSides BHAM - Birmingham, AL
 description: "Think inside the box. Developing inside a container to avoid conflicts, improve security and speed up on-boarding"
 image: https://user-images.githubusercontent.com/1228996/65818448-f9b2b400-e1d6-11e9-93df-1651e75623fd.png
 slug: bsides-bhm-2019
+date: 10/12/2019
 ---
 
 Hi! Thanks for attending my talk!

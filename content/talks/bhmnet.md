@@ -4,6 +4,7 @@ title: BHM.NET Meetup - Birmingham, AL
 description: "Think inside the box. Developing inside a container to avoid conflicts, improve security and speed up on-boarding"
 image: https://user-images.githubusercontent.com/1228996/69191019-3c15b480-0ae7-11ea-9112-ead443d90563.png
 slug: bhmnet
+date: 11/19/2019
 ---
 
 Hi! Thanks for attending my talk!

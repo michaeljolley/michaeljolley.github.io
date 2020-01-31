@@ -5,6 +5,7 @@ description: "Think inside the box. Developing inside a container to avoid confl
 image: https://user-images.githubusercontent.com/1228996/68601482-0549f980-046a-11ea-8ec6-b543e4565687.png
 banner_image_alt: "The Chattanoogan Hotel in Chattanooga TN"
 slug: devopsdays2019
+date: 11/12/2019
 ---
 
 Hi! Thanks for attending my talk!
