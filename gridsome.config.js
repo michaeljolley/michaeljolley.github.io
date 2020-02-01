@@ -31,12 +31,7 @@ module.exports = {
       use: 'gridsome-plugin-sass-resources-loader',
       options: {
         resources: [
-          './src/assets/_sass/_variables.scss',
-          // './src/assets/_sass/_reset.scss',
-          // './src/assets/_sass/_general.scss',
-          // './src/assets/_sass/_icons.scss',
-          // './src/assets/_sass/_comments.scss',
-          // './src/assets/_sass/_syntax.scss',
+          './src/assets/_sass/_variables.scss'
         ]
       }
     },

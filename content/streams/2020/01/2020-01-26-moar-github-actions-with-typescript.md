@@ -6,17 +6,44 @@ description: "Continuing to build our code-community GitHub Action"
 comments: true
 tags: [twitch, stream, github, actions]
 replay: https://youtu.be/sGrefk-JdBQ
+candle: {
+  name: "Warm Tobacco Pipe",
+  url: "https://amzn.to/2GSsMxX"
+}
+subscribers: [
+  {
+    name: "FullStackLive",
+    profile: "https://static-cdn.jtvnw.net/jtv_user_pictures/e2a9f2fe-89df-4fc9-a585-c1d214b6acc1-profile_image-300x300.png"
+  },
+  {
+    name: "Wally_KC",
+    profile: "https://static-cdn.jtvnw.net/jtv_user_pictures/e0d81e861b461f14-profile_image-300x300.jpeg"
+  },
+  {
+    name: "retro_crt",
+    profile: "https://static-cdn.jtvnw.net/jtv_user_pictures/d8d1d839-7d75-4bdf-b992-5995645ccdbd-profile_image-300x300.png"
+  },
+  {
+    name: "dare_devel_ops",
+    profile: "https://static-cdn.jtvnw.net/jtv_user_pictures/51b2380b-55c8-4acd-8e4b-21a0b86bf901-profile_image-300x300.png",
+    github: "daredevelops",
+    twitter: "daredevelops"
+  }]
 ---
 
 ### Stream Replay Link
 
-[{{$page.stream.replay}}]({{$page.stream.replay}})
+[{{ $frontmatter.replay }}]({{ $frontmatter.replay }})
+
+{{replay}}
+
+{{frontmatter.title}}
 
 <!--more-->
 
 ### Today's Candle To Code By
 
-<a href="https://amzn.to/2GSsMxX" target="_blank">Warm Tobacco Pipe</a>
+<a href="" target="_blank">Warm Tobacco Pipe</a>
 
 ### Things We Learned
 
