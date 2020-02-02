@@ -1,13 +1,13 @@
 <template>
   <form
-    action="/fake"
-    data-action="https://michaeljolley-comments.azurewebsites.net/api/PostComment"
+    action="https://michaeljolley-comments.azurewebsites.net/api/PostComment"
     method="post"
     id="commentform"
+    ref="commentform"
     class="form-horizontal comment-box"
   >
     <input name="redirect" type="hidden" value="https://baldbeardedbuilder.com/thanks" />
-    <input name="post_id" type="hidden" :value="path" />
+    <input name="post_id" type="hidden" v-model="path.path" />
     <input name="comment-site" type="hidden" value="https://baldbeardedbuilder.com" />
     <div id="comment-box">
       <img
@@ -17,26 +17,26 @@
         alt="avatar"
         class="avatar"
         id="avatarPreview"
+        ref="avatarPreview"
       />
       <div id="commenttext">
-        <div id="commentstatus" class="status"></div>
-        <div
-          contenteditable="true"
+        <div id="commentstatus" class="status" ref="commentstatus"></div>
+        <textarea
           tabindex="0"
-          role="textbox"
-          aria-multiline="true"
-          data-role="editable"
           class="textarea plaintext"
-          aria-label="Join the discussion..."
-          id="comment-div"
-          data-target="message"
-        ></div>
-        <input type="hidden" name="message" id="message" data-required="true" value />
+          placeholder="Join the discussion..."
+          name="message"
+          v-model="message"
+          id="message"
+          rows="5"
+          data-required="true"
+          value
+        />
       </div>
     </div>
     <div id="comment-author">
       <div class="control-group">
-        <input type="hidden" name="avatar" id="avatarInput" />
+        <input type="hidden" name="avatar" id="avatarInput" ref="avatarInput" />
         <input
           type="text"
           name="name"
@@ -44,6 +44,7 @@
           placeholder="Display Name"
           title="Name displayed with your comment"
           data-required="true"
+          v-model="name"
         />
         <input
           type="text"
@@ -51,21 +52,128 @@
           id="identity"
           placeholder="email/@twitter/github"
           data-required="true"
+          v-model="identity"
+          v-on:change="checkAvatar"
           value
         />
         <div id="remember-me">
           <label for="remember">
-            <input type="checkbox" name="remember" id="remember" />
+            <input type="checkbox" v-model="remember" name="remember" id="remember" />
             <span>Remember?</span>
           </label>
         </div>
       </div>
-      <button type="button" id="commentbutton">Leave response</button>
+      <button
+        type="button"
+        id="commentbutton"
+        v-on:click="postComment"
+        ref="commentbutton"
+      >Leave response</button>
     </div>
   </form>
 </template>
 <script>
 export default {
-  props: ["path"]
+  name: "CommentNew",
+  props: ["path"],
+  data() {
+    return {
+      message: "",
+      identity: "",
+      name: "",
+      remember: false,
+      avatar: ""
+    };
+  },
+  methods: {
+    checkAvatar() {
+      const emailRegex = /[^@\s]+@[^@\s]+\.[^@\s]+$/;
+      let possibleAvatars = [];
+
+      if (this.identity.match(emailRegex)) {
+        possibleAvatars.push(
+          `https://secure.gravatar.com/avatar/${md5(
+            this.identity
+          )}?s=80&d=identicon&r=pg`
+        );
+      } else {
+        possibleAvatars.push(`https://github.com/${this.identity}.png`);
+        possibleAvatars.push(
+          `https://avatars.io/twitter/${this.identity}/medium`
+        );
+      }
+      possibleAvatars.push("/images/comments/unknown-avatar.png");
+
+      let image = this.$refs.avatarPreview;
+      image.possible = possibleAvatars;
+
+      avatarPreview.onerror = e => {
+        this.tryLoad(e.target, 1);
+      };
+
+      image.currentIndex = 0;
+
+      if (image.currentIndex < image.possible.length) {
+        image.src = image.possible[image.currentIndex];
+      } else {
+        avatarPreview.onerror = null;
+        image.src = image.dataset.fallbacksrc;
+      }
+    },
+    tryLoad(image, increment) {
+      if (increment) {
+        image.currentIndex += increment;
+      }
+
+      if (image.currentIndex < image.possible.length) {
+        image.src = image.possible[image.currentIndex];
+      } else {
+        image.onerror = null;
+        image.src = image.dataset.fallbacksrc;
+      }
+    },
+    postComment() {
+      let button = this.$refs.commentbutton;
+      var status = this.$refs.commentstatus;
+      let image = this.$refs.avatarPreview;
+      status.innerText = "";
+
+      var missing = Array.from(document.querySelectorAll("[data-required]"))
+        .filter(el => el.value === "")
+        .map(el => el.name);
+      if (missing.length > 0) {
+        status.innerText =
+          "Some required fields are missing - (" + missing.join(", ") + ")";
+        return;
+      }
+
+      if (button.innerText != "CONFIRM") {
+        button.setAttribute(
+          "title",
+          "Click the button again to confirm the comment"
+        );
+        button.classList.add("confirm-button");
+        button.innerText = "Confirm";
+        this.checkAvatar();
+        return;
+      }
+
+      if (this.remember) {
+        window.localStorage.name = this.name;
+        window.localStorage.identity = this.identity;
+      } else {
+        window.localStorage.name = "";
+        window.localStorage.identity = "";
+      }
+
+      this.$refs.avatarInput.value = image.src;
+
+      this.identity = "";
+      button.setAttribute("disabled", "disabled");
+      button.innerText = "Posting...";
+      button.classList.remove("confirm-button");
+      this.$refs.commentform.submit();
+    }
+  }
 };
 </script>

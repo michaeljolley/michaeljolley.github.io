@@ -10,7 +10,6 @@
               src="https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/64070619-28fef100-cc2a-11e9-8e32-837e130722ca_mjexti.png"
             />
           </div>
-
           <h1 class="entry-title">About Michael Jolley</h1>
         </div>
       </header>
