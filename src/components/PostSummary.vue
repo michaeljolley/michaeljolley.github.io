@@ -6,7 +6,7 @@
       :path="post.path"
       :image="post.image"
       :date="post.date"
-      :showComments="true"
+      :showComments="false"
     />
     <div class="entry-content">
       <div v-html="summary"></div>

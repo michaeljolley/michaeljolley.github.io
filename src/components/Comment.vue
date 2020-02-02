@@ -11,7 +11,7 @@
     <blockquote :id="comment.id">
       <cite>
         <span class="author">{{ comment.name }}</span>
-        <span class="bullet">•</span>
+        <span class="bullet"> • </span>
         <a :href="'#' + comment.id" class="muted" :title="comment.date">{{ comment.date }}</a>
       </cite>
       <div class="comment-body">{{ comment.message }}</div>
@@ -19,5 +19,7 @@
   </li>
 </template>
 <script>
-export default {};
+export default {
+  props: ["comment"]
+};
 </script>

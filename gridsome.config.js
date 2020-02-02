@@ -43,22 +43,20 @@ module.exports = {
           tags: {
             typeName: 'Tag',
             create: true
-          },
-          comments: {
-            typeName: 'Comment',
-            create: true,
-            path: './content/comments/**/*.yml'
           }
         }
       }
     },
-    // {
-    //   use: '@gridsome/source-filesystem',
-    //   options: {
-    //     typeName: 'Comment',
-    //     path: './content/comments/**/*.yml'
-    //   }
-    // },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Comment',
+        path: './content/comments/**/*.yml',
+        refs: {
+          typeName: 'Post'
+        }
+      }
+    },
     {
       use: '@gridsome/source-filesystem',
       options: {

@@ -13,8 +13,8 @@
     <div class="entry-meta" v-if="date">
       <time class="published" :datetime="date">{{ date }}</time>
       <span v-if="showComments">
-        |
-        <a :href="path + '#comments'">s</a>
+        |&nbsp;
+        <a :href="path + '#comments'">{{comments}} Comment<template v-if="comments !== 1">s</template></a>
       </span>
     </div>
   </header>

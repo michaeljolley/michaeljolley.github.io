@@ -7,11 +7,12 @@
         :path="$page.post.path"
         :image="$page.post.image"
         :date="$page.post.date"
+        :comments="$page.comments.totalCount"
         :showComments="true"
       />
       <div class="entry-content" v-html="$page.post.content"></div>
     </article>
-    <Comments :post="$page.post" />
+    <Comments :post="$page.post" :comments="$page.comments.edges" />
   </Layout>
 </template>
 <page-query>
@@ -25,6 +26,18 @@
       date (format: "MMMM D, YYYY")
       content
       description
+    }
+    comments: allComment(perPage: 500, page: 1, filter: { path: { eq: $path }}) {
+      totalCount
+      edges{
+        node {
+          id
+          date (format: "MMMM D, YYYY")
+          avatar
+          message
+          name
+        }
+      }
     }
   }
 </page-query>
