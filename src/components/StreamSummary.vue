@@ -10,15 +10,16 @@
     />
     <div class="entry-content">
       <div v-html="summary"></div>
+      <g-link title="read more" class="more-link" :to="stream.path">read more</g-link>
       <p class="read-more" v-if="hasMore">
         <g-link title="read more" class="more-link" :to="stream.path">read more</g-link>
       </p>
     </div>
     <footer class="entry-footer">
-      <div class="tag-links" :v-if="this.stream.tags.length > 0">
+      <!-- <div class="tag-links" :v-if="this.stream.tags.length > 0">
         Tags:
         <Tags :tags="this.stream.tags" />
-      </div>
+      </div>-->
     </footer>
   </article>
 </template>
@@ -31,7 +32,7 @@ export default {
   components: { SummaryHeader, Tags },
   computed: {
     hasMore: function() {
-      return this.stream.content.search("<!--more-->") >= 0;
+      return false; // this.stream.content.search("<!--more-->") >= 0;
     },
     summary: function() {
       if (this.hasMore) {

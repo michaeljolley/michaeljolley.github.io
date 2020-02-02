@@ -4,7 +4,6 @@ title: "Current Twitch live-coding stream setup"
 image: https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/53290137-aa4e6600-3765-11e9-8115-961de3633562_mxq7og.jpg
 banner_image_alt: Header used on Bald Bearded Builder stream
 description: Hardware & software setup for live-coding streams
-comments: true
 tags: [twitch, stream, setup]
 ---
 

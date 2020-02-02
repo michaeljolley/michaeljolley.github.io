@@ -4,7 +4,6 @@ title: "Setting up Raspberry Pi for use in kiosk mode with Chromium"
 image: https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/48371127-af891880-e680-11e8-89aa-2dec4de4ef8a_xwpry3.jpg
 banner_image_alt: Mash-up of Raspberry Pi & Chromium logos.
 description: Using Chromium on a Raspberry Pi to provide a kiosk experience for users.
-comments: true
 tags: [raspberry-pi, iot]
 ---
 

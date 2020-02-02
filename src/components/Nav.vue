@@ -13,9 +13,6 @@
           <li class>
             <a class href="/talks/">Talks</a>
           </li>
-          <li class>
-            <a class href="/streams/">Streams</a>
-          </li>
         </ul>
       </div>
       <a

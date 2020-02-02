@@ -11,38 +11,60 @@
       />
 
       <div class="entry-content">
-        <h3>Stream Replay Link</h3>
-
-        <p>
-          <g-link :to="$page.stream.replay">{{$page.stream.replay}}</g-link>
-        </p>
-
         <h3>Today's Candle To Code By</h3>
 
         <p>
-          <g-link :to="$page.stream.candle.url">{{$page.stream.candle.name}}</g-link>
+          <g-link :to="$page.stream.candle.url">{{$page.stream.candle.label}}</g-link>
         </p>
 
         <h2>Today's stream brought to you by</h2>
 
-        <div class="users">
-          <div class="user" v-for="sub in $page.stream.subscribers" :key="sub.name">
-            <g-image class="profile" :src="sub.profile" />
-            <span>
-              {{sub.name}}
-              <br />
-              <g-link :to="'https://twitch.tv/' + sub.name">
-                <font-awesome :icon="['fab', 'twitch']"></font-awesome>
-              </g-link>
-              <g-link :to="'https://twitter.com/' + sub.twitter" v-if="sub.twitter">
-                <font-awesome :icon="['fab', 'twitter']"></font-awesome>
-              </g-link>
-              <g-link :to="'https://github.com/' + sub.name" v-if="sub.github">
-                <font-awesome :icon="['fab', 'github']"></font-awesome>
-              </g-link>
-            </span>
+        <template v-if="$page.stream.subscribers && $page.stream.subscribers.length > 0">
+          <h3>Subscribers</h3>
+          <div class="users">
+            <TwitchUser v-for="sub in $page.stream.subscribers" :key="sub._id" :user="sub.user" />
           </div>
-        </div>
+        </template>
+
+        <template v-if="$page.stream.cheers && $page.stream.cheers.length > 0">
+          <h3>Cheers</h3>
+          <div class="users">
+            <TwitchUser
+              v-for="cheerer in $page.stream.cheers"
+              :key="cheerer._id"
+              :user="cheerer.user"
+            />
+          </div>
+        </template>
+
+        <template v-if="$page.stream.raiders && $page.stream.raiders.length > 0">
+          <h3>Raids</h3>
+          <div class="users">
+            <TwitchUser
+              v-for="raider in $page.stream.raiders"
+              :key="raider._id"
+              :user="raider.user"
+            />
+          </div>
+        </template>
+
+        <template v-if="$page.stream.moderators && $page.stream.moderators.length > 0">
+          <h3>Moderators</h3>
+          <div class="users">
+            <TwitchUser v-for="mod in $page.stream.moderators" :key="mod._id" :user="mod" />
+          </div>
+        </template>
+
+        <template v-if="$page.stream.contributors && $page.stream.contributors.length > 0">
+          <h3>Contributors</h3>
+          <div class="users">
+            <TwitchUser
+              v-for="contributor in $page.stream.contributors"
+              :key="contributor._id"
+              :user="contributor"
+            />
+          </div>
+        </template>
       </div>
     </article>
   </Layout>
@@ -51,33 +73,64 @@
   query Stream ($path: String!) {
     stream: stream (path: $path) {
       id
-      image
       title
-      date (format: "MMMM D, YYYY")
-      content
-      description
-      replay
+      streamDate
       candle {
         name
+        label
         url
       }
-      subscribers 
-        {
-          name
-          profile
-          github
-          twitter
+      subscribers {
+        _id
+        user {
+          display_name
+          profile_image_url
+          twitterHandle
+          githubHandle
         }
-      
+      }
+      moderators {
+        _id
+        display_name
+        profile_image_url
+        twitterHandle
+        githubHandle
+      }
+      raiders {
+        _id
+        user {
+          display_name
+          profile_image_url
+          twitterHandle
+          githubHandle
+        }
+      }
+      cheers {
+        _id
+        user {
+          display_name
+          profile_image_url
+          twitterHandle
+          githubHandle
+        }
+      }
+      contributors {
+        _id
+        display_name
+        profile_image_url
+        twitterHandle
+        githubHandle
+      }
     }
   }
 </page-query>
 <script>
 import SummaryHeader from "../components/SummaryHeader";
+import TwitchUser from "../components/TwitchUser";
 
 export default {
   name: "Stream",
-  components: { SummaryHeader },
+  components: { SummaryHeader, TwitchUser },
   metaInfo() {
     return {
       title: this.$page.stream.title,

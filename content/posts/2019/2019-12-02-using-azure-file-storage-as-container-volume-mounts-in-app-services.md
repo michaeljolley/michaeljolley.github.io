@@ -4,7 +4,6 @@ title: "Using Azure File Storage as Container Volume Mounts in App Services"
 image: https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/69994336-4be3be80-1513-11ea-92a1-381658ceef5f_grxpqn.jpg
 banner_image_alt: Azure App Service, Docker and Azure Storage logos on an Azure portal background
 description: How to mount Azure File Storage as a persistent volume in your multi-container App Services.
-comments: true
 tags: [azure, app-service, docker, volume, storage, container]
 ---
 

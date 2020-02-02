@@ -16,7 +16,6 @@ module.exports = {
   siteDescription: 'Michael is a bald, bearded, builder with a passion for helping others succeed. For nearly 20 years, he’s used his experience in software development and DevOps for clients ranging from start-ups to Fortune 500.<br/><br/>When not in full-geek mode, he’s a husband, father of 3, musician and football fanatic.',
   templates: {
     Post: '/posts/:title',
-    Stream: '/streams/:title',
     Tag: '/tags/:title',
     Talk: '/talks/:slug'
   },
@@ -44,17 +43,22 @@ module.exports = {
           tags: {
             typeName: 'Tag',
             create: true
+          },
+          comments: {
+            typeName: 'Comment',
+            create: true,
+            path: './content/comments/**/*.yml'
           }
         }
       }
     },
-    {
-      use: '@gridsome/source-filesystem',
-      options: {
-        typeName: 'Stream',
-        path: './content/streams/**/*.md'
-      }
-    },
+    // {
+    //   use: '@gridsome/source-filesystem',
+    //   options: {
+    //     typeName: 'Comment',
+    //     path: './content/comments/**/*.yml'
+    //   }
+    // },
     {
       use: '@gridsome/source-filesystem',
       options: {
@@ -123,10 +127,6 @@ module.exports = {
           "/talks/*": {
             changefreq: "weekly",
             priority: 0.6
-          },
-          "/streams/*": {
-            changefreq: "daily",
-            priority: 0.5
           }
         }
       }

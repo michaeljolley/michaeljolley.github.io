@@ -11,6 +11,7 @@
       />
       <div class="entry-content" v-html="$page.post.content"></div>
     </article>
+    <Comments :post="$page.post" />
   </Layout>
 </template>
 <page-query>
@@ -18,6 +19,7 @@
     post: post (path: $path) {
       id
       image
+      path
       banner_image_alt
       title
       date (format: "MMMM D, YYYY")
@@ -28,9 +30,10 @@
 </page-query>
 <script>
 import SummaryHeader from "../components/SummaryHeader";
+import Comments from "../components/Comments";
 export default {
   name: "Post",
-  components: { SummaryHeader },
+  components: { Comments, SummaryHeader },
   metaInfo() {
     return {
       title: this.$page.post.title,

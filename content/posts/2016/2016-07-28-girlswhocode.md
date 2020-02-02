@@ -4,7 +4,6 @@ title: "Girls Who Code"
 image: https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/66d4554a-544d-11e6-82d7-ced84abd4123_afjjdd.jpg
 banner_image_alt: Girls in a classroom watching a robot they've built.
 description: Thinking about our girls interest in STEM related fields.
-comments: true
 tags: [parenting]
 ---
 
