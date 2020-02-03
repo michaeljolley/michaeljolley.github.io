@@ -33,13 +33,7 @@ export default {
   components: { Footer, Header, Nav, Sidebar },
   metaInfo() {
     return {
-      title: this.$page.post.title,
       meta: [
-        {
-          key: "description",
-          name: "description",
-          content: this.$page.post.description
-        },
         {
           key: "twitter:card",
           name: "twitter:card",
