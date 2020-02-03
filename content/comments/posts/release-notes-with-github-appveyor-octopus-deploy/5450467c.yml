@@ -1,0 +1,6 @@
+id: 5450467c
+postpath: /posts/automating-release-notes-with-git-hub-app-veyor-and-octopus-deploy/
+date: 2020-01-04T14:09:20.6871017Z
+name: Maks
+avatar: https://avatars.io/twitter//medium
+message: "Hello MICHAEL,\r\nIt is very usefully article. Thanks a lot!\r\nBut this solution can have one big minus, since Github API cannot work with more than 250 commits and you must use git CLI to resolve it. \r\nDo you use git CLI in octopus to get release notes?"
