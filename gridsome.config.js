@@ -51,10 +51,7 @@ module.exports = {
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'Comment',
-        path: './content/comments/**/*.yml',
-        refs: {
-          typeName: 'Post'
-        }
+        path: './content/comments/**/*.yml'
       }
     },
     {

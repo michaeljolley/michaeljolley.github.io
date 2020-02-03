@@ -29,7 +29,7 @@
       path
       canonical_url
     }
-    comments: allComment(perPage: 500, page: 1, filter: { path: { eq: $path }}) {
+    comments: allComment(perPage: 500, page: 1, sortBy: "date", order: ASC, filter: { postpath: { eq: $path }}) {
       totalCount
       edges{
         node {
