@@ -1,0 +1,12 @@
+id: 9a281d9b
+path: /posts/adding-hateoas-to-an-asp-net-core-api/
+date: 2020-01-03T03:28:22.5994651Z
+name: Ashith Raj
+avatar: https://avatars.io/twitter/@AshithRaj/medium
+message: >+
+  Hi Michael, good intro to HATEOAS in ASP.NET Core Web API. if we have to include authorization logic for links / certain actions for example: certain role ("Admins") has access to certain action methods and other roles don't have access then should we generate the links for other roles based on authorization rules or not.
+
+  Also, authorization logic like Certain role ("Admins") have access to all the fields of an API Model and other roles don't have access to certain fields of an API model, in this case, should we create separate API Response Models per role ?
+
+
+
