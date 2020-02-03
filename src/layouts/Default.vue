@@ -30,7 +30,34 @@ import Nav from "../components/Nav.vue";
 import Sidebar from "../components/Sidebar.vue";
 
 export default {
-  components: { Footer, Header, Nav, Sidebar }
+  components: { Footer, Header, Nav, Sidebar },
+  metaInfo() {
+    return {
+      title: this.$page.post.title,
+      meta: [
+        {
+          key: "description",
+          name: "description",
+          content: this.$page.post.description
+        },
+        {
+          key: "twitter:card",
+          name: "twitter:card",
+          content: "summary_large_image"
+        },
+        {
+          key: "twitter:site",
+          name: "twitter:site",
+          content: "@baldbeardbuild"
+        },
+        {
+          key: "copyright",
+          name: "copyright",
+          content: "Copyright by Michael Jolley. All Rights Reserved."
+        }
+      ]
+    };
+  }
 };
 </script>
 

@@ -5,6 +5,7 @@ image: https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/header_w
 banner_image_alt: Metamorphosis of a butterfly with the .NET core and AutoMapper logos
 description: How to map objects to one another in ASP.NET Core 3 applications with AutoMapper.
 tags: [c#, automapper, dotnet, aspnetcore]
+canonical_url: "https://baldbeardedbuilder.com/posts/using-automapper-with-dotnetcore-3/"
 ---
 
 [AutoMapper] is well known in the .NET community. It bills itself as "a simple little library built
