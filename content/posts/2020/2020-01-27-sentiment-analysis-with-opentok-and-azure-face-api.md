@@ -172,7 +172,7 @@ const AZURE_FACE_API_ENDPOINT = '';
 
 We'll get the `OPENTOK_API_KEY`, `OPENTOK_SESSION_ID` and `OPENTOK_TOKEN` variables from our TokBox Account.
 
-In your TokBox Account, click the 'Projects' menu and 'Create New Project.` Then click the 'Create Custom Project' button. Give your new project a name and press the 'Create' button. You can leave the preferred codec as 'VP8'.
+In your TokBox Account, click the 'Projects' menu and 'Create New Project.' Then click the 'Create Custom Project' button. Give your new project a name and press the 'Create' button. You can leave the preferred codec as 'VP8'.
 
 ![Screenshot of the "project created" dialog within a TokBox account.](https://www.nexmo.com/wp-content/uploads/2020/01/tb-project-created.png)
 
