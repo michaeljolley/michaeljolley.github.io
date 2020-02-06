@@ -52,6 +52,14 @@ export default {
   metaInfo() {
     return {
       title: this.$page.post.title,
+      link: [
+        {
+          rel: "canonical",
+          href:
+            this.$page.post.canonical_url ||
+            `https://baldbeardedbuilder.com${this.$page.post.path}`
+        }
+      ],
       meta: [
         {
           key: "description",
@@ -92,13 +100,6 @@ export default {
           key: "twitter:image",
           name: "twitter:image",
           content: this.$page.post.image
-        },
-        {
-          key: "canonical",
-          name: "canonical",
-          content:
-            this.$page.post.canonical_url ||
-            `https://baldbeardedbuilder.com${this.$page.post.path}`
         }
       ]
     };
