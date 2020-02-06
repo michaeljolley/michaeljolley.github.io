@@ -43,7 +43,7 @@ cd video-sentiment
 
 In the root of the video-sentiment folder, create an `index.html` file and copy the following to it.
 
-```HTML
+```html
 <!DOCTYPE html>
 <html>
   <head>
@@ -75,7 +75,7 @@ In the root of the video-sentiment folder, create an `index.html` file and copy 
 
 Next, create a `css` directory and add an `app.css` file to it. Copy the CSS below into that file.
 
-```CSS
+```css
 body,
 html {
   height: 100%;
@@ -159,7 +159,7 @@ Great! Now we can make that pretty HTML &amp; CSS do something. Create a `js` fo
 
 The `config.js` file contains configuration parameters that we'll get from our TokBox and Azure accounts. Copy the following into the `config.js` file.
 
-```JS
+```js
 // Replace these values with those generated in your TokBox and Azure Accounts
 const OPENTOK_API_KEY = '';
 const OPENTOK_SESSION_ID = '';
@@ -193,7 +193,7 @@ Log into your Azure account and create a new Face API Cognitive Service. Once cr
 
 With our configuration ready, let's add some JavaScript to connect to an OpenTok session. Add an `app.js` file to the js folder and copy the following to it.
 
-```JS
+```js
 var opentok_api_key;
 var opentok_session_id;
 var opentok_token;
@@ -257,7 +257,7 @@ The `emotions` array will hold strings that represent any emotions returned by A
 
 Add the `initializeSession` method below to the bottom of the `app.js` file.
 
-```JS
+```js
 function initializeSession() {
   var session = OT.initSession(opentok_api_key, opentok_session_id);
   // Subscribe to a newly created streams and add
@@ -311,7 +311,7 @@ Now we can see and hear participants, but what is their face telling us that the
 
 In the `index.html` file, replace the comment that says `<!-- Footer will go here -->` with the following:
 
-```HTML
+```html
 <footer>
     <button id="analyze" type="button" onclick="processImages();">Analyze</button>
 
@@ -332,7 +332,7 @@ This adds a footer at the bottom of the page with an "Analyze" button and an uno
 
 Now let's add the JavaScript to handle our sentiment analysis. Add the following to the bottom of the `app.js` file.
 
-```JS
+```js
 function assignEmoji(emojiClass, index) {
   var widgets = document.getElementsByClassName('OT_widget-container');
   emotions.push(emojiClass);
