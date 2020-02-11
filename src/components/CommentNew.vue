@@ -1,6 +1,6 @@
 <template>
   <form
-    action="https://michaeljolley-comments.azurewebsites.net/api/PostComment"
+    action="https://michaeljolley-comments.azurewebsites.net/api/Comment"
     method="post"
     id="commentform"
     ref="commentform"
