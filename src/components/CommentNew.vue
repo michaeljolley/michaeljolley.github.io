@@ -7,7 +7,7 @@
     class="form-horizontal comment-box"
   >
     <input name="redirect" type="hidden" value="https://baldbeardedbuilder.com/thanks" />
-    <input name="post_id" type="hidden" v-model="path.path" />
+    <input name="postpath" type="hidden" v-model="path.path" />
     <input name="comment-site" type="hidden" value="https://baldbeardedbuilder.com" />
     <div id="comment-box">
       <img
