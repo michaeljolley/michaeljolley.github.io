@@ -9,6 +9,10 @@
       <div class="entry-content">
         <h2>Coming Up</h2>
 
+        <hr />
+
+        <h2>Previous</h2>
+
         <h3>2020</h3>
 
         <p>
@@ -17,12 +21,10 @@
             <a href="https://www.dnnsummit.org/" target="_blank">DNN Summit</a>
           </strong>
           <br />Orlando, FL
+          <br />
+          <a href="/talks/dnnsummit/">Slides, source &amp; links</a>
           <br />Think inside the box. Developing inside a container to avoid conflicts, improve security and speed up on-boarding
         </p>
-
-        <hr />
-
-        <h2>Previous</h2>
 
         <h3>2019</h3>
 
@@ -36,7 +38,7 @@
           </strong>
           <br />Birmingham, AL
           <br />
-          <a href="/talks/bhmnet">Slides, source &amp; links</a>
+          <a href="/talks/bhmnet/">Slides, source &amp; links</a>
           <br />Think inside the box. Developing inside a container to avoid conflicts, improve security and speed up on-boarding
         </p>
 
@@ -52,7 +54,7 @@
           </strong>
           <br />Chattanooga, TN
           <br />
-          <a href="/talks/devopsdays2019">Slides, source &amp; links</a>
+          <a href="/talks/devopsdays2019/">Slides, source &amp; links</a>
           <br />Think inside the box. Developing inside a container to avoid conflicts, improve security and speed up on-boarding
         </p>
 
@@ -65,7 +67,7 @@
           </strong>
           <br />Birmingham, AL
           <br />
-          <a href="/talks/bsides-bhm-2019">Slides, source &amp; links</a>
+          <a href="/talks/bsides-bhm-2019/">Slides, source &amp; links</a>
           <br />Think inside the box. Developing inside a container to avoid conflicts, improve security and speed up on-boarding
         </p>
 
@@ -78,7 +80,7 @@
           </strong>
           <br />Online
           <br />
-          <a href="/talks/dotnetconf2019">Slides, source &amp; links</a>
+          <a href="/talks/dotnetconf2019/">Slides, source &amp; links</a>
           <br />Death to SQL Server! Long live SQL Server! How containerized SQL Server makes development easier
         </p>
 
@@ -94,7 +96,7 @@
           </strong>
           <br />Auburn, AL
           <br />
-          <a href="/talks/devfest-auburn">Slides, source &amp; links</a>
+          <a href="/talks/devfest-auburn/">Slides, source &amp; links</a>
           <br />Think inside the box. Developing inside a container to avoid conflicts, improve security and speed up on-boarding
         </p>
 
