@@ -1,7 +1,7 @@
 ---
 date: 2020-03-12
 title: "Using Apollo to Query GraphQL from Node.js"
-image: https://www.nexmo.com/wp-content/uploads/2020/01/E_Sentiment-Analysis_OpenTok_1200x600.jpg
+image: https://www.nexmo.com/wp-content/uploads/2020/03/E_Apollo_GraphQL_1200x600.png
 banner_image_alt: Using Apollo to Query GraphQL from Node.js
 description: In this tutorial, we will use the apollo-client NPM package within Node.js to query and mutate third-party GraphQL endpoints.
 tags: [apollo, nodejs, graphql, opentok, vonage-video-api]
