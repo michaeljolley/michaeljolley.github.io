@@ -1,5 +1,5 @@
 ---
-date: 2020-04-11
+date: 2020-04-12
 title: "Live-Coding to Learn, Share and Encourage"
 image: https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/Artboard_2_pvr1nv.png
 banner_image_alt: Collage of things that occurred on the Bald Bearded Builder stream on Twitch.
@@ -39,17 +39,19 @@ This shift made a tremendous difference. Viewers would teach me and vice-versa. 
 
 Within weeks, messages started coming in from viewers enjoying the change. As one viewer put it: "makes something that would normally be dumbfounding look approachable." These messages completely altered my outlook.  I began to realize that while I loved building software, it had never brought the sense of fulfillment that I found in helping others learn and succeed.
 
-Those messages, coupled with encouragement from others, caused me to realize that I was in the wrong line of work; so I started working towards a change to developer advocacy. After several months of resume building, giving talks at various meet-ups and conferences and help from friends, in October I became a Developer Advocate at [Vonage](https://vonage.com). I'd love to tell you more about that, but this post isn't about DevRel. I will say I don't know if I've ever been happier with my work.
+Those messages, coupled with encouragement from others, caused me to realize that I was in the wrong line of work; so I started working towards a change to developer advocacy. After several months of resume building, giving talks at various meet-ups and conferences and help from friends, in October I became a Developer Advocate at [Vonage](https://vonage.com). I'd love to tell you more about that, but this post isn't about DevRel. I will say I've never been happier with my work.
 
 ## Viewers. Friends. Family.
 
-One consequence I didn't forsee was relationships. One of the best examples of that came just before Christmas when a viewer arrived to say "Hi all, I can't stay and watch. Wife and I are at the hospital and just had a baby. His name is Oscar." 
+One consequence I didn't foresee was relationships. One of the best examples of this came just before Christmas when a viewer arrived to say "Hi all, I can't stay and watch. Wife and I are at the hospital and just had a baby. His name is Oscar." 
 
-Reflecting on the stream later I realized that so many of these viewers had sneakily become my friends. We weren't only talking about code, but about life.  We were encouraging one another.  When a stream didn't go live, I missed hanging out with my friends.  When someone isn't there for a couple streams in a row I start wondering if they're okay. I admit this has been one of the best outcomes of the stream and I really do enjoy working with each one of them.
+Reflecting on the stream later I realized that so many of these viewers had sneakily become my friends. We weren't only talking about code, but about life.  We were encouraging one another.  When a stream didn't go live, I missed hanging out with my friends.  When someone misses a few streams, I start wondering if they're okay. I admit this has been one of the best outcomes of the stream and I really do enjoy working with each one of them.
 
-## Should I Stream My Code?
+## So Should I Stream My Code?
 
-Nearly every week I hear "I've been thinking of streaming my code, but I don't have X."  My response is always the same: If you have a microphone, you can stream. Yes, ideally you'll have a webcam, but not all streamers show themselves and it's not required. Green screens, sound effects, etc., while nice, are not required. All you need is some type of streaming software ([OBS](https://obsproject.com/) or [StreamLabs OBS](https://streamlabs.com/streamlabs-obs)), a microphone, and a willingness to share what you're developing/learning with others. Like blogging or presenting talks, streaming is simply another method to teach, help or encourage others. Any time you have the opportunity to do one of those things you should.
+Nearly every week I hear "I've been thinking of streaming my code, but I don't have X."  My response is always the same; if you have a microphone, you can stream. Yes, ideally you'll have a webcam, but not all streamers show themselves and it's not required. Green screens, sound effects, etc., while nice, are not required. All you need is some type of streaming software ([OBS](https://obsproject.com/) or [StreamLabs OBS](https://streamlabs.com/streamlabs-obs)), a microphone, and a willingness to share what you're developing/learning with others. 
+
+Like blogging or presenting talks, streaming is simply another method to teach, help or encourage others. Any time you have the opportunity to do one of those things you should.
 
 ## Start Streaming
 
