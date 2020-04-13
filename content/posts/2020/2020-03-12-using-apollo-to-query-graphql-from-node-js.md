@@ -12,6 +12,8 @@ It's a common scenario—you built a quick prototype, it worked great, and now m
 
 Do you need to create an Express app with routes for each data set you need? No way! In this tutorial, we will use the <a href="https://www.apollographql.com/" target="_blank" rel="noopener noreferrer">Apollo</a> client library within a Node.js Express app to provide a middleman to your third-party endpoint, without the need to rewrite your GraphQL queries and mutations.
 
+<!--more-->
+
 In addition to Apollo, there are several NPM libraries, like <a target="_blank" href="https://www.npmjs.com/package/lokka" rel="noopener noreferrer">lokka</a> and <a href="https://www.npmjs.com/package/express-graphql" target="_blank" rel="noopener noreferrer">express-graphql</a>, that we could use to abstract our third-party endpoint. Each of these libraries have their pros and cons. We'll be using Apollo due to its popularity and the level of support it has as part of the <a href="https://www.apollographql.com/" target="_blank" rel="noopener noreferrer">Apollo Data Graph Platform</a>.
 
 > Want to skip to the end? You can find all the source code for this tutorial on <a href="https://github.com/opentok-community/insights-api-samples/tree/master/nodejs-apollo-client" target="_blank" rel="noopener noreferrer">GitHub</a>.
