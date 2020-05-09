@@ -22,6 +22,7 @@
           <br />Geppetto's Guide to Living Puppets
         </p>
 
+        <hr />
         <p>
           <strong>2020 May 22</strong> -
           <strong>
