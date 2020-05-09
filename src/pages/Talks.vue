@@ -9,6 +9,29 @@
       <div class="entry-content">
         <h2>Coming Up</h2>
 
+        <p>
+          <strong>2020 May 14</strong> -
+          <strong>
+            <a
+              href="https://www.eventbrite.com/e/vonage-developer-day-tickets-102886113134"
+              target="_blank"
+            >Vonage Developer Day</a>
+          </strong>
+          <br />Online
+          <br />
+          <br />Geppetto's Guide to Living Puppets
+        </p>
+
+        <p>
+          <strong>2020 May 22</strong> -
+          <strong>
+            <a href="https://halfstackconf.com/online/" target="_blank">HalfStack Online</a>
+          </strong>
+          <br />Online
+          <br />
+          <br />Geppetto's Guide to Living Puppets
+        </p>
+
         <hr />
 
         <h2>Previous</h2>
