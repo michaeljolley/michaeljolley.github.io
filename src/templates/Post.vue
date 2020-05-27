@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <article class="post">
-      <SummaryHeader
+      <PostHeader
         :title="$page.post.title"
         :banner_image_alt="$page.post.banner_image_alt"
         :path="$page.post.path"
@@ -9,8 +9,19 @@
         :date="$page.post.date"
         :comments="$page.comments.totalCount"
         :showComments="true"
+        :showMeta="false"
+        :showTitle="false"
       />
-      <div class="entry-content" v-html="$page.post.content"></div>
+      <div class="entry-content">
+        <h1>{{$page.post.title}}</h1>
+        <div class="entry-meta" v-if="$page.post.date">
+          <time class="published" :datetime="$page.post.date">{{ $page.post.date }}</time>
+            |&nbsp;
+            <a :href="$page.post.path + '#comments'">{{$page.comments.totalCount}} Comment<template v-if="$page.comments.totalCount !== 1">s</template></a>
+        </div>
+        <div class="content" v-html="$page.post.content">
+        </div>
+      </div>
     </article>
     <Comments :post="$page.post" :comments="$page.comments.edges" />
   </Layout>
@@ -44,11 +55,11 @@
   }
 </page-query>
 <script>
-import SummaryHeader from "../components/SummaryHeader";
+import PostHeader from "@/components/posts/PostHeader";
 import Comments from "../components/Comments";
 export default {
   name: "Post",
-  components: { Comments, SummaryHeader },
+  components: { Comments, PostHeader },
   metaInfo() {
     return {
       title: this.$page.post.title,
@@ -107,5 +118,32 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+.entry-header {
+  background-color: $light-blue !important;
+}
+.entry-content {
+  background-color: $white;
+  padding: 20px;
+
+  h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: $pink;
+  }
+  .entry-meta {
+    padding-bottom: 15px;
+    border-bottom: 1px dotted $mid-blue;
+    a {
+      color: $pink;
+      text-decoration: none;
+      &:hover {
+        color: $pink;
+      }
+    }
+  }
+}
+.post {
+  margin-bottom: 0;
+}
 </style>

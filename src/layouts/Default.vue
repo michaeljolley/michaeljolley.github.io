@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <Nav />
     <Header />
+    <SubHeader />
 
     <div class="site-content">
       <div class="inner">
         <main class="site-main">
           <slot />
         </main>
-        <Sidebar />
       </div>
     </div>
+    
     <Footer />
   </div>
 </template>
@@ -24,13 +24,12 @@ query {
 </static-query>
 
 <script>
-import Footer from "../components/Footer.vue";
-import Header from "../components/Header.vue";
-import Nav from "../components/Nav.vue";
-import Sidebar from "../components/Sidebar.vue";
+import SubHeader from "@/components/layout/SubHeader.vue";
+import Footer from "@/components/layout/Footer.vue";
+import Header from "@/components/layout/Header.vue";
 
 export default {
-  components: { Footer, Header, Nav, Sidebar },
+  components: { Footer, Header, SubHeader },
   metaInfo() {
     return {
       meta: [
@@ -55,5 +54,8 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+.site-content {
+  margin-top: 133px;
+}
 </style>

@@ -63,7 +63,7 @@ query Tag($id: ID!) {
 }
 </page-query>
 <script>
-import PostSummary from "../components/PostSummary";
+import PostSummary from "@/components/posts/PostSummary";
 export default {
   components: { PostSummary },
   metaInfo: {

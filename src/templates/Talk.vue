@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <article class="post">
-      <SummaryHeader
+      <PostHeader
         :title="$page.talk.title"
         :banner_image_alt="$page.talk.banner_image_alt"
         :path="$page.talk.path"
@@ -24,11 +24,11 @@
   }
 </page-query>
 <script>
-import SummaryHeader from "../components/SummaryHeader";
+import PostHeader from "@/components/posts/PostHeader";
 
 export default {
   name: "Talk",
-  components: { SummaryHeader },
+  components: { PostHeader },
   metaInfo() {
     return {
       title: this.$page.talk.title,
