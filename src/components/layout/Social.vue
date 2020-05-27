@@ -71,7 +71,6 @@ export default {};
 
     svg {
       padding-top: 8px;
-     
     }
 
     &.twitter:hover {
