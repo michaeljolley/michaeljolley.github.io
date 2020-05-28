@@ -3,12 +3,11 @@
     <div class="inner">
       <h2>Join the discussion</h2>
     </div>
-    <div class="inner comment-list">
-      <CommentNew :path="post" />
-      <ol id="comments-list">
-        <Comment :comment="comment.node" v-for="comment in comments" :key="comment.id" />
-      </ol>
-    </div>
+    
+    <CommentNew :path="post" />
+    <ol id="comments-list">
+      <Comment :comment="comment.node" v-for="comment in comments" :key="comment.id" />
+    </ol>
   </div>
 </template>
 <script>

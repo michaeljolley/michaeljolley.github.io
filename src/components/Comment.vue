@@ -11,7 +11,7 @@
     <blockquote :id="comment.id">
       <cite>
         <span class="author">{{ comment.name }}</span>
-        <span class="bullet"> • </span>
+        <span class="bullet">&nbsp; &nbsp;| &nbsp;</span>
         <a :href="'#' + comment.id" :title="comment.date">{{ comment.date }}</a>
       </cite>
       <div class="comment-body">{{ comment.message }}</div>
@@ -25,25 +25,30 @@ export default {
 </script>
 <style lang="scss">
 li {
-  padding: 20px;
-  padding-bottom: 0;
+  padding: 20px 40px 10px;
   display: flex;
-  font-size: .9em;
+  font-size: 1em;
 
   blockquote {
-    margin-top: 0;
+    margin: 0 40px 10px;
     color: $white;
 
     cite {
+      margin-bottom: 5px;
+      display: inline-block;
       .author {
         color: $pink;
         font-weight: bold;
       }
 
-      a {
-        color: $gray;
+      .bullet {
         font-style: normal;
-        font-size: .9em;
+      }
+
+      a {
+        color: $light-gray;
+        font-style: normal;
+        font-size: 1em
         &:hover {
           color: $pink;
         }

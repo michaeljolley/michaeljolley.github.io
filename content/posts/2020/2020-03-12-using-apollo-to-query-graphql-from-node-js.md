@@ -34,7 +34,7 @@ Create a new file named `apollo.js`. This file contains the real "meat" of our s
 
 Let's start by copying the following snippet into that file.
 
-```JS
+```js
 const gql = require("graphql-tag");
 const ApolloClient = require("apollo-client").ApolloClient;
 const fetch = require("node-fetch");
@@ -59,7 +59,7 @@ For our purposes, we'll use the `InMemoryCache` object to handle caching data, b
 
 Next, copy the snippet below into the `apollo.js` file.
 
-```JS
+```js
 
 const query = async (req, res) => {
   if (!req.body || !req.body.query) {
@@ -114,7 +114,7 @@ These functions (query and mutate) take a request, pull query/mutate and variabl
 
 Finally, we create an `apollo` method and export it so we can use it in the Express workflow later. This function inspects the incoming request and forwards it to the appropriate (mutate or query) function.
 
-```JS
+```js
 
 const apollo = async (req, res, next) => {
   switch (req.method) {
@@ -139,7 +139,7 @@ module.exports = apollo;
 
 Now that we've got our middleman built, let's plug it into an Express application. Create an `index.js` file and copy in the following:
 
-```JS
+```js
 const express = require("express");
 const app = express();
 const port = 3000;
@@ -166,7 +166,7 @@ First, you'll need a TokBox Account. If you don't have one already, <a target="_
 
 In your TokBox Account, click the 'Projects' menu and 'Create New Project'. Then click the 'Create Custom Project' button. Give your new project a name and press the 'Create' button. You can leave the preferred codec as 'VP8'.
 
-<img src="https://www.nexmo.com/wp-content/uploads/2020/01/tb-project-created.png" alt="Screenshot of the &quot;project created&quot; dialog within a TokBox account." width="674" height="808" class="alignnone size-full wp-image-31151" />
+![Screenshot of the "project created" dialog within a TokBox account.](https://www.nexmo.com/wp-content/uploads/2020/01/tb-project-created.png)
 
 Copy the API Key and Secret on this screen. We'll use it later to configure our authentication.
 
@@ -176,7 +176,7 @@ Copy the API Key and Secret on this screen. We'll use it later to configure our 
 
 Create a new file called `config.js` and paste the code below in it. Be sure to replace the values of the constants with the API Key and Secret you copied previously.
 
-```JS
+```js
 // Replace these values with those generated in your TokBox Account
 const OPENTOK_API_KEY = "";
 const OPENTOK_API_SECRET = "";
@@ -194,7 +194,7 @@ npm install --save jsonwebtoken
 
 Next, create a new file called `auth.js` and paste the following:
 
-```JS
+```js
 const JWT = require("jsonwebtoken");
 const SECRETS = require("./config");
 
@@ -224,7 +224,7 @@ This code exports a method that will create our custom headers object with the n
 
 Now that we can generate headers appropriately, we'll need to update our `apollo.js` code to use them. Open the `apollo.js` file and add the following snippet:
 
-```JS
+```js
 const getHeaders = require("./auth");
 
 const authLink = setContext((_, { headers }) => {
@@ -238,7 +238,7 @@ const authLink = setContext((_, { headers }) => {
 
 Next, replace the constructor for the `client` constant with the following:
 
-```JS
+```js
 const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache()
@@ -251,7 +251,7 @@ We can now start up the app in the terminal by running `node index.js`. Then we 
 
 ### Query
 
-```JS
+```js
 query ($PROJECT_ID: Int!, $START_TIME: Date!) {
     project(projectId: $PROJECT_ID) {
       projectData(
@@ -276,7 +276,7 @@ query ($PROJECT_ID: Int!, $START_TIME: Date!) {
 
 ### Variables
 
-```JS
+```js
 {
     "PROJECT_ID": {OPENTOK API KEY},
     "START_TIME": "2020-01-01T08:00:00.000Z"
@@ -287,7 +287,7 @@ query ($PROJECT_ID: Int!, $START_TIME: Date!) {
 
 You should receive a result similar to below.
 
-```JS
+```js
 {
     "data": {
         "project": {

@@ -16,6 +16,8 @@ $gold: #F9C378;
 $white: #ffffff;
 $black: #000000;
 $gray: #a5a5a5;
+$light-gray: lighten($gray, 5%);
+$lightest-gray: lighten($light-gray, 20%);
 
 $brand-twitter:	        #1DA1F2;
 $brand-linkedin:        #0077B5;
