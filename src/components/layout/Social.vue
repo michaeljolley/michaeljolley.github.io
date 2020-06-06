@@ -46,6 +46,14 @@
           <font-awesome :icon="['fab', 'linkedin']"></font-awesome>
           <span class="screen-reader-text">LinkedIn</span>
         </a>
+            <a
+          target="_blank"
+          href="https://discord.gg/XSG7HJm"
+          class="dot discord" title="Discord" rel="noopener"
+        >
+          <font-awesome :icon="['fab', 'discord']"></font-awesome>
+          <span class="screen-reader-text">Discord</span>
+        </a>
   </div>
 </template>
 
@@ -81,6 +89,9 @@ export default {};
     }
     &.twitch:hover {
         background-color: $brand-twitch;
+    }
+    &.discord:hover {
+        background-color: $brand-discord;
     }
     &.youtube:hover {
         background-color: $brand-youtube;

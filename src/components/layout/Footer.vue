@@ -3,7 +3,8 @@
     <div class="inner">
       <div class="site-info">
          &copy;
-        <a href="/">Bald Bearded Builder.</a> all rights reserved.
+        <a href="/">Bald Bearded Builder.</a> all rights reserved. &nbsp;| &nbsp;
+        <g-link to="/code-of-conduct/">Code of Conduct</g-link>
       </div>
       <div class="back-to-top">
         <a v-on:click="top" class="top-link square fill-horizontal" title="back to top">

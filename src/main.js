@@ -1,11 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { config, library } from '@fortawesome/fontawesome-svg-core'
 import { faChevronUp, faChevronLeft, faChevronRight, faRss } from '@fortawesome/free-solid-svg-icons'
-import { faCodepen, faYoutube, faInstagram, faLinkedin, faGithub, faTwitter, faDribbble, faGithubAlt, faTwitch } from '@fortawesome/free-brands-svg-icons'
+import { faCodepen, faYoutube, faInstagram, faLinkedin, faGithub, faTwitter, faDribbble, faGithubAlt, faTwitch, faDiscord } from '@fortawesome/free-brands-svg-icons'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 
 config.autoAddCss = false;
-library.add(faCodepen, faYoutube, faGithubAlt, faGithub, faLinkedin,
+library.add(faCodepen, faDiscord, faYoutube, faGithubAlt, faGithub, faLinkedin,
   faTwitter, faDribbble, faTwitch, faInstagram, faChevronUp, faChevronLeft, faChevronRight, faRss)
 
 import "~/assets/main.scss";

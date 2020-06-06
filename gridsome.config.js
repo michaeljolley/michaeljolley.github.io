@@ -115,6 +115,10 @@ module.exports = {
             changefreq: "monthly",
             priority: 0.7
           },
+          "/codeofconduct/": {
+            changefreq: "monthly",
+            priority: 0.7
+          },
           "/talks/": {
             changefreq: "daily",
             priority: 0.4

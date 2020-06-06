@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <article class="post">
+    <article class="page">
       <header class="entry-header">
         <div class="entry-header-wrap">
           <h1 class="entry-title">Talks</h1>
