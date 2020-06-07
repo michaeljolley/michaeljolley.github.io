@@ -2,9 +2,9 @@
 layout: page
 title: GDG DevFest 2019 - Auburn, AL
 description: "Think inside the box. Developing inside a container to avoid conflicts, improve security and speed up on-boarding"
-image: https://user-images.githubusercontent.com/1228996/64830953-e548a780-d598-11e9-9077-46a00b7e9e0b.png
+image: https://res.cloudinary.com/dk3rdh3yo/image/upload/c_scale,w_auto/v1591493643/aub_ecqhyn.png
 slug: devfest-auburn
-date: 9/15/2019
+date: 2019-09-15
 ---
 
 Hi! Thanks for attending my talk!

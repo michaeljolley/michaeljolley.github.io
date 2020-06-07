@@ -12,10 +12,12 @@ import "~/assets/main.scss";
 import 'prismjs/themes/prism-okaidia.css'
 
 import DefaultLayout from '~/layouts/Default.vue'
+import AddBottomLayout from '~/layouts/AddBottom.vue'
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
+  Vue.component('AddBottomLayout', AddBottomLayout)
   Vue.component('font-awesome', FontAwesomeIcon)
 
   head.link.push({

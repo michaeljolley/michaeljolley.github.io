@@ -16,6 +16,7 @@ $gold: #F9C378;
 $white: #ffffff;
 $black: #000000;
 $gray: #a5a5a5;
+$dark-gray: darken($gray, 20%);
 $light-gray: lighten($gray, 5%);
 $lightest-gray: lighten($light-gray, 20%);
 

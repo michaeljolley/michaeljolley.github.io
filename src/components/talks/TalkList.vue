@@ -1,13 +1,13 @@
 <template>
-  <div class="post-list">
-    <PostSummary v-for="post in $static.posts.edges" :key="post.node.id" :post="post.node" />
-    <Pager :info="$static.posts.pageInfo" class="pager"/>
+  <div class="talk-list">
+    <TalkSummary v-for="talk in $static.talks.edges" :key="talk.node.id" :talk="talk.node" />
+    <Pager :info="$static.talks.pageInfo"/>
   </div>
 </template>
 
 <static-query>
-  query Posts ($page: Int) {
-    posts: allPost (perPage: 5, page: $page) @paginate {
+  query Talks ($page: Int) {
+    talks: allTalk (perPage: 5, page: $page) @paginate {
       totalCount
       pageInfo {
         totalPages
@@ -20,14 +20,9 @@
           id
           title
           description
-          timeToRead
           date (format: "MMMM D, YYYY")
           image
-          tags {
-            id
-          }
           path
-          content
           banner_image_alt
         }
       }
@@ -36,30 +31,31 @@
 </static-query>
 <script>
 import { Pager } from 'gridsome'
-import PostSummary from "@/components/posts/PostSummary";
+import TalkSummary from "@/components/talks/TalkSummary";
 export default {
-  components: {
+  components: { 
     Pager,
-    PostSummary 
+    TalkSummary 
+  },
+  computed: {
+    previousPage: function() {
+      if (this.talks.pageInfo.currentPage === 2) {
+        return "";
+      }
+      return this.talks.pageInfo.currentPage - 1;
+    }
   }
 };
 </script>
 <style lang="scss">
-.post-list {
+.talk-list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: stretch;
     
-  .button {
-    margin-bottom: 20px;
-    flex-basis: 46%;
-    background-color: $light-blue;
-    padding: 15px;
-  }
-
-  .post:first-child {
+  .talk:first-child {
     flex-basis: 100%;
 
     .entry-header {

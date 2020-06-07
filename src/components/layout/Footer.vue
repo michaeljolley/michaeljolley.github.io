@@ -29,7 +29,6 @@ export default {
   color: $gray;
   background-color: $dark-blue;
   height: 30px;
-  margin-top: 20px;
   padding: 20px 0 10px 0;
   font-size: .8em;
   .inner {

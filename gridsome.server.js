@@ -6,7 +6,22 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = function (api) {
-  api.loadSource(({ addCollection }) => {
+  api.loadSource(({ addSchemaTypes, schema }) => {
+    addSchemaTypes([
+      schema.createObjectType({
+        name: 'Talk',
+        interfaces: ['Node'],
+        fields: {
+          title: 'String',
+          description: 'String',
+          image: 'String',
+          slug: 'String',
+          date: 'Date',
+          layout: 'String',
+          banner_image_alt: 'String'
+        }
+      })
+    ])
   })
 
   api.createPages(({ createPage }) => {

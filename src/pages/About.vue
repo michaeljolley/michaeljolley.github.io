@@ -2,18 +2,13 @@
   <Layout>
     <article class="page">
       <header class="entry-header">
-        <div class="entry-header-wrap">
-          <div class="post-thumbnail">
-            <g-image
-              alt="Michael Jolley standing in front of a brick wall."
+          <img 
               class="cld-responsive lazyload"
               src="https://res.cloudinary.com/dk3rdh3yo/image/upload/c_scale/64070619-28fef100-cc2a-11e9-8e32-837e130722ca_mjexti.png"
-            />
-          </div>
-          <h1 class="entry-title">About Michael Jolley</h1>
-        </div>
+              alt="Michael Jolley standing in front of a brick wall."/>
       </header>
       <div class="entry-content">
+        <h1>About Michael Jolley</h1>
         <p>
           From his early days with lincoln logs to building custom ERP systems, Michael has always been a builder. With
           nearly 20 years experience designing &amp; developing software, he loves sharing his knowledge with others
@@ -26,16 +21,6 @@
           <em>full-geek</em> mode, Michael is a husband of nearly 20 years, father to three awesome kids, musician,
           and football fanatic.
         </p>
-
-        <figure class="full-width caption">
-          <img
-            src="https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/64070917-6916a180-cc33-11e9-87df-a5917f886ed4_d0xfct.png"
-            alt
-            class="cld-responsive lazyload"
-          />
-
-          <figcaption class="caption-text">Screenshot of Twitch channel</figcaption>
-        </figure>
 
         <h2>Bald. Bearded. Builder.</h2>
 
@@ -79,7 +64,7 @@
           <br />Dialed up to AOL, logged in after school
         </p>
 
-        <p class="parithon">
+        <p>
           Then some HTML when I was up really late
           <br />Started showing gifs that would animate
           <br />I made one little page and my mom’s voice raised

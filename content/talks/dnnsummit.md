@@ -5,7 +5,7 @@ description: "Think inside the box. Developing inside a container to avoid confl
 image: https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/dnn_vjwhaq.png
 banner_image_alt: "Palm trees and the DNN Summit 2020 logo."
 slug: dnnsummit
-date: 02/24/2020
+date: 2020-02-24
 ---
 
 Hi! Thanks for attending my talk!

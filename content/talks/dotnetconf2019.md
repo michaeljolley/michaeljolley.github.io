@@ -2,9 +2,9 @@
 layout: page
 title: DotNetConf 2019
 description: "Resources for my talk Death to SQL Server! Long live SQL Server! How containerized SQL Server makes development easier given at DotNetConf 2019."
-image: https://user-images.githubusercontent.com/1228996/65446541-31e27d00-ddfa-11e9-89f0-953f4cc05c41.png
+image: https://res.cloudinary.com/dk3rdh3yo/image/upload/c_scale,w_auto/v1591493643/netconf_sabsng.png
 slug: dotnetconf2019
-date: 9/25/2019
+date: 2019-09-25
 ---
 
 Hi! Thanks for attending my talk!

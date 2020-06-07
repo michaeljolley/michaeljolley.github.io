@@ -1,7 +1,7 @@
 <template>
   <nav id="top" class="site-navigation">
     <ul>
-      <li><g-link to="/blog/">Blog</g-link></li>
+      <li><g-link to="/">Blog</g-link></li>
       <li><g-link to="/talks/">Talks</g-link></li>
       <li><g-link to="/about/">About</g-link></li>
     </ul>
