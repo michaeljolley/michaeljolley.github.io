@@ -17,7 +17,7 @@ module.exports = {
   templates: {
     Post: '/posts/:title',
     Tag: '/tags/:title',
-    Talk: '/talks/:slug'
+    Talk: '/talks/:title'
   },
   plugins: [
     {

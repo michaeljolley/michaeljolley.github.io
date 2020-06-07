@@ -3,7 +3,6 @@ layout: page
 title: HalfStack Online
 description: "Controlling servo motors via webhooks, Particle Argon boards, JavaScript and facial tracking."
 image: https://res.cloudinary.com/dk3rdh3yo/image/upload/c_scale,w_auto/v1591504071/halfstack_yxpjun.png
-slug: halfstack-2020-05
 date: 2020-05-22
 ---
 

@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>{{title}}</h2>
-    <div class="upcoming-talk-list">
+    <div class="list bottom">
         <TalkSummary v-for="talk in $page.talks.edges" :key="talk.node.id" :talk="talk.node" />
     </div>
   </div>
@@ -28,12 +28,3 @@ export default {
   }
 };
 </script>
-<style lang="scss" scoped>
-.upcoming-talk-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: stretch;
-}
-</style>

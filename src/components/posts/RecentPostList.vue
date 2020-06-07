@@ -1,7 +1,7 @@
 <template>  
   <div>
     <h2>Recent Posts</h2>
-    <div class="recent-post-list">
+    <div class="list bottom">
         <PostSummary v-for="post in $static.posts.edges" :key="post.node.id" :post="post.node" />
     </div>
   </div>
@@ -42,12 +42,3 @@ export default {
   components: { PostSummary },
 };
 </script>
-<style lang="scss" scoped>
-.recent-post-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: stretch;
-}
-</style>

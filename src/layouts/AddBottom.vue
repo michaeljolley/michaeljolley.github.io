@@ -47,16 +47,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss">
-.site-content {
-  margin-top: 133px;
-}
-.bottom-content {
-  background-color: $lightest-gray;//$lightest-blue;
-
-  h2 {
-    color: $dark-gray;
-  }
-}
-</style>

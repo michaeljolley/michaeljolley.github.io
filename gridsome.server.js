@@ -15,7 +15,6 @@ module.exports = function (api) {
           title: 'String',
           description: 'String',
           image: 'String',
-          slug: 'String',
           date: 'Date',
           layout: 'String',
           banner_image_alt: 'String'

@@ -30,30 +30,3 @@ export default {
   }
 };
 </script>
-<style lang="scss">
-.entry-header {
-  background-color: $light-blue;
-  padding: .5em;
-  height: 95%;
-
-  img {
-    width: 100%;
-    background-color: $white;
-  }
-
-}
-.entry-title {
-  margin: .5em 0 0 0;
-  font-size: 1em;
-  font-family: 'PT Sans', sans-serif;
-  a {
-    text-decoration: none;
-    color: $white;
-  }
-}
-.entry-meta {
-  font-size: .7em;
-  margin-top: .2em;
-  color: $gray;
-}
-</style>

@@ -18,9 +18,3 @@ export default {
   components: { PostHeader }
 };
 </script>
-<style lang="scss" scoped>
-.post {
-  margin-bottom: 20px;
-  flex-basis: 49%;
-}
-</style>

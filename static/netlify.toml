@@ -63,3 +63,39 @@
   to = "/posts/setting-up-raspberry-pi-for-use-in-kiosk-mode-with-chromium/"
   status = 301
   force = true
+  
+[[redirects]]
+  from = "/talks/devfest-auburn"
+  to = "/talks/gdg-dev-fest-2019-auburn-al/"
+  status = 301
+  force = true
+  
+[[redirects]]
+  from = "/talks/dotnetconf2019/"
+  to = "/talks/dot-net-conf-2019/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/talks/bsides-bhm-2019/"
+  to = "/talks/b-sides-bham-birmingham-al/"
+  status = 301
+  force = true
+  
+[[redirects]]
+  from = "/talks/devopsdays2019/"
+  to = "/talks/devopsdays-chattanooga-2019-chattanooga-tn/"
+  status = 301
+  force = true
+  
+[[redirects]]
+  from = "/talks/bhmnet/"
+  to = "/talks/bhm-net-meetup-birmingham-al/"
+  status = 301
+  force = true
+  
+[[redirects]]
+  from = "/talks/dnnsummit/"
+  to = "/talks/dnn-summit-2020-orlando-fl/"
+  status = 301
+  force = true

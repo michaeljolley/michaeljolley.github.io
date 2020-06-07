@@ -4,7 +4,7 @@
      <div class="site-content">
       <div class="inner">
         <main class="site-main">
-          <PostList />
+          <PostList posts="$page.posts" />
         </main>
       </div>
     </div>
@@ -21,8 +21,8 @@
 </template>
 
 <page-query>
-  query Talks ($page: Int) {
-    talks: allTalk (perPage: 2, page: $page, sort: { by: "date", order: DESC }, filter: {date: {gte: "2020"}}) @paginate {
+  query Home ($page: Int) {
+    posts: allPost (perPage: 5, page: $page) @paginate {
       totalCount
       pageInfo {
         totalPages
@@ -30,6 +30,25 @@
         isFirst
         isLast
       }
+      edges {
+        node {
+          id
+          title
+          description
+          timeToRead
+          date (format: "MMMM D, YYYY")
+          image
+          tags {
+            id
+          }
+          path
+          content
+          banner_image_alt
+        }
+      }
+    },
+    talks: allTalk (perPage: 2, sort: { by: "date", order: DESC }, filter: {date: {gte: "2020"}}) @paginate {
+      totalCount
       edges {
         node {
           id

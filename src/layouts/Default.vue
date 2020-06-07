@@ -53,9 +53,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss">
-.site-content {
-  margin-top: 133px;
-}
-</style>

@@ -1,82 +1,20 @@
 <template>
-  <div class="post-list">
-    <PostSummary v-for="post in $static.posts.edges" :key="post.node.id" :post="post.node" />
-    <Pager :info="$static.posts.pageInfo" class="pager"/>
+  <div>
+    <div class="list">
+      <PostSummary v-for="post in $page.posts.edges" :key="post.node.id" :post="post.node" />
+    </div>
+    <Pager :pageInfo="$page.posts.pageInfo" label="Posts"/>
   </div>
 </template>
 
-<static-query>
-  query Posts ($page: Int) {
-    posts: allPost (perPage: 5, page: $page) @paginate {
-      totalCount
-      pageInfo {
-        totalPages
-        currentPage
-        isFirst
-        isLast
-      }
-      edges {
-        node {
-          id
-          title
-          description
-          timeToRead
-          date (format: "MMMM D, YYYY")
-          image
-          tags {
-            id
-          }
-          path
-          content
-          banner_image_alt
-        }
-      }
-    }
-  }
-</static-query>
 <script>
-import { Pager } from 'gridsome'
+import Pager from '@/components/Pager'
 import PostSummary from "@/components/posts/PostSummary";
 export default {
+  props: ["posts"],
   components: {
     Pager,
     PostSummary 
   }
 };
 </script>
-<style lang="scss">
-.post-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: stretch;
-    
-  .button {
-    margin-bottom: 20px;
-    flex-basis: 46%;
-    background-color: $light-blue;
-    padding: 15px;
-  }
-
-  .post:first-child {
-    flex-basis: 100%;
-
-    .entry-header {
-      background-color: $white;
-      padding: 1em;
-    }
-    .entry-title { 
-      margin: .2em 0 0 0;
-      font-size: 1.8em;
-      a {
-        color: $pink;
-      }
-    }
-    .entry-meta {
-      color: $dark-blue;
-      margin-top: .1em;
-    }
-  }
-}
-</style>

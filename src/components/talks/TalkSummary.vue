@@ -17,9 +17,3 @@ export default {
   components: { TalkHeader }
 };
 </script>
-<style lang="scss" scoped>
-.talk {
-  margin-bottom: 20px;
-  flex-basis: 49%;
-}
-</style>
