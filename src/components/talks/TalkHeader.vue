@@ -1,6 +1,12 @@
 <template>
   <header class="entry-header">
-    <g-link :title="title" :to="path">
+    <iframe 
+      :src="recording" 
+      v-if="recording !== null"
+      frameborder="0" 
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen></iframe>
+    <g-link :title="title" :to="path" v-if="recording === null">
       <g-image :src="image" class="cld-responsive lazyload" :alt="banner_image_alt" />
     </g-link>
     <h2 class="entry-title" v-if="showTitle">
@@ -26,6 +32,10 @@ export default {
     showTitle: {
       type: Boolean,
       default: true
+    },
+    recording: {
+      type: String,
+      default: null
     }
   }
 };

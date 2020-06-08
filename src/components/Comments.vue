@@ -1,9 +1,5 @@
 <template>
   <div class="comments" id="comments">
-    <div class="inner">
-      <h2>Join the discussion</h2>
-    </div>
-    
     <CommentNew :path="post" />
     <ol id="comments-list">
       <Comment :comment="comment.node" v-for="comment in comments" :key="comment.id" />
@@ -21,12 +17,6 @@ export default {
 </script>
 <style lang="scss">
 .comments {
-  background-color: $light-blue;
-
-  .inner {
-    align-items: flex-start;
-    justify-content: space-between;
-  }
 
   ol {
     padding: 0;
@@ -52,7 +42,7 @@ export default {
 
     li {  
       &:nth-child(odd) {
-       background-color: $lighter-blue;
+       background-color: $light-gray;
       }
     }
   }

@@ -10,7 +10,7 @@
         </div>
       </g-link>
       <Nav/>
-      <a href="#" class="pill">Watch Live!</a>
+      <!-- <a href="#" class="pill">Watch Live!</a> -->
     </div>
   </header>
 </template>
@@ -53,6 +53,12 @@ export default {
         font-weight: normal;
         margin:  0;
         text-transform: uppercase;
+      }
+    }
+
+    @media (max-width: $breakpoint-phone) {
+      .title {
+        padding-left: 65px;
       }
     }
     

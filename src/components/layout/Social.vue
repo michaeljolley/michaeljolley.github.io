@@ -106,4 +106,11 @@ export default {};
 
   }
  }
+
+ 
+@media (max-width: $breakpoint-phone) {
+  .social-links {
+    margin-top: 10px;
+  }
+}
 </style>

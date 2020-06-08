@@ -6,6 +6,7 @@ image: https://res.cloudinary.com/dk3rdh3yo/image/upload/c_scale,w_auto/v1591493
 banner_image_alt: "The Chattanoogan Hotel in Chattanooga TN"
 slug: devopsdays2019
 date: 2019-11-12
+recording: https://www.youtube.com/watch?v=rIBasrQy228&t=9s
 ---
 
 Hi! Thanks for attending my talk!

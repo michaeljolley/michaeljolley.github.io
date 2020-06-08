@@ -32,6 +32,7 @@
       content
       description
       path
+      recording
     }
   }
 </page-query>

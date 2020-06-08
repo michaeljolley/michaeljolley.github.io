@@ -27,15 +27,15 @@ export default {
 li {
   padding: 20px 40px 10px;
   display: flex;
-  font-size: 1em;
+  font-size: .9em;
 
   blockquote {
     margin: 0 40px 10px;
-    color: $white;
-
+    color: $dark-blue;
     cite {
       margin-bottom: 5px;
       display: inline-block;
+      font-size: .8em;
       .author {
         color: $pink;
         font-weight: bold;
@@ -46,9 +46,8 @@ li {
       }
 
       a {
-        color: $light-gray;
+        color: $dark-gray;
         font-style: normal;
-        font-size: 1em
         &:hover {
           color: $pink;
         }

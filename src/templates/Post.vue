@@ -30,7 +30,7 @@
       </div>
     </div>
     
-    <div class="bottom-content">
+    <!-- <div class="bottom-content">
       <div class="inner">
         <main class="site-main">
           <h2>Comments</h2>
@@ -38,7 +38,7 @@
           <Comments :post="$page.post" :comments="$page.comments.edges" />
         </main>
       </div>
-    </div>
+    </div> -->
     
   </AddBottomLayout>
 </template>

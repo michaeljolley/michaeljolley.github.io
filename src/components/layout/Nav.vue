@@ -1,5 +1,8 @@
 <template>
   <nav id="top" class="site-navigation">
+    <div class="nav-icon" v-on:click="toggleNav">
+      <font-awesome :icon="['fa', 'bars']"></font-awesome>
+    </div>
     <ul>
       <li><g-link to="/">Blog</g-link></li>
       <li><g-link to="/talks/">Talks</g-link></li>
@@ -9,7 +12,18 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      showNav: false
+    }
+  },
+  methods: {
+    toggleNav: function() {
+      this.showNav = !this.showNav;
+    }
+  }
+};
 </script>
 <style lang="scss">
 .site-navigation {
@@ -31,4 +45,38 @@ export default {};
       }
     }
  }
+ .nav-icon {
+   display: none;
+ }
+ 
+@media (max-width: $breakpoint-phone) {
+  .nav-icon {
+    display: inline-block;
+    align-self: flex-end;
+    width: 100px;
+    height: 100px;
+    color: $white;
+    .fa-bars {
+      margin-top: 20px;
+      height: 100px;
+    }
+  }
+  ul {
+    display: inline-block;
+    li {
+      display: block;
+      clear: both;
+      a {
+        text-decoration: none;
+        color: $gray !important;
+        &:hover {
+          color: $mint !important;
+        }
+      }
+    }
+  }
+// .site-navigation {
+  //   display: none;
+  // }
+}
 </style>

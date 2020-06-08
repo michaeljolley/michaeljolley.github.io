@@ -17,7 +17,8 @@ module.exports = function (api) {
           image: 'String',
           date: 'Date',
           layout: 'String',
-          banner_image_alt: 'String'
+          banner_image_alt: 'String',
+          recording: 'String'
         }
       })
     ])
