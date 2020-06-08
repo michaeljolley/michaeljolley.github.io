@@ -31,11 +31,10 @@ So without further delay:
 I'm still learning a lot about lighting and audio.  There is a lot of experimentation going on in these areas right now so a lot of what's below is subject to change.
 
 Above my monitors I have two [Elgato Key Light](https://amzn.to/2Te5LOd) panels.  Both are set to provide more yellow light than blue to offset the blue light coming from my 3 24" monitors.
-<figure>
-   <img data-src="https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/53291179-d9b89f00-3774-11e9-8aca-ade57af31e10_ef90ia.jpg"
+
+   <img src="https://res.cloudinary.com/dk3rdh3yo/image/upload/c_scale,w_auto/v1577502545/53291179-d9b89f00-3774-11e9-8aca-ade57af31e10_ef90ia.png"
     class="cld-responsive lazyload"
     alt="Two Elgato key lights" />
-</figure>
 
 Behind me is a [Fovitec StudioPRO](https://amzn.to/2BPi7m2) 5' x 6.5' blue/green screen held up with a [Fovitec clip stand](https://amzn.to/2U52qy4).
 
@@ -49,11 +48,9 @@ For the audio I'm using an [Audio-Technica AT2020](https://amzn.to/2E6Z9HS) cond
 
 My streams have really been focused on IoT development and I've found it difficult to display what's going on with my [Raspberry Pi](https://amzn.to/2EhMOkr)'s video onto the stream.  So far I've been limited to only displaying an SSH window to the Pi.  So a new addition to the family is the [Elgato HD60 Pro](https://amzn.to/2XhXwQl) game capture card.  This receives an HDMI input and shows in OBS as a video source that I can share on the stream.  This will get its first use in a few days on the stream.
 
-<figure style="float:right;">
   <img src="https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/53291452-36b65400-3779-11e9-946d-5afe7562919c_ybbzr0.jpg"
     class="cld-responsive lazyload"
     alt="iPazzPort Handheld keyboard">
-</figure>
 
 Speaking of working on IoT devices, I've often had the problem of connecting keyboards & mice to them and then having to rewire everything as I switched devices or put it away.  Then [Scott Hanselman](https://www.hanselman.com/) turned me on to the [iPazzPort Wireless Mini Handheld Keyboard/Touchpad](https://amzn.to/2Npx0jt).
 
@@ -73,4 +70,4 @@ I'm not using a ton of software, but here's the rundown:
 
 That's the current run-down.  I hope to expound more on my findings as I work to improve the audio/video production of the stream so future streamers can get there faster.  In all, I've really enjoyed live-coding on stream.  More than anything I've really gotten a lot from the relationships formed and am constantly amazed at the friendliness &amp; helpfulness of all those involved.
 
-Got any suggestions to improve my stream or other hardware/audio/video ideas?  Leave me a comment or find me on Twitter [@baldbeardbuild](https://twitter.com/baldbeardbuild) or Twitch [themichaeljolley](https://twitch.tv/BaldBeardedBuilder).
+Got any suggestions to improve my stream or other hardware/audio/video ideas?  Leave me a comment or find me on Twitter [@baldbeardbuild](https://twitter.com/baldbeardbuild) or Twitch [baldbeardedbuilder](https://twitch.tv/BaldBeardedBuilder).

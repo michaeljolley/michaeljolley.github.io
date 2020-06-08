@@ -1,7 +1,7 @@
 ---
 date: 2020-03-12
 title: "Using Apollo to Query GraphQL from Node.js"
-image: https://www.nexmo.com/wp-content/uploads/2020/03/E_Apollo_GraphQL_1200x600.png
+image: https://res.cloudinary.com/dk3rdh3yo/image/upload/c_scale,w_auto/v1591657746/E_Apollo_GraphQL_1200x600_cg4c8p.png
 banner_image_alt: Using Apollo to Query GraphQL from Node.js
 description: In this tutorial, we will use the apollo-client NPM package within Node.js to query and mutate third-party GraphQL endpoints.
 tags: [apollo, nodejs, graphql, opentok, vonage-video-api]
@@ -25,7 +25,7 @@ First, let's get all our files and dependencies in place. Create a folder called
 Now run `npm init` in your terminal to initialize NPM in the directory. Then execute the script below to install the dependencies.
 
 ```bash
-npm install --save npm i apollo-cache-inmemory apollo-client apollo-link-http express graphql graphql-tag  node-fetch
+npm install --save apollo-cache-inmemory apollo-client apollo-link-http express graphql graphql-tag node-fetch
 ```
 
 ## Build a GraphQL Middleman
@@ -130,7 +130,6 @@ const apollo = async (req, res, next) => {
 
   next();
 };
-
 
 module.exports = apollo;
 ```
@@ -253,24 +252,24 @@ We can now start up the app in the terminal by running `node index.js`. Then we 
 
 ```js
 query ($PROJECT_ID: Int!, $START_TIME: Date!) {
-    project(projectId: $PROJECT_ID) {
-      projectData(
-      start: $START_TIME,
-      interval: AUTO,
-      sdkType: [JS, IOS, ANDROID],
-      groupBy: [SDK_TYPE]
-          ) {
-        resources {
-          sdkType
-          intervalStart
-          intervalEnd
-          usage {
-            streamedPublishedMinutes
-            streamedSubscribedMinutes
-          }
+  project(projectId: $PROJECT_ID) {
+    projectData(
+    start: $START_TIME,
+    interval: AUTO,
+    sdkType: [JS, IOS, ANDROID],
+    groupBy: [SDK_TYPE]
+        ) {
+      resources {
+        sdkType
+        intervalStart
+        intervalEnd
+        usage {
+          streamedPublishedMinutes
+          streamedSubscribedMinutes
         }
       }
     }
+  }
 }
 ```
 
@@ -278,8 +277,8 @@ query ($PROJECT_ID: Int!, $START_TIME: Date!) {
 
 ```js
 {
-    "PROJECT_ID": {OPENTOK API KEY},
-    "START_TIME": "2020-01-01T08:00:00.000Z"
+  "PROJECT_ID": {OPENTOK API KEY},
+  "START_TIME": "2020-01-01T08:00:00.000Z"
 }
 ```
 
@@ -289,41 +288,41 @@ You should receive a result similar to below.
 
 ```js
 {
-    "data": {
-        "project": {
-            "projectData": {
-                "resources": [
-                    {
-                        "sdkType": "JS",
-                        "intervalStart": "2020-02-01T08:00:00.000Z",
-                        "intervalEnd": "2020-02-29T08:00:00.000Z",
-                        "usage": {
-                            "streamedPublishedMinutes": 898.6833333333332,
-                            "streamedSubscribedMinutes": 1121.0166666666664,
-                            "__typename": "Usage"
-                        },
-                        "__typename": "Metric"
-                    },
-                    {
-                        "sdkType": "JS",
-                        "intervalStart": "2020-03-01T08:00:00.000Z",
-                        "intervalEnd": "2020-03-08T08:00:00.000Z",
-                        "usage": {
-                            "streamedPublishedMinutes": 97.11666666666667,
-                            "streamedSubscribedMinutes": 12.766666666666666,
-                            "__typename": "Usage"
-                        },
-                        "__typename": "Metric"
-                    }
-                ],
-                "__typename": "ProjectData"
+  "data": {
+    "project": {
+      "projectData": {
+        "resources": [
+          {
+            "sdkType": "JS",
+            "intervalStart": "2020-02-01T08:00:00.000Z",
+            "intervalEnd": "2020-02-29T08:00:00.000Z",
+            "usage": {
+              "streamedPublishedMinutes": 898.6833333333332,
+              "streamedSubscribedMinutes": 1121.0166666666664,
+              "__typename": "Usage"
             },
-            "__typename": "Project"
-        }
-    },
-    "loading": false,
-    "networkStatus": 7,
-    "stale": false
+            "__typename": "Metric"
+          },
+          {
+            "sdkType": "JS",
+            "intervalStart": "2020-03-01T08:00:00.000Z",
+            "intervalEnd": "2020-03-08T08:00:00.000Z",
+            "usage": {
+              "streamedPublishedMinutes": 97.11666666666667,
+              "streamedSubscribedMinutes": 12.766666666666666,
+              "__typename": "Usage"
+            },
+            "__typename": "Metric"
+          }
+        ],
+        "__typename": "ProjectData"
+      },
+      "__typename": "Project"
+    }
+  },
+  "loading": false,
+  "networkStatus": 7,
+  "stale": false
 }
 ```
 

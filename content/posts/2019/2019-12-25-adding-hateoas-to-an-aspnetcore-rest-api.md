@@ -7,6 +7,8 @@ description: Implement simple JSON HATEOAS support to an ASP.NET Core web API
 tags: [aspnetcore, hateoas, api, json, dotnet, c#]
 ---
 
+ 
+
 > I am insanely thankful to be included in <a href="https://crosscuttingconcerns.com/The-Third-Annual-csharp-Advent" target="_blank">C# Advent</a> this year. This is the 3rd year of C# Advent and I always enjoy the dozens of posts by everyone in the community.  Be sure to follow the link above and check out the other posts and watch `#csadvent` on Twitter for updates.
 
 RESTful APIs are very popular these days. When used consistently, they provide a great way to make our APIs easier 

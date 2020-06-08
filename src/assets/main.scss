@@ -111,8 +111,8 @@ a {
       }
     }
     /deep/ ul {
-      li {
-        display: inline-block;
+      /deep/ li {
+        display: block;
         padding: 5px;
       }
     }
