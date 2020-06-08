@@ -80,7 +80,7 @@ a {
   padding: 20px;
 
   h1 {
-    font-size: 2.5em;
+    font-size: 1.5em;
     margin: 0;
     color: $pink;
   }
@@ -155,6 +155,12 @@ a {
       }
     }
   }
+  
+  @media (min-width: $breakpoint-desktop) {
+    h1 {
+      font-size: 2.5em;
+    }
+  }
 }
 
 .list {
@@ -174,6 +180,10 @@ a {
   .post, .talk {
     margin-bottom: 20px;
     flex-basis: 49%;
+    
+    @media (max-width: $breakpoint-phone) {
+      flex-basis: 100%;
+    }
   }
 
   &:not(.bottom) {
@@ -181,7 +191,7 @@ a {
     .post, .talk {
       &:first-child {
         flex-basis: 100%;
-
+        
         .entry-header {
           background-color: $white;
           padding: 1em;
@@ -197,8 +207,17 @@ a {
           color: $dark-blue;
           margin-top: .1em;
         }
+
+        @media (max-width: $breakpoint-phone) {
+          .entry-header {
+            padding: .5em;
+          }
+
+          .entry-title { 
+            font-size: 1.1em;
+          }
+        }
       }
     }
   }
 }
-

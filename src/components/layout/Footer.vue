@@ -3,7 +3,7 @@
     <div class="inner">
       <div class="site-info">
          &copy;
-        <a href="/">Bald Bearded Builder.</a> all rights reserved. &nbsp;| &nbsp;
+        <a href="/">Bald Bearded Builder.</a><span class="allrights"> all rights reserved.</span> &nbsp;| &nbsp;
         <g-link to="/code-of-conduct/">Code of Conduct</g-link>
       </div>
       <div class="back-to-top">
@@ -47,6 +47,12 @@ export default {
       margin-left: 10px;
     }
   } 
+}
+
+@media (max-width: $breakpoint-phone) {
+  .allrights {
+    display: none;
+  }
 }
 
 </style>
