@@ -1,36 +1,27 @@
 <template>
-  <Layout>
-    <PostSummary v-for="post in $page.posts.edges" :key="post.node.id" :post="post.node" />
+  <AddBottomLayout>
 
-    <nav class="pagination" v-if="$page.posts.pageInfo.totalPages > 1">
-      <h2 class="screen-reader-text">Posts navigation</h2>
-      <g-link
-        :to="'/' + previousPage"
-        v-if="!$page.posts.pageInfo.isFirst"
-        class="newer-posts square fill-horizontal"
-      >
-        <font-awesome :icon="['fa', 'chevron-left']" swap-opacity></font-awesome>
-        <span class="screen-reader-text">Newer Posts</span>
-      </g-link>
+     <div class="site-content">
+      <div class="inner">
+        <main class="site-main">
+          <PostList posts="$page.posts" />
+        </main>
+      </div>
+    </div>
+    
+    <div class="bottom-content" v-if="$page.talks.totalCount > 0">
+      <div class="inner">
+        <main class="bottom-main">
+          <UpcomingTalkList talks="$page.talks" />
+        </main>
+      </div>
+    </div>
 
-      <span
-        class="page-number"
-      >Page {{ $page.posts.pageInfo.currentPage }} of {{ $page.posts.pageInfo.totalPages }}</span>
-
-      <g-link
-        :to="'/' + ($page.posts.pageInfo.currentPage + 1)"
-        v-if="!$page.posts.pageInfo.isLast"
-        class="older-posts square fill-horizontal"
-      >
-        <font-awesome :icon="['fa', 'chevron-right']" swap-opacity></font-awesome>
-        <span class="screen-reader-text">Older Posts</span>
-      </g-link>
-    </nav>
-  </Layout>
+  </AddBottomLayout>
 </template>
 
 <page-query>
-  query Posts ($page: Int) {
+  query Home ($page: Int) {
     posts: allPost (perPage: 5, page: $page) @paginate {
       totalCount
       pageInfo {
@@ -55,23 +46,35 @@
           banner_image_alt
         }
       }
+    },
+    talks: allTalk (perPage: 2, sort: { by: "date", order: DESC }, filter: {date: {gte: "2020"}}) @paginate {
+      totalCount
+      edges {
+        node {
+          id
+          title
+          description
+          date (format: "MMMM D, YYYY")
+          image
+          path
+          banner_image_alt
+        }
+      }
     }
   }
 </page-query>
 <script>
-import PostSummary from "../components/PostSummary";
+import PostList from "@/components/posts/PostList";
+import UpcomingTalkList from "@/components/talks/UpcomingTalkList";
 export default {
-  components: { PostSummary },
+  components: { PostList, UpcomingTalkList },
+  data () {
+    return {
+      talks: null
+    }
+  },
   metaInfo: {
     title: "Welcome!"
-  },
-  computed: {
-    previousPage: function() {
-      if (this.$page.posts.pageInfo.currentPage === 2) {
-        return "";
-      }
-      return this.$page.posts.pageInfo.currentPage - 1;
-    }
   }
 };
 </script>

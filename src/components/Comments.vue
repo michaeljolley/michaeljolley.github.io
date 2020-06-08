@@ -1,17 +1,9 @@
 <template>
-  <div class="comments comments-area" id="comments">
-    <div class="comments-inner">
-      <h2 class="comments-title">Comments</h2>
-
-      <CommentNew :path="post" />
-
-      <hr />
-      <!-- <h3 id="comment-count">{% if comment_count == 1 %}One response{% else %}{{ comment_count }} responses{% endif %}</h3> -->
-
-      <ol id="comments-list">
-        <Comment :comment="comment.node" v-for="comment in comments" :key="comment.id" />
-      </ol>
-    </div>
+  <div class="comments" id="comments">
+    <CommentNew :path="post" />
+    <ol id="comments-list">
+      <Comment :comment="comment.node" v-for="comment in comments" :key="comment.id" />
+    </ol>
   </div>
 </template>
 <script>
@@ -23,3 +15,37 @@ export default {
   components: { Comment, CommentNew }
 };
 </script>
+<style lang="scss">
+.comments {
+
+  ol {
+    padding: 0;
+    margin: 0;
+  }
+  
+  h2 {
+    padding: 0 20px;
+    color: $mint;
+    margin-top: 20px;
+  }
+
+  img.avatar {
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    border: 1px solid $dark-blue;
+    background-color: $white;
+  }
+  
+  #comments-list {
+    list-style-type: none;
+
+    li {  
+      &:nth-child(odd) {
+       background-color: $light-gray;
+      }
+    }
+  }
+
+  }
+</style>

@@ -1,19 +1,46 @@
 <template>
-  <Layout>
-    <article class="post">
-      <SummaryHeader
-        :title="$page.post.title"
-        :banner_image_alt="$page.post.banner_image_alt"
-        :path="$page.post.path"
-        :image="$page.post.image"
-        :date="$page.post.date"
-        :comments="$page.comments.totalCount"
-        :showComments="true"
-      />
-      <div class="entry-content" v-html="$page.post.content"></div>
-    </article>
-    <Comments :post="$page.post" :comments="$page.comments.edges" />
-  </Layout>
+  <AddBottomLayout>
+     <div class="site-content">
+      <div class="inner">
+        <main class="site-main">
+          <article class="page">
+            <PostHeader
+              :title="$page.post.title"
+              :banner_image_alt="$page.post.banner_image_alt"
+              :path="$page.post.path"
+              :image="$page.post.image"
+              :date="$page.post.date"
+              :comments="$page.comments.totalCount"
+              :showComments="true"
+              :showMeta="false"
+              :showTitle="false"
+            />
+            <div class="entry-content">
+              <h1>{{$page.post.title}}</h1>
+              <div class="entry-meta" v-if="$page.post.date">
+                <time class="published" :datetime="$page.post.date">{{ $page.post.date }}</time>
+                  |&nbsp;
+                  <a :href="$page.post.path + '#comments'">{{$page.comments.totalCount}} Comment<template v-if="$page.comments.totalCount !== 1">s</template></a>
+              </div>
+              <div class="content" v-html="$page.post.content">
+              </div>
+            </div>
+          </article>
+        </main>
+      </div>
+    </div>
+    
+    <!-- <div class="bottom-content">
+      <div class="inner">
+        <main class="site-main">
+          <h2>Comments</h2>
+          
+          <Comments :post="$page.post" :comments="$page.comments.edges" />
+        </main>
+      </div>
+    </div> -->
+    
+  </AddBottomLayout>
 </template>
 <page-query>
   query Post ($path: String!) {
@@ -44,11 +71,11 @@
   }
 </page-query>
 <script>
-import SummaryHeader from "../components/SummaryHeader";
+import PostHeader from "@/components/posts/PostHeader";
 import Comments from "../components/Comments";
 export default {
   name: "Post",
-  components: { Comments, SummaryHeader },
+  components: { Comments, PostHeader },
   metaInfo() {
     return {
       title: this.$page.post.title,
@@ -106,6 +133,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-</style>

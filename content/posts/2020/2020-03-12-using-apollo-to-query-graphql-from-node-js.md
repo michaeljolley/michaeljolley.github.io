@@ -1,7 +1,7 @@
 ---
 date: 2020-03-12
 title: "Using Apollo to Query GraphQL from Node.js"
-image: https://www.nexmo.com/wp-content/uploads/2020/03/E_Apollo_GraphQL_1200x600.png
+image: https://res.cloudinary.com/dk3rdh3yo/image/upload/c_scale,w_auto/v1591657746/E_Apollo_GraphQL_1200x600_cg4c8p.png
 banner_image_alt: Using Apollo to Query GraphQL from Node.js
 description: In this tutorial, we will use the apollo-client NPM package within Node.js to query and mutate third-party GraphQL endpoints.
 tags: [apollo, nodejs, graphql, opentok, vonage-video-api]
@@ -25,7 +25,7 @@ First, let's get all our files and dependencies in place. Create a folder called
 Now run `npm init` in your terminal to initialize NPM in the directory. Then execute the script below to install the dependencies.
 
 ```bash
-npm install --save npm i apollo-cache-inmemory apollo-client apollo-link-http express graphql graphql-tag  node-fetch
+npm install --save apollo-cache-inmemory apollo-client apollo-link-http express graphql graphql-tag node-fetch
 ```
 
 ## Build a GraphQL Middleman
@@ -34,7 +34,7 @@ Create a new file named `apollo.js`. This file contains the real "meat" of our s
 
 Let's start by copying the following snippet into that file.
 
-```JS
+```js
 const gql = require("graphql-tag");
 const ApolloClient = require("apollo-client").ApolloClient;
 const fetch = require("node-fetch");
@@ -59,7 +59,7 @@ For our purposes, we'll use the `InMemoryCache` object to handle caching data, b
 
 Next, copy the snippet below into the `apollo.js` file.
 
-```JS
+```js
 
 const query = async (req, res) => {
   if (!req.body || !req.body.query) {
@@ -114,7 +114,7 @@ These functions (query and mutate) take a request, pull query/mutate and variabl
 
 Finally, we create an `apollo` method and export it so we can use it in the Express workflow later. This function inspects the incoming request and forwards it to the appropriate (mutate or query) function.
 
-```JS
+```js
 
 const apollo = async (req, res, next) => {
   switch (req.method) {
@@ -131,7 +131,6 @@ const apollo = async (req, res, next) => {
   next();
 };
 
-
 module.exports = apollo;
 ```
 
@@ -139,7 +138,7 @@ module.exports = apollo;
 
 Now that we've got our middleman built, let's plug it into an Express application. Create an `index.js` file and copy in the following:
 
-```JS
+```js
 const express = require("express");
 const app = express();
 const port = 3000;
@@ -166,7 +165,7 @@ First, you'll need a TokBox Account. If you don't have one already, <a target="_
 
 In your TokBox Account, click the 'Projects' menu and 'Create New Project'. Then click the 'Create Custom Project' button. Give your new project a name and press the 'Create' button. You can leave the preferred codec as 'VP8'.
 
-<img src="https://www.nexmo.com/wp-content/uploads/2020/01/tb-project-created.png" alt="Screenshot of the &quot;project created&quot; dialog within a TokBox account." width="674" height="808" class="alignnone size-full wp-image-31151" />
+![Screenshot of the "project created" dialog within a TokBox account.](https://www.nexmo.com/wp-content/uploads/2020/01/tb-project-created.png)
 
 Copy the API Key and Secret on this screen. We'll use it later to configure our authentication.
 
@@ -176,7 +175,7 @@ Copy the API Key and Secret on this screen. We'll use it later to configure our 
 
 Create a new file called `config.js` and paste the code below in it. Be sure to replace the values of the constants with the API Key and Secret you copied previously.
 
-```JS
+```js
 // Replace these values with those generated in your TokBox Account
 const OPENTOK_API_KEY = "";
 const OPENTOK_API_SECRET = "";
@@ -194,7 +193,7 @@ npm install --save jsonwebtoken
 
 Next, create a new file called `auth.js` and paste the following:
 
-```JS
+```js
 const JWT = require("jsonwebtoken");
 const SECRETS = require("./config");
 
@@ -224,7 +223,7 @@ This code exports a method that will create our custom headers object with the n
 
 Now that we can generate headers appropriately, we'll need to update our `apollo.js` code to use them. Open the `apollo.js` file and add the following snippet:
 
-```JS
+```js
 const getHeaders = require("./auth");
 
 const authLink = setContext((_, { headers }) => {
@@ -238,7 +237,7 @@ const authLink = setContext((_, { headers }) => {
 
 Next, replace the constructor for the `client` constant with the following:
 
-```JS
+```js
 const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache()
@@ -251,35 +250,35 @@ We can now start up the app in the terminal by running `node index.js`. Then we 
 
 ### Query
 
-```JS
+```js
 query ($PROJECT_ID: Int!, $START_TIME: Date!) {
-    project(projectId: $PROJECT_ID) {
-      projectData(
-      start: $START_TIME,
-      interval: AUTO,
-      sdkType: [JS, IOS, ANDROID],
-      groupBy: [SDK_TYPE]
-          ) {
-        resources {
-          sdkType
-          intervalStart
-          intervalEnd
-          usage {
-            streamedPublishedMinutes
-            streamedSubscribedMinutes
-          }
+  project(projectId: $PROJECT_ID) {
+    projectData(
+    start: $START_TIME,
+    interval: AUTO,
+    sdkType: [JS, IOS, ANDROID],
+    groupBy: [SDK_TYPE]
+        ) {
+      resources {
+        sdkType
+        intervalStart
+        intervalEnd
+        usage {
+          streamedPublishedMinutes
+          streamedSubscribedMinutes
         }
       }
     }
+  }
 }
 ```
 
 ### Variables
 
-```JS
+```js
 {
-    "PROJECT_ID": {OPENTOK API KEY},
-    "START_TIME": "2020-01-01T08:00:00.000Z"
+  "PROJECT_ID": {OPENTOK API KEY},
+  "START_TIME": "2020-01-01T08:00:00.000Z"
 }
 ```
 
@@ -287,43 +286,43 @@ query ($PROJECT_ID: Int!, $START_TIME: Date!) {
 
 You should receive a result similar to below.
 
-```JS
+```js
 {
-    "data": {
-        "project": {
-            "projectData": {
-                "resources": [
-                    {
-                        "sdkType": "JS",
-                        "intervalStart": "2020-02-01T08:00:00.000Z",
-                        "intervalEnd": "2020-02-29T08:00:00.000Z",
-                        "usage": {
-                            "streamedPublishedMinutes": 898.6833333333332,
-                            "streamedSubscribedMinutes": 1121.0166666666664,
-                            "__typename": "Usage"
-                        },
-                        "__typename": "Metric"
-                    },
-                    {
-                        "sdkType": "JS",
-                        "intervalStart": "2020-03-01T08:00:00.000Z",
-                        "intervalEnd": "2020-03-08T08:00:00.000Z",
-                        "usage": {
-                            "streamedPublishedMinutes": 97.11666666666667,
-                            "streamedSubscribedMinutes": 12.766666666666666,
-                            "__typename": "Usage"
-                        },
-                        "__typename": "Metric"
-                    }
-                ],
-                "__typename": "ProjectData"
+  "data": {
+    "project": {
+      "projectData": {
+        "resources": [
+          {
+            "sdkType": "JS",
+            "intervalStart": "2020-02-01T08:00:00.000Z",
+            "intervalEnd": "2020-02-29T08:00:00.000Z",
+            "usage": {
+              "streamedPublishedMinutes": 898.6833333333332,
+              "streamedSubscribedMinutes": 1121.0166666666664,
+              "__typename": "Usage"
             },
-            "__typename": "Project"
-        }
-    },
-    "loading": false,
-    "networkStatus": 7,
-    "stale": false
+            "__typename": "Metric"
+          },
+          {
+            "sdkType": "JS",
+            "intervalStart": "2020-03-01T08:00:00.000Z",
+            "intervalEnd": "2020-03-08T08:00:00.000Z",
+            "usage": {
+              "streamedPublishedMinutes": 97.11666666666667,
+              "streamedSubscribedMinutes": 12.766666666666666,
+              "__typename": "Usage"
+            },
+            "__typename": "Metric"
+          }
+        ],
+        "__typename": "ProjectData"
+      },
+      "__typename": "Project"
+    }
+  },
+  "loading": false,
+  "networkStatus": 7,
+  "stale": false
 }
 ```
 

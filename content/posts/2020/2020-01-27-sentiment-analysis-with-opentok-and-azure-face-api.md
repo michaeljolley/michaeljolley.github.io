@@ -1,7 +1,7 @@
 ---
 date: 2020-01-27
 title: "I See What You're Saying: Sentiment Analysis With Opentok and Azure Face API"
-image: https://www.nexmo.com/wp-content/uploads/2020/01/E_Sentiment-Analysis_OpenTok_1200x600.jpg
+image: https://res.cloudinary.com/dk3rdh3yo/image/upload/c_scale,w_auto/v1591657788/E_Sentiment-Analysis_OpenTok_1200x600_sol5l1.jpg
 banner_image_alt: Sentiment Analysis With Opentok and Azure Face API
 description: How to map objects to one another in ASP.NET Core 3 applications with AutoMapper.
 tags: [csharp, automapper, dotnet, aspnetcore]
@@ -36,7 +36,7 @@ Before getting started, you'll need a few things:
 
 We'll use JavaScript to do the heavy lifting, so let's get the HTML &amp; CSS out of the way.
 
-```
+```bash
 mkdir video-sentiment
 cd video-sentiment
 ```

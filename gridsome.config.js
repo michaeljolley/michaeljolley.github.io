@@ -17,7 +17,7 @@ module.exports = {
   templates: {
     Post: '/posts/:title',
     Tag: '/tags/:title',
-    Talk: '/talks/:slug'
+    Talk: '/talks/:title'
   },
   plugins: [
     {
@@ -112,6 +112,10 @@ module.exports = {
             priority: 0.6
           },
           "/about/": {
+            changefreq: "monthly",
+            priority: 0.7
+          },
+          "/codeofconduct/": {
             changefreq: "monthly",
             priority: 0.7
           },

@@ -2,10 +2,11 @@
 layout: page
 title: devopsdays Chattanooga 2019 - Chattanooga, TN
 description: "Think inside the box. Developing inside a container to avoid conflicts, improve security and speed up on-boarding"
-image: https://user-images.githubusercontent.com/1228996/68601482-0549f980-046a-11ea-8ec6-b543e4565687.png
+image: https://res.cloudinary.com/dk3rdh3yo/image/upload/c_scale,w_auto/v1591493472/chat_kckk5d.png
 banner_image_alt: "The Chattanoogan Hotel in Chattanooga TN"
 slug: devopsdays2019
-date: 11/12/2019
+date: 2019-11-12
+recording: https://www.youtube.com/watch?v=rIBasrQy228&t=9s
 ---
 
 Hi! Thanks for attending my talk!

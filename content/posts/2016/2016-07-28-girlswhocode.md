@@ -15,12 +15,9 @@ As a dad of two daughters, I often think about what their futures hold.  Like mo
 
 Of course, we'll support them in whatever they choose to be when they grow up, but I still feel an urge to expose them to other ideas and skills and professions while they're young.  Even if it's nothing more than me letting them know "hey, it's okay to be a girl and like math or science or robots."  *Heck, who doesn't like robots?*
 
-<figure style="width:300px;float:right;">
-    <img data-src="https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/439e9ce2-544e-11e6-9497-8f6883536914_f8rjzk.jpg"
+<img src="https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/439e9ce2-544e-11e6-9497-8f6883536914_f8rjzk.jpg"
     class="cld-responsive lazyload" />
-    <figcaption>Picture from <a href="http://www.snapcircuits.net/" target="_blank">Snap Circuits</a></figcaption>
-</figure>
-
+  
 One of the ways I've started exposing them to these ideas is with a kit I found online that helps teach kids about electronics.  It teaches them how circuits and resistors and sensors work.  If you'd like to check it out it's called <a href="http://www.snapcircuits.net/" target="_blank">Snap Circuits</a>.  No, I have no incentive to push their product and there are many on the market like it, but this one really seems to get the attention of my kids.   They have several packages you can pick up but we got the <a href="https://www.amazon.com/gp/product/B000IXMP6Q/ref=oh_aui_detailpage_o01_s00?ie=UTF8&psc=1" target="_blank">Extreme SC-750R Student Electronics Training Program</a>.  It comes with several books to help teach how electronics work and includes over 750 experiments for us to build.
 
 Our first night with it was a hit as we built a fan with a switch, a light with a switch and connected a speaker to a click switch to show how sensors can be used like a flip switch to turn on circuits.  It was so much fun to watch their eyes get huge and fight for who would be the first one to turn on our new experiment.
