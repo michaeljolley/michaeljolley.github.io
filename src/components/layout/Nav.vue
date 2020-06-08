@@ -1,7 +1,8 @@
 <template>
   <nav id="top" class="site-navigation">
     <div class="nav-icon" v-on:click="toggleNav">
-      <font-awesome :icon="['fa', 'bars']"></font-awesome>
+      <font-awesome :icon="['fa', 'bars']" v-if="!navVisible"></font-awesome>
+      <font-awesome :icon="['fa', 'times']" v-if="navVisible"></font-awesome>
     </div>
     <ul>
       <li><g-link to="/">Blog</g-link></li>
@@ -12,23 +13,26 @@
 </template>
 
 <script>
+import * as types from "@/state/Mutations";
+
 export default {
-  data() {
-    return {
-      showNav: false
+  computed: {
+    navVisible () {
+      return this.$store.state.navVisible
     }
   },
   methods: {
     toggleNav: function() {
-      this.showNav = !this.showNav;
+      this.$store.dispatch(types.NAV_TOGGLE);
     }
   }
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .site-navigation {
-    flex-grow: 1;
-    ul {
+  flex-grow: 1;
+
+  ul {
       display: flex;
       list-style: none;
       margin:0;
@@ -50,33 +54,26 @@ export default {
  }
  
 @media (max-width: $breakpoint-phone) {
-  .nav-icon {
-    display: inline-block;
-    align-self: flex-end;
-    width: 100px;
-    height: 100px;
-    color: $white;
-    .fa-bars {
-      margin-top: 20px;
-      height: 100px;
-    }
-  }
-  ul {
-    display: inline-block;
-    li {
-      display: block;
-      clear: both;
-      a {
-        text-decoration: none;
-        color: $gray !important;
-        &:hover {
-          color: $mint !important;
-        }
+  .site-navigation {
+    flex-grow: 0;
+  
+    .nav-icon {
+      display: inline-block;
+      margin-left: auto;
+      width: 40px;
+      height: 40px;
+      color: $white;
+        margin-top: 5px;
+      .fa-bars {
+        height: 100px;
+      }
+      .fa-times {
+        height: 120px;
       }
     }
+    ul {
+      display: none !important;
+    }
   }
-// .site-navigation {
-  //   display: none;
-  // }
 }
 </style>

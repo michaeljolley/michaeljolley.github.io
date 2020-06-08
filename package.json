@@ -22,7 +22,8 @@
     "gridsome-plugin-sass-resources-loader": "0.0.3",
     "js-yaml": "^3.14.0",
     "md5": "^2.2.1",
-    "vue-eslint-parser": "^7.1.0"
+    "vue-eslint-parser": "^7.1.0",
+    "vuex": "^3.4.0"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",

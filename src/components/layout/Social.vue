@@ -61,6 +61,7 @@
 export default {};
 </script>
 <style lang="scss">
+
 .social-links {
  // margin: 80px 0 20px 0;
   display: flex;
@@ -73,9 +74,9 @@ export default {};
     border-radius: 50%;
     margin-left: 15px;
     text-align: center;
-    background-color: $dark-blue;
     color: $white;
     display: inline-block;
+    background-color: $dark-blue;
 
     svg {
       padding-top: 8px;
@@ -97,7 +98,7 @@ export default {};
         background-color: $brand-youtube;
     }
     &.github:hover {
-        background-color: #fff;
+        background-color: $white;
         color: $brand-github;
     }
     &.instagram:hover {
@@ -107,10 +108,37 @@ export default {};
   }
  }
 
+@media (max-width: $breakpoint-desktop) {
+  .dot {
+    &.twitter {
+      background-color: $brand-twitter;
+    }
+    &.linkedin {
+        background-color: $brand-linkedin;
+    }
+    &.twitch {
+        background-color: $brand-twitch;
+    }
+    &.discord {
+        background-color: $brand-discord;
+    }
+    &.youtube {
+        background-color: $brand-youtube;
+    }
+    &.github {
+        background-color: $white;
+        color: $brand-github;
+    }
+    &.instagram {
+        background-color: $brand-instagram;
+    }
+  }
+}
+
  
 @media (max-width: $breakpoint-phone) {
   .social-links {
-    margin-top: 10px;
+    margin-top: 12px;
   }
 }
 </style>

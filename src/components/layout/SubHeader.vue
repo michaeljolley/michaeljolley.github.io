@@ -1,5 +1,6 @@
 <template>
   <div class="site-sub-header">
+    <MobileNav />
     <div class="inner">
         <Social />
         <Drips />
@@ -10,9 +11,10 @@
 <script>
 import Drips from "@/components/layout/Drips.vue";
 import Social from "@/components/layout/Social.vue";
+import MobileNav from "@/components/layout/MobileNav.vue";
 
 export default {
-  components: { Drips, Social }
+  components: { Drips, MobileNav, Social }
 };
 </script>
 
