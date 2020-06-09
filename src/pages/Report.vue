@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <article class="post">
+    <article class="page">
       <header class="entry-header">
         <g-link title="Code of Conduct Report" :to="/report/">
           <img src="https://res.cloudinary.com/dk3rdh3yo/image/upload/c_scale/v1591405456/cover_knfirw.png" class="cld-responsive lazyload" alt="Hands of various people joined" />
@@ -12,9 +12,52 @@
         <p>If you have been harassed by a member of the Bald Bearded Builder community, or if you have observed 
           someone else being harassed, please report the behaviour using the form below.</p>
 
-
-
-
+        <form 
+          name="coc-report"
+          method="post"
+          v-on:submit.prevent="handleSubmit"
+          action="/success/"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+        >
+          <input type="hidden" name="form-name" value="coc-report" />
+          <p hidden>
+            <label>
+              Don’t fill this out: <input name="bot-field" />
+            </label>
+          </p>
+         
+          <ul class="flex-outer">
+            <li>
+              <label for="description">Description of Event(s)<br/><span class="required">* required</span></label>
+              <textarea rows="6" 
+                    id="description" 
+                    required
+                    v-model="formData.description" 
+                    placeholder="Describe the event(s) that occurred. Be sure to include the name of the person who violated the code of conduct."></textarea>
+            </li>
+            <li>
+              If you would like someone to follow up with you, please complete the fields below.  <strong>For your privacy, they are NOT required.</strong>
+            </li>
+            <li>
+              <label for="name">Your Name</label>
+              <input type="text" 
+                    id="name" 
+                    placeholder="Enter your name here"
+                    v-model="formData.name">
+            </li> 
+            <li>
+              <label for="email">Your Email</label>
+              <input type="text" 
+                    id="email" 
+                    placeholder="Enter your email address here"
+                    v-model="formData.email">
+            </li>
+            <li>
+              <button type="submit">Submit</button>
+            </li>
+          </ul>
+        </form>
       </div>
     </article>
   </Layout>
@@ -24,119 +67,30 @@
 export default {
   metaInfo: {
     title: "Code of Conduct Report Form"
+  },
+  data() {
+    return {
+      formData: {},
+    }
+  },
+  methods: {
+    encode(data) {
+      return Object.keys(data)
+        .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+        .join('&')
+    },
+    handleSubmit(e) {
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: this.encode({
+          'form-name': e.target.getAttribute('name'),
+          ...this.formData,
+        }),
+      })
+      .then(() => this.$router.push('/success'))
+      .catch(error => alert(error))
+    }
   }
 };
 </script>
-<style lang="scss" scoped>
-.entry-header {
-  background-color: $light-blue;
-  padding: .5em;
-  height: 95%;
-
-  img {
-    width: 100%;
-    background-color: $white;
-  }
-
-}
-.entry-title {
-  margin: .5em 0 0 0;
-  font-size: 1em;
-  font-family: 'PT Sans', sans-serif;
-  a {
-    text-decoration: none;
-    color: $white;
-  }
-}
-.entry-meta {
-  font-size: .7em;
-  margin-top: .2em;
-  color: $gray;
-}
-.entry-header {
-  background-color: $light-blue !important;
-}
-.entry-content {
-  background-color: $white;
-  padding: 20px;
-
-  h1 {
-    font-size: 2.5em;
-    margin: 0;
-    color: $pink;
-  }
-  .entry-meta {
-    padding-bottom: 15px;
-    border-bottom: 1px dotted $mid-blue;
-    a {
-      color: $pink;
-      text-decoration: none;
-      &:hover {
-        color: $pink;
-      }
-    }
-  }
-  .content {
-    line-height: 1.6em;
-    /deep/ blockquote {
-      background-color: $lightest-gray;
-      color: $dark-blue;
-      margin: 0 20px;
-      font-family: 'PT Sans', sans-serif;
-      font-size: 1.1em;
-      font-style: italic;
-      border: $gray solid 1px;
-      p {
-        padding: 0 10px;
-      }
-    }
-    /deep/ ul {
-      li {
-        display: inline-block;
-        padding: 5px;
-      }
-    }
-    /deep/ img {
-      border: 10px solid;
-      box-shadow: 2px 2px 10px $gray;
-      border-color: $light-gray ;
-      margin: 20px;
-      position: relative;
-      left: 25%;
-      width: 40%;
-
-      &.right, &.left {
-        position: unset;
-        left: unset;
-        width: unset;
-      }
-
-      &.right {
-        float: right;
-        margin-right: 0;
-      }
-      &.left {
-        float: left;
-        margin-left: 0;
-      }
-    }
-    /deep/ code {
-      background-color: $lightest-gray;
-      padding: 0 4px;
-      font-style: italic;
-      font-size: .9em;
-    }
-    /deep/ pre {
-      code {
-        background-color: inherit;
-        font-style: inherit;
-        font-size: inherit;
-        line-height: inherit;
-      }
-    }
-  }
-}
-.post {
-  margin-bottom: 0;
-}
-</style>
