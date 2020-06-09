@@ -32,6 +32,7 @@
               <label for="description">Description of Event(s)<br/><span class="required">* required</span></label>
               <textarea rows="6" 
                     id="description" 
+                    name="description"
                     required
                     v-model="formData.description" 
                     placeholder="Describe the event(s) that occurred. Be sure to include the name of the person who violated the code of conduct."></textarea>
@@ -43,6 +44,7 @@
               <label for="name">Your Name</label>
               <input type="text" 
                     id="name" 
+                    name="name"
                     placeholder="Enter your name here"
                     v-model="formData.name">
             </li> 
@@ -50,6 +52,7 @@
               <label for="email">Your Email</label>
               <input type="text" 
                     id="email" 
+                    name="email"
                     placeholder="Enter your email address here"
                     v-model="formData.email">
             </li>
