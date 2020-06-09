@@ -15,7 +15,7 @@ export default {
   components: { Comment, CommentNew }
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .comments {
 
   ol {

@@ -23,7 +23,7 @@ export default {
   props: ["comment"]
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped> 
 li {
   padding: 20px 40px 10px;
   display: flex;
