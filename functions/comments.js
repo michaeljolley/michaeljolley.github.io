@@ -1,4 +1,4 @@
-const octo = require("@octokit/rest")
+const { Octokit } = require("@octokit/rest")
 const yaml = require("js-yaml")
 
 const { GITHUB_USERNAME, GITHUB_AUTHTOKEN, GITHUB_REPO } = process.env;
@@ -42,7 +42,7 @@ exports.handler = async (event, context) => {
   }
 }
 
-let octokit = new octo.Octokit({ auth: GITHUB_AUTHTOKEN });
+const octokit = new Octokit({ auth: GITHUB_AUTHTOKEN });
 let baseRef, latestCommitSha, treeSha, newTreeSha, comment, commentId, commitRef;
 
 const saveComment = async (comment) => {
@@ -64,7 +64,7 @@ const getBaseBranch = async () => {
     owner: GITHUB_USERNAME,
     repo: GITHUB_REPO
   });
-  console.dir(response);
+  console.log(JSON.stringify(response));
   x = response;
   baseRef = response.data.default_branch;
 }
