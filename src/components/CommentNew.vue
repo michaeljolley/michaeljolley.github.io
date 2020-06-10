@@ -4,7 +4,7 @@
     <form 
           method="post"
           v-on:submit.prevent="postComment"
-          action="/thanks/"
+          action="/.netlify/lambda/comments.js"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
         >
@@ -13,6 +13,7 @@
           Don’t fill this out: <input name="bot-field" />
         </label>
       </p>
+      <input type="hidden" name="redirect" id="redirect" value="https://baldbeardedbuilder.com/thanks/"/>
       <input type="hidden" name="avatar" id="avatar" v-model="formData.avatar" ref="avatar" />
 
       <div class="avatar">
