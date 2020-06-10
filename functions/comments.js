@@ -2,30 +2,26 @@ const { Octokit } = require("@octokit/rest")
 const yaml = require("js-yaml")
 
 const { GITHUB_USERNAME, GITHUB_AUTHTOKEN, GITHUB_REPO } = process.env;
-let x = '';
 
 exports.handler = async (event, context) => {
 
-  const comment = event.body;
-  const redirectUrl = event.body.redirect;
-
+  const comment = JSON.parse(event.body);
+  comment.postpath = unescape(comment.postpath);
+  comment.message = unescape(comment.message);
+  comment.name = unescape(comment.name);
+  comment.avatar = unescape(comment.avatar);
+  const redirectUrl = unescape(comment.redirect);
   if (comment) {
     try {
       await saveComment(comment);
       return {
-        statusCode: 302,
-        headers: {
-          Location: redirectUrl,
-          'Cache-Control': 'no-cache',
-        },
-        body: JSON.stringify({
-          repo: GITHUB_REPO,
-          un: GITHUB_USERNAME,
-          comment: comment,
-          baseRef,
-          resp: x
-        })
-      };
+          statusCode: 302,
+          headers: {
+            location: redirectUrl,
+            'Cache-Control': 'no-cache',
+          },
+          body: JSON.stringify({ })
+        }
     }
     catch (err) {
       return {
@@ -45,9 +41,8 @@ exports.handler = async (event, context) => {
 const octokit = new Octokit({ auth: GITHUB_AUTHTOKEN });
 let baseRef, latestCommitSha, treeSha, newTreeSha, comment, commentId, commitRef;
 
-const saveComment = async (comment) => {
-  comment = comment;
-
+const saveComment = async (rawComment) => {
+  comment = rawComment;
   // Validate the incoming comment
   if (comment.message && comment.message.length > 0) {
     await getBaseBranch();
@@ -56,6 +51,7 @@ const saveComment = async (comment) => {
     await createCommit();
     await createRef();
     await createPullRequest();
+    console.log('all good');
   }
 }
 
@@ -64,8 +60,6 @@ const getBaseBranch = async () => {
     owner: GITHUB_USERNAME,
     repo: GITHUB_REPO
   });
-  console.log(JSON.stringify(response));
-  x = response;
   baseRef = response.data.default_branch;
 }
 
@@ -81,20 +75,22 @@ const getLastCommitSha = async() => {
 }
 
 const createTree = async () => {
-  commentId = Math.abs(
-    hash(
-      `${comment.date}${comment.postpath}${comment.name}`
-    )
-  );
   const cleanComment = {
     postpath: comment.postpath,
     avatar: comment.avatar,
     message: comment.message,
     name: comment.name,
-    date: new Date(),
-    id: commentId
+    date: new Date()
   };
+  commentId = Math.abs(
+    hash(
+      `${cleanComment.date}${cleanComment.postpath}${cleanComment.name}`
+    )
+  );
+  cleanComment.id = commentId;
+  console.log(cleanComment);
   const commentYaml = yaml.safeDump(cleanComment);
+  console.log(commentYaml);
   let response = await octokit.git.createTree({
     owner: GITHUB_USERNAME,
     repo: GITHUB_REPO,
@@ -131,14 +127,15 @@ const createRef = async () => {
 }
 
 const createPullRequest = async () => {
-  await octokit.pulls.create({
-    owner: GITHUB_USERNAME,
-    repo: GITHUB_REPO,
-    title: `Comment by ${comment.name} on ${comment.postpath}`,
-    body: `avatar: <img src='${comment.avatar}' width='64'  height='64'/>\n\n${comment.message}`,
-    head: commentId.toString(),
-    base: baseRef
-  });
+    await octokit.pulls.create({
+      owner: GITHUB_USERNAME,
+      repo: GITHUB_REPO,
+      title: `Comment by ${comment.name} on ${comment.postpath}`,
+      body: `avatar: <img src='${comment.avatar}' width='64'  height='64'/>\n\n${comment.message}`,
+      head: commentId.toString(),
+      base: baseRef
+    });
+
 }
 
 const hash = (str) => {

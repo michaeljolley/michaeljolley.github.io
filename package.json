@@ -4,7 +4,8 @@
   "scripts": {
     "build": "gridsome build && netlify-lambda build functions",
     "develop": "gridsome develop && netlify-lambda serve functions",
-    "explore": "gridsome explore"
+    "explore": "gridsome explore",
+    "serve": "netlify-lambda build functions && netlify-lambda serve functions "
   },
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
