@@ -2,7 +2,7 @@ const octo = require("@octokit/rest")
 const yaml = require("js-yaml")
 
 const { GITHUB_USERNAME, GITHUB_AUTHTOKEN, GITHUB_REPO } = process.env;
-const x;
+let x = '';
 
 exports.handler = async (event, context) => {
 
