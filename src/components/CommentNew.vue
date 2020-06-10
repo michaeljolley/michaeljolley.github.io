@@ -4,7 +4,7 @@
     <form 
           method="post"
           v-on:submit.prevent="postComment"
-          action="/.netlify/lambda/comments.js"
+          action="/.netlify/functions/comments.js"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           ref="commentform"
