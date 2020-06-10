@@ -3,7 +3,7 @@ const yaml = require("js-yaml")
 
 const { GITHUB_USERNAME, GITHUB_AUTHTOKEN, GITHUB_REPO } = process.env;
 
-exports.handler = async (event, context, callback) => {
+exports.handler = async (event, context) => {
 
   const comment = event.body;
   const redirectUrl = event.body.redirect;
@@ -12,10 +12,12 @@ exports.handler = async (event, context, callback) => {
     try {
       await saveComment(comment);
       return {
-        statusCode:302,
+        statusCode: 302,
         headers: {
-            location: redirectUrl
-        }
+          Location: redirectUrl,
+          'Cache-Control': 'no-cache',
+        },
+        body: JSON.stringify({})
       };
     }
     catch (err) {
