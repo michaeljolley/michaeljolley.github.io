@@ -1,6 +1,6 @@
 <template>
   <div class="comments" id="comments">
-    <CommentNew :path="post" />
+    <CommentNew :path="post.path" />
     <ol id="comments-list">
       <Comment :comment="comment.node" v-for="comment in comments" :key="comment.id" />
     </ol>

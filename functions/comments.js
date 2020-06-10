@@ -17,7 +17,12 @@ exports.handler = async (event, context) => {
           Location: redirectUrl,
           'Cache-Control': 'no-cache',
         },
-        body: JSON.stringify({})
+        body: JSON.stringify({
+          repo: GITHUB_REPO,
+          un: GITHUB_USERNAME,
+          comment: comment,
+          baseRef
+        })
       };
     }
     catch (err) {

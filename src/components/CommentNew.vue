@@ -16,6 +16,7 @@
       </p>
       <input type="hidden" name="redirect" id="redirect" value="https://baldbeardedbuilder.com/thanks/"/>
       <input type="hidden" name="avatar" id="avatar" v-model="formData.avatar" ref="avatar" />
+      <input type="hidden" name="postpath" id="postpath" :value="path"/>
 
       <div class="avatar">
           <img
@@ -32,13 +33,13 @@
   
       <ul class="flex-outer">
         <li>
-          <label for="comment">Comment<br/><span class="required">* required</span></label>
+          <label for="message">Comment<br/><span class="required">* required</span></label>
           <textarea rows="6" 
-                id="comment" 
-                name="comment"
+                id="message" 
+                name="message"
                 required
-                v-model="formData.comment" 
-                placeholder="Your comment"></textarea>
+                v-model="formData.message" 
+                placeholder="Your message"></textarea>
         </li>
         <li>
           <label for="name">Your Name<br/><span class="required">* required</span></label>
@@ -153,12 +154,11 @@ methods: {
     }
 
     this.formData.avatar = image.src;
-
     this.formData.identity = "";
     button.setAttribute("disabled", "disabled");
     button.innerText = "Posting...";
     button.classList.remove("confirm-button");
-    
+    console.dir(this.formData);
     this.$refs.commentform.submit();
   }
 }
