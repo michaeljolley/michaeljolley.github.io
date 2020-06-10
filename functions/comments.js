@@ -5,8 +5,8 @@ const { GITHUB_USERNAME, GITHUB_AUTHTOKEN, GITHUB_REPO } = process.env;
 
 exports.handler = async (event, context, callback) => {
 
-  const comment = context.body;
-  const redirectUrl = req.body.redirect;
+  const comment = event.body;
+  const redirectUrl = event.body.redirect;
 
   if (comment) {
     try {
