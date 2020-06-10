@@ -7,6 +7,7 @@
           action="/.netlify/lambda/comments.js"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
+          ref="commentform"
         >
       <p hidden>
         <label>
