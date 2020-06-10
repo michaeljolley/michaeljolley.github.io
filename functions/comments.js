@@ -1,16 +1,31 @@
 const { Octokit } = require("@octokit/rest")
+const querystring = require('querystring');
 const yaml = require("js-yaml")
 
 const { GITHUB_USERNAME, GITHUB_AUTHTOKEN, GITHUB_REPO } = process.env;
 
-exports.handler = async (event, context) => {
+const octokit = new Octokit({ auth: GITHUB_AUTHTOKEN });
+let baseRef, latestCommitSha, treeSha, newTreeSha, comment, commentId, commitRef;
 
-  const comment = JSON.parse(event.body);
-  comment.postpath = unescape(comment.postpath);
-  comment.message = unescape(comment.message);
-  comment.name = unescape(comment.name);
-  comment.avatar = unescape(comment.avatar);
-  const redirectUrl = unescape(comment.redirect);
+exports.handler = async (event, context) => {
+  
+  const bodyComment = querystring.decode(event.body);
+  comment = {
+    postpath   : bodyComment.postpath,
+    message    : bodyComment.message,
+    name       : bodyComment.name,
+    avatar     : bodyComment.avatar,
+    redirect   : bodyComment.redirect,
+    identity   : bodyComment.identity,
+    date       : new Date(),
+    id         : Math.abs(
+                    hash(
+                      `${new Date()}${bodyComment.postpath}${bodyComment.name}`
+                    )
+                  )
+  };
+  console.log(comment)
+  const redirectUrl = comment.redirect;
   if (comment) {
     try {
       await saveComment(comment);
@@ -38,18 +53,21 @@ exports.handler = async (event, context) => {
   }
 }
 
-const octokit = new Octokit({ auth: GITHUB_AUTHTOKEN });
-let baseRef, latestCommitSha, treeSha, newTreeSha, comment, commentId, commitRef;
 
 const saveComment = async (rawComment) => {
-  comment = rawComment;
+  
   // Validate the incoming comment
   if (comment.message && comment.message.length > 0) {
     await getBaseBranch();
+    console.log('getBaseBranch');
     await getLastCommitSha();
+    console.log('getLastCommitSha');
     await createTree();
+    console.log('createTree');
     await createCommit();
+    console.log('createCommit');
     await createRef();
+    console.log('createRef');
     await createPullRequest();
     console.log('all good');
   }
@@ -75,19 +93,7 @@ const getLastCommitSha = async() => {
 }
 
 const createTree = async () => {
-  const cleanComment = {
-    postpath: comment.postpath,
-    avatar: comment.avatar,
-    message: comment.message,
-    name: comment.name,
-    date: new Date()
-  };
-  commentId = Math.abs(
-    hash(
-      `${cleanComment.date}${cleanComment.postpath}${cleanComment.name}`
-    )
-  );
-  cleanComment.id = commentId;
+ 
   console.log(cleanComment);
   const commentYaml = yaml.safeDump(cleanComment);
   console.log(commentYaml);
