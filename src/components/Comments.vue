@@ -28,21 +28,15 @@ export default {
     color: $mint;
     margin-top: 20px;
   }
-
-  img.avatar {
-    border-radius: 50%;
-    width: 48px;
-    height: 48px;
-    border: 1px solid $dark-blue;
-    background-color: $white;
-  }
   
   #comments-list {
     list-style-type: none;
 
     li {  
+      background-color: $lightest-gray;
+
       &:nth-child(odd) {
-       background-color: $light-gray;
+       background-color: $white;
       }
     }
   }
