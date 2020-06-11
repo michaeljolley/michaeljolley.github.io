@@ -93,16 +93,14 @@ const getLastCommitSha = async() => {
 }
 
 const createTree = async () => {
- 
   const commentYaml = yaml.safeDump(comment);
-  console.log(commentYaml);
   let response = await octokit.git.createTree({
     owner: GITHUB_USERNAME,
     repo: GITHUB_REPO,
     base_tree: treeSha,
     tree: [
       {
-        path: `content/comments${comment.postpath}${commentId}.yml`,
+        path: `content/comments${comment.postpath}${comment.id}.yml`,
         mode: "100644",
         content: commentYaml
       }
@@ -126,7 +124,7 @@ const createRef = async () => {
   let response = await octokit.git.createRef({
     owner: GITHUB_USERNAME,
     repo: GITHUB_REPO,
-    ref: `refs/heads/${commentId}`,
+    ref: `refs/heads/${comment.id}`,
     sha: latestCommitSha
   });
 }
@@ -137,10 +135,9 @@ const createPullRequest = async () => {
       repo: GITHUB_REPO,
       title: `Comment by ${comment.name} on ${comment.postpath}`,
       body: `avatar: <img src='${comment.avatar}' width='64'  height='64'/>\n\n${comment.message}`,
-      head: commentId.toString(),
+      head: comment.id.toString(),
       base: baseRef
     });
-
 }
 
 const hash = (str) => {
