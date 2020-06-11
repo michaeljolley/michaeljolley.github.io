@@ -1,5 +1,5 @@
 ---
-date: 2020-6-11
+date: 2020-06-11
 title: "Using Netlify Functions with Gridsome"
 image: https://res.cloudinary.com/dk3rdh3yo/image/upload/c_scale,w_auto/v1591897176/netlify-functions-gridsome_wvvqks.png
 banner_image_alt: Terminal window with the words Using Netlify functions with Gridsome 
