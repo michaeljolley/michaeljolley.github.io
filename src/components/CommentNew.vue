@@ -15,7 +15,7 @@
         </label>
       </p>
       <input type="hidden" name="redirect" id="redirect" value="https://baldbeardedbuilder.com/thanks/"/>
-      <input type="hidden" name="avatar" id="avatar" v-model="formData.avatar" ref="avatar" />
+      <input type="hidden" name="avatar" id="avatar" ref="avatar" />
       <input type="hidden" name="postpath" id="postpath" :value="path"/>
 
       <div class="avatar">
@@ -153,12 +153,11 @@ methods: {
       return;
     }
 
-    this.formData.avatar = image.src;
+    this.$refs.avatar.value = image.src;
     this.formData.identity = "";
     button.setAttribute("disabled", "disabled");
     button.innerText = "Posting...";
     button.classList.remove("confirm-button");
-    console.dir(this.formData);
     this.$refs.commentform.submit();
   }
 }
