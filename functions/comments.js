@@ -28,7 +28,7 @@ exports.handler = async (event, context) => {
   const redirectUrl = comment.redirect;
   if (comment) {
     try {
-      await saveComment(comment);
+      await saveComment();
       return {
           statusCode: 302,
           headers: {
@@ -54,7 +54,7 @@ exports.handler = async (event, context) => {
 }
 
 
-const saveComment = async (rawComment) => {
+const saveComment = async () => {
   
   // Validate the incoming comment
   if (comment.message && comment.message.length > 0) {
@@ -94,8 +94,7 @@ const getLastCommitSha = async() => {
 
 const createTree = async () => {
  
-  console.log(cleanComment);
-  const commentYaml = yaml.safeDump(cleanComment);
+  const commentYaml = yaml.safeDump(comment);
   console.log(commentYaml);
   let response = await octokit.git.createTree({
     owner: GITHUB_USERNAME,
