@@ -1,6 +1,6 @@
 <template>
   <div class="comments" id="comments">
-    <CommentNew :path="post" />
+    <CommentNew :path="post.path" />
     <ol id="comments-list">
       <Comment :comment="comment.node" v-for="comment in comments" :key="comment.id" />
     </ol>
@@ -15,7 +15,7 @@ export default {
   components: { Comment, CommentNew }
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .comments {
 
   ol {
@@ -28,21 +28,15 @@ export default {
     color: $mint;
     margin-top: 20px;
   }
-
-  img.avatar {
-    border-radius: 50%;
-    width: 48px;
-    height: 48px;
-    border: 1px solid $dark-blue;
-    background-color: $white;
-  }
   
   #comments-list {
     list-style-type: none;
 
     li {  
+      background-color: $lightest-gray;
+
       &:nth-child(odd) {
-       background-color: $light-gray;
+       background-color: $white;
       }
     }
   }

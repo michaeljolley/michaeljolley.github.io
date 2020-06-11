@@ -7,7 +7,7 @@
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
       allowfullscreen></iframe>
     <g-link :title="title" :to="path" v-if="recording === null">
-      <g-image :src="image" class="cld-responsive lazyload" :alt="banner_image_alt" />
+      <g-image :src="image" class="cld-responsive lazyload" :alt="image_alt" />
     </g-link>
     <h2 class="entry-title" v-if="showTitle">
       <g-link :title="title" :to="path">{{title}}</g-link>
@@ -36,6 +36,11 @@ export default {
     recording: {
       type: String,
       default: null
+    }
+  },
+  computed: {
+    image_alt: function() {
+      return this.banner_image_alt | this.title; 
     }
   }
 };

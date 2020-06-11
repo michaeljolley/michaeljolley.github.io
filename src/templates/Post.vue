@@ -30,15 +30,17 @@
       </div>
     </div>
     
-    <!-- <div class="bottom-content">
+    <div class="bottom-content">
       <div class="inner">
         <main class="site-main">
-          <h2>Comments</h2>
+          <div class="entry-content comments">
+            <h2>Comments</h2>
           
-          <Comments :post="$page.post" :comments="$page.comments.edges" />
+            <Comments :post="$page.post" :comments="$page.comments.edges" />
+          </div>
         </main>
       </div>
-    </div> -->
+    </div>
     
   </AddBottomLayout>
 </template>
@@ -133,3 +135,8 @@ export default {
   }
 };
 </script>
+<style lang="scss" >
+  .comments {
+    background-color: $lighter-gray;
+  }
+</style>
