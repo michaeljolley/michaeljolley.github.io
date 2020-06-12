@@ -17,7 +17,10 @@ Since then many of those platforms have gone the way of the buffalo. But it seem
 
 I've been developing with Vue.js for a while, so [Gridsome](https://gridsome.org/) seemed like a better fit for me. So a few months ago I made the transition and have loved every minute of it.
 
-I admit that one reason I like Gridsome better is the fact that I understand how it works. I used Ruby just enough to get my blog going, but it always felt like voodoo to this .NET/JavaScript guy.
+I admit that one reason I like Gridsome better is the fact that I understand how it works. I used Ruby just enough to get my blog going, but it always felt like voodoo to this .NET/JavaScript guy. But this isn't a Gridsome versus the world post. It's about a problem you'll face no matter which of these static-site platforms you choose... *user comments*.
 
-But this isn't a Gridsome versus the world post. It's about a problem you'll face no matter which of these static-site platforms you choose... *user comments*.
+## Platform? Check. Comments? Uhhhh...
 
+<img alt="Logos of Facebook, Disqus, and Discourse" src="https://res.cloudinary.com/dk3rdh3yo/image/upload/v1591928511/socials_zo4hwm.png" class="right"/>
+
+Don't tell me. You decided on your static-site framework; Designed or purchased a theme; Started building it out.  Then it hits you... "how do I get comments from users and display them on each post?" In the words of Scooby Doo, "ruh roh."
