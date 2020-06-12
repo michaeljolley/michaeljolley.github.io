@@ -7,9 +7,7 @@ description: Netlify provides serverless functions to process information, while
 tags: [netlify, gridsome, functions, serverless, vuejs]
 ---
 
-When I started writing this blog a few years ago, I was overwhelmed at the number of platforms available to me. JavaScript, .NET, Ruby? We got 'em all!
-
-While I settled on Jekyll, it was somewhat by accident. I really liked the idea of writing my posts in Markdown with GitHub Pages and, since they were powered by Jekyll, the choice was made for me.
+When I started writing this blog a few years ago, I was overwhelmed at the number of platforms available to me. JavaScript, .NET, Ruby? We got 'em all! While I settled on Jekyll, it was somewhat by accident. I really liked the idea of writing my posts in Markdown with GitHub Pages and, since they were powered by Jekyll, the choice was made for me.
 
 <!--more-->
 
@@ -21,4 +19,6 @@ No matter the framework & platform you choose, before you get too far you hit th
 
 <img alt="Logos of Facebook, Disqus, and Discourse" src="https://res.cloudinary.com/dk3rdh3yo/image/upload/c_scale,w_auto/v1591930862/socials_yakdpk.png" class="right"/>
 
-Don't tell me. You decided on your static-site framework; Designed or purchased a theme; Started building it out.  Then it hits you... "how do I get comments from users and display them on each post?" In the words of Scooby Doo, "ruh roh."
+Write your posts in Markdown they said. It will compile to a static site they said. But no one ever brings up the fact that comments on a blog aren't static. Hopefully, your community is chiming in and providing feedback. So how do we add these dynamic, incoming messages to our page?
+
+Just like the multitude of static-site frameworks, there are a ton of options for managing comments on your site. From integrating platforms like Disqus or Facebook to systems like Discourse. But I wanted more control over my site. I didn't want to integrate with a third-party that may require my visitors to register for an account. Then it hit me... my site lives in GitHub. 
