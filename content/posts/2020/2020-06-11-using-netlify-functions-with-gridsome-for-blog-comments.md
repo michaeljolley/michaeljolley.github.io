@@ -1,9 +1,9 @@
 ---
 date: 2020-06-11
-title: "Using Netlify Functions with Gridsome"
+title: "Using Netlify Functions to Add Comments to Gridsome Sites"
 image: https://res.cloudinary.com/dk3rdh3yo/image/upload/c_scale,w_auto/v1591897176/netlify-functions-gridsome_wvvqks.png
 banner_image_alt: Terminal window with the words Using Netlify functions with Gridsome 
-description: Netlify provides serverless functions to process information, while Gridsome provides a Vue.js based static-site generation. Combining the two allows developers to build static-sites with the same capabilities of dynamic sites; all while maintaining stability and scalability.
+description: Netlify provides serverless functions to process information, while Gridsome provides a Vue.js based static-site generation. In this post we combine the two allowing visitors to leave comments on our posts.
 tags: [netlify, gridsome, functions, serverless, vuejs]
 ---
 
@@ -223,4 +223,127 @@ This method uses various values posted to it to create a `comment` object. This 
 
 It then calls the `saveComment()` method we added previously to save the comment to our repo and create a pull request.
 
-3
+## Wiring the HTML Form
+
+With the function in place, let's add the appropriate fields to our comment form. Below is a form you can use, but to summarize it sends:
+
+- `postpath`: relative path to the post
+- `redirect`: fully qualified url to redirect the commenter to
+- `avatar`: fully qualified url of an avatar to use for this commenter
+- `message`: the actual comment left
+- `name`: name to display for the commenter
+
+Netlify functions can be reached at `/.netlify/functions/{function name}`. Since we named this function `comments.js`, our form will post to `/.netlify/functions/comments`.
+
+> **Note:** This was a "gotcha" for me. The url for the function is the name of the file without its' extension.  Netlify's documentation states this but I overlooked it for several minutes submitting to /.netlify/functions/comments.js.
+
+```html
+<form
+    method="post"
+    v-on:submit.prevent="postComment"
+    action="/.netlify/functions/comments"
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+    ref="commentform"
+    >
+    <p hidden>
+    <label>
+        Don’t fill this out: <input name="bot-field" />
+    </label>
+    </p>
+    <input type="hidden" name="redirect" id="redirect" value="https://baldbeardedbuilder.com/thanks/"/>
+    <input type="hidden" name="avatar" id="avatar" ref="avatar" />
+    <input type="hidden" name="postpath" id="postpath" :value="path"/>
+
+    <div class="avatar">
+        <img
+        src="/images/comments/unknown-avatar.png"
+        data-fallbacksrc="/images/comments/unknown-avatar.png"
+        data-role="user-avatar"
+        alt="avatar"
+        id="avatarPreview"
+        ref="avatarPreview"
+        />
+    </div>
+    <div id="commentstatus" class="status" ref="commentstatus"></div>
+
+    <ul class="flex-outer">
+    <li>
+        <label for="message">Comment<br/><span class="required">* required</span></label>
+        <textarea rows="6"
+            id="message"
+            name="message"
+            required
+            v-model="formData.message"
+            placeholder="Your message"></textarea>
+    </li>
+    <li>
+        <label for="name">Your Name<br/><span class="required">* required</span></label>
+        <input type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Enter your name here"
+            v-model="formData.name">
+    </li>
+    <li>
+        <label for="identity">Email/GitHub<br/><span class="required">* required</span></label>
+        <input type="text"
+            id="identity"
+            name="identity"
+            v-on:change="checkAvatar"
+            required
+            placeholder="Your email address or GitHub username"
+            v-model="formData.identity">
+    </li>
+    <li>
+        <button type="submit"
+        id="comment"
+        ref="commentbutton">Leave Comment</button>
+    </li>
+    </ul>
+</form>
+```
+
+## Compiling the Function with Gridsome
+
+We'll want to test our functions locally and to do that we can install the `netlify-lambda` npm package.
+
+```bash
+npm install --save-dev netlify-lambda
+```
+
+Next we'll update our `package.json` file to allow us to build and debug. Modify your `package.json` scripts to include the following:
+
+```js
+ "scripts": {
+    "build": "gridsome build && netlify-lambda build functions",
+    "develop": "gridsome develop && netlify-lambda serve functions",
+    "explore": "gridsome explore",
+    "serve": "netlify-lambda build functions && netlify-lambda serve functions "
+  }
+```
+
+This will tell netlify-lambda to build the functions located in the `functions` folder. To let netlify-lamba know where to put our compiled functions, we'll add a `netlify.toml` file to the root of our application. Paste the following configuration in it.
+
+```toml
+[build]
+command = "npm run build"
+functions = "lambda"
+```
+
+This toml will cause the compiled function to be placed in the `lambda` folder in the root directory of our application.
+
+## Configuring Netlify for our Function
+
+<img src="https://res.cloudinary.com/dk3rdh3yo/image/upload/c_scale,w_auto/v1592013132/84557187-8c0bd100-acee-11ea-90b7-c409186d6c08_o7qt3r.png" alt="Function deploy settings in Netlify" class="right"/>
+
+We can log into our Netlify account to configure our functions. First, go to the `Site Settings` for your site in Netlify and click on `Functions`. Then press `Edit settings` and update the `Functions Directory` to `lambda`. This coincides with the directory you specified in the `netlify.toml` above.
+
+Then click on `Environment` under the `Build & deploy` settings.  Here you can enter the three environment variables we specified in our function above (`GITHUB_USERNAME`, `GITHUB_REPO`, and `GITHUB_AUTHTOKEN`). `GITHUB_AUTHTOKEN` is a GitHub personal access token that has write permissions to the repo.
+
+Once you deploy your application you'll see additional billing options for functions, but Netlify has a very generous free tier for functions that include up to 125,000 requests and 100 hours of compute.
+
+## Sit Back, Relax and Merge Pull Requests
+
+That's it! When someone fills out the form on one of your Gridsome pages a new branch and pull request will be created with the comments details. You can then preview the Netlify build to see the comment on your pages before approving the merge.
