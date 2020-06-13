@@ -346,4 +346,8 @@ Once you deploy your application you'll see additional billing options for funct
 
 ## Sit Back, Relax and Merge Pull Requests
 
-That's it! When someone fills out the form on one of your Gridsome pages a new branch and pull request will be created with the comments details. You can then preview the Netlify build to see the comment on your pages before approving the merge.
+That's it! When someone fills out the form on one of your Gridsome pages a new branch and pull request will be created with the comments' details. You can then preview the Netlify build to see the comment on your pages before approving the merge.
+
+I've been using Gridsome with Netlify for months and love how easy they've made deploying and serving my site. The fact that I can use this function to add comments to my site is just icing on the cake.
+
+Was there something I missed? Maybe didn't explain something well? Let me know in the comments!
