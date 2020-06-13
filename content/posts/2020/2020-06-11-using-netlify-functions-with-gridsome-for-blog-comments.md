@@ -1,13 +1,28 @@
 ---
 date: 2020-06-11
-title: "Using Netlify Functions to Add Comments to Gridsome Sites"
+title: "Using Netlify Functions to Add Comments to Gridsome"
 image: https://res.cloudinary.com/dk3rdh3yo/image/upload/c_scale,w_auto/v1592014710/netlify-functions-gridsome_jg67dm.png
 banner_image_alt: Terminal window with the words Using Netlify functions with Gridsome 
 description: Netlify provides serverless functions to process information, while Gridsome provides a Vue.js based static-site generation. In this post we combine the two allowing visitors to leave comments on our posts.
 tags: [netlify, gridsome, functions, serverless, vuejs]
 ---
 
-When I started writing this blog a few years ago, I was overwhelmed at the number of platforms available to me. JavaScript, .NET, Ruby? We got 'em all! While I settled on Jekyll, it was somewhat by accident. I really liked the idea of writing my posts in Markdown with GitHub Pages and, since they were powered by Jekyll, the choice was made for me.
+When I started writing this blog a few years ago, I was overwhelmed by the number of platforms available to me. JavaScript, .NET, Ruby? We got 'em all! While I settled on Jekyll, it was somewhat by accident. I really liked the idea of writing my posts in Markdown with GitHub Pages and, since they were powered by Jekyll, the choice was made for me.This toml will cause the compiled function to be placed in the lambda folder in the root directory of our application.
+
+Configuring Netlify for our Function
+Function deploy settings in Netlify
+We can log into our Netlify account to configure our functions. First, go to the Site Settings for your site in Netlify and click on Functions. Then press Edit settings and update the Functions Directory to lambda. This coincides with the directory you specified in the netlify.toml above.
+
+Then click on Environment under the Build & deploy settings. Here you can enter the three environment variables we specified in our function above (GITHUB_USERNAME, GITHUB_REPO, and GITHUB_AUTHTOKEN). GITHUB_AUTHTOKEN is a GitHub personal access token that has write permissions to the repo.
+
+Once you deploy your application you'll see additional billing options for functions, but Netlify has a very generous free tier for functions that include up to 125,000 requests and 100 hours of compute.
+
+Sit Back, Relax and Merge Pull Requests
+That's it! When someone fills out the form on one of your Gridsome pages a new branch and pull request will be created with the comments' details. You can then preview the Netlify build to see the comment on your pages before approving the merge.
+
+I've been using Gridsome with Netlify for months and love how easy they've made deploying and serving my site. The fact that I can use this function to add comments to my site is just icing on the cake.
+
+Was there something I missed? Maybe didn't explain something well? Let me know in the comments!
 
 <!--more-->
 
@@ -35,7 +50,7 @@ But how to make that happen...
 
 There's an old saying "To a man with a hammer, everything looks like a nail." Lately, no matter the problem I face, serverless functions seem like the answer. So why stop now? Let's make a serverless function that we trigger via an HTTP Post request.  We'll send it information about the comment and let it create a file in my repo with the details.
 
-We'll need a few more npm packages before we can write our function. These will be used to communicate with the GitHub Rest API, manipulate querystring information and convert objects to YAML.
+We'll need a few more npm packages before we can write our function. These will be used to communicate with the GitHub Rest API, manipulate query string information, and convert objects to YAML.
 
 ```bash
 npm install --save @octokit/rest querystring js-yaml
@@ -54,7 +69,7 @@ const octokit = new Octokit({ auth: GITHUB_AUTHTOKEN });
 let baseRef, latestCommitSha, treeSha, newTreeSha, comment, commentId, commitRef;
 ```
 
-In the snippet above, we're pulling in our external packages, referencing environment variables and defining variables we'll use as we progress.  The `Octokit` object will be used to communicate with the GitHub Rest API.
+In the snippet above, we're pulling in our external packages, referencing environment variables, and defining variables we'll use as we progress.  The `Octokit` object will be used to communicate with the GitHub Rest API.
 
 I'm not going to discuss the following code block in detail because this isn't a post about how to do things with the GitHub API, but briefly, they:
 
@@ -228,14 +243,14 @@ It then calls the `saveComment()` method we added previously to save the comment
 With the function in place, let's add the appropriate fields to our comment form. Below is a form you can use, but to summarize it sends:
 
 - `postpath`: relative path to the post
-- `redirect`: fully qualified url to redirect the commenter to
-- `avatar`: fully qualified url of an avatar to use for this commenter
+- `redirect`: fully qualified URL to redirect the commenter to
+- `avatar`: fully qualified URL of an avatar to use for this commenter
 - `message`: the actual comment left
 - `name`: name to display for the commenter
 
 Netlify functions can be reached at `/.netlify/functions/{function name}`. Since we named this function `comments.js`, our form will post to `/.netlify/functions/comments`.
 
-> **Note:** This was a "gotcha" for me. The url for the function is the name of the file without its' extension.  Netlify's documentation states this but I overlooked it for several minutes submitting to /.netlify/functions/comments.js.
+> **Note:** This was a "gotcha" for me. The URL for the function is the name of the file without its' extension.  Netlify's documentation states this but I overlooked it for several minutes submitting to /.netlify/functions/comments.js.
 
 ```html
 <form
@@ -313,7 +328,7 @@ We'll want to test our functions locally and to do that we can install the `netl
 npm install --save-dev netlify-lambda
 ```
 
-Next we'll update our `package.json` file to allow us to build and debug. Modify your `package.json` scripts to include the following:
+Next, we'll update our `package.json` file to allow us to build and debug. Modify your `package.json` scripts to include the following:
 
 ```js
  "scripts": {
@@ -340,7 +355,7 @@ This toml will cause the compiled function to be placed in the `lambda` folder i
 
 We can log into our Netlify account to configure our functions. First, go to the `Site Settings` for your site in Netlify and click on `Functions`. Then press `Edit settings` and update the `Functions Directory` to `lambda`. This coincides with the directory you specified in the `netlify.toml` above.
 
-Then click on `Environment` under the `Build & deploy` settings.  Here you can enter the three environment variables we specified in our function above (`GITHUB_USERNAME`, `GITHUB_REPO`, and `GITHUB_AUTHTOKEN`). `GITHUB_AUTHTOKEN` is a GitHub personal access token that has write permissions to the repo.
+Then click on `Environment` under the `Build & deploy` settings.  Enter the three environment variables we specified in our function above (`GITHUB_USERNAME`, `GITHUB_REPO`, and `GITHUB_AUTHTOKEN`). `GITHUB_AUTHTOKEN` is a GitHub personal access token that has been given write permissions to the repo.
 
 Once you deploy your application you'll see additional billing options for functions, but Netlify has a very generous free tier for functions that include up to 125,000 requests and 100 hours of compute.
 
@@ -350,4 +365,4 @@ That's it! When someone fills out the form on one of your Gridsome pages a new b
 
 I've been using Gridsome with Netlify for months and love how easy they've made deploying and serving my site. The fact that I can use this function to add comments to my site is just icing on the cake.
 
-Was there something I missed? Maybe didn't explain something well? Let me know in the comments!
+Was there something I missed? Maybe I didn't explain something well? Let me know in the comments!
