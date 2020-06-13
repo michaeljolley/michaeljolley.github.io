@@ -29,13 +29,11 @@ But how to make that happen...
 
 ## Servers? We Don't Need No Stinking Servers
 
+> I'm going to assume you already have a Gridsome site. If you want to stand something up quickly, I used the [Gridsome CLI](https://gridsome.org/docs/gridsome-cli/) to generate the basic framework I needed.
+
 <img alt="Scene from the film The Treasure of the Sierra Madre with the words 'Servers!? We don't need no stinking servers!'" src="https://res.cloudinary.com/dk3rdh3yo/image/upload/c_scale,w_auto/v1591934417/servers_obmhkl.png" class="right"/>
 
 There's an old saying "To a man with a hammer, everything looks like a nail." Lately, no matter the problem I face, serverless functions seem like the answer. So why stop now? Let's make a serverless function that we trigger via an HTTP Post request.  We'll send it information about the comment and let it create a file in my repo with the details.
-
-## What is Your Function?
-
-> I'm going to assume you already have a Gridsome site. If you want to stand something up quickly, I used the [Gridsome CLI](https://gridsome.org/docs/gridsome-cli/) to generate the basic framework I needed.
 
 We'll need a few more npm packages before we can write our function. These will be used to communicate with the GitHub Rest API, manipulate querystring information and convert objects to YAML.
 
