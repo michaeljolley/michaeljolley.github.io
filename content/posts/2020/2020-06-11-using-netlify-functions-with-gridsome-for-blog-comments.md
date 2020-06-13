@@ -9,21 +9,6 @@ tags: [netlify, gridsome, functions, serverless, vuejs]
 
 When I started writing this blog a few years ago, I was overwhelmed by the number of platforms available to me. JavaScript, .NET, Ruby? We got 'em all! While I settled on Jekyll, it was somewhat by accident. I really liked the idea of writing my posts in Markdown with GitHub Pages and, since they were powered by Jekyll, the choice was made for me.This toml will cause the compiled function to be placed in the lambda folder in the root directory of our application.
 
-Configuring Netlify for our Function
-Function deploy settings in Netlify
-We can log into our Netlify account to configure our functions. First, go to the Site Settings for your site in Netlify and click on Functions. Then press Edit settings and update the Functions Directory to lambda. This coincides with the directory you specified in the netlify.toml above.
-
-Then click on Environment under the Build & deploy settings. Here you can enter the three environment variables we specified in our function above (GITHUB_USERNAME, GITHUB_REPO, and GITHUB_AUTHTOKEN). GITHUB_AUTHTOKEN is a GitHub personal access token that has write permissions to the repo.
-
-Once you deploy your application you'll see additional billing options for functions, but Netlify has a very generous free tier for functions that include up to 125,000 requests and 100 hours of compute.
-
-Sit Back, Relax and Merge Pull Requests
-That's it! When someone fills out the form on one of your Gridsome pages a new branch and pull request will be created with the comments' details. You can then preview the Netlify build to see the comment on your pages before approving the merge.
-
-I've been using Gridsome with Netlify for months and love how easy they've made deploying and serving my site. The fact that I can use this function to add comments to my site is just icing on the cake.
-
-Was there something I missed? Maybe didn't explain something well? Let me know in the comments!
-
 <!--more-->
 
 Since then many of those platforms have gone the way of the buffalo. But it seems that just as one dies off, another takes its place. Now we have options for nearly every language and framework. You're an Angular developer? You might feel comfortable with [Scully](https://github.com/scullyio/scully). More of a React dev? [Gatsby](https://www.gatsbyjs.org/) is probably more up your alley. I've been developing with Vue.js for a while, so [Gridsome](https://gridsome.org/) seemed like a better fit for me.
