@@ -33,19 +33,19 @@ But how to make that happen...
 
 There's an old saying "To a man with a hammer, everything looks like a nail." Lately, no matter the problem I face, serverless functions seem like the answer. So why stop now? Let's make a serverless function that we trigger via an HTTP Post request.  We'll send it information about the comment and let it create a file in my repo with the details.
 
-> I'm going to assume you already have a Gridsome site. If you want to stand something up quickly, I used the [Gridsome CLI](https://gridsome.org/docs/gridsome-cli/) to generate the basic framework I needed.
-
 ## What is Your Function?
+
+> I'm going to assume you already have a Gridsome site. If you want to stand something up quickly, I used the [Gridsome CLI](https://gridsome.org/docs/gridsome-cli/) to generate the basic framework I needed.
 
 We'll need a few more npm packages before we can write our function. These will be used to communicate with the GitHub Rest API, manipulate querystring information and convert objects to YAML.
 
-```JS
+```bash
 npm install --save @octokit/rest querystring js-yaml
 ```
 
 In the root of your project create a folder named `functions` and, within that folder, create a file named `comments.js`. Copy the following into that file.
 
-```JS
+```js
 const { Octokit } = require("@octokit/rest")
 const querystring = require('querystring');
 const yaml = require("js-yaml")
@@ -55,3 +55,174 @@ const { GITHUB_USERNAME, GITHUB_AUTHTOKEN, GITHUB_REPO } = process.env;
 const octokit = new Octokit({ auth: GITHUB_AUTHTOKEN });
 let baseRef, latestCommitSha, treeSha, newTreeSha, comment, commentId, commitRef;
 ```
+
+In the snippet above, we're pulling in our external packages, referencing environment variables and defining variables we'll use as we progress.  The `Octokit` object will be used to communicate with the GitHub Rest API.
+
+I'm not going to discuss the following code block in detail because this isn't a post about how to do things with the GitHub API, but briefly, they:
+
+- Get the default branch of the repo
+- Create a branch based on the latest commit on that branch
+- Convert the comment data to YAML 
+- Commit that YAML to a file in the new branch
+- Get a ref to that commit
+- Create a pull request from the new branch to the default branch
+
+Whew! Now let's copy the code below into our `comments.js` file.
+
+```js
+
+const saveComment = async () => {
+  
+  // Validate the incoming comment
+  if (comment.message && comment.message.length > 0) {
+    await getBaseBranch();
+    console.log('getBaseBranch');
+    await getLastCommitSha();
+    console.log('getLastCommitSha');
+    await createTree();
+    console.log('createTree');
+    await createCommit();
+    console.log('createCommit');
+    await createRef();
+    console.log('createRef');
+    await createPullRequest();
+    console.log('all good');
+  }
+}
+
+const getBaseBranch = async () => {
+  let response = await octokit.repos.get({
+    owner: GITHUB_USERNAME,
+    repo: GITHUB_REPO
+  });
+  baseRef = response.data.default_branch;
+}
+
+const getLastCommitSha = async() => {
+  let response = await octokit.repos.listCommits({
+    owner: GITHUB_USERNAME,
+    repo: GITHUB_REPO,
+    sha: baseRef,
+    per_page: 1
+  });
+  latestCommitSha = response.data[0].sha;
+  treeSha = response.data[0].commit.tree.sha;
+}
+
+const createTree = async () => {
+  const commentYaml = yaml.safeDump(comment);
+  let response = await octokit.git.createTree({
+    owner: GITHUB_USERNAME,
+    repo: GITHUB_REPO,
+    base_tree: treeSha,
+    tree: [
+      {
+        path: `content/comments${comment.postpath}${comment.id}.yml`,
+        mode: "100644",
+        content: commentYaml
+      }
+    ]
+  });
+  newTreeSha = response.data.sha;
+}
+
+ const createCommit = async () => {
+  let response = await octokit.git.createCommit({
+    owner: GITHUB_USERNAME,
+    repo: GITHUB_REPO,
+    message: `Comment by ${comment.name} on ${comment.postpath}`,
+    tree: newTreeSha,
+    parents: [latestCommitSha]
+  });
+  latestCommitSha = response.data.sha;
+}
+
+const createRef = async () => {
+  let response = await octokit.git.createRef({
+    owner: GITHUB_USERNAME,
+    repo: GITHUB_REPO,
+    ref: `refs/heads/${comment.id}`,
+    sha: latestCommitSha
+  });
+}
+
+const createPullRequest = async () => {
+    await octokit.pulls.create({
+      owner: GITHUB_USERNAME,
+      repo: GITHUB_REPO,
+      title: `Comment by ${comment.name} on ${comment.postpath}`,
+      body: `avatar: <img src='${comment.avatar}' width='64'  height='64'/>\n\n${comment.message}`,
+      head: comment.id.toString(),
+      base: baseRef
+    });
+}
+
+const hash = (str) => {
+  let hash = 0;
+  let i = 0;
+  let chr;
+  if (str.length === 0) return hash;
+  for (i = 0; i < str.length; i++) {
+    chr = str.charCodeAt(i);
+    hash = (hash << 5) - hash + chr;
+    hash |= 0; // Convert to 32bit integer
+  }
+  return hash;
+}
+```
+
+Now we can write the serverless function that will use those methods to save our comment. Add the following to `comments.js` file.
+
+```js
+exports.handler = async (event, context) => {
+  
+  const bodyComment = querystring.decode(event.body);
+  comment = {
+    postpath   : bodyComment.postpath,
+    message    : bodyComment.message,
+    name       : bodyComment.name,
+    avatar     : bodyComment.avatar,
+    redirect   : bodyComment.redirect,
+    identity   : bodyComment.identity,
+    date       : new Date(),
+    id         : Math.abs(
+                    hash(
+                      `${new Date()}${bodyComment.postpath}${bodyComment.name}`
+                    )
+                  )
+  };
+  console.log(comment)
+  const redirectUrl = comment.redirect;
+  if (comment) {
+    try {
+      await saveComment();
+      return {
+          statusCode: 302,
+          headers: {
+            location: redirectUrl,
+            'Cache-Control': 'no-cache',
+          },
+          body: JSON.stringify({ })
+        }
+    }
+    catch (err) {
+      return {
+        statusCode: 500,
+        body: err
+      };
+    }
+  }
+  else {
+      return {
+          statusCode:400,
+          body: "Please pass comment details."
+      };
+  }
+}
+```
+
+This method uses various values posted to it to create a `comment` object. This object contains information like the actual message of the comment, an avatar of the user, and the path of the post on our blog.
+
+It then calls the `saveComment()` method we added previously to save the comment to our repo and create a pull request.
+
+3
