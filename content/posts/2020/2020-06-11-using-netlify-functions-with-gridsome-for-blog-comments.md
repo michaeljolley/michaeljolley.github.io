@@ -33,5 +33,25 @@ But how to make that happen...
 
 There's an old saying "To a man with a hammer, everything looks like a nail." Lately, no matter the problem I face, serverless functions seem like the answer. So why stop now? Let's make a serverless function that we trigger via an HTTP Post request.  We'll send it information about the comment and let it create a file in my repo with the details.
 
-I'm going to assume you have a Gridsome site already built. If you want to stand something up quickly, I used the Gridsome CLI to generate the basic framework I needed.
+> I'm going to assume you already have a Gridsome site. If you want to stand something up quickly, I used the [Gridsome CLI](https://gridsome.org/docs/gridsome-cli/) to generate the basic framework I needed.
 
+## What is Your Function?
+
+We'll need a few more npm packages before we can write our function. These will be used to communicate with the GitHub Rest API, manipulate querystring information and convert objects to YAML.
+
+```JS
+npm install --save @octokit/rest querystring js-yaml
+```
+
+In the root of your project create a folder named `functions` and, within that folder, create a file named `comments.js`. Copy the following into that file.
+
+```JS
+const { Octokit } = require("@octokit/rest")
+const querystring = require('querystring');
+const yaml = require("js-yaml")
+
+const { GITHUB_USERNAME, GITHUB_AUTHTOKEN, GITHUB_REPO } = process.env;
+
+const octokit = new Octokit({ auth: GITHUB_AUTHTOKEN });
+let baseRef, latestCommitSha, treeSha, newTreeSha, comment, commentId, commitRef;
+```
