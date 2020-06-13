@@ -21,7 +21,7 @@ No matter the framework & platform you choose, before you get too far you hit th
 
 Write your posts in Markdown they said. It will compile to a static site they said. But no one ever brings up the fact that comments on a blog aren't static. Hopefully, your community is chiming in and providing feedback. So how do we add these dynamic, incoming messages to our page?
 
-Just like the multitude of static-site frameworks, there are a ton of options for managing comments on your site. From integrating platforms like Disqus or Facebook to systems like Discourse. But I wanted more control over my site. I didn't want to integrate with a third-party that may require my visitors to register for an account. 
+Just like the multitude of static-site frameworks, there are a ton of options for managing comments on your site. From integrating platforms like Disqus or Facebook to systems like Discourse. But I wanted more control over my site. I didn't want to integrate with a third-party that may require my visitors to register for an account.
 
 Then it hit me... my site lives in GitHub. If I could store comments in files within my repo, I could add them to the site just like my posts. Plus, I'd gain the ability to use pull requests as my moderation tool.
 
@@ -30,3 +30,8 @@ But how to make that happen...
 ## Servers? We Don't Need No Stinking Servers
 
 <img alt="Scene from the film The Treasure of the Sierra Madre with the words 'Servers!? We don't need no stinking servers!'" src="https://res.cloudinary.com/dk3rdh3yo/image/upload/c_scale,w_auto/v1591934417/servers_obmhkl.png" class="right"/>
+
+There's an old saying "To a man with a hammer, everything looks like a nail." Lately, no matter the problem I face, serverless functions seem like the answer. So why stop now? Let's make a serverless function that we trigger via an HTTP Post request.  We'll send it information about the comment and let it create a file in my repo with the details.
+
+I'm going to assume you have a Gridsome site already built. If you want to stand something up quickly, I used the Gridsome CLI to generate the basic framework I needed.
+
