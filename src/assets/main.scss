@@ -120,26 +120,37 @@ a {
       border: 10px solid;
       box-shadow: 2px 2px 10px $gray;
       border-color: $light-gray ;
-      margin: 20px;
-      position: relative;
-      left: 25%;
-      width: 40%;
-
-      &.right, &.left {
-        position: unset;
-        left: unset;
-        width: unset;
-      }
-
-      &.right {
-        float: right;
-        margin-right: 0;
-      }
-      &.left {
-        float: left;
-        margin-left: 0;
+    }
+    @media (max-width: $breakpoint-phone) {
+      /deep/ img {
+        width: 95% !important
       }
     }
+    @media (min-width: $breakpoint-tablet) {
+      /deep/ img {
+        margin: 20px;
+        position: relative;
+        left: 25%;
+        width: 40%;
+
+
+        &.right, &.left {
+          position: unset;
+          left: unset;
+          width: unset;
+        }
+
+        &.right {
+          float: right;
+          margin-right: 0;
+        }
+        &.left {
+          float: left;
+          margin-left: 0;
+        }
+      }
+    }
+
     /deep/ code {
       background-color: $lightest-gray;
       padding: 0 4px;
