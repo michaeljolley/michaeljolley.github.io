@@ -1,5 +1,5 @@
 ---
-date: 2020-06-11
+date: 2020-06-14
 title: "Using Netlify Functions to Add Comments to Gridsome"
 image: https://res.cloudinary.com/dk3rdh3yo/image/upload/c_scale,w_auto/v1592014710/netlify-functions-gridsome_jg67dm.png
 banner_image_alt: Terminal window with the words Using Netlify functions with Gridsome 
