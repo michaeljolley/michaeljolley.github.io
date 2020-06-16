@@ -16,7 +16,7 @@ exports.handler = async (event, context) => {
 
   let redirectUrl = 'https://baldbeardedbuilder.com/'
 
-  const path = event.path
+  const path = event.queryStringParameters.path
 
   const realdeal = await getLongUrl(path)
 

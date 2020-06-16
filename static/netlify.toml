@@ -99,3 +99,10 @@
   to = "/talks/dnn-summit-2020-orlando-fl/"
   status = 301
   force = true
+
+[[redirects]]
+  from = "https://bbb.dev/*"
+  to = "/.netlify/functions/smolify"
+  query = {path = ":splat"}
+  status = 301
+  force = true
