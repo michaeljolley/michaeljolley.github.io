@@ -102,6 +102,6 @@
 
 [[redirects]]
   from = "https://bbb.dev/*"
-  to = "/.netlify/functions/smolify"
+  to = "/.netlify/functions/smolify?path=:splat"
   status = 301
   force = true
