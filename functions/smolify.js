@@ -96,7 +96,7 @@ const query = `
 `;
 
 const mutation = `
-  mutation  updateshortlink($id:ID!, $data: ShortyMcShortLinkInput!) {
+  ($id:ID!, $data: ShortyMcShortLinkInput!) {
     updateShortyMcShortLink(
           id: $id,
           data: $data) {
