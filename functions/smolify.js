@@ -50,7 +50,7 @@ const getLongUrl = async (path) => {
     if (data.shortyMcShortLinkBySource && data.shortyMcShortLinkBySource) {
       const shortLink = data.shortyMcShortLinkBySource;
 
-      // TODO: Record the visit
+      await recordVisit(shortLink);
 
       longUrl = shortLink.target;
     }
@@ -63,9 +63,44 @@ const getLongUrl = async (path) => {
   };
 };
 
+const recordVisit = async (shortLink) => {
+
+  // Save the updated visit count to Fauna
+  try {
+    const variables = {
+      id: shortLink._id,
+      data: {
+        source: shortLink.source,
+        target: shortLink.target,
+        visits: shortLink.visits++
+      }
+    };
+
+    await client.mutation(mutation, variables);
+
+  } catch (err) {
+    console.log(err);
+  }
+
+}
+
 const query = `
   query getEm($source: String!) {
     shortyMcShortLinkBySource(source:$source){
+      _id
+      source
+      target
+      visits
+    }
+  }
+`;
+
+const mutation = `
+  mutation  updateshortlink($id:ID!, $data: ShortyMcShortLinkInput!) {
+    updateShortyMcShortLink(
+          id: $id,
+          data: $data) {
+      _id
       source
       target
       visits
