@@ -72,7 +72,7 @@ const recordVisit = async (shortLink) => {
       data: {
         source: shortLink.source,
         target: shortLink.target,
-        visits: shortLink.visits + 1
+        visits: ++shortLink.visits
       }
     };
 
