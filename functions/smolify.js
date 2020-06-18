@@ -76,7 +76,7 @@ const recordVisit = async (shortLink) => {
       }
     };
 
-    await client.mutation(mutation, variables);
+    await client.mutate(mutation, variables);
 
   } catch (err) {
     console.log(err);
