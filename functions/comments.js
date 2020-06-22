@@ -2,14 +2,13 @@ const { Octokit } = require("@octokit/rest")
 const querystring = require('querystring')
 const yaml = require("js-yaml")
 const akismet = require('@cedx/akismet')
-const { CheckResult } = require("@cedx/akismet")
 
 const { AKISMET_APIKEY, AKISMET_URL, GITHUB_USERNAME, GITHUB_AUTHTOKEN, GITHUB_REPO } = process.env
 
 const octokit = new Octokit({ auth: GITHUB_AUTHTOKEN })
 let baseRef, latestCommitSha, treeSha, newTreeSha, comment, commentId, commitRef
 
-const akismetClient = new akismet.Client(AKISMET_APIKEY, new Blog(new URL(AKISMET_URL)));
+const akismetClient = new akismet.Client(AKISMET_APIKEY, new akismet.Blog(new URL(AKISMET_URL)));
 
 exports.handler = async (event, context) => {
 
