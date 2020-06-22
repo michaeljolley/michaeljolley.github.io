@@ -106,12 +106,13 @@ const validateRequest = (event) => {
 }
 
 const validateAkismetKey = async () => {
-  return new Promise((res, rej) => {
-    akismetClient.verifyKey((err, isValid) => {
-      if (err !== undefined) res(false)
-      res(isValid)
-    })
-  })
+  return true
+  // return new Promise((res, rej) => {
+  //   akismetClient.verifyKey((err, isValid) => {
+  //     if (err !== undefined) res(false)
+  //     res(isValid)
+  //   })
+  // })
 }
 
 const checkSpam = async (akismetComment) => {
