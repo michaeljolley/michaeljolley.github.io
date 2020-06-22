@@ -83,8 +83,8 @@ exports.handler = async (event, context) => {
 const validateAkismetKey = async () => {
   return new Promise((res, rej) => {
     akismetClient.verifyKey((err, isValid) => {
-      if (err !== undefined) return false
-      return isValid
+      if (err !== undefined) res(false)
+      res(isValid)
     })
   })
 }
@@ -92,8 +92,8 @@ const validateAkismetKey = async () => {
 const checkSpam = async (akismetComment) => {
   return new Promise((res, rej) => {
     akismetClient.checkComment(akismetComment, (err, isSpam) => {
-      if (err !== undefined) return false
-      return isSpam
+      if (err !== undefined) res(false)
+      res(isSpam)
     })
   })
 }
