@@ -11,8 +11,6 @@ const akismetClient = require('akismet').client({ blog: AKISMET_URL, apiKey: AKI
 
 exports.handler = async (event, context) => {
 
-  console.dir(event)
-  
   const bodyComment = querystring.decode(event.body)
   comment = {
     postpath   : bodyComment.postpath,
@@ -30,6 +28,20 @@ exports.handler = async (event, context) => {
   }
   console.log(comment)
   const redirectUrl = comment.redirect
+
+  console.dir(event)
+  if (!validateRequest(event)) {
+    return {
+      statusCode: 302,
+      headers: {
+        location: redirectUrl,
+        'Cache-Control': 'no-cache',
+      },
+      body: JSON.stringify({ })
+    }
+  }
+  
+
   if (comment) {
     try {
 
@@ -42,11 +54,13 @@ exports.handler = async (event, context) => {
 
       if (isAkismetValid) {
         const akismetComment = {
-          ip: '123.123.123.123',
-          useragent: 'CommentorsAgent 1.0 WebKit',
-          content: 'Very nice blog! Check out mine!',
-          email: 'not.a.spammer@gmail.com',
-          name: 'John Doe'
+          user_ip: event.headers['client-ip'],
+          user_agent : event.headers['user-agent'],
+          referrer: event.headers['referrer'],
+          permalink: `${event.headers.origin}${comment.postpath}`,
+          comment_type: 'comment',
+          comment_content: comment.message,
+          comment_author: comment.name
         }
         isSpam = await checkSpam(akismetComment) 
         console.log(`Akismet verdict: Is spam? ${isSpam}`)
@@ -78,6 +92,17 @@ exports.handler = async (event, context) => {
           body: "Please pass comment details."
       }
   }
+}
+
+const validateRequest = (event) => {
+  let isValid = true
+  // Validate the referrer.
+  if (!event.origin || event.origin !== AKISMET_URL) {
+    console.log(`Request invalid: origin = ${event.origin}`)
+    isValid = false
+  }
+
+  return isValid
 }
 
 const validateAkismetKey = async () => {
