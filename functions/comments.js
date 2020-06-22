@@ -1,7 +1,7 @@
 const { Octokit } = require("@octokit/rest")
 const querystring = require('querystring')
 const yaml = require("js-yaml")
-const { AkismetClient } = require('akismet-api')
+const AkismetClient = require('akismet-api')
 
 const { AKISMET_APIKEY, AKISMET_URL, GITHUB_USERNAME, GITHUB_AUTHTOKEN, GITHUB_REPO } = process.env
 
