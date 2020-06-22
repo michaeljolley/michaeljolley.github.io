@@ -97,7 +97,7 @@ exports.handler = async (event, context) => {
 const validateRequest = (event) => {
   let isValid = true
   // Validate the referrer.
-  if (!event.headers['origin'] || event.headers['origin'] !== AKISMET_URL) {
+  if (!event.headers['origin'] || event.headers['origin'] !== 'https://baldbeardedbuilder.com') {
     console.log(`Request invalid: origin = ${event.headers['origin']}`)
     isValid = false
   }
