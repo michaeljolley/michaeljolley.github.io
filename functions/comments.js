@@ -8,7 +8,7 @@ const { AKISMET_APIKEY, AKISMET_URL, GITHUB_USERNAME, GITHUB_AUTHTOKEN, GITHUB_R
 const octokit = new Octokit({ auth: GITHUB_AUTHTOKEN })
 let baseRef, latestCommitSha, treeSha, newTreeSha, comment, commentId, commitRef
 
-const akismetClient = new AkismetClient({ AKISMET_APIKEY, AKISMET_URL })
+const akismetClient = require('akismet').client({ blog: AKISMET_URL, apiKey: AKISMET_APIKEY });
 
 exports.handler = async (event, context) => {
 

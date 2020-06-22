@@ -16,7 +16,7 @@
     "@gridsome/transformer-remark": "^0.4.0",
     "@gridsome/transformer-yaml": "^0.2.1",
     "@octokit/rest": "^17.10.0",
-    "akismet-api": "^5.0.0",
+    "akismet": "^2.0.5",
     "encoding": "^0.1.12",
     "eslint": "^6.8.0",
     "eslint-plugin-gridsome": "^1.4.12",
