@@ -35,10 +35,10 @@ exports.handler = async (event, context) => {
 
       // Verify that the Akismet key is valid before requiring 
       // Akisment verification
-      const isAkismetValid = await akismetClient.verifyKey()
+      const isAkismetValid = await validateAkismetKey()
       let isSpam = false;
 
-      console.log(`Akisment valid: ${isAkismetValid}`)
+      console.log(`Akismet valid: ${isAkismetValid}`)
 
       if (isAkismetValid) {
         const akismetComment = {
@@ -48,7 +48,7 @@ exports.handler = async (event, context) => {
           email: 'not.a.spammer@gmail.com',
           name: 'John Doe'
         }
-        isSpam = await akismetClient.checkSpam(akismetComment)
+        isSpam = await checkSpam(akismetComment) 
         console.log(`Akismet verdict: Is spam? ${isSpam}`)
       }
 
@@ -80,6 +80,23 @@ exports.handler = async (event, context) => {
   }
 }
 
+const validateAkismetKey = async () => {
+  return new Promise((res, rej) => {
+    akismetClient.verifyKey((err, isValid) => {
+      if (err !== undefined) return false
+      return isValid
+    })
+  })
+}
+
+const checkSpam = async (akismetComment) => {
+  return new Promise((res, rej) => {
+    akismetClient.checkComment(akismetComment, (err, isSpam) => {
+      if (err !== undefined) return false
+      return isSpam
+    })
+  })
+}
 
 const saveComment = async () => {
   
