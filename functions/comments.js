@@ -8,7 +8,7 @@ const { AKISMET_APIKEY, AKISMET_URL, GITHUB_USERNAME, GITHUB_AUTHTOKEN, GITHUB_R
 const octokit = new Octokit({ auth: GITHUB_AUTHTOKEN })
 let baseRef, latestCommitSha, treeSha, newTreeSha, comment, commentId, commitRef
 
-const akismetClient = new akismet.Client(AKISMET_APIKEY, new akismet.Blog(new URL(AKISMET_URL)));
+const akismetClient = new akismet.Client(AKISMET_APIKEY, new akismet.Blog(new URL('https://baldbeardedbuilder.com')));
 
 exports.handler = async (event, context) => {
 
