@@ -1,14 +1,11 @@
 const { Octokit } = require("@octokit/rest")
 const querystring = require('querystring')
 const yaml = require("js-yaml")
-const akismet = require('@cedx/akismet')
 
-const { AKISMET_APIKEY, AKISMET_URL, GITHUB_USERNAME, GITHUB_AUTHTOKEN, GITHUB_REPO } = process.env
+const {  GITHUB_USERNAME, GITHUB_AUTHTOKEN, GITHUB_REPO } = process.env
 
 const octokit = new Octokit({ auth: GITHUB_AUTHTOKEN })
 let baseRef, latestCommitSha, treeSha, newTreeSha, comment, commentId, commitRef
-
-const akismetClient = new akismet.Client(AKISMET_APIKEY, new akismet.Blog(new URL('https://baldbeardedbuilder.com')));
 
 exports.handler = async (event, context) => {
 
@@ -45,34 +42,7 @@ exports.handler = async (event, context) => {
   if (comment) {
     try {
 
-      // Verify that the Akismet key is valid before requiring 
-      // Akisment verification
-      const isAkismetValid = await akismetClient.verifyKey()
-      let isSpam = 0;
-
-      console.log(`Akismet valid: ${isAkismetValid}`)
-
-      if (isAkismetValid) {
-        const author = new akismet.Author(event.headers['client-ip'], event.headers['user-agent'], {
-          name: comment.name
-        })
-        const akismetComment = new akismet.Comment(author, {
-          content: comment.message,
-          date: new Date,
-          referrer: event.headers['referer'],
-          permalink: `${event.headers.origin}${comment.postpath}`,
-          user_agent: event.headers['user-agent'],
-          user_ip: event.headers['client-ip'],
-          comment_type: 'comment'
-        })
-
-        isSpam = await akismetClient.checkComment(akismetComment) 
-        console.log(`Akismet verdict: Is spam? ${isSpam}`)
-      }
-
-      if (!isAkismetValid || isSpam === 0) {
-        await saveComment()
-      }
+      await saveComment()
 
       return {
           statusCode: 302,
