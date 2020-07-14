@@ -7,6 +7,7 @@
     <ul>
       <li><g-link to="/">Blog</g-link></li>
       <li><g-link to="/talks/">Talks</g-link></li>
+      <li><a href="https://bbb.dev/shop">Shop</a></li>
       <li><g-link to="/about/">About</g-link></li>
     </ul>
   </nav>
