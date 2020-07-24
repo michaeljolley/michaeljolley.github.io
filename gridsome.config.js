@@ -13,7 +13,7 @@ function addStyleResource(rule) {
 module.exports = {
   siteName: 'Bald. Bearded. Builder.',
   siteUrl: 'https://baldbeardedbuilder.com',
-  siteDescription: 'Michael is a bald, bearded, builder with a passion for helping others succeed. For nearly 20 years, he’s used his experience in software development and DevOps for clients ranging from start-ups to Fortune 500.<br/><br/>When not in full-geek mode, he’s a husband, father of 3, musician and football fanatic.',
+  siteDescription: 'Michael is the bald, bearded builder. Using his 20 years experience in software development and DevOps, this follicly challenged developer spends his days focused on helping others succeed.',
   templates: {
     Post: '/posts/:title',
     Tag: '/tags/:title',
@@ -24,14 +24,6 @@ module.exports = {
       use: '@gridsome/plugin-google-analytics',
       options: {
         id: 'UA-81841605-1'
-      }
-    },
-    {
-      use: 'gridsome-plugin-sass-resources-loader',
-      options: {
-        resources: [
-          './src/assets/_sass/_variables.scss'
-        ]
       }
     },
     {
@@ -67,7 +59,7 @@ module.exports = {
         contentTypes: ['Post', 'Talk'],
         feedOptions: {
           title: "Bald Bearded Builder",
-          description: 'Michael is a bald, bearded, builder with a passion for helping others succeed. For nearly 20 years, he’s used his experience in software development and DevOps for clients ranging from start-ups to Fortune 500.<br/><br/>When not in full-geek mode, he’s a husband, father of 3, musician and football fanatic.',
+          description: 'Michael is the bald, bearded builder. Using his 20 years experience in software development and DevOps, this follicly challenged developer spends his days focused on helping others succeed.',
           link: 'https://baldbeardedbuilder.com/',
           language: 'en'
         },
