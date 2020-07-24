@@ -14,14 +14,14 @@ export default {
   computed: {
     navVisible() {
       return this.$store.state.navVisible;
-    }
-  }
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
 .sub-nav {
   overflow-y: hidden;
-  max-height: 185px;
+  max-height: 250px;
   transition-property: all;
   transition-duration: 0.5s;
   transition-timing-function: cubic-bezier(0, 1, 0.5, 1);

@@ -28,13 +28,13 @@ export default {
   computed: {
     navVisible() {
       return this.$store.state.navVisible;
-    }
+    },
   },
   methods: {
-    toggleNav: function() {
+    toggleNav: function () {
       this.$store.dispatch(types.NAV_TOGGLE);
-    }
-  }
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
