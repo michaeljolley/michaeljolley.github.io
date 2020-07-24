@@ -14,8 +14,8 @@ export default {
   computed: {
     navVisible() {
       return this.$store.state.navVisible;
-    }
-  }
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
