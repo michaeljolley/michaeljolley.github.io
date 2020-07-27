@@ -3,7 +3,7 @@
     <div class="links">
       <g-link to="/">Blog</g-link>
       <g-link to="/talks/">Talks</g-link>
-      <a href="https://bbb.dev/shop">Shop</a>
+      <g-link to="/store/">Store</g-link>
       <g-link to="/about/">About</g-link>
     </div>
   </div>

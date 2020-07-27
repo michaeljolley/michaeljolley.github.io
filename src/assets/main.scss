@@ -196,6 +196,66 @@ a {
       flex-basis: 100%;
     }
   }
+  
+  .product {
+    margin-bottom: 10px;
+    flex-basis: 32%;
+    
+    h2 {
+      color: $mint;
+      font-size: 1.2em;
+    }
+    .options, .addButton {
+      display: flex;
+      flex-direction: row;
+      margin: 10px 0;
+      justify-content: space-between;
+      font-size: 1.5em;
+    }
+    
+    label, .price {
+      font-weight: bold;
+      color: $white;
+    }
+
+    .price {
+      margin-top: 5px;
+      color: $pink;
+    }
+
+    input, select {
+      padding: 4px;
+      color: $black;
+      text-align: right;
+      margin-left: 10px;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    .options_size {
+      align-self: flex-start;
+      margin-top: 5px;
+    }
+
+    .options_qty {
+      align-self: flex-end;
+
+      input {
+        width: 50px;
+      }
+    }
+    
+    .VueCarousel-dot[data-v-438fd353] {
+      background-color: $light-blue !important;
+    }
+    .VueCarousel-dot--active[data-v-438fd353] {
+      background-color: $pink !important;
+    }
+    
+    @media (max-width: $breakpoint-phone) {
+      flex-basis: 100%;
+    }
+  }
 
   &:not(.bottom) {
 
@@ -298,4 +358,15 @@ form {
     letter-spacing: .09em;
     border-radius: 2px;
   }
+}
+
+@-webkit-keyframes bounce { 
+  0%, 20%, 55%, 75%, 100% {-webkit-transform: translateY(0);} 
+  40% {-webkit-transform: translateY(-45px);} 
+  60% {-webkit-transform: translateY(-35px);} 
+} 
+@keyframes bounce { 
+  0%, 20%, 55%, 75%, 100% {-webkit-transform: translateY(0);} 
+  40% {-webkit-transform: translateY(-45px);} 
+  60% {-webkit-transform: translateY(-35px);} 
 }

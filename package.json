@@ -28,7 +28,11 @@
     "lokka": "^1.7.0",
     "lokka-transport-http": "^1.6.1",
     "md5": "^2.2.1",
+    "slugify": "^1.4.4",
+    "stripe": "^8.79.0",
+    "vue-carousel": "^0.18.0",
     "vue-eslint-parser": "^7.1.0",
+    "vue-stripe-checkout": "^3.5.7",
     "vuex": "^3.5.1"
   },
   "devDependencies": {

@@ -12,7 +12,7 @@
         <g-link to="/talks/">Talks</g-link>
       </li>
       <li>
-        <a href="https://bbb.dev/shop">Shop</a>
+        <g-link to="/store/">Store</g-link>
       </li>
       <li>
         <g-link to="/about/">About</g-link>

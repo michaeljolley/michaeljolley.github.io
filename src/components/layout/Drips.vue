@@ -1,8 +1,8 @@
 <template>
   <div class="drips">
-      <div class="bar blue"></div>
-      <div class="bar pink"></div>
-      <div class="bar mint"></div>
+    <div class="bar blue"></div>
+    <div class="bar pink"></div>
+    <div class="bar mint"></div>
   </div>
 </template>
 
@@ -12,8 +12,8 @@ export default {};
 <style lang="scss">
 @media (min-width: $breakpoint-desktop) {
   .drips {
-      display: flex;
-      justify-content: flex-end;
+    display: flex;
+    justify-content: flex-end;
 
     .bar {
       height: 60px;
@@ -49,10 +49,9 @@ export default {};
 }
 
 @media (min-width: $breakpoint-phone) and (max-width: $breakpoint-desktop) {
-
   .drips {
-      display: flex;
-      justify-content: flex-end;
+    display: flex;
+    justify-content: flex-end;
 
     .bar {
       height: 60px;

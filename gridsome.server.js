@@ -5,7 +5,10 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
+const StripeSource = require('./src/plugins/stripe')
+
 module.exports = function (api) {
+
   api.loadSource(({ addSchemaTypes, schema }) => {
     addSchemaTypes([
       schema.createObjectType({
@@ -23,6 +26,8 @@ module.exports = function (api) {
       })
     ])
   })
+
+  api.loadSource(args => StripeSource(args))
 
   api.createPages(({ createPage }) => {
     // Use the Pages API here: https://gridsome.org/docs/pages-api/

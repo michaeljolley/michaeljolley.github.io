@@ -2,9 +2,10 @@
   <div id="app">
     <Header />
     <SubHeader />
+    <CartDrop />
 
-    <slot/>
-    
+    <slot />
+
     <Footer />
   </div>
 </template>
@@ -21,29 +22,30 @@ query {
 import SubHeader from "@/components/layout/SubHeader.vue";
 import Footer from "@/components/layout/Footer.vue";
 import Header from "@/components/layout/Header.vue";
+import CartDrop from "@/components/CartDrop.vue";
 
 export default {
-  components: { Footer, Header, SubHeader },
+  components: { CartDrop, Footer, Header, SubHeader },
   metaInfo() {
     return {
       meta: [
         {
           key: "twitter:card",
           name: "twitter:card",
-          content: "summary_large_image"
+          content: "summary_large_image",
         },
         {
           key: "twitter:site",
           name: "twitter:site",
-          content: "@baldbeardbuild"
+          content: "@baldbeardbuild",
         },
         {
           key: "copyright",
           name: "copyright",
-          content: "Copyright by Michael Jolley. All Rights Reserved."
-        }
-      ]
+          content: "Copyright by Michael Jolley. All Rights Reserved.",
+        },
+      ],
     };
-  }
+  },
 };
 </script>

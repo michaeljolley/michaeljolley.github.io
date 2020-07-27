@@ -13,6 +13,9 @@ $pink: #FE6584;
 $mint: #3DDDC2;
 $gold: #F9C378;
 
+$dark-pink: darken($pink, 45%);
+$light-pink: lighten($pink, 15%);
+
 $white: #ffffff;
 $black: #000000;
 $gray: #a5a5a5;

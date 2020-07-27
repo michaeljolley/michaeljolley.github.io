@@ -1,16 +1,17 @@
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { config, library } from '@fortawesome/fontawesome-svg-core'
-import { faChevronUp, faChevronLeft, faChevronRight, faRss, faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
-import { faCodepen, faYoutube, faInstagram, faLinkedin, faGithub, faTwitter, faDribbble, faGithubAlt, faTwitch, faDiscord } from '@fortawesome/free-brands-svg-icons'
+import { faChevronUp, faTrashAlt, faCartPlus, faShoppingCart, faChevronLeft, faChevronRight, faRss, faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faCodepen, faStripeS, faYoutube, faInstagram, faLinkedin, faGithub, faTwitter, faDribbble, faGithubAlt, faTwitch, faDiscord } from '@fortawesome/free-brands-svg-icons'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import Vuex from "vuex";
+import VueCarousel from 'vue-carousel';
 
 import store from "./state/Store";
 import * as types from '@/state/Mutations';
 
 config.autoAddCss = false;
-library.add(faCodepen, faDiscord, faYoutube, faGithubAlt, faGithub, faLinkedin,
-  faTwitter, faDribbble, faTwitch, faInstagram, faChevronUp, faTimes, faChevronLeft, faChevronRight, faRss, faBars)
+library.add(faCodepen, faTrashAlt, faCartPlus, faShoppingCart, faDiscord, faYoutube, faGithubAlt, faGithub, faLinkedin,
+  faTwitter, faDribbble, faStripeS, faTwitch, faInstagram, faChevronUp, faTimes, faChevronLeft, faChevronRight, faRss, faBars)
 
 import "~/assets/main.scss";
 import 'prismjs/themes/prism-okaidia.css'
@@ -19,10 +20,11 @@ import DefaultLayout from '~/layouts/Default.vue'
 import AddBottomLayout from '~/layouts/AddBottom.vue'
 
 export default function (Vue, { appOptions, router, head, isClient }) {
-  
+
   Vue.use(Vuex)
+  Vue.use(VueCarousel);
   appOptions.store = store
-  
+
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
   Vue.component('AddBottomLayout', AddBottomLayout)

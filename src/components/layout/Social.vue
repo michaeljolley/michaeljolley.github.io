@@ -1,59 +1,75 @@
 <template>
   <div class="social-links">
-        <a target="_blank"
-            href="https://twitter.com/baldbeardbuild"
-            class="dot twitter" title="Twitter" rel="noopener">
-            <font-awesome :icon="['fab', 'twitter']" swap-opacity></font-awesome>
-            <span class="screen-reader-text">Twitter</span>
-        </a>
-            <a
-          target="_blank"
-          href="https://www.twitch.tv/baldbeardedbuilder"
-          class="dot twitch" title="Twitch" rel="noopener"
-        >
-          <font-awesome :icon="['fab', 'twitch']"></font-awesome>
-          <span class="screen-reader-text">Twitch</span>
-        </a>
-             <a
-          target="_blank"
-          href="https://youtube.com/baldbeardedbuilder" 
-          class="dot youtube" title="YouTube" rel="noopener"
-        >
-          <font-awesome :icon="['fab', 'youtube']"></font-awesome>
-          <span class="screen-reader-text">YouTube</span>
-        </a>
-            <a
-          target="_blank"
-          href="https://www.instagram.com/baldbeardedbuilder/"
-          class="dot instagram" title="Instagram" rel="noopener"
-        >
-          <font-awesome :icon="['fab', 'instagram']"></font-awesome>
-          <span class="screen-reader-text">Instagram</span>
-        </a>
-             <a
-          target="_blank"
-          href="https://github.com/michaeljolley"
-          class="dot github" title="GitHub" rel="noopener"
-        >
-          <font-awesome :icon="['fab', 'github-alt']"></font-awesome>
-          <span class="screen-reader-text">GitHub</span>
-        </a>
-            <a
-          target="_blank"
-          href="https://www.linkedin.com/in/michaelwjolley/"
-          class="dot linkedin" title="LinkedIn" rel="noopener"
-        >
-          <font-awesome :icon="['fab', 'linkedin']"></font-awesome>
-          <span class="screen-reader-text">LinkedIn</span>
-        </a>
-            <a
-          target="_blank"
-          href="https://discord.gg/XSG7HJm"
-          class="dot discord" title="Discord" rel="noopener"
-        >
-          <font-awesome :icon="['fab', 'discord']"></font-awesome>
-          <span class="screen-reader-text">Discord</span>
-        </a>
+    <a
+      target="_blank"
+      href="https://twitter.com/baldbeardbuild"
+      class="dot twitter"
+      title="Twitter"
+      rel="noopener"
+    >
+      <font-awesome :icon="['fab', 'twitter']" swap-opacity></font-awesome>
+      <span class="screen-reader-text">Twitter</span>
+    </a>
+    <a
+      target="_blank"
+      href="https://www.twitch.tv/baldbeardedbuilder"
+      class="dot twitch"
+      title="Twitch"
+      rel="noopener"
+    >
+      <font-awesome :icon="['fab', 'twitch']"></font-awesome>
+      <span class="screen-reader-text">Twitch</span>
+    </a>
+    <a
+      target="_blank"
+      href="https://youtube.com/baldbeardedbuilder"
+      class="dot youtube"
+      title="YouTube"
+      rel="noopener"
+    >
+      <font-awesome :icon="['fab', 'youtube']"></font-awesome>
+      <span class="screen-reader-text">YouTube</span>
+    </a>
+    <a
+      target="_blank"
+      href="https://www.instagram.com/baldbeardedbuilder/"
+      class="dot instagram"
+      title="Instagram"
+      rel="noopener"
+    >
+      <font-awesome :icon="['fab', 'instagram']"></font-awesome>
+      <span class="screen-reader-text">Instagram</span>
+    </a>
+    <a
+      target="_blank"
+      href="https://github.com/michaeljolley"
+      class="dot github"
+      title="GitHub"
+      rel="noopener"
+    >
+      <font-awesome :icon="['fab', 'github-alt']"></font-awesome>
+      <span class="screen-reader-text">GitHub</span>
+    </a>
+    <a
+      target="_blank"
+      href="https://www.linkedin.com/in/michaelwjolley/"
+      class="dot linkedin"
+      title="LinkedIn"
+      rel="noopener"
+    >
+      <font-awesome :icon="['fab', 'linkedin']"></font-awesome>
+      <span class="screen-reader-text">LinkedIn</span>
+    </a>
+    <a
+      target="_blank"
+      href="https://discord.gg/XSG7HJm"
+      class="dot discord"
+      title="Discord"
+      rel="noopener"
+    >
+      <font-awesome :icon="['fab', 'discord']"></font-awesome>
+      <span class="screen-reader-text">Discord</span>
+    </a>
   </div>
 </template>
 
@@ -61,9 +77,8 @@
 export default {};
 </script>
 <style lang="scss">
-
 .social-links {
- // margin: 80px 0 20px 0;
+  // margin: 80px 0 20px 0;
   display: flex;
   justify-content: flex-start;
   align-content: flex-start;
@@ -86,27 +101,26 @@ export default {};
       background-color: $brand-twitter;
     }
     &.linkedin:hover {
-        background-color: $brand-linkedin;
+      background-color: $brand-linkedin;
     }
     &.twitch:hover {
-        background-color: $brand-twitch;
+      background-color: $brand-twitch;
     }
     &.discord:hover {
-        background-color: $brand-discord;
+      background-color: $brand-discord;
     }
     &.youtube:hover {
-        background-color: $brand-youtube;
+      background-color: $brand-youtube;
     }
     &.github:hover {
-        background-color: $white;
-        color: $brand-github;
+      background-color: $white;
+      color: $brand-github;
     }
     &.instagram:hover {
-        background-color: $brand-instagram;
+      background-color: $brand-instagram;
     }
-
   }
- }
+}
 
 @media (max-width: $breakpoint-desktop) {
   .dot {
@@ -114,28 +128,27 @@ export default {};
       background-color: $brand-twitter;
     }
     &.linkedin {
-        background-color: $brand-linkedin;
+      background-color: $brand-linkedin;
     }
     &.twitch {
-        background-color: $brand-twitch;
+      background-color: $brand-twitch;
     }
     &.discord {
-        background-color: $brand-discord;
+      background-color: $brand-discord;
     }
     &.youtube {
-        background-color: $brand-youtube;
+      background-color: $brand-youtube;
     }
     &.github {
-        background-color: $white;
-        color: $brand-github;
+      background-color: $white;
+      color: $brand-github;
     }
     &.instagram {
-        background-color: $brand-instagram;
+      background-color: $brand-instagram;
     }
   }
 }
 
- 
 @media (max-width: $breakpoint-phone) {
   .social-links {
     margin-top: 12px;
