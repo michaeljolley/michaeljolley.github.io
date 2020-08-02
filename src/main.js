@@ -4,7 +4,6 @@ import { faChevronUp, faTrashAlt, faCartPlus, faShoppingCart, faChevronLeft, faC
 import { faCodepen, faStripeS, faYoutube, faInstagram, faLinkedin, faGithub, faTwitter, faDribbble, faGithubAlt, faTwitch, faDiscord } from '@fortawesome/free-brands-svg-icons'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import Vuex from "vuex";
-import VueCarousel from 'vue-carousel';
 
 import store from "./state/Store";
 import * as types from '@/state/Mutations';
@@ -22,7 +21,6 @@ import AddBottomLayout from '~/layouts/AddBottom.vue'
 export default function (Vue, { appOptions, router, head, isClient }) {
 
   Vue.use(Vuex)
-  Vue.use(VueCarousel);
   appOptions.store = store
 
   // Set default layout as a global component
