@@ -79,7 +79,7 @@ If you want a perfectly flat top with no cracks between boards, you need to use 
 
 Once the marks were in place, I used my pocket-hole jig to create holes for the screws. Once they were all pre-drilled I glued the boards and quickly aligned and screwed them together to help hold them in place while the glue dried. The glue will provide more than enough strength to hold them together. The screws were more helpful for holding them while I worked and before I could clamp them all together.
 
-Once the glue and screws were in place, I added clamps on both sides of the board to help ensure good contact across the boards and left them to dry for a day.
+With the glue and screws ready, I added clamps on both sides of the board to help ensure good contact across the boards and left them to dry for a day.
 
 ## Sanding, Sanding & More Sanding
 
