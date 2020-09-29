@@ -1,78 +1,64 @@
 <template>
-  <header class="site-header">
-    <div class="inner">
-      <g-link to="/" class="logo-text">
-        <div class="title">
-            <h1 class="site-title">
-              Michael Jolley
-            </h1> 
-            <p>bald. bearded. builder.</p>
-        </div>
-      </g-link>
-      <Nav/>
-      <!-- <a href="#" class="pill">Watch Live!</a> -->
-    </div>
+  <header>
+		<g-link to="/" class="title" title="back home" aria-label="Bald Bearded Builder Logo" aria-role="img">
+			<div class="logo"></div>
+			<div class="text">
+				<h1>
+					Michael Jolley
+				</h1> 
+				<p>bald. bearded. builder.</p>
+			</div>
+		</g-link>
+		<Nav/>
   </header>
 </template>
 
 <script>
-import Nav from "@/components/layout/Nav.vue";
+import Nav from './Nav';
 
 export default {
-  components: {
-    Nav
-  }
+  components: { Nav }
 };
 </script>
-<style lang="scss">
-.site-header {
-  background-color: $dark-blue;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 90;
-  color: $white;
+<style lang="scss" scoped>
+header {
+	justify-content: space-evenly;
+ 
+	background-color: $lightgray;
 
+	border-bottom: 4px solid;
+  border-image-source: linear-gradient(90deg, rgba(255,0,255,1) 0%, rgba(0,255,255,1) 100%);
+	border-image-slice: 1;
+	
+	.title {
+		display: flex;
+		text-decoration: none;
+		margin-left: 5px;
 
-  .inner {
-    height: 70px;
-    justify-content: space-between;
+		.logo {
+			background: $logo-svg no-repeat;
+			height: 45px;
+			width: 45px;
+		}
 
-    .title {
-      font-family: 'PT Sans', sans-serif;
-      background: $logo-svg no-repeat;
-      padding-left: 70px;
+		.text {
+			display: flex;
+			flex-direction: column;
+			margin-left: 15px;
 
-      h1 {
-        margin: 0;
-        font-size: 24pt;
-      }
-      p {
-        color: $gray;
-        font-size: .7em;
-        font-weight: normal;
-        margin:  0;
-        text-transform: uppercase;
-      }
-    }
+			h1 {
+				color: $black;
+				font-size: 1.2em;
+				margin: 0;
+			}
 
-    @media (max-width: $breakpoint-phone) {
-      .title {
-        padding-left: 65px;
-      }
-    }
-    
-    a {
-      color: $white;
-      text-decoration: none;
-
-      &.pill {
-        background-color: $pink;
-        text-align: center;
-        padding: 5px 15px;
-        border-radius: 30px;
-      }
-    }
-  }
+			p {
+				margin: 1px 0 0 0;
+				font-size: .7em;
+				color: $darkblue;
+			}
+		}
+	}
  }
+ 
 </style>

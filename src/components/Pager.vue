@@ -32,27 +32,4 @@ export default {
 };
 </script>
 <style lang="scss">
-.pager {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: stretch;
-  margin-bottom: 20px;
-
-  .next, .prev {
-    padding: 15px;
-    background-color: $dark-blue;
-    font-family: 'PT Sans', sans-serif;
-    font-size: 1.2em;
-  
-    &.hidden {
-      background-color: $mid-blue;
-    }
-
-    a {
-      color: $mint
-    }
-  }
-}
 </style>

@@ -1,17 +1,10 @@
 <template>
   <div id="app">
-    <Header />
-    <SubHeader />
+    <Nav/>
 
-    <div class="site-content">
-      <div class="inner">
-        <main class="site-main">
-          <slot />
-        </main>
-      </div>
-    </div>
-    
-    <Footer />
+    <main>
+      <slot/>
+    </main>
   </div>
 </template>
 
@@ -24,12 +17,11 @@ query {
 </static-query>
 
 <script>
-import SubHeader from "@/components/layout/SubHeader.vue";
 import Footer from "@/components/layout/Footer.vue";
-import Header from "@/components/layout/Header.vue";
+import Nav from "@/components/layout/Nav.vue";
 
 export default {
-  components: { Footer, Header, SubHeader },
+  components: { Footer, Nav },
   metaInfo() {
     return {
       meta: [
@@ -46,7 +38,7 @@ export default {
         {
           key: "copyright",
           name: "copyright",
-          content: "Copyright by Michael Jolley. All Rights Reserved."
+          content: "Copyright by Bald Bearded Builder, LLC. All Rights Reserved."
         }
       ]
     };

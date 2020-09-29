@@ -10,23 +10,21 @@ import * as types from '@/state/Mutations';
 
 config.autoAddCss = false;
 library.add(faCodepen, faDiscord, faYoutube, faGithubAlt, faGithub, faLinkedin,
-  faTwitter, faDribbble, faTwitch, faInstagram, faChevronUp, faTimes, faChevronLeft, faChevronRight, faRss, faBars)
+  faTwitter, faDribbble, faTwitch, faInstagram, faChevronUp, faTimes, faChevronLeft, faChevronRight, faRss, faBars);
 
 import "~/assets/main.scss";
-import 'prismjs/themes/prism-okaidia.css'
+import 'prismjs/themes/prism-okaidia.css';
 
-import DefaultLayout from '~/layouts/Default.vue'
-import AddBottomLayout from '~/layouts/AddBottom.vue'
+import DefaultLayout from '~/layouts/Default.vue';
 
-export default function (Vue, { appOptions, router, head, isClient }) {
-  
-  Vue.use(Vuex)
-  appOptions.store = store
-  
+export default function (Vue, { appOptions, router, head }) {
+
+  Vue.use(Vuex);
+  appOptions.store = store;
+
   // Set default layout as a global component
-  Vue.component('Layout', DefaultLayout)
-  Vue.component('AddBottomLayout', AddBottomLayout)
-  Vue.component('font-awesome', FontAwesomeIcon)
+  Vue.component('Layout', DefaultLayout);
+  Vue.component('font-awesome', FontAwesomeIcon);
 
   head.link.push({
     rel: 'stylesheet',
@@ -35,6 +33,6 @@ export default function (Vue, { appOptions, router, head, isClient }) {
 
   router.beforeEach((to, from, next) => {
     store.dispatch(types.NAV_CLOSE);
-    next()
-  })
+    next();
+  });
 }

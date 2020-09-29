@@ -25,7 +25,7 @@ export default {
   
   h2 {
     padding: 0 20px;
-    color: $mint;
+    color: $neonblue;
     margin-top: 20px;
   }
   
@@ -33,7 +33,6 @@ export default {
     list-style-type: none;
 
     li {  
-      background-color: $lightest-gray;
 
       &:nth-child(odd) {
        background-color: $white;

@@ -1,12 +1,13 @@
 <template>
   <Layout>
-    <article class="page">
-      <header class="entry-header">
-        <g-link title="Code of Conduct" :to="/code-of-conduct/">
-          <img src="https://res.cloudinary.com/dk3rdh3yo/image/upload/c_scale/v1591405456/cover_knfirw.png" class="cld-responsive lazyload" alt="Hands of various people joined" />
-        </g-link>
+    <article>
+      <header>
+          <g-image
+            alt="Hands of various people joined"
+            src="~/assets/images/cover_knfirw.png"
+            />
       </header>
-      <div class="entry-content">
+      <section>
         <h1>Community Guidelines</h1>
        
         <p>The Bald Bearded Builder community is filled with amazing, clever and creative people, and we're excited 
@@ -102,7 +103,7 @@
 
         <h3>THANKS</h3>
         <p>This code of conduct is hugely inspired by You Got This Conference.</p>
-      </div>
+      </section>
     </article>
   </Layout>
 </template>
@@ -110,10 +111,7 @@
 <script>
 export default {
   metaInfo: {
-    title: "Bald Bearded Builder Community Code of Conduct"
+    title: "Community Code of Conduct"
   }
 };
 </script>
-<style lang="scss" scoped>
-
-</style>

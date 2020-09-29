@@ -41,19 +41,15 @@ li {
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    border: 1px solid $light-gray;
-    background-color: $dark-gray;
   }
 
   blockquote {
     margin: 0 40px 10px;
-    color: $dark-blue;
     cite {
       margin-bottom: 5px;
       display: inline-block;
       font-size: .8em;
       .author {
-        color: $dark-blue;
         font-weight: bold;
       }
 
@@ -62,10 +58,9 @@ li {
       }
 
       a {
-        color: $dark-gray;
         font-style: normal;
         &:hover {
-          color: $pink;
+          color: $neonpink;
         }
       }
     }

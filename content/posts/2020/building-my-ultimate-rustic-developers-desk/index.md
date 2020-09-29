@@ -1,7 +1,7 @@
 ---
 date: 2020-08-03
 title: "Building my Ultimate Rustic Developers Desk"
-image: https://res.cloudinary.com/dk3rdh3yo/image/upload/c_scale,w_auto/Artboard_2_bferrw.png
+cover: ./cover-image.png
 banner_image_alt: Partially visible view of the newly built desk
 description: Since I started woodworking, I've had the goal of building my own desk, complete with a wireless charger and built-in USB hub.
 tags: [diy, desk, setup, woodworking]
@@ -13,25 +13,25 @@ In 20 years of being a developer, I've used lots of various desk types: sitting;
 
 The reason I say "my" ultimate developer desk, is because we all have our own preferences for how we work best. Over the years I've found a few things that I prefer in my desk:
 
-### Length Over Depth
+## Length Over Depth
 
 My arms aren't really long so I prefer a desk that isn't as deep. I like to be able to reach the back of my desk without a lot of reaching. However, I love having a long desk so I can put more on it without cramping my work area. So after taking some measurements of my current desk I finalized on a size of 7' (1.82m) x 27.5" (698.5mm). This depth was also partially determined because I had decided to build with 2x6 boards. In the US, 2x6 boards have an actual size of 1.5"x5.5". So 5 boards would naturally create my depth without the need for cuts.
 
-### Strength for Mountings
+## Strength for Mountings
 
 Previously, I had 3 24" monitors mounted to the wall behind my desk. I'm moving these to mounts on the desk itself so I can raise & lower it easier. Also, I recently purchased a new computer and want it on the desk rather than underneath. It's a behemoth at nearly 50 pounds (22.6kg) and will sit near the edge of the desk so strength will be important.
 
-### Technical Conveniences
+## Technical Conveniences
 
 I'm a stickler for good cable management so it would be nice to include some way to manage cables within the desk that makes things look tidy. Also, the correct number of USB ports is always n+1 so I want to integrate a USB hub into the desk, ideally mounted flush with the desktop, so I can always have a spot to plug in something quick.
 
 Finally, I don't want to use a cable to charge my phone. That's so 2018. I want to integrate a wireless charger, maybe under the desk, so I can just set my phone in a specific area on the desktop to charge it while I work.
 
-### Motorized Sit/Stand Capabilities
+## Motorized Sit/Stand Capabilities
 
 I've been spoiled in the past by the Ikea sit/stand desk and want that convenience again. I'm currently using a sit/stand desk but it's a very manual transition between those states so I want to automate it. Also, the monitors being mounted on the wall limits my current sit/stand flexibility so those are going to come to the desk.
 
-### Worn & Rustic Aesthetic
+## Worn & Rustic Aesthetic
 
 I'm not sure I know the correct name for the design/style/whatever of my office. There's lots of wood, iron pipe, a ship-lap wall, and overall "rustic/industrial" vibe so I don't want a perfectly shaped & polished desk. My goal was to build something that looks a little worn and old.
 
@@ -62,8 +62,9 @@ There weren't a lot of materials required. I already had all the screws needed s
 
 ## Measuring & Measuring & Cutting
 
-<img style="width:30%" src="https://res.cloudinary.com/dk3rdh3yo/image/upload/c_scale,w_auto/1_gn0y3y.png" 
- alt="Two inch blocks sitting beside a miter saw that have been cut from the ends of two by sixes" class="right"> First up was cutting the boards to length. Because the ends of store-bought boards aren't always straight, I cut 2" (50mm) off one end of each. Then I measured, marked, and cut one of the boards 7' (1.82m) from the straight end.
+![Two inch blocks sitting beside a miter saw that have been cut from the ends of two by sixes](./1_gn0y3y.png)
+
+First up was cutting the boards to length. Because the ends of store-bought boards aren't always straight, I cut 2" (50mm) off one end of each. Then I measured, marked, and cut one of the boards 7' (1.82m) from the straight end.
 
 Rather than measure and mark the others, I used a square jig I had previously created on my tabletop with two scrap pieces of wood to square each one with the jig and cut board to mark the cut line. This made sure all boards were the same length and saved the time of measuring each board by hand. With each board cut to length, I was ready to glue them together.
 
@@ -71,11 +72,11 @@ If you want a perfectly flat top with no cracks between boards, you need to use 
 
 ## Stuck On You
 
-<img style="width:30%"   src="https://res.cloudinary.com/dk3rdh3yo/image/upload/c_scale,w_auto/3_ztos4f.png" class="right" alt="Boards laid on a table with clamps, wood glue and a drill sitting on them.">Before I started the glue-up, I clamped a scrap board to my table that I knew was straight. Then I lined each board against it and reviewed how each board fit with those around it and compared their uniqueness to decide which boards should be in the front versus the back. Once I got each laid out where I liked them, I made some markings to add some pocket screws for stability.
+![Boards laid on a table with clamps, wood glue and a drill sitting on them.](./3_ztos4f.png)
 
-<blockquote style="width: 60%;">
-<p>I had originally planned to use glue and biscuits to align the boards, but when I got to the glue-up I forgot that I had the biscuits and a plate joiner. Because, you know... I'm a winner.</p>
-</blockquote>
+Before I started the glue-up, I clamped a scrap board to my table that I knew was straight. Then I lined each board against it and reviewed how each board fit with those around it and compared their uniqueness to decide which boards should be in the front versus the back. Once I got each laid out where I liked them, I made some markings to add some pocket screws for stability.
+
+> I had originally planned to use glue and biscuits to align the boards, but when I got to the glue-up I forgot that I had the biscuits and a plate joiner. Because, you know... I'm a winner.
 
 Once the marks were in place, I used my pocket-hole jig to create holes for the screws. Once they were all pre-drilled I glued the boards and quickly aligned and screwed them together to help hold them in place while the glue dried. The glue will provide more than enough strength to hold them together. The screws were more helpful for holding them while I worked and before I could clamp them all together.
 
@@ -87,7 +88,9 @@ I was really messy in my glue-up. I didn't bother to clean the joints between th
 
 ## Let's Be Extra
 
-<img style="width:30%"   src="https://res.cloudinary.com/dk3rdh3yo/image/upload/c_scale,w_auto/5_ucdvfo.png"  class="right" alt="Collage of routed channels for a wireless charger and USB hub.">Hi. My name is Michael and I'm extra. I'm the guy who was being interviewed for a job and suggested they hire me because I have an animatronic puppet that would be great to control with their product. But hey, I hear the best way to overcome your issues is to first admit you have the problem.
+![Collage of routed channels for a wireless charger and USB hub.](./5_ucdvfo.png)
+
+Hi. My name is Michael and I'm extra. I'm the guy who was being interviewed for a job and suggested they hire me because I have an animatronic puppet that would be great to control with their product. But hey, I hear the best way to overcome your issues is to first admit you have the problem.
 
 I saw a YouTube video a while back where someone had built a desk with a wireless charger mounted underneath. They could set their phone on the top of the desk and charge it while they worked.
 
@@ -101,7 +104,9 @@ Needless to say, I was really worried about the routing. One wrong cut and the e
 
 ## Make It Pretty
 
-<img style="width:30%"   src="https://res.cloudinary.com/dk3rdh3yo/image/upload/c_scale,w_auto/7_snotgj.png" class="right" alt="Stained desk with fresh coat of polycrylic applied and still drying.">I spent some time at my local hardware store and picked a stain that I thought would match the rest of my office well. After a quick tutorial from the staff at the store, I set off to stain and poly the desk. First, I created two samples using some scrap wood and the stain with one and two coats. It really seemed like one coat provided the color I wanted and that was perfect because I'm lazy.
+![Stained desk with fresh coat of polycrylic applied and still drying.](./7_snotgj.png)
+
+I spent some time at my local hardware store and picked a stain that I thought would match the rest of my office well. After a quick tutorial from the staff at the store, I set off to stain and poly the desk. First, I created two samples using some scrap wood and the stain with one and two coats. It really seemed like one coat provided the color I wanted and that was perfect because I'm lazy.
 
 After applying the stain with a foam brush, I let it sit for about 7-8 minutes and wiped the excess off with scraps of an old t-shirt. Then I let the stain dry for 24 hours.
 
@@ -113,7 +118,7 @@ I searched online for programmable motorized legs to use as the base. The key me
 
 Once the polycrylic was dry, I mounted it to the desktop and stood it up for the first time. Then it was just a matter of adding the wireless charger, USB hub, and then setting everything up in my office.
 
-<a href="https://res.cloudinary.com/dk3rdh3yo/image/upload/c_scale,w_auto/9_qmwjvi.png" target="_blank"><img style="width: 98%;left: inherit;margin: auto;position: inherit;" src="https://res.cloudinary.com/dk3rdh3yo/image/upload/c_scale,w_auto/9_qmwjvi.png"  alt="Finished desk assembled in my office."></a>
+![Finished desk assembled in my office.](./9_qmwjvi.png)
 
 ## What Did I Miss?
 

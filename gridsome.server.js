@@ -6,6 +6,10 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = function (api) {
+  api.loadSource(store => {
+    store.addMetadata('monetization', process.env.VUE_APP_MONETIZATION)
+  })
+
   api.loadSource(({ addSchemaTypes, schema }) => {
     addSchemaTypes([
       schema.createObjectType({

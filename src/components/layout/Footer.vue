@@ -1,15 +1,13 @@
 <template>
-  <footer class="site-footer">
-    <div class="inner">
+  <footer>
+    <div class="container">
       <div class="site-info">
-         &copy;
-        <a href="/">Bald Bearded Builder.</a><span class="allrights"> all rights reserved.</span> &nbsp;| &nbsp;
-        <g-link to="/code-of-conduct/">Code of Conduct</g-link>
+        &copy; Bald Bearded Builder.<span> All rights reserved.</span> | 
+        <g-link to="/code-of-conduct/" title="Code of Conduct">Code of Conduct</g-link>
       </div>
       <div class="back-to-top">
-        <a v-on:click="top" class="top-link square fill-horizontal" title="back to top">
+        <a v-on:click="top" title="back to top" aria-label="back to top">
           <font-awesome :icon="['fa', 'chevron-up']"></font-awesome>
-          <span class="screen-reader-text">back to top</span>
         </a>
       </div>
     </div>
@@ -25,34 +23,34 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.site-footer {
-  color: $gray;
-  background-color: $dark-blue;
-  height: 30px;
-  padding: 20px 0 10px 0;
+footer {
+  
   font-size: .8em;
-  .inner {
-    justify-content: space-between;
+  color: $lightgray;
+  margin-top: 20px;
+  
+  .container {
+    display: flex;
+    width: 100%;
+    padding: 20px 10px 0 10px;
+	  justify-content: space-between;
+
+
+    border-top: 1px solid;
+    border-image-source: linear-gradient(90deg, rgba(255,0,255,1) 0%, rgba(0,255,255,1) 100%);
+    border-image-slice: 1;
   }
-  a {
-    color: $white;
-    text-decoration: none;
-    cursor: pointer;
-    &:hover {
-      color: $mint;
-    }
-  }
+
   .back-to-top {
-    .screen-reader-text {
-      margin-left: 10px;
-    }
-  } 
-}
+    cursor: pointer;
 
-@media (max-width: $breakpoint-phone) {
-  .allrights {
-    display: none;
+    a {
+      color: $neonpink;
+
+      &:hover, :active {
+        color: $white;
+      }
+    }
   }
 }
-
 </style>

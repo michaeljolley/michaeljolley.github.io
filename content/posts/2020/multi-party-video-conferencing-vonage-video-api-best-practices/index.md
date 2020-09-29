@@ -1,7 +1,7 @@
 ---
 date: 2020-07-23
 title: "Best Practices for Multi-Party Video Conferencing with the Vonage Video API"
-image: https://res.cloudinary.com/dk3rdh3yo/image/upload/c_scale,w_auto/Dev_Multi-Party-Video-Conferencing_1000x420_kkzyzz.png
+cover: ./cover-image.png
 banner_image_alt: User in front of computer participating in a multi-party video session.
 description: Follow this guide to learn about platform limitations and best practices when moving Vonage Video API sessions from one-on-one to multi-party.
 canonical_url: https://www.nexmo.com/blog/2020/07/23/best-practices-for-multi-party-video-conferencing-with-the-vonage-video-api-dr/

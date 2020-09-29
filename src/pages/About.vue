@@ -1,13 +1,13 @@
 <template>
   <Layout>
-    <article class="page">
-      <header class="entry-header">
-          <img 
-              class="cld-responsive lazyload"
-              src="https://res.cloudinary.com/dk3rdh3yo/image/upload/c_scale/64070619-28fef100-cc2a-11e9-8e32-837e130722ca_mjexti.png"
-              alt="Michael Jolley standing in front of a brick wall."/>
+    <article>
+      <header>
+        <g-image 
+        alt="Michael Jolley standing in front of a brick wall."
+        src="~/assets/images/michael-brick.png"
+       />
       </header>
-      <div class="entry-content">
+      <section>
         <h1>About Michael Jolley</h1>
         <p>
           From his early days with lincoln logs to building custom ERP systems, Michael has always been a builder. With
@@ -70,11 +70,10 @@
           <br />I made one little page and my mom’s voice raised
           <br />She said ‘You better use those tabs and stop with the spaces’
         </p>
-      </div>
+      </section>
     </article>
   </Layout>
 </template>
-
 <script>
 export default {
   metaInfo: {
@@ -82,6 +81,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss">
-</style>

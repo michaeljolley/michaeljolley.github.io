@@ -1,13 +1,13 @@
 <template>
   <Layout>
-    <article class="page">
-      <header class="entry-header">
-        <img 
-            class="cld-responsive lazyload"
-            src="https://res.cloudinary.com/dk3rdh3yo/image/upload/c_scale/64070619-28fef100-cc2a-11e9-8e32-837e130722ca_mjexti.png"
-            alt="Michael Jolley standing in front of a brick wall."/>
+    <article>
+      <header>
+        <g-image 
+        alt="Michael Jolley standing in front of a brick wall."
+        src="~/assets/images/michael-brick.png"
+       />
       </header>
-      <div class="entry-content">
+      <section>
         <h1>Thanks for submitting a comment!</h1>
         <p>
           All comments are loaded as pull requests on my websites'
@@ -16,7 +16,7 @@
             target="_blank"
           >GitHub repository</a>. Once it's merged your comments will be displayed.
         </p>
-      </div>
+      </section>
     </article>
   </Layout>
 </template>

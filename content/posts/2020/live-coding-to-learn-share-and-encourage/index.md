@@ -1,7 +1,7 @@
 ---
 date: 2020-04-12
 title: "Live-Coding to Learn, Share and Encourage"
-image: https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/Artboard_2_pvr1nv.png
+cover: ./cover-image.png
 banner_image_alt: Collage of things that occurred on the Bald Bearded Builder stream on Twitch.
 description: A reflection on one year of coding live on Twitch to learn new technologies, share what I know, and encourage others to grow personally & professionally.
 tags: [live, coding, teach, twitch, learn]

@@ -1,54 +1,21 @@
 <template>
-  <AddBottomLayout>
-     <div class="site-content">
-      <div class="inner">
-        <main class="site-main">
-          <article class="page">
-            <PostHeader
-              :title="$page.post.title"
-              :banner_image_alt="$page.post.banner_image_alt"
-              :path="$page.post.path"
-              :image="$page.post.image"
-              :date="$page.post.date"
-              :comments="$page.comments.totalCount"
-              :showComments="true"
-              :showMeta="false"
-              :showTitle="false"
-            />
-            <div class="entry-content">
-              <h1>{{$page.post.title}}</h1>
-              <div class="entry-meta" v-if="$page.post.date">
-                <time class="published" :datetime="$page.post.date">{{ $page.post.date }}</time>
-                  |&nbsp;
-                  <a :href="$page.post.path + '#comments'">{{$page.comments.totalCount}} Comment<template v-if="$page.comments.totalCount !== 1">s</template></a>
-              </div>
-              <div class="content" v-html="$page.post.content">
-              </div>
-            </div>
-          </article>
-        </main>
-      </div>
-    </div>
-    
-    <div class="bottom-content">
-      <div class="inner">
-        <main class="site-main">
-          <div class="entry-content comments">
-            <h2>Comments</h2>
-          
-            <Comments :post="$page.post" :comments="$page.comments.edges" />
-          </div>
-        </main>
-      </div>
-    </div>
-    
-  </AddBottomLayout>
+  <Layout>
+     <article>
+      <header>
+        <g-image
+          :alt="$page.post.banner_image_alt"
+          :src="$page.post.cover.src"
+        />
+      </header>
+      <section v-html="$page.post.content"/>
+     </article>
+  </Layout>
 </template>
 <page-query>
   query Post ($path: String!) {
     post: post (path: $path) {
       id
-      image
+      cover
       path
       banner_image_alt
       title
@@ -135,8 +102,3 @@ export default {
   }
 };
 </script>
-<style lang="scss" >
-  .comments {
-    background-color: $lighter-gray;
-  }
-</style>

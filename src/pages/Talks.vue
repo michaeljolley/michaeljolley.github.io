@@ -1,5 +1,5 @@
 <template>
-  <AddBottomLayout>
+  <Layout>
 
      <div class="site-content">
       <div class="inner">
@@ -17,7 +17,7 @@
       </div>
     </div>
 
-  </AddBottomLayout>
+  </Layout>
 </template>
 
 <page-query>
