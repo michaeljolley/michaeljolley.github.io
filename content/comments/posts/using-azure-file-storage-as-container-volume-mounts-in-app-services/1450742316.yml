@@ -1,0 +1,8 @@
+postpath: /posts/using-azure-file-storage-as-container-volume-mounts-in-app-services/
+message: "Hi Divi. You shouldn't have to specify the volumes separately in the docker-compose. You can list it under the service as I show in the blog post. However, it is VERY important that you make sure the name you gave in the New Azure Storage Mount dialog matches the name in the docker-compose. Spelling & casing should match. In my example I entered \"data\" as the Name.\r\n\r\nAs for your second question, it's hard to identify what you're experiencing without seeing some code. Feel free to reach out via a Twitter DM with more information."
+name: Michael Jolley
+avatar: 'https://github.com/michaeljolley.png'
+redirect: 'https://baldbeardedbuilder.com/thanks/'
+identity: michaeljolley
+date: 2020-10-06T02:24:30.057Z
+id: 1450742316
