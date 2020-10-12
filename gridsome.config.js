@@ -11,6 +11,13 @@ function addStyleResource(rule) {
 }
 
 module.exports = {
+  devServer: {
+    proxy: {
+      '/.netlify/': {
+        target: 'http://localhost:9000/.netlify/'
+      }
+    }
+  },
   siteName: 'Bald. Bearded. Builder.',
   siteUrl: 'https://baldbeardedbuilder.com',
   siteDescription: 'Michael is the bald, bearded builder. Using his 20 years experience in software development and DevOps, this follicly challenged developer spends his days focused on helping others succeed.',

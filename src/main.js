@@ -19,10 +19,15 @@ import DefaultLayout from '~/layouts/Default.vue'
 import AddBottomLayout from '~/layouts/AddBottom.vue'
 
 export default function (Vue, { appOptions, router, head, isClient }) {
-  
+
+  head.script.push({
+    src: 'https://contentstorage.onenote.office.net/onenoteltir/immersivereadersdk/immersive-reader-sdk.1.0.0.js',
+    body: false
+  })
+
   Vue.use(Vuex)
   appOptions.store = store
-  
+
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
   Vue.component('AddBottomLayout', AddBottomLayout)
