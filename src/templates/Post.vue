@@ -20,8 +20,10 @@
               <div class="entry-meta" v-if="$page.post.date">
                 <time class="published" :datetime="$page.post.date">{{ $page.post.date }}</time>
                   |&nbsp;
-                  <button @click.prevent="handleLaunchImmersiveReader" class="immersive-reader-button" data-button-style="iconAndText" data-locale="en"></button>
- |&nbsp;
+                  <a class="immersiveReader" @click.prevent="handleLaunchImmersiveReader">
+                    Immersive Reader
+                  </a>
+                  |&nbsp;
                   <a :href="$page.post.path + '#comments'">{{$page.comments.totalCount}} Comment<template v-if="$page.comments.totalCount !== 1">s</template></a>
               </div>
               <div class="content" lang="en-us" v-html="$page.post.content">
@@ -178,10 +180,7 @@ export default {
   .comments {
     background-color: $lighter-gray;
   }
-  .immersive-reader-button {
-    background-color: white;
-    margin-top: 5px;
-    border: 1px solid black;
-    float: right;
+  .immersiveReader {
+    cursor: pointer;
   }
 </style>
