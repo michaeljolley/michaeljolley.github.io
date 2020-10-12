@@ -20,9 +20,13 @@
               <div class="entry-meta" v-if="$page.post.date">
                 <time class="published" :datetime="$page.post.date">{{ $page.post.date }}</time>
                   |&nbsp;
+                  <a class="immersiveReader" @click.prevent="handleLaunchImmersiveReader">
+                    Immersive Reader
+                  </a>
+                  |&nbsp;
                   <a :href="$page.post.path + '#comments'">{{$page.comments.totalCount}} Comment<template v-if="$page.comments.totalCount !== 1">s</template></a>
               </div>
-              <div class="content" v-html="$page.post.content">
+              <div class="content" lang="en-us" v-html="$page.post.content">
               </div>
             </div>
           </article>
@@ -72,12 +76,49 @@
     }
   }
 </page-query>
+
 <script>
+const axios = require('axios');
+
 import PostHeader from "@/components/posts/PostHeader";
 import Comments from "../components/Comments";
 export default {
   name: "Post",
   components: { Comments, PostHeader },
+  methods: {
+    getTokenAndSubdomainAsync: async function () {
+      return (await axios.get("/.netlify/functions/immersivereader")).data;
+    },
+    handleLaunchImmersiveReader: async function() {
+      try {
+        const { token, subdomain } = await this.getTokenAndSubdomainAsync();
+        const data = {
+            title: this.$page.post.title,
+            chunks: [{
+                content: this.$page.post.content,
+                mimeType: "text/html"
+            }]
+        };
+        // Learn more about options https://docs.microsoft.com/azure/cognitive-services/immersive-reader/reference#options
+        const options = {
+          "uiLang": "en-US",
+          "onExit": this.exitCallback,
+          "uiZIndex": 2000
+        };
+        ImmersiveReader.launchAsync(token, subdomain, data, options)
+            .catch(function (error) {
+                alert("Error in launching the Immersive Reader. Check the console.");
+                console.log(error);
+            });
+      }
+      catch (err) {
+        console.log(err);
+      }
+    },
+    exitCallback: () => {
+        console.log("This is the callback function. It is executed when the Immersive Reader closes.");
+    }
+  },
   metaInfo() {
     return {
       title: this.$page.post.title,
@@ -138,5 +179,8 @@ export default {
 <style lang="scss" >
   .comments {
     background-color: $lighter-gray;
+  }
+  .immersiveReader {
+    cursor: pointer;
   }
 </style>
