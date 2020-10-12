@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  background-color: $darkblue;
+  background: $darkblue;
   color: $lightgray;
   font-family: 'Roboto', sans-serif;
   height: 100%;
@@ -99,10 +99,10 @@ a {
   background: $neonblue !important; //linear-gradient(90deg, rgba(255,0,255,1) 0%, rgba(0,255,255,1) 100%) !important;
 }
 .bm-overlay {
-  background: $darkerblue !important;
+  background: $darkblue !important;
 }
 .bm-menu {
-  background: $darkblue !important;
+  background: $midblue !important;
 }
 .bm-cross {
   background: $neonpink !important;

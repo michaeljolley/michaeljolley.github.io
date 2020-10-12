@@ -1,10 +1,12 @@
 <template>
   <div id="app">
-    <Nav/>
+    <Header/>
 
     <main>
       <slot/>
     </main>
+    
+    <Footer/>
   </div>
 </template>
 
@@ -17,11 +19,11 @@ query {
 </static-query>
 
 <script>
+import Header from "@/components/layout/Header.vue";
 import Footer from "@/components/layout/Footer.vue";
-import Nav from "@/components/layout/Nav.vue";
 
 export default {
-  components: { Footer, Nav },
+  components: { Footer, Header },
   metaInfo() {
     return {
       meta: [

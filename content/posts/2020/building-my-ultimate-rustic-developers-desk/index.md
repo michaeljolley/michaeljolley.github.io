@@ -1,7 +1,7 @@
 ---
 date: 2020-08-03
 title: "Building my Ultimate Rustic Developers Desk"
-cover: ./cover-image.png
+cover: ./ograph.png
 banner_image_alt: Partially visible view of the newly built desk
 description: Since I started woodworking, I've had the goal of building my own desk, complete with a wireless charger and built-in USB hub.
 tags: [diy, desk, setup, woodworking]

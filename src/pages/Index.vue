@@ -22,7 +22,6 @@
       <section class="posts">
         <h2 class="link">
           Recent Posts
-          <g-link to="/posts" title="more blog posts">more posts <font-awesome :icon="['fa', 'chevron-right']"></font-awesome></g-link>
         </h2>
         <div>
           <g-link
@@ -46,7 +45,7 @@
         node {
           id
           title
-          cover (width: 380, quality: 90)
+          cover (width: 450, quality: 90)
           path
           banner_image_alt
         }
@@ -125,11 +124,9 @@ export default {
     font-size: 5em;
     padding-bottom: 0px;
     display: block;
-    color: $neonblue;
-
-    span {
-      color: $white;
-    }
+    background: linear-gradient(90deg, rgba(255,0,255,1) 0%, rgba(0,255,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 </style>
