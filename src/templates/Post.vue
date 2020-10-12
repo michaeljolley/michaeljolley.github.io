@@ -85,7 +85,7 @@ export default {
   components: { Comments, PostHeader },
   methods: {
     getTokenAndSubdomainAsync: async function () {
-      return await axios.get(".netlify/functions/immersivereader");
+      return await axios.get("/.netlify/functions/immersivereader");
     },
     handleLaunchImmersiveReader: async function() {
       try {
