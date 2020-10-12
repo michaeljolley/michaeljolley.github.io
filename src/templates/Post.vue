@@ -24,7 +24,7 @@
  |&nbsp;
                   <a :href="$page.post.path + '#comments'">{{$page.comments.totalCount}} Comment<template v-if="$page.comments.totalCount !== 1">s</template></a>
               </div>
-              <div class="content" v-html="$page.post.content">
+              <div class="content" lang="en-us" v-html="$page.post.content">
               </div>
             </div>
           </article>
@@ -99,8 +99,9 @@ export default {
         };
         // Learn more about options https://docs.microsoft.com/azure/cognitive-services/immersive-reader/reference#options
         const options = {
-            "onExit": this.exitCallback,
-            "uiZIndex": 2000
+          "uiLang": "en-US",
+          "onExit": this.exitCallback,
+          "uiZIndex": 2000
         };
         ImmersiveReader.launchAsync(token, subdomain, data, options)
             .catch(function (error) {
