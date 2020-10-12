@@ -91,9 +91,9 @@ export default {
       try {
         const { token, subdomain } = await this.getTokenAndSubdomainAsync();
         const data = {
-            title: $page.post.title,
+            title: this.$page.post.title,
             chunks: [{
-                content: $page.post.content,
+                content: this.$page.post.content,
                 mimeType: "text/html"
             }]
         };
