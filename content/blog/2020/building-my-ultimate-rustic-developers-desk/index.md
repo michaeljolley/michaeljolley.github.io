@@ -73,7 +73,7 @@ If you want a perfectly flat top with no cracks between boards, you need to use 
 
 ## Stuck On You
 
-![Boards laid on a table with clamps, wood glue and a drill sitting on them.](/content/posts/building-my-ultimate-rustic-developers-desk/3_ztos4f.png)
+![Boards laid on a table with clamps, wood glue and a drill sitting on them.](./building-my-ultimate-rustic-developers-desk/3_ztos4f.png)
 
 Before I started the glue-up, I clamped a scrap board to my table that I knew was straight. Then I lined each board against it and reviewed how each board fit with those around it and compared their uniqueness to decide which boards should be in the front versus the back. Once I got each laid out where I liked them, I made some markings to add some pocket screws for stability.
 
