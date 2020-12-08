@@ -1,3 +1,4 @@
+import cloudinary from './cloudinary'
 import config from './config'
 import feed from './feed'
 import fontawesome from './fontAwesome'
@@ -7,11 +8,12 @@ import sitemap from './sitemap'
 import tailwindcss from './tailwindcss'
 
 export {
-  config,
-  feed,
-  fontawesome,
-  googleAnalytics,
-  purgeCss,
-  sitemap,
-  tailwindcss,
+	cloudinary,
+	config,
+	feed,
+	fontawesome,
+	googleAnalytics,
+	purgeCss,
+	sitemap,
+	tailwindcss,
 }

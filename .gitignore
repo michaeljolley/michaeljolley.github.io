@@ -1,4 +1,8 @@
 # Created by .ignore support plugin (hsz.mobi)
+
+# Custom build artifacts
+assets/images/
+
 ### Node template
 # Logs
 /logs

@@ -12,16 +12,21 @@
     "test": "jest"
   },
   "dependencies": {
+    "@nuxtjs/cloudinary": "^1.0.2",
     "@nuxt/content": "^1.9.0",
     "core-js": "^3.6.5",
     "fontsource-roboto": "^3.0.3",
     "nuxt": "^2.14.6"
   },
   "devDependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@nuxtjs/color-mode": "^2.0.2",
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/eslint-config": "^3.1.0",
     "@nuxtjs/eslint-module": "^2.0.0",
     "@nuxtjs/feed": "^2.0.0",
+    "@nuxtjs/fontawesome": "^1.1.2",
     "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/sitemap": "^2.4.0",
     "@nuxtjs/tailwindcss": "^3.1.0",
@@ -38,6 +43,7 @@
     "jest": "^26.5.0",
     "prettier": "^2.1.2",
     "reading-time": "^1.2.1",
+    "tailwindcss-dark-mode": "^1.1.7",
     "vue-jest": "^3.0.4"
   }
 }

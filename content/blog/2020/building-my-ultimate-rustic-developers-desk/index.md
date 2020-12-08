@@ -63,7 +63,9 @@ There weren't a lot of materials required. I already had all the screws needed s
 
 ## Measuring & Measuring & Cutting
 
-![Two inch blocks sitting beside a miter saw that have been cut from the ends of two by sixes](./1_gn0y3y.png)
+<v-image
+  alt="Two inch blocks sitting beside a miter saw that have been cut from the ends of two by sixes"
+ src="./1_gn0y3y.png"></v-image>
 
 First up was cutting the boards to length. Because the ends of store-bought boards aren't always straight, I cut 2" (50mm) off one end of each. Then I measured, marked, and cut one of the boards 7' (1.82m) from the straight end.
 
@@ -73,7 +75,9 @@ If you want a perfectly flat top with no cracks between boards, you need to use 
 
 ## Stuck On You
 
-![Boards laid on a table with clamps, wood glue and a drill sitting on them.](./building-my-ultimate-rustic-developers-desk/3_ztos4f.png)
+<v-image
+  alt="Boards laid on a table with clamps, wood glue and a drill sitting on them."
+ src="./3_ztos4f.png"></v-image>
 
 Before I started the glue-up, I clamped a scrap board to my table that I knew was straight. Then I lined each board against it and reviewed how each board fit with those around it and compared their uniqueness to decide which boards should be in the front versus the back. Once I got each laid out where I liked them, I made some markings to add some pocket screws for stability.
 
@@ -89,7 +93,9 @@ I was really messy in my glue-up. I didn't bother to clean the joints between th
 
 ## Let's Be Extra
 
-![Collage of routed channels for a wireless charger and USB hub.](./5_ucdvfo.png)
+<v-image
+  alt="Collage of routed channels for a wireless charger and USB hub."
+ src="./5_ucdvfo.png"></v-image>
 
 Hi. My name is Michael and I'm extra. I'm the guy who was being interviewed for a job and suggested they hire me because I have an animatronic puppet that would be great to control with their product. But hey, I hear the best way to overcome your issues is to first admit you have the problem.
 
@@ -105,7 +111,9 @@ Needless to say, I was really worried about the routing. One wrong cut and the e
 
 ## Make It Pretty
 
-![Stained desk with fresh coat of polycrylic applied and still drying.](./7_snotgj.png)
+<v-image
+  alt="Stained desk with fresh coat of polycrylic applied and still drying."
+ src="./7_snotgj.png"></v-image>
 
 I spent some time at my local hardware store and picked a stain that I thought would match the rest of my office well. After a quick tutorial from the staff at the store, I set off to stain and poly the desk. First, I created two samples using some scrap wood and the stain with one and two coats. It really seemed like one coat provided the color I wanted and that was perfect because I'm lazy.
 
@@ -119,7 +127,9 @@ I searched online for programmable motorized legs to use as the base. The key me
 
 Once the polycrylic was dry, I mounted it to the desktop and stood it up for the first time. Then it was just a matter of adding the wireless charger, USB hub, and then setting everything up in my office.
 
-![Finished desk assembled in my office.](./9_qmwjvi.png)
+<v-image
+  alt="Finished desk assembled in my office."
+ src="./9_qmwjvi.png"></v-image>
 
 ## What Did I Miss?
 

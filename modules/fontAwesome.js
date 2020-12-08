@@ -1,8 +1,16 @@
 export default {
-  imports: [
-    {
-      set: '@fortawesome/free-solid-svg-icons',
-      icons: ['faChevronUp'],
-    },
-  ],
+	icons: {
+		solid: ['faChevronCircleUp'],
+		brands: [
+			'faTwitter',
+			'faTwitch',
+			'faDev',
+			'faDiscord',
+			'faFacebook',
+			'faGithub',
+			'faInstagram',
+			'faLinkedin',
+			'faYoutube',
+		],
+	},
 }

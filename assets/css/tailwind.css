@@ -1,0 +1,65 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import '../fonts/spezia/spezia.css';
+@import 'fontsource-roboto/index.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: Roboto, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+	@apply text-white
+}
+
+.sticky + .container {
+  padding-top: 66px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Roboto, sans-serif;
+	border-bottom: 1px solid;
+	border-image-source: linear-gradient(
+		90deg,
+		rgba(255, 0, 255, 1) 0%,
+		rgba(0, 255, 255, 1) 100%
+	);
+	border-image-slice: 1;
+	@apply pb-2;
+	@apply mb-5;
+	@apply font-bold;
+}
+
+a {
+	@apply text-pink-500
+}
+a:hover {
+	@apply text-blue-500
+}
+
+div.nuxt-progress {
+  background: linear-gradient(to right, #7fc6f4, #d5279b);
+}
+
+
+/* @screen md {
+  .nuxt-content .nuxt-content-highlight {
+    margin: 0 -30px;
+  }
+
+  .nuxt-content .nuxt-content-highlight pre {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+} */
+
+.nuxt-content img {
+  @apply rounded-lg;
+  margin: 0 auto;
+}
+
