@@ -1,16 +1,10 @@
 <template>
 	<div class="post">
-		<div class="toc">
-			<ul>
-				<li
-					v-for="link of post.toc"
-					:key="link.id"
-					:class="{ toc2: link.depth === 2, toc3: link.depth === 3 }"
-				>
-					<NuxtLink :to="`#${link.id}`">{{ link.text }}</NuxtLink>
-				</li>
-			</ul>
-		</div>
+		<TableOfContents
+			v-if="post.toc.length > 0"
+			:toc="post.toc"
+			:levels="post.toc.length > 10 ? [2] : [2, 3]"
+		/>
 		<article>
 			<header>
 				<cld-image
@@ -75,29 +69,58 @@ export default {
 <style scoped>
 .post {
 	@apply flex;
-	/* @apply space-x-4; */
+	@apply items-start;
 	@apply mt-10;
-}
-
-.toc {
-	@apply flex;
-	@apply flex-col;
-	@apply w-1/5;
-	@apply bg-gray-500;
-	@apply rounded-xl;
-	@apply mr-10;
-	@apply p-3;
+	@apply lg:space-x-4;
 }
 
 article {
 	@apply flex;
 	@apply flex-col;
-	@apply w-4/5;
+	@apply w-full;
+	@apply lg:w-4/5;
 }
 
 section {
-	@apply p-10;
 	@apply bg-gray-500;
 	@apply rounded-b-xl;
+	@apply text-lg;
+	@apply p-6;
+	@apply lg:p-10;
+}
+
+section h2,
+section h3 {
+	background: linear-gradient(
+		90deg,
+		rgba(255, 0, 255, 1) 0%,
+		rgba(0, 255, 255, 1) 100%
+	);
+	@apply bg-clip-text;
+	-webkit-text-fill-color: transparent;
+}
+
+section h2 {
+	@apply text-3xl;
+	@apply mt-8;
+}
+section h3 {
+	@apply text-2xl;
+	@apply mt-6;
+}
+
+.cld-image {
+	width: unset !important;
+	margin: 50px -45px;
+	@apply shadow-lg;
+}
+
+header .cld-image {
+	width: unset !important;
+	margin: 15px -10px 0px -10px;
+	@apply shadow-lg;
+}
+header .cld-image img {
+	@apply rounded-xl;
 }
 </style>

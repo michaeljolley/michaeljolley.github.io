@@ -12,11 +12,14 @@
     "test": "jest"
   },
   "dependencies": {
-    "@nuxtjs/cloudinary": "^1.0.2",
     "@nuxt/content": "^1.9.0",
+    "@nuxtjs/cloudinary": "^1.0.2",
+    "autoprefixer": "^10.1.0",
     "core-js": "^3.6.5",
     "fontsource-roboto": "^3.0.3",
-    "nuxt": "^2.14.6"
+    "nuxt": "^2.14.6",
+    "postcss": "^8.2.0",
+    "tailwindcss": "^2.0.1"
   },
   "devDependencies": {
     "@fortawesome/free-brands-svg-icons": "^5.15.1",

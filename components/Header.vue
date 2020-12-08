@@ -42,6 +42,7 @@ header {
 		rgba(0, 255, 255, 1) 100%
 	);
 	border-image-slice: 1;
+	@apply z-10;
 }
 
 .sticky {
