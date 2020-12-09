@@ -116,9 +116,7 @@ export default {
 	tailwindcss: {
 		exposeConfig: true,
 	},
-	purgeCSS: {
-		whitelist: ['dark-mode'],
-	},
+	purgeCSS: {},
 
 	plugins: ['~/directives/scroll.client.js'],
 

@@ -6,18 +6,9 @@
 			:levels="post.toc.length > 10 ? [2] : [2, 3]"
 		/>
 		<article>
-			<header>
-				<cld-image
-					v-if="post.cover && post.cover.public_id"
-					:alt="post.title"
-					:public-id="post.cover.public_id"
-					quality="auto"
-					fetch-format="auto"
-					responsive
-					loading="lazy"
-				/>
-			</header>
+			<ArticleHeader :cover="post.cover" :title="post.title" />
 			<section>
+				<h1>{{ post.title }}</h1>
 				<nuxt-content :document="post" />
 			</section>
 		</article>
@@ -71,56 +62,12 @@ export default {
 	@apply flex;
 	@apply items-start;
 	@apply mt-10;
-	@apply lg:space-x-4;
-}
-
-article {
-	@apply flex;
-	@apply flex-col;
-	@apply w-full;
-	@apply lg:w-4/5;
-}
-
-section {
-	@apply bg-gray-500;
-	@apply rounded-b-xl;
-	@apply text-lg;
-	@apply p-6;
-	@apply lg:p-10;
-}
-
-section h2,
-section h3 {
-	background: linear-gradient(
-		90deg,
-		rgba(255, 0, 255, 1) 0%,
-		rgba(0, 255, 255, 1) 100%
-	);
-	@apply bg-clip-text;
-	-webkit-text-fill-color: transparent;
-}
-
-section h2 {
-	@apply text-3xl;
-	@apply mt-8;
-}
-section h3 {
-	@apply text-2xl;
-	@apply mt-6;
+	@apply lg:space-x-3;
 }
 
 .cld-image {
 	width: unset !important;
 	margin: 50px -45px;
 	@apply shadow-lg;
-}
-
-header .cld-image {
-	width: unset !important;
-	margin: 15px -10px 0px -10px;
-	@apply shadow-lg;
-}
-header .cld-image img {
-	@apply rounded-xl;
 }
 </style>

@@ -2,6 +2,7 @@
 	<cld-image
 		:alt="alt"
 		:public-id="src"
+		:title="alt"
 		fetch-format="auto"
 		quality="auto"
 		loading="lazy"

@@ -35,6 +35,55 @@ h1, h2, h3, h4, h5, h6 {
 	@apply font-bold;
 }
 
+article {
+	@apply flex;
+	@apply flex-col;
+	@apply w-full;
+	@apply lg:w-4/5;
+}
+
+section {
+	@apply bg-gray-500;
+	@apply rounded-b-xl;
+	@apply text-lg;
+	@apply p-6;
+	@apply lg:p-10;
+}
+
+section h1,
+section h2,
+section h3,
+section h4,
+section h5 {
+	background: linear-gradient(
+		90deg,
+		rgba(255, 0, 255, 1) 0%,
+		rgba(0, 255, 255, 1) 100%
+	);
+	@apply bg-clip-text;
+	-webkit-text-fill-color: transparent;
+}
+
+section h1 {
+	@apply text-5xl;
+}
+section h2 {
+	@apply text-3xl;
+	@apply mt-8;
+}
+section h3 {
+	@apply text-2xl;
+	@apply mt-6;
+}
+section p {
+	@apply mt-3;
+	@apply mb-3;
+}
+section ul {
+	@apply list-disc;
+}
+
+
 a {
 	@apply text-pink-500
 }
