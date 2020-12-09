@@ -1,0 +1,9 @@
+postpath: /posts/using-azure-file-storage-as-container-volume-mounts-in-app-services/
+message: "Hi, thanks for this document!\r\nI trying to replicate these steps, but im not able to put \"/\" on the mount path box.\r\n\r\nAlso I have a question, the mount path box is for the path inside the webapp or the path inside docker container? \r\n\r\nThank you!"
+name: leo ferreira
+avatar: >-
+  https://secure.gravatar.com/avatar/8dcf7ba3e2a8e7074a1c7e73dc2a72d3?s=80&d=identicon&r=pg
+redirect: 'https://baldbeardedbuilder.com/thanks/'
+identity: leofgaliberti@gmail.com
+date: 2020-12-09T18:38:37.701Z
+id: 746850074
