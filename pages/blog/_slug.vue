@@ -1,11 +1,14 @@
 <template>
 	<div class="post">
-		<TableOfContents
-			v-if="post.toc.length > 0"
-			:toc="post.toc"
-			:levels="post.toc.length > 10 ? [2] : [2, 3]"
-		/>
-		<article>
+		<aside>
+			<TableOfContents
+				v-if="post.toc.length > 0"
+				:toc="post.toc"
+				:levels="post.toc.length > 10 ? [2] : [2, 3]"
+			/>
+			<SocialSharing :post="post" />
+		</aside>
+		<article class="content">
 			<ArticleHeader :cover="post.cover" :title="post.title" />
 			<section>
 				<h1>{{ post.title }}</h1>
@@ -62,12 +65,22 @@ export default {
 	@apply flex;
 	@apply items-start;
 	@apply mt-10;
+	@apply space-x-2;
 	@apply lg:space-x-3;
+}
+
+aside {
 }
 
 .cld-image {
 	width: unset !important;
-	margin: 50px -45px;
+	margin: 35px -30px;
 	@apply shadow-lg;
+}
+
+@screen lg {
+	.cld-image {
+		margin: 50px -45px;
+	}
 }
 </style>

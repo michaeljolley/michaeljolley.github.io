@@ -1,5 +1,5 @@
 <template>
-	<aside>
+	<section>
 		<h3>Table of Contents</h3>
 		<ul class="toc">
 			<li
@@ -13,7 +13,7 @@
 				<NuxtLink :to="`#${link.id}`">{{ link.text }}</NuxtLink>
 			</li>
 		</ul>
-	</aside>
+	</section>
 </template>
 <script>
 export default {
@@ -70,27 +70,23 @@ export default {
 				el = el.offsetParent
 				top += el.offsetTop
 			}
-			return top - height < window.pageYOffset
+			return top - height < window.pageYOffset + 80
 		},
 		handleScroll() {
-			this.pos = window.pageYOffset
+			this.pos = window.pageYOffset + 80
 		},
 	},
 }
 </script>
 <style scoped>
-aside {
-	@apply flex-col;
-	@apply w-1/5;
-	@apply bg-gray-500;
-	@apply rounded-xl;
-	@apply p-3;
-	@apply text-sm;
-	@apply z-0;
-	@apply sticky;
-	top: 105px;
+section {
 	@apply hidden;
 	@apply lg:flex;
+	@apply flex-col;
+}
+
+li {
+	@apply ml-3;
 }
 
 .toc a {

@@ -1,7 +1,7 @@
 ---
 date: 2020-08-03
 title: "Building my Ultimate Rustic Developers Desk"
-cover: ./ograph.png
+cover: ./cover-image.png
 slug: building-my-ultimate-rustic-developers-desk
 banner_image_alt: Partially visible view of the newly built desk
 description: Since I started woodworking, I've had the goal of building my own desk, complete with a wireless charger and built-in USB hub.
@@ -133,4 +133,4 @@ Once the polycrylic was dry, I mounted it to the desktop and stood it up for the
 
 ## What Did I Miss?
 
-I'm completely in love with this desk. The USB hub is such a time-saver. But, just like our code projects, I'm already planning the next version. Got any ideas on something I should add? Add a comment and let me know!
+I'm completely in love with this desk. The USB hub is such a time-saver. But, just like our code projects, I'm already planning the next version. Got any ideas on something I should add? Reach out and let me know!

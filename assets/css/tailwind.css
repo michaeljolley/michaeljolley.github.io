@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5, h6 {
 article {
 	@apply flex;
 	@apply flex-col;
-	@apply w-full;
+	@apply w-11/12;
 	@apply lg:w-4/5;
 }
 
@@ -46,15 +46,13 @@ section {
 	@apply bg-gray-500;
 	@apply rounded-b-xl;
 	@apply text-lg;
-	@apply p-6;
-	@apply lg:p-10;
 }
 
-section h1,
-section h2,
-section h3,
-section h4,
-section h5 {
+article > section > h1,
+.nuxt-content h2,
+.nuxt-content h3,
+.nuxt-content h4,
+.nuxt-content h5 {
 	background: linear-gradient(
 		90deg,
 		rgba(255, 0, 255, 1) 0%,
@@ -64,25 +62,39 @@ section h5 {
 	-webkit-text-fill-color: transparent;
 }
 
-section h1 {
+article > section > h1 {
 	@apply text-5xl;
 }
-section h2 {
+.nuxt-content h2 {
 	@apply text-3xl;
 	@apply mt-8;
 }
-section h3 {
+.nuxt-content h3 {
 	@apply text-2xl;
 	@apply mt-6;
 }
-section p {
+.nuxt-content p {
 	@apply mt-3;
 	@apply mb-3;
 }
-section ul {
+.nuxt-content ul {
 	@apply list-disc;
+	@apply pl-6;
+}
+.nuxt-content h1:before,
+.nuxt-content h2:before,
+.nuxt-content h3:before,
+.nuxt-content h4:before {
+	content:"";
+	@apply block;
+	height:90px;
+	margin: -90px 0 0;
 }
 
+article > section {
+	@apply p-6;
+	@apply lg:p-10;
+}
 
 a {
 	@apply text-pink-500
@@ -91,10 +103,28 @@ a:hover {
 	@apply text-blue-500
 }
 
+aside {
+	@apply flex-col;
+	@apply w-1/12;
+	@apply bg-gray-500;
+	@apply rounded-xl;
+	@apply p-3;
+	@apply text-sm;
+	@apply z-0;
+	@apply sticky;
+	top: 105px;
+	@apply flex;
+	@apply lg:w-1/5;
+}
+
+aside > section > h3 {
+	@apply uppercase;
+	@apply text-base;
+}
+
 div.nuxt-progress {
   background: linear-gradient(to right, #7fc6f4, #d5279b);
 }
-
 
 /* @screen md {
   .nuxt-content .nuxt-content-highlight {
@@ -111,4 +141,3 @@ div.nuxt-progress {
   @apply rounded-lg;
   margin: 0 auto;
 }
-

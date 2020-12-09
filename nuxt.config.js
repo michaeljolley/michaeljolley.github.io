@@ -98,6 +98,7 @@ export default {
 		'@nuxt/content',
 		'@nuxtjs/feed',
 		'@nuxtjs/sitemap',
+		'vue-social-sharing/nuxt',
 	],
 
 	content: {
