@@ -23,16 +23,9 @@
 
 <script>
 export default {
-	async asyncData({ $content, params, redirect }) {
+	async asyncData({ $content, params }) {
 		const talk = await $content('/talks', params.slug).fetch()
-
-		if (talk) {
-			console.dir(talk)
-			return {
-				talk,
-			}
-		}
-		return redirect('/')
+		return { talk }
 	},
 	head() {
 		return {

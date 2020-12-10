@@ -5,13 +5,15 @@
 			:key="post.path"
 			:v-if="posts"
 			:post="post"
-			type="talks"
+			type="speaking"
 		/>
 		<InfiniteScroll :enough="enough" @load-more="loadPosts()" />
 	</main>
 </template>
 
 <script>
+import Vue from 'vue'
+
 export default {
 	data() {
 		return {
@@ -19,6 +21,7 @@ export default {
 			enough: false,
 			page: 0,
 			pageSize: 12,
+			isLoading: false,
 		}
 	},
 	mounted() {
@@ -26,8 +29,9 @@ export default {
 	},
 	methods: {
 		async loadPosts() {
-			if (!this.enough) {
-				const newPosts = await this.$content('talks')
+			if (!this.enough && !this.isLoading) {
+				this.isLoading = true
+				const newPosts = await this.$content('/talks')
 					.only([
 						'path',
 						'title',
@@ -51,7 +55,9 @@ export default {
 				if (newPosts.length === 0 || newPosts.length < 12) {
 					this.enough = true
 				}
+				this.isLoading = false
 			}
+			await Vue.nextTick()
 		},
 	},
 }

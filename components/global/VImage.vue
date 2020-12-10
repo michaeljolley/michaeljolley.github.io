@@ -8,7 +8,8 @@
 		loading="lazy"
 		responsive
 		blur
-	/>
+		><cld-placeholder type="blur"
+	/></cld-image>
 </template>
 
 <script>

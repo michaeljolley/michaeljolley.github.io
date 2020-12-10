@@ -19,7 +19,7 @@
 					<NuxtLink to="/blog" title="Blog posts">Blog</NuxtLink>
 				</li>
 				<li class="flex-1">
-					<NuxtLink to="/talks" title="Speaking">Speaking</NuxtLink>
+					<NuxtLink to="/speaking" title="Speaking">Speaking</NuxtLink>
 				</li>
 				<li class="flex-1">
 					<NuxtLink to="/shop" title="Swag">Swag</NuxtLink>

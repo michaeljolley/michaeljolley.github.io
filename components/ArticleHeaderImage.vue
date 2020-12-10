@@ -9,7 +9,8 @@
 			fetch-format="auto"
 			responsive
 			loading="lazy"
-		/>
+			><cld-placeholder type="blur"
+		/></cld-image>
 	</header>
 </template>
 <script>
