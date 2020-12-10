@@ -1,7 +1,7 @@
 ---
 date: 2019-05-20 
 title: "Using a CONTRIBUTING & CODE_OF_CONDUCT to assist others in contributing to public repositories"
-image: https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/58047500-f400df80-7b0d-11e9-917c-b4b1cd4a8d2b_b3iim4.jpg
+cover: ./58047500-f400df80-7b0d-11e9-917c-b4b1cd4a8d2b_b3iim4.jpg
 banner_image_alt: Woman working on laptop leaned against a brick wall.
 description: Helping other contribute to public repositories on GitHub by providing contributing and code of conduct guidelines.
 tags: [github, contributions, code-of-conduct]
@@ -18,7 +18,7 @@ with contributing and code of conduct guidelines.
 
 <!--more-->
 
-### Contributing Guidelines
+## Contributing Guidelines
 
 For the most part, contributors have seen my repositories on our [Twitch][twitch] stream
 and wanted to help.  The benefit to the stream is that viewers can see the process we use
@@ -47,7 +47,7 @@ This basic information gives potential contributors a little more confidence abo
 submitting that pull request by alleviating the fear they'll be blasted for using the
 wrong base branch.
 
-### Code of Conduct
+## Code of Conduct
 
 I'll admit I'm a little knew to this one. I'm not sure I've ever read a repositories Code of
 Conduct before this week. It's easy to overlook when you expect the best from people and/or
@@ -61,7 +61,7 @@ advance how they can expect to be treated by the community and maintainers.
 [Contributor Covenant](https://www.contributor-covenant.org/) is a great resource for a Code
 of Conduct for your repository.
 
-### Acknowledging Contributions
+## Acknowledging Contributions
 
 I love new contributors! It makes my day when I get a notification that someone created an
 issue, submitted a pull request or even just forked the repository. There are several ways to
@@ -74,10 +74,9 @@ on our README.md.
 
 An example from our VS Code extension is:
 
-  <img src="https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/58047645-3cb89880-7b0e-11e9-8270-7fd116460102_ve78fr.jpg"
+<v-image
   alt="Example of the bottom of our README's with contributors."
-  class="cld-responsive lazyload"
-  />
+ src="./58047645-3cb89880-7b0e-11e9-8270-7fd116460102_ve78fr.jpg"></v-image>
 
 Not all contributions are code.  Using All Contributors, I can recognize contributors for everything from ideas, questions, documentation, tests, examples and more.  A full listing of options is available on their [emoji key](https://allcontributors.org/docs/en/emoji-key).
 

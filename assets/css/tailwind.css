@@ -42,13 +42,13 @@ article {
 	@apply lg:w-4/5;
 }
 
-section {
+article > section {
 	@apply bg-gray-500;
 	@apply rounded-b-xl;
 	@apply text-lg;
 }
 
-article > section > h1,
+header h1,
 .nuxt-content h2,
 .nuxt-content h3,
 .nuxt-content h4,

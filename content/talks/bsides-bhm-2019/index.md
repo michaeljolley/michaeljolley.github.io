@@ -1,10 +1,10 @@
 ---
-layout: page
-title: BSides BHAM - Birmingham, AL
-description: "Think inside the box. Developing inside a container to avoid conflicts, improve security and speed up on-boarding"
-image: https://res.cloudinary.com/dk3rdh3yo/image/upload/c_scale,w_auto/v1591493386/vulc_u9npiy.png
-slug: bsides-bhm-2019
 date: 2019-10-12
+title: BSides BHAM - Birmingham, AL
+cover: ./vulc_u9npiy.png
+slug: bsides-bhm-2019
+description: "Think inside the box. Developing inside a container to avoid conflicts, improve security and speed up on-boarding"
+tags: [vscode, devops, docker]
 ---
 
 Hi! Thanks for attending my talk!

@@ -1,7 +1,7 @@
 ---
 date: 2018-11-10 
 title: "Automating release notes with GitHub, AppVeyor and Octopus Deploy"
-image: https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/48307028-d709a500-e509-11e8-9bd6-b7cd12cbce90_qlqkfx.jpg
+cover: ./48307028-d709a500-e509-11e8-9bd6-b7cd12cbce90_qlqkfx.jpg
 banner_image_alt: Burger labeled "DevOps Burger" with layers for PowerShell, AppVeyor, Octopus Deploy and GitHub.
 description: Utilizing a custom PowerShell script to generate deployment release notes with GitHub, AppVeyor & Octopus Deploy
 tags: [devops, appveyor, octopus-deploy]
@@ -77,11 +77,13 @@ At the beginning of a build in AppVeyor, the script calls to your Octopus Deploy
 
 Then, with that list of commits we build both HTML &amp; markdown versions of the release notes.  The HTML version is passed to Octopus with the build artifacts.  The markdown version is sent to GitHub with the build artifacts.
 
-  <img src="https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/48307475-14befb80-e513-11e8-85fb-b50ec28751b2_nndjdm.jpg"
-  class="cld-responsive lazyload" alt="Sample Markdown look at generated release notes" />
-
-  <img src="https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/48307489-69fb0d00-e513-11e8-8f8c-a86359d90494_snm6ke.jpg"
-  class="cld-responsive lazyload" alt="Sample HTML look at generated release notes" />
+<v-image
+  alt="Sample Markdown look at generated release notes"
+ src="./48307475-14befb80-e513-11e8-85fb-b50ec28751b2_nndjdm.jpg"></v-image>
+ 
+<v-image
+  alt="Sample HTML look at generated release notes"
+ src="./48307489-69fb0d00-e513-11e8-8f8c-a86359d90494_snm6ke.jpg"></v-image>
 
 ## Important Notes
 

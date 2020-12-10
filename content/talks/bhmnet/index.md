@@ -1,10 +1,10 @@
 ---
-layout: page
-title: BHM.NET Meetup - Birmingham, AL
-description: "Think inside the box. Developing inside a container to avoid conflicts, improve security and speed up on-boarding"
-image: https://res.cloudinary.com/dk3rdh3yo/image/upload/c_scale,w_auto/v1591493284/bhmnet_yih0m0.png
-slug: bhmnet
 date: 2019-11-19
+title: BHM.NET Meetup
+cover: ./bhmnet_yih0m0.png
+slug: bhmnet
+description: "Think inside the box. Developing inside a container to avoid conflicts, improve security and speed up on-boarding"
+tags: [docker, bhm-net, talks, presentation]
 ---
 
 Hi! Thanks for attending my talk!

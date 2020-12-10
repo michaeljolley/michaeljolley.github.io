@@ -1,9 +1,10 @@
 ---
-layout: page
-title: Vonage Developer Day
-description: "Controlling servo motors via webhooks, Particle Argon boards, JavaScript and facial tracking."
-image: https://res.cloudinary.com/dk3rdh3yo/image/upload/c_scale,w_auto/v1591506612/vondev_i1qjlr.png
 date: 2020-05-14
+title: Vonage Developer Day
+cover: ./vondev_i1qjlr.png
+slug: bhmnet
+description: "Controlling servo motors via webhooks, Particle Argon boards, JavaScript and facial tracking."
+tags: [iot, facial-recognition, vonage, talks, presentation]
 recording: https://www.youtube.com/watch?v=Izr6liGB-iA
 ---
 

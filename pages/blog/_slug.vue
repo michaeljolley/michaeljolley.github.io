@@ -9,9 +9,12 @@
 			<SocialSharing :post="post" />
 		</aside>
 		<article class="content">
-			<ArticleHeader :cover="post.cover" :title="post.title" />
+			<ArticleHeaderImage
+				:cover="post.cover"
+				:title="post.banner_image_alt || post.title"
+			/>
 			<section>
-				<h1>{{ post.title }}</h1>
+				<ArticleHeader :post="post" />
 				<nuxt-content :document="post" />
 			</section>
 		</article>
@@ -28,6 +31,15 @@ export default {
 		}
 	},
 	head() {
+		const link = this.post.canonical_url
+			? [
+					{
+						rel: 'canonical',
+						href: this.post.canonical_url,
+					},
+			  ]
+			: null
+
 		return {
 			title: this.post.title,
 			meta: [
@@ -55,6 +67,7 @@ export default {
 					content: this.post.description,
 				},
 			],
+			link,
 		}
 	},
 }
@@ -69,17 +82,24 @@ export default {
 	@apply lg:space-x-3;
 }
 
-aside {
-}
-
 .cld-image {
 	width: unset !important;
 	margin: 35px -30px;
 	@apply shadow-lg;
 }
 
+pre {
+	margin: 35px -30px;
+	@apply rounded;
+	@apply shadow-lg;
+}
+
 @screen lg {
 	.cld-image {
+		margin: 50px -45px;
+	}
+
+	pre {
 		margin: 50px -45px;
 	}
 }

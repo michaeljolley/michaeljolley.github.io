@@ -1,7 +1,7 @@
 ---
 date: 2019-01-01 
 title: "Reviewing 2018 and plans for 2019"
-image: https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/50575938-07184a80-0dcd-11e9-998f-59865d568263_cckgjo.jpg
+cover: ./50575938-07184a80-0dcd-11e9-998f-59865d568263_cckgjo.jpg
 banner_image_alt: Fireworks with Michael's avatar wearing a new years hat.
 description: Looking back at 2018 and setting goals for 2019.
 tags: [review]
@@ -47,9 +47,9 @@ Around July I started meal prepping each week to improve my diet.  I'm definitel
 
 ### Hi-ho, hi-ho, it's off to wood working we go
 
-<img src="https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/50576549-b1966a80-0dd9-11e9-9cdc-e75f4542dfab_xjeqta.jpg" 
-    alt="Collage of pictures with Michael & Lauryn building a table."
-    class="cld-responsive lazyload " />
+<v-image
+  alt="Collage of pictures with Michael & Lauryn building a table."
+ src="./50576549-b1966a80-0dd9-11e9-9cdc-e75f4542dfab_xjeqta.jpg"></v-image>
 
 In the last few weeks of the year I really started investing in tools and learning to do wood working.  It's been so much fun to learn and I've gotten to spend a lot of time with Lauryn teaching her as we go.  Our first project was a peg board over some cabinets in the garage and we finished the Christmas break with a work table.
 

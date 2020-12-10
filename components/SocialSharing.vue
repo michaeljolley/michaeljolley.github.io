@@ -9,7 +9,7 @@
 					:title="post.title"
 					:description="post.description"
 					:quote="post.description"
-					:hashtags="post.tags.join(',')"
+					:hashtags="post.tags && post.tags.join(',')"
 					class="facebook"
 				>
 					<font-awesome-icon :icon="['fab', 'facebook-f']" />
@@ -21,7 +21,7 @@
 					:url="`${baseUrl}${post.route}`"
 					:title="post.title"
 					twitter-user="VonageDev"
-					:hashtags="post.tags.join(',')"
+					:hashtags="post.tags && post.tags.join(',')"
 					class="twitter"
 				>
 					<font-awesome-icon :icon="['fab', 'twitter']" />
@@ -34,7 +34,7 @@
 					:url="`${baseUrl}${post.route}`"
 					class="linkedin"
 				>
-					<font-awesome-icon :icon="['fab', 'linkedin']" />
+					<font-awesome-icon :icon="['fab', 'linkedin-in']" />
 				</ShareNetwork>
 			</li>
 			<li>

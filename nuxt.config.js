@@ -44,7 +44,9 @@ const copyAssets = async (document, slug) => {
 
 	// load cover image if needed
 	if (document.cover && document.cover.startsWith('./')) {
-		const publicId = `${slug}-cover`
+		const publicId = `${slug}-${document.cover
+			.replace('./', '')
+			.replace(path.extname(document.cover), '')}`
 		const coverPath = path.join(
 			__dirname,
 			'content',
@@ -94,6 +96,7 @@ export default {
 	],
 
 	modules: [
+		'@forked-prs/nuxt-infinite-scroll-module',
 		'@nuxtjs/cloudinary',
 		'@nuxt/content',
 		'@nuxtjs/feed',
@@ -103,6 +106,11 @@ export default {
 
 	content: {
 		liveEdit: false,
+		markdown: {
+			prism: {
+				theme: 'prism-themes/themes/prism-material-dark.css',
+			},
+		},
 	},
 
 	build: {},
@@ -119,7 +127,7 @@ export default {
 	},
 	purgeCSS: {},
 
-	plugins: ['~/directives/scroll.client.js'],
+	plugins: ['~/directives/scroll.client.js', '~/plugins/formatDate.js'],
 
 	hooks: {
 		'content:file:beforeInsert': async (document, database) => {

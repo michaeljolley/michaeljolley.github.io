@@ -1,11 +1,11 @@
 ---
-layout: page
-title: DNN Summit 2020 - Orlando, FL
-description: "Think inside the box. Developing inside a container to avoid conflicts, improve security and speed up on-boarding"
-image: https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/dnn_vjwhaq.png
-banner_image_alt: "Palm trees and the DNN Summit 2020 logo."
-slug: dnnsummit
 date: 2020-02-24
+title: DNN Summit 2020
+cover: ./dnn_vjwhaq.png
+slug: dnnsummit
+description: "Think inside the box. Developing inside a container to avoid conflicts, improve security and speed up on-boarding"
+banner_image_alt: "Palm trees and the DNN Summit 2020 logo."
+tags: [vscode, devops, docker]
 ---
 
 Hi! Thanks for attending my talk!

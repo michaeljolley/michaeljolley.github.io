@@ -1,7 +1,7 @@
 ---
 date: 2019-12-29 
 title: "Cheers to 2019! Bring on 2020!"
-image: https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/Artboard_2_k3mgba.png
+cover: ./Artboard_2_k3mgba.png
 banner_image_alt: Fireworks with Michael's avatar wearing a new years hat.
 description: Reviewing the goals I had for 2019 and how many I accomplished. Then start setting goals for 2020.
 tags: [review]
@@ -63,7 +63,9 @@ I had gained.
 
 ### Level up the wood working
 
-<img class="right" src="https://res.cloudinary.com/dk3rdh3yo/image/upload/w_auto,c_scale/53030755_2228476424037910_6307370620143831616_n_igcxrg.jpg" alt="Our new dining room table.">
+<v-image
+  alt="Our new dining room table."
+ src="./53030755_2228476424037910_6307370620143831616_n_igcxrg.jpg"></v-image>
 
 I really enjoyed wood working in 2018 and wanted to level-up my skills in 2019 with a goal of being proficient enough
 to build a new dining room table for the family by the end of the year. Fast forward, we actually had a family

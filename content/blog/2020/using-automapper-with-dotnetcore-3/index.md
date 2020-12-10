@@ -18,7 +18,7 @@ how to inject our mappings into ASP.NET Core APIs.
 
 <!--more-->
 
-# Getting Started
+## Getting Started
 
 Like most .NET libraries, we can install the `AutoMapper` package from Nuget.
 
@@ -178,7 +178,7 @@ public class UsersController
 With the `IMapper` we can map our objects to their DTO equivalents using the `.Map` 
 method.
 
-# Wrap It Up
+## Wrap It Up
 
 Now that ASP.NET Core is injecting AutoMapper to our controllers, we can add configurations 
 to our profiles or create new profiles for new business areas and still map appropriately 

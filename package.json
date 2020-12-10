@@ -12,6 +12,7 @@
 		"test": "jest"
 	},
 	"dependencies": {
+		"@forked-prs/nuxt-infinite-scroll-module": "^1.0.2",
 		"@nuxt/content": "^1.9.0",
 		"@nuxtjs/cloudinary": "^1.0.2",
 		"autoprefixer": "^10.1.0",
@@ -19,6 +20,7 @@
 		"fontsource-roboto": "^3.0.3",
 		"nuxt": "^2.14.6",
 		"postcss": "^8.2.0",
+		"prism-themes": "^1.5.0",
 		"tailwindcss": "^2.0.1",
 		"vue-social-sharing": "^3.0.4"
 	},

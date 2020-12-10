@@ -1,9 +1,9 @@
 ---
-layout: page
+date: 2020-05-22
 title: HalfStack Online
 description: "Controlling servo motors via webhooks, Particle Argon boards, JavaScript and facial tracking."
-image: https://res.cloudinary.com/dk3rdh3yo/image/upload/c_scale,w_auto/v1591504071/halfstack_yxpjun.png
-date: 2020-05-22
+cover: ./halfstack_yxpjun.png
+tags: [iot, facial-recognition, talks, presentation]
 recording: https://www.youtube.com/watch?v=evAbW9fuCz0
 ---
 

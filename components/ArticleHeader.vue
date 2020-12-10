@@ -1,26 +1,20 @@
 <template>
 	<header>
-		<cld-image
-			v-if="cover && cover.public_id"
-			:alt="title"
-			:public-id="cover.public_id"
-			:title="title"
-			quality="auto"
-			fetch-format="auto"
-			responsive
-			loading="lazy"
-		/>
+		<h1>{{ post.title }}</h1>
+		<summary>
+			<time>{{ post.date | formatDate }}</time>
+			<span v-if="post.dir === '/blog'">
+				&nbsp;&nbsp;&nbsp;| &nbsp;
+				<span class="rt">{{ post.readingTime.text }}</span>
+			</span>
+		</summary>
 	</header>
 </template>
 <script>
 export default {
 	props: {
-		cover: {
+		post: {
 			type: Object,
-			required: true,
-		},
-		title: {
-			type: String,
 			required: true,
 		},
 	},
@@ -28,18 +22,30 @@ export default {
 </script>
 <style scoped>
 header {
-	@apply z-0;
-	@apply -mb-1;
+	border-bottom: 1px solid;
+	border-image-source: linear-gradient(
+		90deg,
+		rgba(255, 0, 255, 1) 0%,
+		rgba(0, 255, 255, 1) 100%
+	);
+	border-image-slice: 1;
+	@apply mb-4;
 }
-header .cld-image {
-	width: unset !important;
-	@apply -ml-1;
-	@apply -mr-1;
-	@apply mt-0;
-	@apply mb-0;
-	@apply shadow-lg;
-	@apply rounded-xl;
-	@apply overflow-hidden;
-	@apply shadow-lg;
+h1 {
+	@apply border-0;
+	@apply text-5xl;
+	@apply mb-1;
+}
+summary {
+	@apply text-base;
+	@apply mb-1;
+	@apply font-bold;
+}
+
+.rt,
+time {
+	@apply text-sm;
+	@apply text-blue-500;
+	@apply font-normal;
 }
 </style>
