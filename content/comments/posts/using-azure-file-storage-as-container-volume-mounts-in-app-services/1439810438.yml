@@ -1,0 +1,9 @@
+postpath: /posts/using-azure-file-storage-as-container-volume-mounts-in-app-services/
+message: "Good day\r\n\r\nI came across your \"Using Azure File Storage as Container Volume Mounts in App Services\" article and was wondering whether you can help me with an Azure Storage Account mount for my Azure App Service container.  I'm trying to use a mount with Moodle.  Where should I put the .yml file?  And how do I make sure my Azure App Service container is using the .yml file?\r\nDo I do the normal, docker cp -> docker commit -> docker tag -> docker push with the .yml file and choose the new version in Container Settings?"
+name: Jacques
+avatar: >-
+  https://secure.gravatar.com/avatar/beedcab4ed8a52f057e4a64bc6179997?s=80&d=identicon&r=pg
+redirect: 'https://baldbeardedbuilder.com/thanks/'
+identity: tyldota@live.com
+date: 2020-12-11T13:34:29.110Z
+id: 1439810438
