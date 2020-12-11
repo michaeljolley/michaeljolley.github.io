@@ -20,15 +20,15 @@ goals for 2020.
 
 <!--more-->
 
-# How did I do?
+## How did I do?
 
 At the start of 2019, I made a [blog post](https://baldbeardedbuilder.com/posts/2018-year-in-review/) reviewing
 2018 and setting goals for 2019. It's the first time I've made a blog post like that. Looking back, I'm glad
 I did because now I can compare the start and end of the year.
 
-## Goals for 2019
+### Goals for 2019
 
-### Don't stop be-logging
+#### Don't stop be-logging
 
 I set a goal of one blog post a month with a stretch goal of 2 per month. I ended up posting exactly 12
 posts during 2019 between this website and the [Nexmo] blog. I did miss some months, but also blogged twice
@@ -37,7 +37,7 @@ poor job of prioritizing it.
 
 **Verdict:** Achieved.
 
-### I've got a Twitch that needs to be scratched
+#### I've got a Twitch that needs to be scratched
 
 Another goal for 2019 was to start streaming regularly on [Twitch]. Little did I know how much this decision would
 change my life. Let's take a look at some of the ways I was impacted:
@@ -51,7 +51,7 @@ change my life. Let's take a look at some of the ways I was impacted:
 
 **Verdict:** Achieved.
 
-### I like to lose it, lose it
+#### I like to lose it, lose it
 
 After losing about 40 pounds near the end of 2018, my goal was to drop another 40 pounds in 2019. How did it go?
 Well... at least I didn't gain any of that weight back. I've basically only maintained that weight loss this year.
@@ -61,7 +61,7 @@ I had gained.
 
 **Verdict:** Failed
 
-### Level up the wood working
+#### Level up the wood working
 
 <v-image
   alt="Our new dining room table."
@@ -74,7 +74,7 @@ our back porch. So while I didn't build the table, I did level up my wood workin
 
 **Verdict:** Achieved.
 
-### Hanging with my girl
+#### Hanging with my girl
 
 The last of the 2019 goals was setting up regular date nights with the wife. All of the social and family events we
 are involved in really hindered us from having regular date nights, but we definitely need to make this a higher priority
@@ -82,9 +82,9 @@ moving forward.
 
 **Verdict:** Failed miserably.
 
-## Goals for 2020
+### Goals for 2020
 
-### Family time FTW
+#### Family time FTW
 
 This is my #1 goal for 2020. During the holidays I purchased several games for the family and we've been playing together
 three to four nights a week for the last few weeks of December. We are loving it. From card games to Monopoly, the quality
@@ -95,7 +95,7 @@ we're doing now.
 
 **Goal:** At least one date night with the wife a month and a minimum of 2 days/nights a week with the family playing, building, etc.
 
-### A tube of you's
+#### A tube of you's
 
 Ever since I started streaming on [Twitch], I've been archiving the streams in an un-edited form to [YouTube]. But in
 2020 my goal is to start creating original content for [YouTube]. I've got a few ideas, but overall the purpose will
@@ -104,7 +104,7 @@ there and hit the subscribe button so you know when the floodgates open.
 
 **Goal:** Generate at least 2 original videos for [YouTube] each month, but the stretch goal will be to have something up weekly.
 
-### Bloggers?! We don't need no stinking bloggers!
+#### Bloggers?! We don't need no stinking bloggers!
 
 I hit my goal of one post a month in 2019, but I'm finally ready to step it up. As part of my job, I'll be generating one or two posts a month, but for the purposes of these goals, I only want to include posts hosted here.
 
@@ -115,7 +115,7 @@ I hit my goal of one post a month in 2019, but I'm finally ready to step it up. 
 2019 was very good to the bald, bearded household and we're really excited about what 2020 holds. We also wish that 2020
 is the best you've ever had.
 
-Do you have any goals for 2020? I'd love to hear them. Feel free to leave them in the comments.
+Do you have any goals for 2020? I'd love to hear them.
 
 ---
 

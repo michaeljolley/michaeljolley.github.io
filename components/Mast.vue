@@ -6,8 +6,8 @@
 	>
 		<div class="text">
 			<h1>
-				Hi!
-				<span>I'm Michael.</span>
+				{{ opening }}
+				<span>It's Michael.</span>
 			</h1>
 			<p>
 				Michael Jolley is the bald, bearded builder.
@@ -23,8 +23,8 @@
 					>Vonage</a
 				>
 				where he gets to play with awesome APIs. You can also catch him giving
-				<NuxtLink to="/talks" title="talks">talks</NuxtLink> at various events
-				or hosting the
+				<NuxtLink to="/talks" title="Talks Michael's given">talks</NuxtLink>
+				at various events or hosting the
 				<a
 					target="_blank"
 					title="Bald Bearded Builder on Twitch"
@@ -43,12 +43,17 @@
 </template>
 
 <script>
+const salutations = ['Hey!', 'Hi!', 'Eh.', 'Oh no.', 'Meh.', 'Uh oh.', 'Eek!']
+
 export default {
 	computed: {
 		backgroundImage() {
 			return `https://res.cloudinary.com/dk3rdh3yo/image/upload/g_auto,f_auto/v1607302424/mj_${Math.floor(
 				Math.random() * 13 + 1
 			)}.png`
+		},
+		opening() {
+			return salutations[Math.floor(Math.random() * salutations.length)]
 		},
 	},
 }

@@ -13,23 +13,21 @@ One of their requirements was the Pi shouldn't go to sleep and appear always-on 
 
 <!--more-->
 
-### Assumptions
+## Assumptions
 
 For our purposes, we're going to assume you've got your application running at http://localhost:5000 and deployed just fine.
 
 We'll also be using the Pi's default OS of Raspian.
 
-### Prerequisites
+## Prerequisites
 
 First, let's install some prerequisites.
 
 ```bash
-
 sudo apt-get install x11-xserver-utils unclutter
-
 ```
 
-### Launch Chromium
+## Launch Chromium
 
 We're going to launch Chromium after boot-up with the following settings:
 
@@ -41,28 +39,24 @@ We're going to launch Chromium after boot-up with the following settings:
 To do this we'll be editing the **autostart** file in **.config/lxsession/LXDE-pi/**.  So navigate to it with:
 
 ```bash
-
 cd /home/pi/.config/lxsession/LXDE-pi/
-
 ```
 
 Then edit it with nano like so:
 
 ```bash
-
 sudo nano autostart
 ```
 
 Once you’re in there, add this line to the end of the file:
 
 ```bash
-
 @chromium-browser --kiosk --incognito --disable-pinch --overscroll-history-navigation=0 http://localhost:5000
 ```
 
 This launches Chromium with the settings we mentioned above and directs it immediately to your site at http://localhost:5000.
 
-### Turn off the screen saver and hide the cursor
+## Turn off the screen saver and hide the cursor
 
 While you're still editing the **autostart** file, add the following:
 
@@ -75,7 +69,7 @@ While you're still editing the **autostart** file, add the following:
 
 Then save your changes and exit the **autostart** file.
 
-### Stay awake
+## Stay awake
 
 Now to keep your Pi from falling asleep we'll edit the **lightdm.conf** file.
 
@@ -91,7 +85,7 @@ xserver-command= X -s 0 -dpms
 
 Then save and exit.
 
-### Disable power management on WiFi
+## Disable power management on WiFi
 
 The Pi's WiFi will also go to sleep if we don't change it.  Modify it by editing the **rc.local** file with:
 
@@ -105,7 +99,7 @@ Add the following line before *exit 0* and save:
 iwconfig wlan0 power off
 ```
 
-### You're in business
+## You're in business
 
 All that's left is to reboot your Pi.  Once it restarts you'll load directly to Chromium viewing your local application.
 

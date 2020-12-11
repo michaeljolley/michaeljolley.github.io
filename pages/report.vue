@@ -8,6 +8,7 @@
 				quality="auto"
 				fetch-format="auto"
 				responsive
+				blur
 				loading="lazy"
 				><cld-placeholder type="blur"
 			/></cld-image>
@@ -41,7 +42,7 @@
 						<label> Don’t fill this out: <input name="bot-field" /> </label>
 					</p>
 
-					<ul class="flex-outer">
+					<ul>
 						<li>
 							<label for="description"
 								>Description of Event(s)<span class="required"
@@ -57,7 +58,7 @@
 								placeholder="Describe the event(s) that occurred. Be sure to include the name of the person who violated the code of conduct."
 							></textarea>
 						</li>
-						<li>
+						<li class="mt-14">
 							If you would like someone to follow up with you, please complete
 							the fields below.
 							<strong>For your privacy, they are NOT required.</strong>
@@ -124,8 +125,14 @@ export default {
 	@apply flex;
 	@apply items-start;
 	@apply mt-10;
-	@apply space-x-2;
-	@apply lg:space-x-3;
+}
+
+article {
+	@apply w-full;
+}
+
+form {
+	@apply mt-10;
 }
 
 .cld-image {
@@ -152,18 +159,27 @@ li p {
 input,
 textarea {
 	@apply block;
-	@apply w-1/2;
+	@apply w-3/4;
 	@apply p-2;
 	@apply text-black;
+	@apply bg-gray-600;
+	@apply border-white;
+	@apply border-solid;
+	@apply border;
+	@apply rounded-sm;
 }
 
 button {
 	@apply rounded-xl;
 	@apply pl-4 pr-4;
 	@apply pt-2 pb-2;
-	@apply text-indigo-800;
+	@apply text-blue-500;
 	@apply font-bold;
-	@apply bg-indigo-400;
+	@apply border-white;
+	@apply border-solid;
+	@apply border;
+	@apply rounded-md;
+	@apply bg-gray-700;
 }
 
 label > span {

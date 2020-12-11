@@ -1,13 +1,13 @@
 <template>
 	<main>
-		<Card
-			v-for="post in posts"
-			:key="post.path"
-			:v-if="posts"
-			:post="post"
+		<TalkCard
+			v-for="talk in talks"
+			:key="talk.path"
+			:v-if="talks"
+			:talk="talk"
 			type="speaking"
 		/>
-		<InfiniteScroll :enough="enough" @load-more="loadPosts()" />
+		<InfiniteScroll :enough="enough" @load-more="loadTalks()" />
 	</main>
 </template>
 
@@ -17,7 +17,7 @@ import Vue from 'vue'
 export default {
 	data() {
 		return {
-			posts: [],
+			talks: [],
 			enough: false,
 			page: 0,
 			pageSize: 12,
@@ -25,20 +25,19 @@ export default {
 		}
 	},
 	mounted() {
-		this.loadPosts()
+		this.loadTalks()
 	},
 	methods: {
-		async loadPosts() {
+		async loadTalks() {
 			if (!this.enough && !this.isLoading) {
 				this.isLoading = true
-				const newPosts = await this.$content('/talks')
+				const newTalks = await this.$content('/talks')
 					.only([
 						'path',
 						'title',
 						'cover',
 						'date',
 						'banner_image_alt',
-						'readingTime',
 						'slug',
 						'dir',
 					])
@@ -49,10 +48,10 @@ export default {
 
 				this.page++
 
-				if (newPosts.length > 0) {
-					this.posts.push(...newPosts)
+				if (newTalks.length > 0) {
+					this.talks.push(...newTalks)
 				}
-				if (newPosts.length === 0 || newPosts.length < 12) {
+				if (newTalks.length === 0 || newTalks.length < 12) {
 					this.enough = true
 				}
 				this.isLoading = false
@@ -72,8 +71,6 @@ main {
 	@apply md:grid-cols-1;
 	@apply lg:grid-cols-2;
 	@apply lg:gap-10;
-	@apply xl:grid-cols-3;
-	@apply xl:gap-10;
 }
 
 .cld-image {

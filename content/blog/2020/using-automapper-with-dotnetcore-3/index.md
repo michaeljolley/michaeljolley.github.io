@@ -134,7 +134,7 @@ public class UserManagementProfile : Profile
 For added isolation, we can create a project just for our `Profile` configurations. Using 
 profiles helps us keep configurations more manageable as our application grows.
 
-# Dependency Injection
+## Dependency Injection
 
 Dependency injection is baked into ASP.NET Core, but to use AutoMapper with it we'll need 
 additional configuration and an additional Nuget package.  
@@ -185,7 +185,7 @@ to our profiles or create new profiles for new business areas and still map appr
 without further configuration.  
 
 Of course, we didn't cover all of the features of AutoMapper so I'd suggest checking out their documentation for more information about their capabilities.  Hopefully this post gave you 
-enough information to start trying AutoMapper yourself.  Let me know in the comments how you 
+enough information to start trying AutoMapper yourself.  Let me know how you 
 use AutoMapper in your applications.
 
 [automapper]: https://automapper.org/
