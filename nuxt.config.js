@@ -20,14 +20,14 @@ const isPreviewBuild = () => {
 	)
 }
 
-const loadCover = async (document, slug, root) => {
+const loadCover = async (document, slug) => {
 	// load cover image if needed
 	if (document.cover && document.cover.startsWith('./')) {
 		const publicId = `${slug}-${document.cover
 			.replace('./', '')
 			.replace(path.extname(document.cover), '')}`
 		const coverPath = path.join(
-			root,
+			__dirname,
 			'content',
 			document.dir,
 			document.cover.replace('./', '')
@@ -41,14 +41,14 @@ const loadCover = async (document, slug, root) => {
 	}
 }
 
-const loadOgraph = async (document, slug, root) => {
+const loadOgraph = async (document, slug) => {
 	// load ograph image if needed
 	if (document.ograph && document.ograph.startsWith('./')) {
 		const publicId = `${slug}-${document.ograph
 			.replace('./', '')
 			.replace(path.extname(document.ograph), '')}`
 		const ographPath = path.join(
-			root,
+			__dirname,
 			'content',
 			document.dir,
 			document.ograph.replace('./', '')
@@ -62,14 +62,14 @@ const loadOgraph = async (document, slug, root) => {
 	}
 }
 
-const copyAssets = async (document, slug, root) => {
+const copyAssets = async (document, slug) => {
 	const reviewTag = async (el) => {
 		if (el.tag && el.tag === 'v-image') {
 			const filename = el.props.src.replace('./', '')
 			const publicId = `${slug}-${filename.replace(path.extname(filename), '')}`
 
 			const imagePath = path.join(
-				root,
+				__dirname,
 				'content',
 				document.path.replace('/index', ''),
 				filename
@@ -86,8 +86,8 @@ const copyAssets = async (document, slug, root) => {
 		}
 	}
 
-	await loadCover(document, slug, root)
-	await loadOgraph(document, slug, root)
+	await loadCover(document, slug)
+	await loadOgraph(document, slug)
 
 	if (document.body && document.body.children) {
 		document.body.children.forEach((el) => {
