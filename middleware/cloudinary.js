@@ -24,20 +24,19 @@ const getAsset = async (path, publicId) => {
 	return asset || null
 }
 
-const loadCover = async (document, slug) => {
+const loadCover = async (document, slug, root) => {
 	// load cover image if needed
 	if (document.cover && document.cover.startsWith('./')) {
 		const publicId = `${slug}-${document.cover
 			.replace('./', '')
 			.replace(path.extname(document.cover), '')}`
 		const coverPath = path.join(
-			__dirname.replace('/middleware', ''),
+			root,
 			'content',
 			document.dir,
 			document.cover.replace('./', '')
 		)
 
-		console.log(coverPath)
 		document.cover = await getAsset(coverPath, publicId)
 		document.cover.secure_url = document.cover.secure_url.replace(
 			'/image/upload/',
@@ -46,20 +45,18 @@ const loadCover = async (document, slug) => {
 	}
 }
 
-const loadOgraph = async (document, slug) => {
+const loadOgraph = async (document, slug, root) => {
 	// load ograph image if needed
 	if (document.ograph && document.ograph.startsWith('./')) {
 		const publicId = `${slug}-${document.ograph
 			.replace('./', '')
 			.replace(path.extname(document.ograph), '')}`
 		const ographPath = path.join(
-			__dirname.replace('/middleware', ''),
+			root,
 			'content',
 			document.dir,
 			document.ograph.replace('./', '')
 		)
-
-		console.log(ographPath)
 
 		document.ograph = await getAsset(ographPath, publicId)
 		document.ograph.secure_url = document.ograph.secure_url.replace(
@@ -69,20 +66,18 @@ const loadOgraph = async (document, slug) => {
 	}
 }
 
-const copyAssets = async (document, slug) => {
+const copyAssets = async (document, slug, root) => {
 	const reviewTag = async (el) => {
 		if (el.tag && el.tag === 'v-image') {
 			const filename = el.props.src.replace('./', '')
 			const publicId = `${slug}-${filename.replace(path.extname(filename), '')}`
 
 			const imagePath = path.join(
-				__dirname.replace('/middleware', ''),
+				root,
 				'content',
 				document.path.replace('/index', ''),
 				filename
 			)
-
-			console.log(imagePath)
 
 			const asset = await getAsset(imagePath, publicId)
 			el.props.src = asset.public_id

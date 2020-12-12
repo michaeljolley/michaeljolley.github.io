@@ -102,7 +102,7 @@ export default {
 
 				// Copy images to assets directory for optimization
 				// and update the img tags with the new paths
-				await $cloudinary.copyAssets(document, slug)
+				await $cloudinary.copyAssets(document, slug, __dirname)
 
 				// for blog posts, update the slug to be based off the
 				// last directory in the path
