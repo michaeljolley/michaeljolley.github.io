@@ -31,7 +31,7 @@ const loadCover = async (document, slug) => {
 			.replace('./', '')
 			.replace(path.extname(document.cover), '')}`
 		const coverPath = path.join(
-			__dirname,
+			__dirname.replace('/middleware', ''),
 			'content',
 			document.dir,
 			document.cover.replace('./', '')
@@ -51,7 +51,7 @@ const loadOgraph = async (document, slug) => {
 			.replace('./', '')
 			.replace(path.extname(document.ograph), '')}`
 		const ographPath = path.join(
-			__dirname,
+			__dirname.replace('/middleware', ''),
 			'content',
 			document.dir,
 			document.ograph.replace('./', '')
@@ -71,7 +71,7 @@ const copyAssets = async (document, slug) => {
 			const publicId = `${slug}-${filename.replace(path.extname(filename), '')}`
 
 			const imagePath = path.join(
-				__dirname,
+				__dirname.replace('/middleware', ''),
 				'content',
 				document.path.replace('/index', ''),
 				filename
