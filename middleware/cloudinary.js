@@ -36,6 +36,8 @@ const loadCover = async (document, slug) => {
 			document.dir,
 			document.cover.replace('./', '')
 		)
+
+		console.log(coverPath)
 		document.cover = await getAsset(coverPath, publicId)
 		document.cover.secure_url = document.cover.secure_url.replace(
 			'/image/upload/',
@@ -56,6 +58,9 @@ const loadOgraph = async (document, slug) => {
 			document.dir,
 			document.ograph.replace('./', '')
 		)
+
+		console.log(ographPath)
+
 		document.ograph = await getAsset(ographPath, publicId)
 		document.ograph.secure_url = document.ograph.secure_url.replace(
 			'/image/upload/',
@@ -76,6 +81,8 @@ const copyAssets = async (document, slug) => {
 				document.path.replace('/index', ''),
 				filename
 			)
+
+			console.log(imagePath)
 
 			const asset = await getAsset(imagePath, publicId)
 			el.props.src = asset.public_id
