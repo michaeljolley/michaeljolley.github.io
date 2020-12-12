@@ -2,7 +2,7 @@ import config from './config'
 
 const generateSitemapRoute = (obj) => {
 	return {
-		url: obj.path,
+		url: `${obj.path}/`,
 		priority: 0.8,
 		lastmod: obj.updatedAt,
 	}

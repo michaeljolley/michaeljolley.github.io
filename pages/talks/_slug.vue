@@ -1,20 +1,20 @@
 <template>
 	<div class="post">
 		<aside>
-			<!-- <TableOfContents
+			<TableOfContents
 				v-if="talk.toc && talk.toc.length > 0"
 				:toc="talk.toc"
 				:levels="talk.toc.length > 10 ? [2] : [2, 3]"
 			/>
-			<SocialSharing :post="talk" /> -->
+			<SocialSharing :post="talk" />
 		</aside>
 		<article class="content">
-			<!-- <ArticleHeaderImage
+			<ArticleHeaderImage
 				:cover="talk.cover"
 				:title="talk.banner_image_alt || talk.title"
-			/> -->
+			/>
 			<section>
-				<!-- <ArticleHeader :post="talk" /> -->
+				<TalkHeader :post="talk" />
 				<nuxt-content :document="talk" />
 			</section>
 		</article>
@@ -73,6 +73,12 @@ export default {
 	width: unset !important;
 	margin: 35px -30px;
 	@apply shadow-lg;
+}
+
+td .cld-image,
+td img {
+	width: 5rem !important;
+	@apply rounded-md;
 }
 
 @screen lg {

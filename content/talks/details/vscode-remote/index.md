@@ -33,21 +33,65 @@ As developers, our most famous response, "it works on my machine," doesn't cut i
 
 This talk was given at the following events:
 
-| | Event | Date | Location |
-| --- | --- | --- | --- |
-| <v-image
+<table>
+	<thead>
+		<tr>
+			<th></th>
+			<th>Event</th>
+			<th>Date</th>
+			<th>Location</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+			<v-image
   alt="DNN Summit - Orlando"
- src="./dnn_vjwhaq.png"></v-image> | DNN Summit | Feb. 24, 2020 | Orlando, FL |
-| <v-image
+ src="./dnn_vjwhaq.png"></v-image>
+ </td>
+			<td>DNN Summit</td>
+			<td>Feb. 24, 2020</td>
+			<td>Orlando, FL</td>
+		</tr>
+		<tr>
+			<td>
+			<v-image
   alt="BHM.NET Meetup - Birmingham"
- src="./bhmnet_yih0m0.png"></v-image> | BHM.NET Meetup | Nov. 19, 2019 | Birmingham, AL |
-| <v-image
+ src="./bhmnet_yih0m0.png"></v-image>
+ </td>
+			<td>BHM.NET Meetup</td>
+			<td>Nov. 19, 2019</td>
+			<td>Birmingham, AL</td>
+		</tr>
+		<tr>
+			<td>
+			<v-image
   alt="devopsdays - Chattanooga"
- src="./chat_kckk5d.png"></v-image> | devopsdays | Nov. 12, 2019 | Chattanooga, TN |
-| <v-image
+ src="./chat_kckk5d.png"></v-image>
+ </td>
+			<td>devopsdays</td>
+			<td>Nov. 12, 2019</td>
+			<td>Chattanooga, TN</td>
+		</tr>
+		<tr>
+			<td>
+			<v-image
   alt="BSides BHAM - Birmingham"
- src="./vulc_u9npiy.png"></v-image> | BSides BHAM | Oct. 12, 2019 | Birmingham, AL |
-| 
-<v-image
+ src="./vulc_u9npiy.png"></v-image>
+ </td>
+			<td>BSides BHAM</td>
+			<td>Oct. 12, 2019</td>
+			<td>Birmingham, AL</td>
+		</tr>
+		<tr>
+			<td>
+			<v-image
   alt="GDG DevFest 2019 - Auburn"
- src="./aub_ecqhyn.png"></v-image> | GDG Devfest 2019 | Sept. 15, 2019 | Auburn, AL |
+ src="./aub_ecqhyn.png"></v-image>
+ </td>
+			<td>GDG Devfest 2019</td>
+			<td>Sept. 15, 2019</td>
+			<td>Auburn, AL</td>
+		</tr>
+	</tbody>
+</table>

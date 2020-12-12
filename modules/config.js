@@ -15,6 +15,7 @@ const config = {
 	baseKeywords: [
 		'developer',
 		'javascript',
+		'csharp',
 		'azure',
 		'michael jolley',
 		'education',
@@ -31,6 +32,7 @@ const config = {
 	cloudinaryCloudName: process.env.CLOUDINARY_CLOUD_NAME || null,
 	cloudinaryAPIKey: process.env.CLOUDINARY_API_KEY || null,
 	cloudinaryAPISecret: process.env.CLOUDINARY_API_SECRET || null,
+	stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY || null,
 	get headMeta() {
 		return [
 			{ charset: 'utf-8' },

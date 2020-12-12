@@ -5,6 +5,7 @@ import fontawesome from './fontAwesome'
 import googleAnalytics from './googleAnalytics'
 import purgeCss from './purgeCSS'
 import sitemap from './sitemap'
+import stripe from './stripe'
 import tailwindcss from './tailwindcss'
 
 export {
@@ -15,5 +16,6 @@ export {
 	googleAnalytics,
 	purgeCss,
 	sitemap,
+	stripe,
 	tailwindcss,
 }

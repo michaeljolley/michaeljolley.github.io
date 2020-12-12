@@ -1,4 +1,3 @@
-import path from 'path'
 import readingTime from 'reading-time'
 import { $cloudinary } from './middleware'
 import {
@@ -9,6 +8,7 @@ import {
 	googleAnalytics,
 	purgeCss,
 	sitemap,
+	tailwindcss,
 } from './modules'
 
 const isPreviewBuild = () => {
@@ -17,48 +17,6 @@ const isPreviewBuild = () => {
 		process.env.HEAD &&
 		process.env.HEAD.startsWith('cms/blog')
 	)
-}
-
-const copyAssets = async (document, slug) => {
-	const reviewTag = async (el) => {
-		if (el.tag && el.tag === 'v-image') {
-			const filename = el.props.src.replace('./', '')
-			const publicId = `${slug}-${filename.replace(path.extname(filename), '')}`
-
-			const imagePath = path.join(__dirname, 'content', document.dir, filename)
-
-			const asset = await getAsset(imagePath, publicId)
-			el.props.src = asset.public_id
-		}
-
-		if (el.children) {
-			for (let i = 0; i < el.children.length; i++) {
-				await reviewTag(el.children[i])
-			}
-		}
-	}
-
-	const getAsset = async (coverPath, publicId) => {
-		return await $cloudinary.getAsset(coverPath, publicId)
-	}
-
-	// load cover image if needed
-	if (document.cover && document.cover.startsWith('./')) {
-		const publicId = `${slug}-${document.cover
-			.replace('./', '')
-			.replace(path.extname(document.cover), '')}`
-		const coverPath = path.join(
-			__dirname,
-			'content',
-			document.dir,
-			document.cover.replace('./', '')
-		)
-		document.cover = await getAsset(coverPath, publicId)
-	}
-
-	document.body.children.forEach((el) => {
-		reviewTag(el)
-	})
 }
 
 export default {
@@ -121,10 +79,8 @@ export default {
 	googleAnalytics,
 	purgeCss,
 	sitemap,
+	tailwindcss,
 
-	tailwindcss: {
-		exposeConfig: true,
-	},
 	purgeCSS: {},
 
 	plugins: ['~/directives/scroll.client.js', '~/plugins/formatDate.js'],
@@ -146,7 +102,7 @@ export default {
 
 				// Copy images to assets directory for optimization
 				// and update the img tags with the new paths
-				await copyAssets(document, slug)
+				await $cloudinary.copyAssets(document, slug)
 
 				// for blog posts, update the slug to be based off the
 				// last directory in the path

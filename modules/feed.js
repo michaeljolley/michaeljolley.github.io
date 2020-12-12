@@ -1,6 +1,6 @@
 import config from './config'
 
-export default async () => {
+export default () => {
 	const { $content } = require('@nuxt/content')
 
 	const feedFormats = {
