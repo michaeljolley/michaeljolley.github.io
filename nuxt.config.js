@@ -1,3 +1,4 @@
+import path from 'path'
 import readingTime from 'reading-time'
 import { $cloudinary } from './middleware'
 import {
@@ -17,6 +18,82 @@ const isPreviewBuild = () => {
 		process.env.HEAD &&
 		process.env.HEAD.startsWith('cms/blog')
 	)
+}
+
+const loadCover = async (document, slug, root) => {
+	// load cover image if needed
+	if (document.cover && document.cover.startsWith('./')) {
+		const publicId = `${slug}-${document.cover
+			.replace('./', '')
+			.replace(path.extname(document.cover), '')}`
+		const coverPath = path.join(
+			root,
+			'content',
+			document.dir,
+			document.cover.replace('./', '')
+		)
+
+		document.cover = await $cloudinary.getAsset(coverPath, publicId)
+		document.cover.secure_url = document.cover.secure_url.replace(
+			'/image/upload/',
+			'/image/upload/f_auto,q_auto,w_1200,h_600,c_fit/'
+		)
+	}
+}
+
+const loadOgraph = async (document, slug, root) => {
+	// load ograph image if needed
+	if (document.ograph && document.ograph.startsWith('./')) {
+		const publicId = `${slug}-${document.ograph
+			.replace('./', '')
+			.replace(path.extname(document.ograph), '')}`
+		const ographPath = path.join(
+			root,
+			'content',
+			document.dir,
+			document.ograph.replace('./', '')
+		)
+
+		document.ograph = await $cloudinary.getAsset(ographPath, publicId)
+		document.ograph.secure_url = document.ograph.secure_url.replace(
+			'/image/upload/',
+			'/image/upload/f_auto,q_auto,w_1200,h_600,c_fit/'
+		)
+	}
+}
+
+const copyAssets = async (document, slug, root) => {
+	const reviewTag = async (el) => {
+		if (el.tag && el.tag === 'v-image') {
+			const filename = el.props.src.replace('./', '')
+			const publicId = `${slug}-${filename.replace(path.extname(filename), '')}`
+
+			const imagePath = path.join(
+				root,
+				'content',
+				document.path.replace('/index', ''),
+				filename
+			)
+
+			const asset = await $cloudinary.getAsset(imagePath, publicId)
+			el.props.src = asset.public_id
+		}
+
+		if (el.children) {
+			for (let i = 0; i < el.children.length; i++) {
+				await reviewTag(el.children[i])
+			}
+		}
+	}
+
+	await loadCover(document, slug, root)
+	await loadOgraph(document, slug, root)
+
+	if (document.body && document.body.children) {
+		document.body.children.forEach((el) => {
+			reviewTag(el)
+		})
+	}
 }
 
 export default {
@@ -110,7 +187,7 @@ export default {
 
 				// Copy images to assets directory for optimization
 				// and update the img tags with the new paths
-				await $cloudinary.copyAssets(document, slug, __dirname)
+				await copyAssets(document, slug, __dirname)
 
 				// for blog posts, update the slug to be based off the
 				// last directory in the path
