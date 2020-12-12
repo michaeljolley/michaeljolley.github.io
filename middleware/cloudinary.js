@@ -93,9 +93,11 @@ const copyAssets = async (document, slug, root) => {
 	await loadCover(document, slug, root)
 	await loadOgraph(document, slug, root)
 
-	document.body.children.forEach((el) => {
-		reviewTag(el)
-	})
+	if (document.body && document.body.children) {
+		document.body.children.forEach((el) => {
+			reviewTag(el)
+		})
+	}
 }
 
 export default {

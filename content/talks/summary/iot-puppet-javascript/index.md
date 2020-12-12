@@ -1,8 +1,8 @@
 ---
 date: 2020-05-22
 title: IoT - Controlling Servos with Facial Tracking in a Browser
+cover: ./vondev_i1qjlr.png
 description: "Controlling servo motors via webhooks, Particle Argon boards, JavaScript and facial tracking."
-cover: ./halfstack_yxpjun.png
 tags: [iot, facial-recognition, talks, presentation]
 ---
 
@@ -24,13 +24,4 @@ Vonage Video API, Azure Functions, Particle IoT devices and yes, an animatronic 
 
 ## History
 
-This talk was given at the following events:
-
-| | Event | Date | Location |
-| --- | --- | --- | --- |
-| <v-image
-  alt="HalfStack Online"
- src="./halfstack_yxpjun.png"></v-image> | HalfStack | May 22, 2020 | Online |
-| <v-image
-  alt="DNN Summit - Orlando"
- src="./vondev_i1qjlr.png"></v-image> | Vonage Developer Day | May 14, 2020 | Online |
+This talk has been given at the following events:

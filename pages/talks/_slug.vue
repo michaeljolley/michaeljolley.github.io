@@ -16,6 +16,9 @@
 			<section>
 				<TalkHeader :post="talk" />
 				<nuxt-content :document="talk" />
+				<div class="events">
+					<Event v-for="event in events" :key="event.slug" :event="event" />
+				</div>
 			</section>
 		</article>
 	</div>
@@ -25,7 +28,13 @@
 export default {
 	async asyncData({ $content, params }) {
 		const talk = await $content('/talks', params.slug).fetch()
-		return { talk }
+
+		const events = await $content('/events')
+			.where({ talk: { $eq: params.slug } })
+			.sortBy('date', 'desc')
+			.fetch()
+
+		return { talk, events }
 	},
 	head() {
 		return {
@@ -69,16 +78,14 @@ export default {
 	@apply lg:space-x-3;
 }
 
-.cld-image {
-	width: unset !important;
-	margin: 35px -30px;
-	@apply shadow-lg;
-}
+.events {
+	@apply grid;
+	@apply gap-6;
+	@apply mt-10;
 
-td .cld-image,
-td img {
-	width: 5rem !important;
-	@apply rounded-md;
+	@apply md:grid-cols-1;
+	@apply lg:grid-cols-2;
+	@apply lg:gap-6;
 }
 
 @screen lg {

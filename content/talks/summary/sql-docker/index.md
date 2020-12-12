@@ -29,10 +29,4 @@ Managing development databases can be tricky, especially if members of the team 
 
 ## History
 
-This talk was given at the following events:
-
-| | Event | Date | Location |
-| --- | --- | --- | --- |
-| <v-image
-  alt="DotNetConf 2019"
- src="./netconf_sabsng.png"></v-image> | DotNetConf | Sept. 25, 2019 | Online |
+This talk has been given at the following events:

@@ -41,6 +41,5 @@ header .cld-image {
 	@apply shadow-lg;
 	@apply rounded-xl;
 	@apply overflow-hidden;
-	@apply shadow-lg;
 }
 </style>

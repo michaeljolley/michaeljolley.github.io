@@ -96,9 +96,17 @@ export default {
 				document.postslug = slug
 			} else if (
 				directories.includes('blog') ||
-				directories.includes('talks')
+				directories.includes('talks') ||
+				directories.includes('events')
 			) {
-				const type = directories.includes('blog') ? 'blog' : 'talks'
+				let type
+				if (directories.includes('blog')) {
+					type = 'blog'
+				} else if (directories.includes('talks')) {
+					type = 'talks'
+				} else {
+					type = 'events'
+				}
 
 				// Copy images to assets directory for optimization
 				// and update the img tags with the new paths
@@ -111,7 +119,9 @@ export default {
 				document.dir = `/${type}`
 
 				// calculate and add reading time to document
-				document.readingTime = readingTime(document.text)
+				if (document.text) {
+					document.readingTime = readingTime(document.text)
+				}
 			}
 		},
 	},

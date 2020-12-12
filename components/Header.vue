@@ -22,7 +22,7 @@
 					<NuxtLink to="/talks" title="Talks">Speaking</NuxtLink>
 				</li>
 				<li class="flex-1">
-					<NuxtLink to="/shop" title="Swag">Swag</NuxtLink>
+					<a href="https://bbb.dev/shop" title="Swag">Swag</a>
 				</li>
 			</ul>
 		</nav>
