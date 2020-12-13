@@ -15,6 +15,14 @@
 import Vue from 'vue'
 
 export default {
+	asyncData({ $content, params, error, payload }) {
+		if (payload) {
+			return {
+				talks: payload.talks,
+				page: 1,
+			}
+		}
+	},
 	data() {
 		return {
 			talks: [],
@@ -25,10 +33,16 @@ export default {
 		}
 	},
 	mounted() {
-		this.loadTalks()
+		if (this.page === 0) {
+			this.loadTalks()
+		}
 	},
 	methods: {
 		async loadTalks() {
+			if (this.talks.length === 0) {
+				this.page = 0
+			}
+
 			if (!this.enough && !this.isLoading) {
 				this.isLoading = true
 				const newTalks = await this.$content('talks')

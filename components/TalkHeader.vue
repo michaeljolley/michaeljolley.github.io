@@ -25,8 +25,10 @@ header {
 	@apply mb-4;
 }
 h1 {
+	@apply text-3xl;
 	@apply border-0;
-	@apply text-5xl;
-	@apply mb-1;
+	@apply mb-0;
+	@apply md:text-4xl;
+	@apply md:mb-1;
 }
 </style>

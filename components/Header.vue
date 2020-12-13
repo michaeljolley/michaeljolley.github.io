@@ -98,6 +98,7 @@ li a {
 	@apply content-center;
 	@apply font-bold;
 	@apply grid;
+	font-family: 'SpeziaWide', sans-serif;
 }
 li a:hover {
 	@apply text-white;

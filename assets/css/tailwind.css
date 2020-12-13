@@ -63,15 +63,20 @@ header h1,
 }
 
 article > section > h1 {
-	@apply text-5xl;
+	@apply text-3xl;
+	@apply md:text-4xl;
 }
 .nuxt-content h2 {
-	@apply text-3xl;
-	@apply mt-8;
+	@apply text-2xl;
+	@apply mt-3;
+	@apply md:text-2xl;
+	@apply md:mt-8;
 }
 .nuxt-content h3 {
-	@apply text-2xl;
-	@apply mt-6;
+	@apply text-xl;
+	@apply mt-3;
+	@apply md:mt-6;
+	@apply md:text-xl;
 }
 .nuxt-content p {
 	@apply mt-3;
@@ -140,17 +145,5 @@ div.nuxt-progress {
 .nuxt-content img {
   @apply rounded-lg;
   margin: 0 auto;
-}
-
-@media sm {
-	article > section > h1 {
-		@apply text-3xl;
-	}
-	.nuxt-content h2 {
-		@apply text-2xl;
-	}
-	.nuxt-content h3 {
-		@apply text-xl;
-	}
 }
 

@@ -32,14 +32,17 @@ header {
 	@apply mb-4;
 }
 h1 {
+	@apply text-3xl;
 	@apply border-0;
-	@apply text-5xl;
-	@apply mb-1;
+	@apply mb-0;
+	@apply md:text-4xl;
+	@apply md:mb-1;
 }
 summary {
-	@apply text-base;
+	@apply text-sm;
 	@apply mb-1;
 	@apply font-bold;
+	@apply md:text-base;
 }
 
 .rt,

@@ -16,7 +16,6 @@
 	"dependencies": {
 		"@fortawesome/free-brands-svg-icons": "^5.15.1",
 		"@fortawesome/free-solid-svg-icons": "^5.15.1",
-		"@forked-prs/nuxt-infinite-scroll-module": "^1.0.2",
 		"@nuxt/content": "^1.9.0",
 		"@nuxtjs/cloudinary": "^1.0.2",
 		"autoprefixer": "^10.1.0",

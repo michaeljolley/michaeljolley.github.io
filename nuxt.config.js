@@ -129,6 +129,14 @@ export default {
 							},
 						},
 					],
+					...[
+						{
+							route: '/talks',
+							payload: {
+								talks: talks.slice(0, 12),
+							},
+						},
+					],
 				]
 			}
 		},
