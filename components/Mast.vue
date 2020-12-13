@@ -46,17 +46,18 @@
 const salutations = ['Hey!', 'Hi!', 'Eh.', 'Oh no.', 'Meh.', 'Uh oh.', 'Eek!']
 
 export default {
-	data() {
-		backgroundImage: '',
-		opening: ''
-	},
-	created() {
-		this.backgroundImage = `https://res.cloudinary.com/dk3rdh3yo/image/upload/g_auto,f_auto/v1607302424/mj_${Math.floor(
-				Math.random() * 13 + 1
-			)}.png`
-		this.opening =
-			salutations[Math.floor(Math.random() * salutations.length)]
-	}
+  data() {
+    return {
+      backgroundImage: '',
+      opening: '',
+    }
+  },
+  created() {
+    this.backgroundImage = `https://res.cloudinary.com/dk3rdh3yo/image/upload/g_auto,f_auto/v1607302424/mj_${Math.floor(
+      Math.random() * 13 + 1
+    )}.png`
+    this.opening = salutations[Math.floor(Math.random() * salutations.length)]
+  },
 }
 </script>
 <style lang="css" scoped>
