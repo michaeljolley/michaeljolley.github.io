@@ -53,7 +53,6 @@ export default {
 		}
 	},
 	created() {
-		console.log('created')
 		this.backgroundImage = `https://res.cloudinary.com/dk3rdh3yo/image/upload/g_auto,f_auto/v1607302424/mj_${Math.floor(
 			Math.random() * 13 + 1
 		)}.png`
@@ -63,7 +62,7 @@ export default {
 </script>
 <style lang="css" scoped>
 .mast {
-	@apply sm:hidden;
+	@apply hidden;
 
 	@apply md:bg-right;
 	@apply md:bg-no-repeat;
