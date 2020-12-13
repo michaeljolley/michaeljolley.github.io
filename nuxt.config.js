@@ -11,12 +11,28 @@ import {
 	tailwindcss,
 } from './modules'
 
+const isProduction = () => {
+	return process.env.CONTEXT && process.env.CONTEXT === 'production'
+}
+
 const isPreviewBuild = () => {
 	return (
 		process.env.PULL_REQUEST &&
 		process.env.HEAD &&
 		process.env.HEAD.startsWith('cms/blog')
 	)
+}
+
+const previewRoute = () => {
+	if (process.env.HEAD) {
+		const [, type, slug] = process.env.HEAD.split('/')
+
+		if (type === 'blog') {
+			return `/${type}/${slug}`
+		} else {
+			return null
+		}
+	}
 }
 
 export default {
@@ -72,6 +88,27 @@ export default {
 	},
 
 	build: {},
+
+	generate: {
+		crawler: isProduction(),
+		fallback: true,
+		routes() {
+			if (isPreviewBuild()) {
+				return [previewRoute()]
+			} else {
+				this.$content('blog')
+					.fetch()
+					.then((result) => {
+						return result.map((post) => {
+							return {
+								route: '/blog/' + post.slug,
+								payload: post,
+							}
+						})
+					})
+			}
+		},
+	},
 
 	cloudinary,
 	feed,

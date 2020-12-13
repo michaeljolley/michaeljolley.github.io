@@ -14,7 +14,7 @@ footer {
 	@apply mt-5;
 	@apply mb-5;
 	@apply pt-5;
-	@apply text-gray-300;
+	@apply text-gray-100;
 
 	border-top: 1px solid;
 	border-image-source: linear-gradient(
