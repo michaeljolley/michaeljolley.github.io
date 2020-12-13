@@ -150,6 +150,18 @@ const config = {
 				rel: 'dns-prefetch',
 				href: '//res.cloudinary.com',
 			},
+			{
+				rel: 'preconnect',
+				href: 'https://res.cloudinary.com',
+			},
+			{
+				rel: 'prerender',
+				href: `${this.baseUrl}/talks`,
+			},
+			{
+				rel: 'prerender',
+				href: `${this.baseUrl}/blog`,
+			},
 			// {
 			//   rel: 'icon',
 			//   type: 'image/png',
