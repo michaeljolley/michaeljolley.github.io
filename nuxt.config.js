@@ -123,7 +123,7 @@ export default {
 							payload: {
 								posts: posts
 									.sort((a, b) => {
-										return b.date - a.date
+										return new Date(b.date) - new Date(a.date)
 									})
 									.slice(0, 12),
 							},
