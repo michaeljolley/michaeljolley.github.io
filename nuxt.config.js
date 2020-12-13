@@ -120,7 +120,13 @@ export default {
 					...[
 						{
 							route: '/blog',
-							payload: { posts: posts.slice(0, 12) },
+							payload: {
+								posts: posts
+									.sort((a, b) => {
+										return a.date - b.date
+									})
+									.slice(0, 12),
+							},
 						},
 					],
 				]

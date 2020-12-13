@@ -146,6 +146,10 @@ const config = {
 				href: '/feed.xml',
 				title: 'RSS',
 			},
+			{
+				rel: 'dns-prefetch',
+				href: '//res.cloudinary.com',
+			},
 			// {
 			//   rel: 'icon',
 			//   type: 'image/png',
