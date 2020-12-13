@@ -53,14 +53,11 @@ export default {
 		}
 	},
 	created() {
-		if (!this.backgroundImage) {
-			this.backgroundImage = `https://res.cloudinary.com/dk3rdh3yo/image/upload/g_auto,f_auto/v1607302424/mj_${Math.floor(
-				Math.random() * 13 + 1
-			)}.png`
-		}
-		if (!this.opening) {
-			this.opening = salutations[Math.floor(Math.random() * salutations.length)]
-		}
+		console.log('created')
+		this.backgroundImage = `https://res.cloudinary.com/dk3rdh3yo/image/upload/g_auto,f_auto/v1607302424/mj_${Math.floor(
+			Math.random() * 13 + 1
+		)}.png`
+		this.opening = salutations[Math.floor(Math.random() * salutations.length)]
 	},
 }
 </script>
@@ -92,6 +89,7 @@ h1 {
 	@apply font-bold;
 	@apply text-2xl;
 	line-height: 1em;
+	font-size: 4rem;
 }
 
 h1 span {

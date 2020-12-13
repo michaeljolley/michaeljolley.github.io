@@ -1,7 +1,7 @@
 <template>
 	<article>
 		<nuxt-link :to="`/talks/${talk.slug}`" :title="talk.title">
-			<header class="overflow-hidden">
+			<header>
 				<v-image
 					v-if="talk.cover"
 					:alt="talk.banner_image_alt || talk.title"

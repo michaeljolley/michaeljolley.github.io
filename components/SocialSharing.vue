@@ -5,7 +5,7 @@
 			<li>
 				<ShareNetwork
 					network="Facebook"
-					:url="`${baseUrl}${post.route}`"
+					:url="`${baseUrl}${post.path}`"
 					:title="post.title"
 					:description="post.description"
 					:quote="post.description"
@@ -18,9 +18,9 @@
 			<li>
 				<ShareNetwork
 					network="Twitter"
-					:url="`${baseUrl}${post.route}`"
+					:url="`${baseUrl}${post.path}`"
 					:title="post.title"
-					twitter-user="VonageDev"
+					twitter-user="baldbeardbuild"
 					:hashtags="post.tags && post.tags.join(',')"
 					class="twitter"
 				>
@@ -31,7 +31,7 @@
 				<ShareNetwork
 					network="LinkedIn"
 					:title="post.title"
-					:url="`${baseUrl}${post.route}`"
+					:url="`${baseUrl}${post.path}`"
 					class="linkedin"
 				>
 					<font-awesome-icon :icon="['fab', 'linkedin-in']" />
@@ -40,7 +40,7 @@
 			<li>
 				<ShareNetwork
 					network="Reddit"
-					:url="`${baseUrl}${post.route}`"
+					:url="`${baseUrl}${post.path}`"
 					:title="post.title"
 					class="reddit"
 				>
@@ -50,7 +50,7 @@
 			<li>
 				<ShareNetwork
 					network="Vk"
-					:url="`${baseUrl}${post.route}`"
+					:url="`${baseUrl}${post.path}`"
 					:title="post.title"
 					:description="post.description"
 					class="vk"

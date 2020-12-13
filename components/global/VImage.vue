@@ -1,15 +1,16 @@
 <template>
-	<cld-image
-		:alt="alt"
-		:public-id="src"
-		:title="alt"
-		fetch-format="auto"
-		quality="auto"
-		loading="lazy"
-		responsive
-		blur
-		><cld-placeholder type="blur"
-	/></cld-image>
+	<client-only>
+		<cld-image
+			:alt="alt"
+			:public-id="src"
+			:title="alt"
+			fetch-format="auto"
+			quality="auto"
+			loading="lazy"
+			responsive
+			blur
+		></cld-image>
+	</client-only>
 </template>
 
 <script>

@@ -50,6 +50,9 @@ export default {
 	},
 
 	head: {
+		htmlAttrs: {
+			lang: 'en',
+		},
 		title: config.indexTitle,
 		titleTemplate: `%s${config.baseSplitter}${config.baseTitle}`,
 		meta: config.headMeta,

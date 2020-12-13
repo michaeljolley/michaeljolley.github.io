@@ -1,13 +1,7 @@
 <template>
 	<header v-scroll>
 		<nav class="container">
-			<NuxtLink
-				to="/"
-				title="back home"
-				aria-label="Bald Bearded Builder Logo"
-				aria-role="img"
-				class="flex"
-			>
+			<NuxtLink to="/" title="back home" class="flex">
 				<div class="logo"></div>
 				<div class="text flex flex-col">
 					<h2>bald. bearded. builder.</h2>
@@ -22,7 +16,7 @@
 					<NuxtLink to="/talks" title="Talks">Speaking</NuxtLink>
 				</li>
 				<li class="flex-1">
-					<a href="https://bbb.dev/shop" title="Swag">Swag</a>
+					<a href="https://bbb.dev/shop" rel="noreferrer" title="Swag">Swag</a>
 				</li>
 			</ul>
 		</nav>

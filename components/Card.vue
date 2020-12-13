@@ -1,7 +1,7 @@
 <template>
-	<article>
-		<nuxt-link :to="`/${type}/${post.slug}`" :title="post.title">
-			<header class="overflow-hidden">
+	<nuxt-link :to="`/${type}/${post.slug}`" :title="post.title">
+		<article>
+			<header>
 				<v-image
 					v-if="post.cover"
 					:alt="post.banner_image_alt || post.title"
@@ -18,8 +18,8 @@
 					</span>
 				</summary>
 			</section>
-		</nuxt-link>
-	</article>
+		</article>
+	</nuxt-link>
 </template>
 <script>
 export default {
