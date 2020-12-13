@@ -92,20 +92,29 @@ export default {
 	generate: {
 		crawler: isProduction(),
 		fallback: true,
-		routes() {
+		async routes() {
 			if (isPreviewBuild()) {
 				return [previewRoute()]
 			} else {
-				this.$content('blog')
-					.fetch()
-					.then((result) => {
-						return result.map((post) => {
-							return {
-								route: '/blog/' + post.slug,
-								payload: post,
-							}
-						})
-					})
+				const { $content } = require('@nuxt/content')
+				const posts = await $content('blog').fetch()
+				const talks = await $content('talks').fetch()
+				const events = await $content('events').fetch()
+				return [
+					...talks.map((talk) => {
+						const talkEvents = events.filter((f) => f.talk === talk.slug)
+						return {
+							route: `/talks/${talk.slug}`,
+							payload: { talk, events: talkEvents },
+						}
+					}),
+					...posts.map((post) => {
+						return {
+							route: `/blog/${post.slug}`,
+							payload: post,
+						}
+					}),
+				]
 			}
 		},
 	},
