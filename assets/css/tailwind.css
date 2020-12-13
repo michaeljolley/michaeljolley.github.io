@@ -141,3 +141,16 @@ div.nuxt-progress {
   @apply rounded-lg;
   margin: 0 auto;
 }
+
+@media sm {
+	article > section > h1 {
+		@apply text-3xl;
+	}
+	.nuxt-content h2 {
+		@apply text-2xl;
+	}
+	.nuxt-content h3 {
+		@apply text-xl;
+	}
+}
+
