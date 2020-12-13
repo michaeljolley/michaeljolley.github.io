@@ -15,6 +15,14 @@
 import Vue from 'vue'
 
 export default {
+	asyncData({ $content, params, error, payload }) {
+		if (payload) {
+			return {
+				posts: payload.posts,
+				page: 1,
+			}
+		}
+	},
 	data() {
 		return {
 			posts: [],
@@ -25,10 +33,16 @@ export default {
 		}
 	},
 	mounted() {
-		this.loadPosts()
+		if (this.page === 0) {
+			this.loadPosts()
+		}
 	},
 	methods: {
 		async loadPosts() {
+			if (this.posts.length === 0) {
+				this.page = 0
+			}
+
 			if (!this.enough && !this.isLoading) {
 				this.isLoading = true
 				const newPosts = await this.$content('blog')

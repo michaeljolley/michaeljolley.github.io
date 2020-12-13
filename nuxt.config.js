@@ -117,6 +117,12 @@ export default {
 							payload: post,
 						}
 					}),
+					...[
+						{
+							route: '/blog',
+							payload: { posts: posts.slice(0, 12) },
+						},
+					],
 				]
 			}
 		},
