@@ -73,7 +73,6 @@ export default {
 	],
 
 	modules: [
-		'@forked-prs/nuxt-infinite-scroll-module',
 		'@nuxtjs/cloudinary',
 		'@nuxt/content',
 		'@nuxtjs/feed',
