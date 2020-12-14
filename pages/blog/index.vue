@@ -1,12 +1,14 @@
 <template>
 	<main>
-		<Card
-			v-for="post in posts"
-			:key="post.path"
-			:v-if="posts"
-			:post="post"
-			type="blog"
-		/>
+		<div class="posts">
+			<Card
+				v-for="post in posts"
+				:key="post.path"
+				:v-if="posts"
+				:post="post"
+				type="blog"
+			/>
+		</div>
 		<InfiniteScroll :enough="enough" @load-more="loadPosts()" />
 	</main>
 </template>
@@ -78,7 +80,7 @@ export default {
 </script>
 
 <style scoped>
-main {
+.posts {
 	@apply grid;
 	@apply gap-6;
 	@apply mt-10;

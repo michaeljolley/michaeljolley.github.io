@@ -1,13 +1,18 @@
 <template>
-	<div class="posts">
-		<Card
-			v-for="post in posts"
-			:key="post.path"
-			:v-if="posts"
-			:post="post"
-			type="blog"
-		/>
-	</div>
+	<main>
+		<div class="container mx-auto">
+			<div class="posts">
+				<Card
+					v-for="post in posts"
+					:key="post.path"
+					:v-if="posts"
+					:post="post"
+					type="blog"
+				/>
+			</div>
+		</div>
+		<SocialBar></SocialBar>
+	</main>
 </template>
 
 <script>
@@ -40,7 +45,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .posts {
 	@apply grid;
 	@apply gap-6;
@@ -48,6 +53,10 @@ export default {
 	@apply md:grid-cols-1;
 	@apply lg:grid-cols-2;
 	@apply lg:gap-10;
+}
+
+.posts article {
+	@apply h-full;
 }
 
 .cld-image {

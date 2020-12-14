@@ -2,8 +2,8 @@
 	<div>
 		<Mast />
 		<Header />
+		<Nuxt />
 		<div class="container">
-			<Nuxt />
 			<Footer />
 		</div>
 		<BackToTop />

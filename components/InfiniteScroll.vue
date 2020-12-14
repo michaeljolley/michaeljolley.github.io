@@ -1,7 +1,7 @@
 <template>
 	<div v-show="!enough" :id="id">
 		<slot>
-			<span> Loading...</span>
+			<font-awesome-icon :icon="['fas', 'spinner']" pulse />
 		</slot>
 	</div>
 </template>
@@ -58,3 +58,11 @@ export default {
 	},
 }
 </script>
+<style scoped>
+div {
+	@apply w-full;
+	@apply text-5xl;
+	@apply flex;
+	@apply justify-center;
+}
+</style>

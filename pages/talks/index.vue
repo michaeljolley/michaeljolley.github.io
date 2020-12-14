@@ -1,12 +1,14 @@
 <template>
 	<main>
-		<TalkCard
-			v-for="talk in talks"
-			:key="talk.path"
-			:v-if="talks"
-			:talk="talk"
-			type="speaking"
-		/>
+		<div class="talks">
+			<TalkCard
+				v-for="talk in talks"
+				:key="talk.path"
+				:v-if="talks"
+				:talk="talk"
+				type="speaking"
+			/>
+		</div>
 		<InfiniteScroll :enough="enough" @load-more="loadTalks()" />
 	</main>
 </template>
@@ -77,7 +79,7 @@ export default {
 </script>
 
 <style scoped>
-main {
+.talks {
 	@apply grid;
 	@apply gap-6;
 	@apply mt-10;
