@@ -1,0 +1,149 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import '../fonts/spezia/spezia.css';
+@import 'fontsource-roboto/index.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: Roboto, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+	@apply text-white
+}
+
+.sticky + .container {
+  padding-top: 66px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'SpeziaWide', sans-serif;
+	border-bottom: 1px solid;
+	border-image-source: linear-gradient(
+		90deg,
+		rgba(255, 0, 255, 1) 0%,
+		rgba(0, 255, 255, 1) 100%
+	);
+	border-image-slice: 1;
+	@apply pb-2;
+	@apply mb-5;
+	@apply font-bold;
+}
+
+article {
+	@apply flex;
+	@apply flex-col;
+	@apply w-11/12;
+	@apply lg:w-4/5;
+}
+
+article > section {
+	@apply bg-gray-500;
+	@apply rounded-b-xl;
+	@apply text-lg;
+}
+
+header h1,
+.nuxt-content h2,
+.nuxt-content h3,
+.nuxt-content h4,
+.nuxt-content h5 {
+	background: linear-gradient(
+		90deg,
+		rgba(255, 0, 255, 1) 0%,
+		rgba(0, 255, 255, 1) 100%
+	);
+	@apply bg-clip-text;
+	-webkit-text-fill-color: transparent;
+}
+
+article > section > h1 {
+	@apply text-3xl;
+	@apply md:text-4xl;
+}
+.nuxt-content h2 {
+	@apply text-2xl;
+	@apply mt-3;
+	@apply md:text-2xl;
+	@apply md:mt-8;
+}
+.nuxt-content h3 {
+	@apply text-xl;
+	@apply mt-3;
+	@apply md:mt-6;
+	@apply md:text-xl;
+}
+.nuxt-content p {
+	@apply mt-3;
+	@apply mb-3;
+}
+.nuxt-content ul {
+	@apply list-disc;
+	@apply pl-6;
+}
+.nuxt-content h1:before,
+.nuxt-content h2:before,
+.nuxt-content h3:before,
+.nuxt-content h4:before {
+	content:"";
+	@apply block;
+	height:90px;
+	margin: -90px 0 0;
+}
+
+article > section {
+	@apply p-6;
+	@apply lg:p-10;
+}
+
+a {
+	@apply text-pink-500
+}
+a:hover {
+	@apply text-blue-500
+}
+
+aside {
+	@apply flex-col;
+	@apply w-1/12;
+	@apply bg-gray-500;
+	@apply rounded-xl;
+	@apply p-3;
+	@apply text-sm;
+	@apply z-0;
+	@apply sticky;
+	top: 105px;
+	@apply flex;
+	@apply lg:w-1/5;
+}
+
+aside > section > h3 {
+	@apply uppercase;
+	@apply text-base;
+}
+
+div.nuxt-progress {
+  background: linear-gradient(to right, #7fc6f4, #d5279b);
+}
+
+/* @screen md {
+  .nuxt-content .nuxt-content-highlight {
+    margin: 0 -30px;
+  }
+
+  .nuxt-content .nuxt-content-highlight pre {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+} */
+
+.nuxt-content img {
+  @apply rounded-lg;
+  margin: 0 auto;
+}
+
