@@ -1,6 +1,6 @@
 export default {
 	icons: {
-		solid: ['faChevronCircleUp', 'faSpinner'],
+		solid: ['faChevronCircleUp', 'faSpinner', 'faSearch', 'faTimes'],
 		brands: [
 			'faDev',
 			'faDiscord',
