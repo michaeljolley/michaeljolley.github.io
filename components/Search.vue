@@ -15,7 +15,7 @@ export default {
 			if (this.searchFor && this.searchFor.length > 3) {
 				try {
 					const response = await fetch(
-						`http://localhost:9000/search?searchFor=${this.searchFor}`
+						`https://bbb-search.azurewebsites.net/api/Search?code=KCsJrciEsX0QOd7jV7JuNMT8jo8ENxLpX0VAIxTa17gKtjX8Dqnj/w==&searchFor=${this.searchFor}`
 					)
 					console.dir(response.json())
 				} catch (err) {

@@ -3,13 +3,12 @@
 	"version": "2.0.0",
 	"private": false,
 	"scripts": {
-		"dev": "concurrently \"nuxt\" \"netlify-lambda serve functions\"",
+		"dev": "nuxt",
 		"build": "npm run build:nuxt && npm run build:lambda",
 		"build:lambda": "netlify-lambda build functions",
 		"build:nuxt": "nuxt build",
 		"deploy": "npm run generate",
 		"generate": "nuxt generate",
-		"lambda": "netlify-lambda serve functions",
 		"start": "nuxt start",
 		"lint": "npm run lint:js",
 		"lint:js": "eslint --ext .js,.vue --ignore-path .gitignore ."

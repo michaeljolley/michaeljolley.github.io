@@ -125,6 +125,7 @@ export default {
 							date: post.date,
 							type: 'post',
 							route: `/blog/${post.slug}`,
+							cover_image: post.cover.public_id,
 							body: bodyParser(post.body).join(' '),
 						}
 					}),
@@ -138,6 +139,7 @@ export default {
 							date: talk.date,
 							type: 'talk',
 							route: `/talks/${talk.slug}`,
+							cover_image: talk.cover.public_id,
 							body: bodyParser(talk.body).join(' '),
 						}
 					}),

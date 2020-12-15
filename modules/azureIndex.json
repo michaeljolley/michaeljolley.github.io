@@ -61,6 +61,13 @@
 			"facetable": false
 		},
 		{
+			"name": "cover_image",
+			"type": "Edm.String",
+			"filterable": false,
+			"sortable": false,
+			"facetable": false
+		},
+		{
 			"name": "body",
 			"type": "Edm.String",
 			"searchable": true,
