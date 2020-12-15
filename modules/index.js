@@ -1,3 +1,4 @@
+import azureSearch from './azureSearch'
 import cloudinary from './cloudinary'
 import config from './config'
 import feed from './feed'
@@ -9,6 +10,7 @@ import stripe from './stripe'
 import tailwindcss from './tailwindcss'
 
 export {
+	azureSearch,
 	cloudinary,
 	config,
 	feed,

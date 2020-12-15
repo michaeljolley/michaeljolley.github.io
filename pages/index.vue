@@ -12,6 +12,7 @@
 			</div>
 		</div>
 		<SocialBar></SocialBar>
+		<Search />
 	</main>
 </template>
 

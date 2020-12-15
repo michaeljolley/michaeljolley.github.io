@@ -1,6 +1,7 @@
 import readingTime from 'reading-time'
 import { $cloudinary } from './middleware'
 import {
+	azureSearch,
 	cloudinary,
 	config,
 	feed,
@@ -102,6 +103,48 @@ export default {
 				const posts = await $content('blog').fetch()
 				const talks = await $content('talks').fetch()
 				const events = await $content('events').fetch()
+
+				const bodyParser = (body) => {
+					const results = []
+					if (body.children) {
+						body.children.forEach((child) => results.push(...bodyParser(child)))
+					} else if (body.type === 'text') {
+						results.push(body.value)
+					}
+					return results
+				}
+
+				const searchIndexDocuments = [
+					...posts.map((post) => {
+						return {
+							slug: post.slug,
+							title: post.title,
+							description: post.description,
+							tags: post.tags,
+							lastUpdated: post.updatedAt,
+							date: post.date,
+							type: 'post',
+							route: `/blog/${post.slug}`,
+							body: bodyParser(post.body).join(' '),
+						}
+					}),
+					...talks.map((talk) => {
+						return {
+							slug: talk.slug,
+							title: talk.title,
+							description: talk.description,
+							tags: talk.tags,
+							lastUpdated: talk.updatedAt,
+							date: talk.date,
+							type: 'talk',
+							route: `/talks/${talk.slug}`,
+							body: bodyParser(talk.body).join(' '),
+						}
+					}),
+				]
+
+				await azureSearch.buildSearchIndex(searchIndexDocuments)
+
 				return [
 					...talks.map((talk) => {
 						const talkEvents = events.filter((f) => f.talk === talk.slug)
