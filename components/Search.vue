@@ -8,16 +8,18 @@ export default {
 	data() {
 		return {
 			searchFor: null,
+			results: [],
 		}
 	},
 	methods: {
 		async search() {
 			if (this.searchFor && this.searchFor.length > 3) {
 				try {
-					const response = await fetch(
+					const resp = await fetch(
 						`https://bbb-search.azurewebsites.net/api/Search?code=KCsJrciEsX0QOd7jV7JuNMT8jo8ENxLpX0VAIxTa17gKtjX8Dqnj/w==&searchFor=${this.searchFor}`
 					)
-					console.dir(response.json())
+					const payload = await resp.json()
+					this.results = payload.results
 				} catch (err) {
 					console.log(err)
 				}

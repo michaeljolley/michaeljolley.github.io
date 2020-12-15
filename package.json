@@ -9,9 +9,7 @@
 		"build:nuxt": "nuxt build",
 		"deploy": "npm run generate",
 		"generate": "nuxt generate",
-		"start": "nuxt start",
-		"lint": "npm run lint:js",
-		"lint:js": "eslint --ext .js,.vue --ignore-path .gitignore ."
+		"start": "nuxt start"
 	},
 	"dependencies": {
 		"@azure/search-documents": "^11.0.3",
