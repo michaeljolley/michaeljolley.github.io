@@ -1,7 +1,8 @@
 # Created by .ignore support plugin (hsz.mobi)
 
 # Custom build artifacts
-assets/images/
+.nuxt
+lambda
 
 ### Node template
 # Logs
