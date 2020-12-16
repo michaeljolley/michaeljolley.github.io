@@ -1,25 +1,34 @@
 <template>
 	<header v-scroll>
-		<nav class="container">
-			<NuxtLink to="/" title="back home" class="flex">
-				<div class="logo"></div>
-				<div class="text flex flex-col">
-					<h2>bald. bearded. builder.</h2>
-					<p>Building Better Builders</p>
-				</div>
-			</NuxtLink>
-			<ul>
-				<li class="flex-1">
-					<NuxtLink to="/blog" title="Blog posts">Blog</NuxtLink>
-				</li>
-				<li class="flex-1">
-					<NuxtLink to="/talks" title="Talks">Speaking</NuxtLink>
-				</li>
-				<li class="flex-1">
-					<a href="https://bbb.dev/shop" rel="noreferrer" title="Swag">Swag</a>
-				</li>
-			</ul>
-		</nav>
+		<div class="navBar">
+			<nav class="container">
+				<NuxtLink to="/" title="back home" class="flex">
+					<div class="logo"></div>
+					<div class="text flex flex-col">
+						<h2>bald. bearded. builder.</h2>
+						<p>Building Better Builders</p>
+					</div>
+				</NuxtLink>
+				<ul>
+					<li class="flex-1">
+						<NuxtLink to="/blog" title="Blog posts">Blog</NuxtLink>
+					</li>
+					<li class="flex-1">
+						<NuxtLink to="/talks" title="Talks">Speaking</NuxtLink>
+					</li>
+					<li class="flex-1">
+						<a href="https://bbb.dev/shop" rel="noreferrer" title="Swag"
+							>Swag</a
+						>
+					</li>
+					<li class="flex-1">
+						<NuxtLink to="/search" title="Search">
+							<font-awesome-icon :icon="['fas', 'search']"></font-awesome-icon
+						></NuxtLink>
+					</li>
+				</ul>
+			</nav>
+		</div>
 	</header>
 </template>
 <script>
@@ -28,6 +37,9 @@ export default {}
 <style scoped>
 header {
 	@apply mb-12;
+	@apply z-10;
+}
+.navBar {
 	@apply bg-gray-500;
 	border-bottom: 4px solid;
 	border-image-source: linear-gradient(
@@ -36,7 +48,6 @@ header {
 		rgba(0, 255, 255, 1) 100%
 	);
 	border-image-slice: 1;
-	@apply z-10;
 }
 
 .sticky {
@@ -88,7 +99,9 @@ p {
 ul {
 	@apply flex;
 	@apply justify-evenly;
-	@apply w-1/2;
+	@apply w-3/4;
+
+	@apply md:w-1/2;
 }
 li {
 	@apply flex;
@@ -100,6 +113,7 @@ li a {
 	@apply grid;
 	font-family: 'SpeziaWide', sans-serif;
 }
+
 li a:hover {
 	@apply text-white;
 }

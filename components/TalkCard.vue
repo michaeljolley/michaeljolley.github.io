@@ -1,11 +1,11 @@
 <template>
 	<article>
-		<nuxt-link :to="`/talks/${talk.slug}`" :title="talk.title">
+		<nuxt-link :to="talk.route || `/talks/${talk.slug}`" :title="talk.title">
 			<header>
 				<v-image
-					v-if="talk.cover"
+					v-if="talk.cover_image || talk.cover"
 					:alt="talk.banner_image_alt || talk.title"
-					:src="talk.cover.public_id"
+					:src="talk.cover_image || talk.cover.public_id"
 				/>
 			</header>
 			<section class="p-3">

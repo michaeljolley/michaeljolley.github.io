@@ -1,18 +1,18 @@
 <template>
-	<nuxt-link :to="`/${type}/${post.slug}`" :title="post.title">
+	<nuxt-link :to="post.route || `/${type}/${post.slug}`" :title="post.title">
 		<article>
 			<header>
 				<v-image
-					v-if="post.cover"
+					v-if="post.cover || post.cover_image"
 					:alt="post.banner_image_alt || post.title"
-					:src="post.cover.public_id"
+					:src="post.cover_image || post.cover.public_id"
 				/>
 			</header>
 			<section class="p-3">
 				<h3>{{ post.title }}</h3>
 				<summary>
 					<time>{{ post.date | formatDate }}</time>
-					<span v-if="post.dir === '/blog'">
+					<span v-if="post.readingTime && post.dir === '/blog'">
 						&nbsp;&nbsp;&nbsp;| &nbsp;
 						<span class="rt">{{ post.readingTime.text }}</span>
 					</span>
@@ -46,6 +46,12 @@ article {
 
 header {
 	overflow: unset;
+}
+
+header img {
+	@apply shadow-lg;
+	@apply rounded-lg;
+	@apply -ml-1 -mr-1;
 }
 
 h3 {

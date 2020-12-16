@@ -7,9 +7,10 @@
 		"build": "npm run build:nuxt && npm run build:lambda",
 		"build:lambda": "netlify-lambda build functions",
 		"build:nuxt": "nuxt build",
-		"deploy": "npm run generate",
+		"deploy": "npm run generate && npm run build:lambda",
 		"generate": "nuxt generate",
-		"start": "nuxt start"
+		"start": "nuxt start",
+		"lint": "eslint --fix"
 	},
 	"dependencies": {
 		"@azure/search-documents": "^11.0.3",
@@ -18,6 +19,7 @@
 		"@nuxt/content": "^1.9.0",
 		"@nuxtjs/cloudinary": "^1.0.2",
 		"autoprefixer": "^10.1.0",
+		"axios": "^0.21.0",
 		"core-js": "^3.6.5",
 		"faunadb": "^2.14.2",
 		"fontsource-roboto": "^3.0.3",
