@@ -71,7 +71,7 @@
 						></font-awesome-icon
 					></a>
 				</li>
-				<li>
+				<li class="mid">
 					<a
 						href="https://discord.gg/XSG7HJm"
 						noreferrer
@@ -103,7 +103,7 @@ h2 {
 }
 ul {
 	@apply grid;
-	@apply grid-cols-4;
+	@apply grid-cols-3;
 	@apply gap-2;
 
 	@apply lg:gap-6;
@@ -113,6 +113,11 @@ ul {
 li {
 	@apply flex;
 	@apply justify-center;
+}
+
+li.mid {
+	@apply col-start-2;
+	@apply md:col-auto;
 }
 
 li a {

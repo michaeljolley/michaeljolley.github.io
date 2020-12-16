@@ -46,6 +46,11 @@ export default {
 </script>
 
 <style scoped>
+main {
+	@apply mt-24;
+	@apply md:mt-0;
+}
+
 .posts {
 	@apply grid;
 	@apply gap-6;

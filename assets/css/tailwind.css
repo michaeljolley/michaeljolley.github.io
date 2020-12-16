@@ -110,13 +110,14 @@ article > section > h1 {
 	font-family: 'SpeziaWide', sans-serif;
 	@apply bg-gray-600;
 	@apply border-gray-900;
-	@apply mx-4;
+	@apply mx-0;
 	@apply my-5;
 	@apply px-6 py-3;
 	@apply italic;
 	@apply text-gray-200;
 	@apply rounded-lg;
 	@apply shadow-lg;
+	@apply overflow-x-scroll;
 
 	@apply md:mx-10;
 	@apply md:py-6;
