@@ -9,7 +9,8 @@
 		"build:nuxt": "nuxt build",
 		"deploy": "npm run generate",
 		"generate": "nuxt generate",
-		"start": "nuxt start"
+		"start": "nuxt start",
+		"lint": "eslint --fix"
 	},
 	"dependencies": {
 		"@azure/search-documents": "^11.0.3",
