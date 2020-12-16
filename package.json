@@ -7,7 +7,7 @@
 		"build": "npm run build:nuxt && npm run build:lambda",
 		"build:lambda": "netlify-lambda build functions",
 		"build:nuxt": "nuxt build",
-		"deploy": "npm run generate",
+		"deploy": "npm run generate && npm run build:lambda",
 		"generate": "nuxt generate",
 		"start": "nuxt start",
 		"lint": "eslint --fix"

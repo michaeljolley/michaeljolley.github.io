@@ -21,10 +21,14 @@
 							>Swag</a
 						>
 					</li>
+					<li class="flex-1">
+						<NuxtLink to="/search" title="Search">
+							<font-awesome-icon :icon="['fas', 'search']"></font-awesome-icon
+						></NuxtLink>
+					</li>
 				</ul>
 			</nav>
 		</div>
-		<Search />
 	</header>
 </template>
 <script>

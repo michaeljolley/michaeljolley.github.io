@@ -156,32 +156,6 @@ li p {
 	@apply text-sm;
 }
 
-input,
-textarea {
-	@apply block;
-	@apply w-3/4;
-	@apply p-2;
-	@apply text-black;
-	@apply bg-gray-600;
-	@apply border-white;
-	@apply border-solid;
-	@apply border;
-	@apply rounded-sm;
-}
-
-button {
-	@apply rounded-xl;
-	@apply pl-4 pr-4;
-	@apply pt-2 pb-2;
-	@apply text-blue-500;
-	@apply font-bold;
-	@apply border-white;
-	@apply border-solid;
-	@apply border;
-	@apply rounded-md;
-	@apply bg-gray-700;
-}
-
 label > span {
 	@apply ml-2;
 	@apply text-sm;
