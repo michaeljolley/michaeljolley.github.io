@@ -96,10 +96,13 @@ export default {}
 	@apply p-6;
 }
 h2 {
+	@apply hidden;
 	@apply text-3xl;
 	@apply border-0;
-	@apply md:text-4xl;
 	@apply text-gray-400;
+
+	@apply md:text-4xl;
+	@apply md:block;
 }
 ul {
 	@apply grid;

@@ -117,7 +117,7 @@ article > section > h1 {
 	@apply text-gray-200;
 	@apply rounded-lg;
 	@apply shadow-lg;
-	@apply overflow-x-scroll;
+	@apply overflow-x-auto;
 
 	@apply md:mx-10;
 	@apply md:py-6;

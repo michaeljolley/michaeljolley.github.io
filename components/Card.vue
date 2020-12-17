@@ -38,6 +38,7 @@ export default {
 <style scoped>
 article {
 	@apply w-full;
+	@apply h-full;
 	@apply shadow-lg;
 	@apply bg-gray-500;
 	@apply text-white;
