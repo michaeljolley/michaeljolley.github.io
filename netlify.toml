@@ -1,3 +1,148 @@
 [build]
 command = 'npm run deploy'
 functions = 'lambda'
+
+[[redirects]]
+  from = "/posts/using-azure-file-storage-as-container-volume-mounts-in-app-services"
+  to = "/blog/using-azure-file-storage-as-container-volume-mounts-in-app-services/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/posts/using-auto-mapper-with-asp-net-core-3"
+  to = "/blog/using-auto-mapper-with-asp-net-core-3/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/posts/environment-variables-in-azure-functions-with-key-vault"
+  to = "/blog/environment-variables-in-azure-functions-with-key-vault/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/posts/adding-hateoas-to-an-asp-net-core-api"
+  to = "/blog/adding-hateoas-to-an-asp-net-core-api/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/posts/building-my-ultimate-rustic-developers-desk"
+  to = "/blog/building-my-ultimate-rustic-developers-desk/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/posts/adding-command-aliases-to-power-shell"
+  to = "/blog/adding-command-aliases-to-power-shell/"
+  status = 301
+  force = true
+
+
+[[redirects]]
+  from = "/posts/setting-up-raspberry-pi-for-use-in-kiosk-mode-with-chromium"
+  to = "/blog/setting-up-raspberry-pi-for-use-in-kiosk-mode-with-chromium/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/posts/using-sql-server-in-docker-containers-for-basic-tasks"
+  to = "/blog/using-sql-server-in-docker-containers-for-basic-tasks/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/posts/communication-between-containers-using-docker-compose-in-windows"
+  to = "/blog/communication-between-containers-using-docker-compose-in-windows/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/posts/using-netlify-functions-to-add-comments-to-gridsome"
+  to = "/blog/using-netlify-functions-to-add-comments-to-gridsome/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/posts/best-practices-for-multi-party-video-conferencing-with-the-vonage-video-api/"
+  to = "/blog/best-practices-for-multi-party-video-conferencing-with-the-vonage-video-api/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/posts/live-coding-to-learn-share-and-encourage"
+  to = "/blog/live-coding-to-learn-share-and-encourage/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/posts/using-apollo-to-query-graph-ql-from-node-js/"
+  to = "/blog/using-apollo-to-query-graph-ql-from-node-js/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/posts/current-twitch-live-coding-stream-setup/"
+  to = "/blog/current-twitch-live-coding-stream-setup/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/posts/automating-release-notes-with-git-hub-app-veyor-and-octopus-deploy"
+  to = "/blog/automating-release-notes-with-git-hub-app-veyor-and-octopus-deploy/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/posts/release-notes-with-github-appveyor-octopus-deploy"
+  to = "/blog/automating-release-notes-with-git-hub-app-veyor-and-octopus-deploy/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/posts/2019-year-in-review"
+  to = "/blog/2019-year-in-review/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/posts/2018-year-in-review"
+  from = "/blog/2018-year-in-review/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/posts/docker-communication-between-containers"
+  to = "/blog/communication-between-containers-using-docker-compose-in-windows/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/posts/sql-server-in-a-linux-container-to-do-quick-tasks"
+  to = "/blog/using-sql-server-in-docker-containers-for-basic-tasks/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/posts/cheers-to-2019-bring-on-2020"
+  to = "/blog/2019-year-in-review/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/posts/girls-who-code"
+  to = "/blog/girls-who-code/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/posts/code-of-conduct-and-contributions-in-public-repositories"
+  to = "/blog/code-of-conduct-and-contributions-in-public-repositories/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/posts/using-azure-file-storage-as-container-volume-mounts-in-app-services"
+  to = "/blog/using-azure-file-storage-as-container-volume-mounts-in-app-services/"
+  status = 301
+  force = true
