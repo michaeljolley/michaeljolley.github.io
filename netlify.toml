@@ -38,7 +38,6 @@ functions = 'lambda'
   status = 301
   force = true
 
-
 [[redirects]]
   from = "/posts/setting-up-raspberry-pi-for-use-in-kiosk-mode-with-chromium"
   to = "/blog/setting-up-raspberry-pi-for-use-in-kiosk-mode-with-chromium/"
@@ -107,7 +106,7 @@ functions = 'lambda'
 
 [[redirects]]
   from = "/posts/2018-year-in-review"
-  from = "/blog/2018-year-in-review/"
+  to = "/blog/2018-year-in-review/"
   status = 301
   force = true
 
