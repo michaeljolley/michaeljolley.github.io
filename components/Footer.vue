@@ -5,6 +5,9 @@
 				<nuxt-link to="/code-of-conduct/" title="Code of Conduct"
 					>Code of Conduct</nuxt-link
 				>
+				&nbsp;| &nbsp;<nuxt-link to="/gear/" title="Gear I use"
+					>Gear &amp; Setup</nuxt-link
+				>
 			</li>
 			<li>&copy; Bald Bearded Builder.<span> All rights reserved.</span></li>
 			<li>
