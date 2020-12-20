@@ -38,17 +38,4 @@ h1 {
 	@apply md:text-4xl;
 	@apply md:mb-1;
 }
-summary {
-	@apply text-sm;
-	@apply mb-1;
-	@apply font-bold;
-	@apply md:text-base;
-}
-
-.rt,
-time {
-	@apply text-sm;
-	@apply text-blue-500;
-	@apply font-normal;
-}
 </style>

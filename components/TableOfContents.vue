@@ -97,13 +97,7 @@ li {
 	@apply text-pink-500;
 }
 
-aside a:hover {
-}
-
 li.link--active a {
-	/* @apply bg-gray-400; */
 	@apply text-gray-50;
-}
-li.link--active a {
 }
 </style>

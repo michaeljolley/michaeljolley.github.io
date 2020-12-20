@@ -40,10 +40,6 @@ export default {
 }
 </script>
 <style scoped>
-a {
-	cursor: pointer;
-	@apply text-pink-500;
-}
 a:hover {
 	@apply text-blue-500;
 }

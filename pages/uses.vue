@@ -17,7 +17,7 @@
 					><cld-placeholder type="blur"
 				/></cld-image>
 			</header>
-			<section class="nuxt-content">
+			<section>
 				<header>
 					<h1>Current Gear &amp; Setup</h1>
 				</header>
@@ -550,50 +550,3 @@ export default {
 	},
 }
 </script>
-<style scoped>
-.post {
-	@apply flex;
-	@apply items-start;
-	@apply mt-10;
-	@apply space-x-2;
-	@apply lg:space-x-3;
-}
-
-h1 {
-	@apply text-5xl;
-}
-
-header {
-	@apply z-0;
-	@apply -mb-1;
-}
-header .cld-image {
-	width: unset !important;
-	@apply -ml-1;
-	@apply -mr-1;
-	@apply mt-0;
-	@apply mb-0;
-	@apply shadow-lg;
-	@apply rounded-xl;
-	@apply overflow-hidden;
-}
-
-.cld-image {
-	width: unset !important;
-	margin: 0px -5px;
-	@apply rounded-xl;
-	@apply shadow-lg;
-}
-
-pre {
-	margin: 35px -30px;
-	@apply rounded;
-	@apply shadow-lg;
-}
-
-@screen lg {
-	.cld-image {
-		margin: 0px -8px;
-	}
-}
-</style>

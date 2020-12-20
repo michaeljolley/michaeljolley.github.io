@@ -37,38 +37,8 @@ section {
 
 h3 {
 	@apply border-none;
-	background: linear-gradient(
-		90deg,
-		rgba(255, 0, 255, 1) 0%,
-		rgba(0, 255, 255, 1) 100%
-	);
-	@apply bg-clip-text;
-	-webkit-text-fill-color: transparent;
 	@apply text-2xl;
-	@apply mb-0;
+	@apply mt-2 mb-0;
 	@apply pb-0;
-}
-
-summary {
-	@apply text-base;
-	@apply mb-1;
-	@apply font-bold;
-	@apply text-white;
-}
-
-time {
-	@apply text-sm;
-	@apply text-blue-500;
-	@apply font-normal;
-}
-
-.cld-image {
-	@apply overflow-hidden;
-	@apply shadow-lg;
-	@apply rounded-lg;
-	@apply -ml-1 -mr-1;
-}
-.cld-image img {
-	margin: 0 auto;
 }
 </style>
