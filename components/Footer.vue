@@ -5,7 +5,7 @@
 				<nuxt-link to="/code-of-conduct/" title="Code of Conduct"
 					>Code of Conduct</nuxt-link
 				>
-				&nbsp;| &nbsp;<nuxt-link to="/gear/" title="Gear I use"
+				&nbsp;| &nbsp;<nuxt-link to="/uses/" title="Gear I use"
 					>Gear &amp; Setup</nuxt-link
 				>
 			</li>

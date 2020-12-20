@@ -1,17 +1,19 @@
 <template>
 	<div class="post">
 		<article class="content">
-			<cld-image
-				alt="Hands of various people joined"
-				public-id="cover_knfirw"
-				title="Hands of various people joined"
-				quality="auto"
-				fetch-format="auto"
-				responsive
-				blur
-				loading="lazy"
-				><cld-placeholder type="blur"
-			/></cld-image>
+			<header>
+				<cld-image
+					alt="Hands of various people joined"
+					public-id="cover_knfirw"
+					title="Hands of various people joined"
+					quality="auto"
+					fetch-format="auto"
+					responsive
+					blur
+					loading="lazy"
+					><cld-placeholder type="blur"
+				/></cld-image>
+			</header>
 
 			<section class="nuxt-content">
 				<header>
@@ -99,24 +101,31 @@ export default {
 			formData: {},
 		}
 	},
-	encode(data) {
-		return Object.keys(data)
-			.map(
-				(key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
-			)
-			.join('&')
-	},
-	handleSubmit(e) {
-		fetch('/', {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-			body: this.encode({
-				'form-name': e.target.getAttribute('name'),
-				...this.formData,
-			}),
-		})
-			.then(() => this.$router.push('/success'))
-			.catch((error) => alert(error))
+	methods: {
+		encode(data) {
+			return Object.keys(data)
+				.map(
+					(key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+				)
+				.join('&')
+		},
+		handleSubmit(e) {
+			fetch('/', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+				body: this.encode({
+					'form-name': e.target.getAttribute('name'),
+					...this.formData,
+				}),
+			})
+				.then(() => this.$router.push('/success'))
+				.catch((error) => alert(error))
+		},
+		head() {
+			return {
+				title: `Report CoC Violations`,
+			}
+		},
 	},
 }
 </script>
@@ -168,6 +177,21 @@ label {
 	@apply w-full;
 	@apply text-pink-500;
 	@apply text-xl;
+}
+
+header {
+	@apply z-0;
+	@apply -mb-1;
+}
+header .cld-image {
+	width: unset !important;
+	@apply -ml-1;
+	@apply -mr-1;
+	@apply mt-0;
+	@apply mb-0;
+	@apply shadow-lg;
+	@apply rounded-xl;
+	@apply overflow-hidden;
 }
 
 aside {

@@ -162,39 +162,27 @@ const config = {
 				rel: 'prerender',
 				href: `${this.baseUrl}/blog`,
 			},
-			// {
-			//   rel: 'icon',
-			//   type: 'image/png',
-			//   href: '/favicon-16x16.png',
-			//   sizes: '16x16',
-			// },
-			// {
-			//   rel: 'icon',
-			//   type: 'image/png',
-			//   href: '/favicon-32x32.png',
-			//   sizes: '32x32',
-			// },
-			// {
-			//   rel: 'apple-touch-icon',
-			//   href: '/apple-touch-icon.png',
-			//   sizes: '180x180',
-			// },
-			// {
-			//   rel: 'manifest',
-			//   href: '/site.webmanifest',
-			// },
-			// {
-			//   rel: 'mask-icon',
-			//   type: 'image/png',
-			//   href: '/safari-pinned-tab.svg',
-			//   color: '#c1c1c1',
-			// },
-			// {
-			//   rel: 'search',
-			//   type: 'application/opensearchdescription+xml',
-			//   href: '/search.xml',
-			//   title: this.baseTitle,
-			// },
+			{
+				rel: 'icon',
+				type: 'image/png',
+				href: '/favicon-16x16.png',
+				sizes: '16x16',
+			},
+			{
+				rel: 'icon',
+				type: 'image/png',
+				href: '/favicon-32x32.png',
+				sizes: '32x32',
+			},
+			{
+				rel: 'apple-touch-icon',
+				href: '/apple-touch-icon.png',
+				sizes: '180x180',
+			},
+			{
+				rel: 'manifest',
+				href: '/site.webmanifest',
+			},
 		]
 	},
 }

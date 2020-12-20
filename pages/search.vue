@@ -87,6 +87,11 @@ export default {
 			this.videos = this.results.filter((f) => f.type === 'video')
 		},
 	},
+	head() {
+		return {
+			title: `Search`,
+		}
+	},
 }
 </script>
 <style scoped>

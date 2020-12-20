@@ -4,16 +4,18 @@
 			<TableOfContents :toc="toc" :levels="toc.length > 10 ? [2] : [2, 3]" />
 		</aside>
 		<article class="content">
-			<cld-image
-				alt="Hands of various people joined"
-				public-id="cover_knfirw"
-				title="Hands of various people joined"
-				quality="auto"
-				fetch-format="auto"
-				responsive
-				loading="lazy"
-				><cld-placeholder type="blur"
-			/></cld-image>
+			<header>
+				<cld-image
+					alt="Hands of various people joined"
+					public-id="cover_knfirw"
+					title="Hands of various people joined"
+					quality="auto"
+					fetch-format="auto"
+					responsive
+					loading="lazy"
+					><cld-placeholder type="blur"
+				/></cld-image>
+			</header>
 
 			<section class="nuxt-content">
 				<header>
@@ -295,6 +297,11 @@ export default {
 			],
 		}
 	},
+	head() {
+		return {
+			title: `Code of Conduct`,
+		}
+	},
 }
 </script>
 <style scoped>
@@ -324,5 +331,20 @@ aside {
 }
 h1 {
 	@apply text-5xl;
+}
+
+header {
+	@apply z-0;
+	@apply -mb-1;
+}
+header .cld-image {
+	width: unset !important;
+	@apply -ml-1;
+	@apply -mr-1;
+	@apply mt-0;
+	@apply mb-0;
+	@apply shadow-lg;
+	@apply rounded-xl;
+	@apply overflow-hidden;
 }
 </style>
