@@ -19,6 +19,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'SpeziaWide', sans-serif;
+	@apply font-bold;
 	border-bottom: 1px solid;
 	border-image-source: linear-gradient(
 		90deg,
@@ -26,16 +27,16 @@ h1, h2, h3, h4, h5, h6 {
 		rgba(0, 255, 255, 1) 100%
 	);
 	border-image-slice: 1;
+
 	background: linear-gradient(
 		90deg,
 		rgba(255, 0, 255, 1) 0%,
 		rgba(0, 255, 255, 1) 100%
 	);
-	@apply bg-clip-text;
 	-webkit-text-fill-color: transparent;
+	@apply bg-clip-text;
 	@apply pb-2;
 	@apply mb-5;
-	@apply font-bold;
 }
 
 h1 {
