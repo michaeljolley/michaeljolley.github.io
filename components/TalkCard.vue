@@ -9,7 +9,7 @@
 				/>
 			</header>
 			<section class="p-3">
-				<h3>{{ talk.title }}</h3>
+				<h2>{{ talk.title }}</h2>
 				<summary></summary>
 			</section>
 		</nuxt-link>

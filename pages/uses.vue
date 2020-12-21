@@ -258,6 +258,15 @@
 					</p>
 
 					<p>
+						I upgraded my monitors in the last half of the year to two
+						<a target="_blank" href="https://amzn.to/3rfyLTT"
+							>Samsung 32" 144Hz curved monitors</a
+						>. I had previously used 3 24" monitors that have been with me for
+						nearly 10 years. Needless to say, I feel like I'm seeing the world
+						in color for the first time.
+					</p>
+
+					<p>
 						My everyday keyboard is a
 						<a target="_blank" href="https://amzn.to/38jMaBU">Drop ALT</a>, and
 						for the mouse, I use a
@@ -335,6 +344,44 @@
 					</ul>
 
 					<p>I'll admit it. I have a problem. :)</p>
+
+					<h3 id="green-screen">Green Screen</h3>
+
+					<blockquote>
+						<strong>Note:</strong> Regardless of the type of green screen you
+						use, the most important thing to consider for proper color keying is
+						lighting. Without proper lighting, you'll never get super polished
+						color keying.
+					</blockquote>
+
+					<p>
+						If you've watched the live-stream before, you know that I use the
+						green screen a lot. I previously used the
+						<a target="_blank" href="https://amzn.to/3arkk9s"
+							>Fovitec green screen</a
+						>
+						held up by the
+						<a target="_blank" href="https://amzn.to/3rhjhij"
+							>Fovitec stand kit</a
+						>. It worked great and I used it for well over a year, but I got
+						tired of the setup/teardown each day.
+					</p>
+
+					<p>
+						Because so much of my role is video creation and I have a dedicated
+						space for production, I decided to make the green screen a more
+						permanent part of the room. I picked up a
+						<a target="_blank" href="https://amzn.to/3rjCxMc"
+							>Neewer wall mount</a
+						>
+						and an
+						<a target="_blank" href="https://amzn.to/2WGEqEl"
+							>Emart 10 X 12ft green screen backdrop</a
+						>. The mount is attached to my office ceiling and I can roll/unroll
+						within a couple seconds. In my latest streams, I start without the
+						green screen and drop it after the intro and raise it just before
+						the ending credits.
+					</p>
 
 					<h3 id="audio-hardware">Audio Hardware</h3>
 
@@ -433,6 +480,11 @@ export default {
 					id: 'video-hardware',
 					depth: 3,
 					text: 'Video/Stream Hardware',
+				},
+				{
+					id: 'green-screen',
+					depth: 3,
+					text: 'Green Screen',
 				},
 				{
 					id: 'audio-hardware',
