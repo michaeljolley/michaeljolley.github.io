@@ -98,6 +98,7 @@ export default {}
 h2 {
 	@apply hidden;
 	@apply text-3xl;
+	@apply mt-0;
 	@apply border-0;
 	@apply text-gray-400;
 

@@ -9,7 +9,7 @@
 				/>
 			</header>
 			<section class="p-3">
-				<h3>{{ post.title }}</h3>
+				<h2>{{ post.title }}</h2>
 				<summary>
 					<time>{{ post.date | formatDate }}</time>
 					<span v-if="post.readingTime && post.dir === '/blog'">

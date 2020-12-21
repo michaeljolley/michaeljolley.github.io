@@ -19,6 +19,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'SpeziaWide', sans-serif;
+	@apply font-bold;
 	border-bottom: 1px solid;
 	border-image-source: linear-gradient(
 		90deg,
@@ -196,6 +197,7 @@ aside h3 {
 	@apply uppercase;
 	@apply text-base;
 	@apply text-white;
+	@apply mt-0;
 	background: unset;
 	background-clip: unset;
 	-webkit-text-fill-color: unset;
@@ -214,6 +216,7 @@ aside h3 {
 }
 
 summary {
+	@apply text-white;
 	@apply text-sm;
 	@apply mb-1;
 	@apply font-bold;
@@ -248,7 +251,7 @@ article.card  {
 	@apply shadow-lg;
 	@apply text-white;
 }
-.card h3 {
+.card h2 {
 	@apply border-none;
 	@apply mt-2 mb-0;
 	@apply pb-0;
