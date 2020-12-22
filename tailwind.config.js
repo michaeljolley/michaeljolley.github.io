@@ -1,7 +1,7 @@
 // tailwind.config.js
 
 module.exports = {
-	darkMode: 'class',
+	darkMode: '.dark-mode',
 	purge: [
 		'./components/**/*.{vue,js}',
 		'./layouts/**/*.vue',
@@ -116,5 +116,6 @@ module.exports = {
 	plugins: [
 		require('tailwindcss-dark-mode')(),
 		require('@tailwindcss/typography'),
+		require('tailwindcss-blend-mode')(),
 	],
 }

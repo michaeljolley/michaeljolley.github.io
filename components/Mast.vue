@@ -23,7 +23,7 @@
 					>Vonage</a
 				>
 				where he gets to play with awesome APIs. You can also catch him giving
-				<NuxtLink to="/talks" title="Talks Michael's given">talks</NuxtLink>
+				<NuxtLink to="/talks/" title="Talks Michael's given">talks</NuxtLink>
 				at various events or hosting the
 				<a
 					target="_blank"
@@ -64,16 +64,23 @@ export default {
 .mast {
 	@apply hidden;
 
-	@apply md:bg-right;
-	@apply md:bg-no-repeat;
-	@apply md:flex;
-	@apply md:flex-col;
-	@apply md:pt-10;
-	@apply md:pb-10;
-	@apply md:visible;
-
+	@apply lg:bg-right;
+	@apply lg:bg-no-repeat;
+	@apply lg:flex;
+	@apply lg:flex-col;
+	@apply lg:pb-10;
+	@apply lg:visible;
 	@apply lg:pt-16;
 	@apply lg:mx-auto;
+
+	@apply bg-gray-50;
+	@apply bg-blend-exclusion;
+
+	@apply dark:bg-gray-900;
+}
+
+.dark-mode .mast {
+	@apply bg-blend-lighten;
 }
 
 .text {
@@ -111,7 +118,8 @@ p {
 p span {
 	@apply text-sm;
 	@apply italic;
-	@apply text-blue-400;
 	@apply block;
+	@apply text-blue-600;
+	@apply dark:text-blue-400;
 }
 </style>

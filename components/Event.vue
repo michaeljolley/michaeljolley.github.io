@@ -28,7 +28,13 @@ export default {
 <style scoped>
 .event {
 	@apply rounded-lg;
-	@apply bg-gray-600;
+	@apply shadow-lg;
+	@apply bg-gray-50;
+	@apply dark:bg-gray-600;
+}
+
+header {
+	@apply shadow-sm;
 }
 
 section {

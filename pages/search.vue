@@ -17,10 +17,21 @@
 							/>
 						</p>
 						<p>
-							<button type="submit">Submit</button>
+							<button type="submit" :disabled="isLoading">
+								<span v-if="!isLoading">Search</span>
+								<span v-if="isLoading">Searching...</span>
+								<font-awesome-icon
+									v-if="isLoading"
+									:icon="['fas', 'spinner']"
+									pulse
+								/>
+							</button>
 						</p>
 					</form>
-
+				</div>
+			</section>
+			<section class="searchSection">
+				<div class="nuxt-content">
 					<div v-if="posts.length > 0">
 						<header>
 							<h2>Blog Posts</h2>
@@ -60,6 +71,7 @@ export default {
 	data() {
 		return {
 			searchFor: null,
+			isLoading: false,
 			results: [],
 			posts: [],
 			talks: [],
@@ -70,6 +82,7 @@ export default {
 	methods: {
 		async search() {
 			if (this.searchFor && this.searchFor.length > 3) {
+				this.isLoading = true
 				try {
 					const resp = await fetch(
 						`https://bbb-search.azurewebsites.net/api/Search?code=KCsJrciEsX0QOd7jV7JuNMT8jo8ENxLpX0VAIxTa17gKtjX8Dqnj/w==&searchFor=${this.searchFor}`
@@ -77,7 +90,9 @@ export default {
 					const payload = await resp.json()
 					this.results = payload.results
 					this.parseResults()
+					this.isLoading = false
 				} catch (err) {
+					this.isLoading = false
 					console.log(err)
 				}
 			}
@@ -97,6 +112,31 @@ export default {
 }
 </script>
 <style scoped>
+.post {
+	@apply flex-col;
+}
+
+article,
+section {
+	background-color: unset;
+	@apply rounded-none;
+	@apply shadow-none;
+}
+
+section:first-child {
+	@apply bg-opacity-100;
+	@apply rounded-lg;
+	@apply shadow-lg;
+
+	@apply bg-white;
+	@apply dark:bg-gray-500;
+}
+
+section:not(:first-child) {
+	@apply pt-0;
+	@apply dark:bg-gray-900;
+}
+
 .results {
 	@apply grid;
 	@apply gap-6;
@@ -107,5 +147,12 @@ export default {
 	@apply lg:gap-10;
 	@apply xl:grid-cols-3;
 	@apply xl:gap-10;
+}
+.results article {
+	@apply bg-white;
+	@apply rounded-lg;
+	@apply shadow-lg;
+
+	@apply dark:bg-gray-500;
 }
 </style>

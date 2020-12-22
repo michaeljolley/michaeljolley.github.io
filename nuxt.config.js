@@ -3,6 +3,7 @@ import { $cloudinary } from './middleware'
 import {
 	azureSearch,
 	cloudinary,
+	colorMode,
 	config,
 	feed,
 	fontawesome,
@@ -48,6 +49,10 @@ export default {
 		baseUrl: config.baseUrl,
 		repoUrl: config.repoUrl,
 		repoBranch: config.repoBranch,
+	},
+
+	router: {
+		trailingSlash: true,
 	},
 
 	head: {
@@ -124,7 +129,7 @@ export default {
 							lastUpdated: post.updatedAt,
 							date: post.date,
 							type: 'post',
-							route: `/blog/${post.slug}`,
+							route: `/blog/${post.slug}/`,
 							cover_image: post.cover.public_id,
 							body: bodyParser(post.body).join(' '),
 						}
@@ -138,7 +143,7 @@ export default {
 							lastUpdated: talk.updatedAt,
 							date: talk.date,
 							type: 'talk',
-							route: `/talks/${talk.slug}`,
+							route: `/talks/${talk.slug}/`,
 							cover_image: talk.cover.public_id,
 							body: bodyParser(talk.body).join(' '),
 						}
@@ -151,19 +156,19 @@ export default {
 					...talks.map((talk) => {
 						const talkEvents = events.filter((f) => f.talk === talk.slug)
 						return {
-							route: `/talks/${talk.slug}`,
+							route: `/talks/${talk.slug}/`,
 							payload: { talk, events: talkEvents },
 						}
 					}),
 					...posts.map((post) => {
 						return {
-							route: `/blog/${post.slug}`,
+							route: `/blog/${post.slug}/`,
 							payload: post,
 						}
 					}),
 					...[
 						{
-							route: '/blog',
+							route: '/blog/',
 							payload: {
 								posts: posts
 									.sort((a, b) => {
@@ -175,7 +180,7 @@ export default {
 					],
 					...[
 						{
-							route: '/talks',
+							route: '/talks/',
 							payload: {
 								talks: talks.slice(0, 12),
 							},
@@ -186,6 +191,7 @@ export default {
 		},
 	},
 
+	colorMode,
 	cloudinary,
 	feed,
 	fontawesome,

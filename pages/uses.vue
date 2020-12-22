@@ -210,7 +210,7 @@
 						with my workload &amp; processes in mind. So far I've been super
 						happy with it and love the added BBB logo etched on each side. You
 						can catch a good view of it in my
-						<a href="/blog/building-my-ultimate-rustic-developers-desk"
+						<a href="/blog/building-my-ultimate-rustic-developers-desk/"
 							>Building my Ultimate Rustic Developers Desk</a
 						>
 						post.

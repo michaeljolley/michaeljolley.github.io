@@ -10,15 +10,7 @@
 	</div>
 </template>
 <script>
-export default {
-	head() {
-		return {
-			bodyAttrs: {
-				class: this.$store.state.darkMode ? 'bg-gray-700' : 'bg-gray-50',
-			},
-		}
-	},
-}
+export default {}
 </script>
 <style scoped>
 .container {

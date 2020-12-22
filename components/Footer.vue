@@ -29,7 +29,9 @@ footer {
 	@apply mt-5;
 	@apply mb-5;
 	@apply pt-5;
-	@apply text-gray-100;
+	@apply text-gray-700;
+
+	@apply dark:text-gray-100;
 
 	border-top: 1px solid;
 	border-image-source: linear-gradient(
@@ -45,8 +47,5 @@ ul {
 
 	@apply md:flex-row;
 	@apply md:justify-between;
-}
-
-li {
 }
 </style>

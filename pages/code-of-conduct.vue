@@ -184,7 +184,7 @@
 						If you are being harassed by a member of the Bald Bearded Builder
 						community, or if you observe someone else being harassed, please
 						report the behaviour using our
-						<a href="/report">Code of Conduct Report Form</a>.
+						<a href="/report/">Code of Conduct Report Form</a>.
 					</p>
 
 					<h3 id="thanks">THANKS</h3>

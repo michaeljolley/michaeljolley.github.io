@@ -90,7 +90,7 @@ li {
 }
 
 .toc a {
-	@apply text-gray-300;
+	@apply text-gray-200;
 }
 
 .toc a:hover {
@@ -98,6 +98,7 @@ li {
 }
 
 li.link--active a {
-	@apply text-gray-50;
+	@apply text-pink-400;
+	@apply dark:text-gray-50;
 }
 </style>
