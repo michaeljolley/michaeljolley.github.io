@@ -91,15 +91,19 @@ export default {}
 </script>
 <style scoped>
 .social {
-	@apply bg-gray-800;
 	@apply mt-10 mb-10;
 	@apply p-6;
+	@apply shadow-lg;
+
+	@apply bg-white;
+	@apply dark:bg-gray-800;
 }
 h2 {
 	@apply hidden;
 	@apply text-3xl;
 	@apply mt-0;
 	@apply border-0;
+
 	@apply text-gray-400;
 
 	@apply md:text-4xl;
@@ -125,7 +129,6 @@ li.mid {
 }
 
 li a {
-	@apply bg-gray-600;
 	@apply text-5xl;
 
 	@apply w-24;
@@ -133,8 +136,12 @@ li a {
 	@apply flex;
 	@apply justify-center;
 	@apply items-center;
-	@apply text-gray-300;
 	border-radius: 50%;
+
+	@apply bg-gray-50;
+	@apply text-gray-200;
+	@apply dark:bg-gray-600;
+	@apply dark:text-gray-300;
 }
 .facebook:hover {
 	@apply bg-brand-facebook;

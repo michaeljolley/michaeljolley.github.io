@@ -15,6 +15,7 @@
 	"dependencies": {
 		"@azure/search-documents": "^11.0.3",
 		"@fortawesome/free-brands-svg-icons": "^5.15.1",
+		"@fortawesome/free-regular-svg-icons": "^5.15.1",
 		"@fortawesome/free-solid-svg-icons": "^5.15.1",
 		"@nuxt/content": "^1.9.0",
 		"@nuxtjs/cloudinary": "^1.0.2",
@@ -56,6 +57,7 @@
 		"netlify-lambda": "^2.0.1",
 		"prettier": "^2.1.2",
 		"reading-time": "^1.2.1",
+		"tailwindcss-blend-mode": "^1.0.0",
 		"tailwindcss-dark-mode": "^1.1.7",
 		"vue-jest": "^3.0.4"
 	}

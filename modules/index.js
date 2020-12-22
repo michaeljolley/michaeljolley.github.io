@@ -1,5 +1,6 @@
 import azureSearch from './azureSearch'
 import cloudinary from './cloudinary'
+import colorMode from './colorMode'
 import config from './config'
 import feed from './feed'
 import fontawesome from './fontAwesome'
@@ -12,6 +13,7 @@ import tailwindcss from './tailwindcss'
 export {
 	azureSearch,
 	cloudinary,
+	colorMode,
 	config,
 	feed,
 	fontawesome,

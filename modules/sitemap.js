@@ -12,6 +12,7 @@ export default {
 	path: '/sitemap.xml',
 	hostname: config.baseUrl,
 	gzip: true,
+	trailingSlash: true,
 	routes: async () => {
 		const { $content } = require('@nuxt/content')
 

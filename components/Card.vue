@@ -1,6 +1,6 @@
 <template>
 	<article class="card">
-		<nuxt-link :to="post.route || `/${type}/${post.slug}`" :title="post.title">
+		<nuxt-link :to="post.route || `/${type}/${post.slug}/`" :title="post.title">
 			<header>
 				<v-image
 					v-if="post.cover || post.cover_image"
@@ -13,7 +13,7 @@
 				<summary>
 					<time>{{ post.date | formatDate }}</time>
 					<span v-if="post.readingTime && post.dir === '/blog'">
-						&nbsp;&nbsp;&nbsp;| &nbsp;
+						&nbsp;&nbsp;| &nbsp;
 						<span class="rt">{{ post.readingTime.text }}</span>
 					</span>
 				</summary>

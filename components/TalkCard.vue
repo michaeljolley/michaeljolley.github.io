@@ -1,6 +1,6 @@
 <template>
 	<article class="card">
-		<nuxt-link :to="talk.route || `/talks/${talk.slug}`" :title="talk.title">
+		<nuxt-link :to="talk.route || `/talks/${talk.slug}/`" :title="talk.title">
 			<header>
 				<v-image
 					v-if="talk.cover_image || talk.cover"

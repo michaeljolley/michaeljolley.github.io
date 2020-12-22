@@ -14,7 +14,11 @@ html {
 }
 
 body {
-	@apply text-white
+	@apply bg-gray-50;
+	@apply text-gray-900;
+
+	@apply dark:bg-gray-900;
+	@apply dark:text-white;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -75,23 +79,26 @@ p {
 
 blockquote {
 	font-family: 'SpeziaWide', sans-serif;
-	@apply bg-gray-600;
-	@apply border-gray-900;
 	@apply mx-0;
 	@apply my-5;
 	@apply px-6 py-3;
 	@apply italic;
-	@apply text-gray-200;
 	@apply rounded-lg;
 	@apply shadow-lg;
 	@apply overflow-x-auto;
+
+	@apply bg-gray-50;
+	@apply text-gray-600;
+
+	@apply dark:bg-gray-600;
+	@apply dark:text-gray-200;
 
 	@apply md:mx-10;
 	@apply md:py-6;
 }
 
 blockquote strong {
-	@apply text-white;
+	@apply text-pink-500;
 }
 
 pre {
@@ -103,10 +110,12 @@ pre {
 
 a {
 	@apply cursor-pointer;
-	@apply text-pink-500
+	@apply text-indigo-400;
+	@apply dark:text-pink-500;
 }
 a:hover {
-	@apply text-blue-500
+	@apply text-pink-500;
+	@apply dark:text-blue-500;
 }
 
 input,
@@ -114,12 +123,16 @@ textarea {
 	@apply block;
 	@apply w-full;
 	@apply p-2;
-	@apply text-white;
-	@apply bg-gray-600;
-	@apply border-white;
 	@apply border-solid;
 	@apply border;
 	@apply rounded-md;
+
+	@apply text-gray-900;
+	@apply bg-gray-50;
+	@apply border-gray-500;
+	@apply dark:text-white;
+	@apply dark:bg-gray-600;
+	@apply dark:border-white;
 
 	@apply md:w-3/4;
 }
@@ -134,13 +147,17 @@ button {
 	@apply rounded-xl;
 	@apply pl-4 pr-4;
 	@apply pt-2 pb-2;
-	@apply text-blue-500;
 	@apply font-bold;
-	@apply border-white;
 	@apply border-solid;
 	@apply border;
 	@apply rounded-md;
-	@apply bg-gray-700;
+
+	@apply border-gray-300;
+	@apply text-pink-500;
+	@apply bg-gray-50;
+	@apply dark:border-white;
+	@apply dark:text-blue-500;
+	@apply dark:bg-gray-700;
 }
 
 img {
@@ -160,11 +177,14 @@ form {
 article {
 	@apply flex;
 	@apply flex-col;
-	@apply bg-gray-500;
 	@apply w-11/12;
 	@apply h-full;
 	@apply lg:w-4/5;
 	@apply rounded-b-lg;
+	@apply shadow-lg;
+
+	@apply bg-white;
+	@apply dark:bg-gray-500;
 }
 
 article.full {
@@ -172,17 +192,18 @@ article.full {
 }
 
 article > section {
-	@apply bg-gray-500;
 	@apply rounded-b-xl;
 	@apply text-lg;
 	@apply p-6;
 	@apply lg:p-10;
+
+	@apply bg-white;
+	@apply dark:bg-gray-500;
 }
 
 aside {
 	@apply flex-col;
 	@apply w-1/12;
-	@apply bg-gray-500;
 	@apply rounded-xl;
 	@apply p-3;
 	@apply text-sm;
@@ -191,16 +212,22 @@ aside {
 	top: 105px;
 	@apply flex;
 	@apply lg:w-1/5;
+	@apply shadow-lg;
+
+	@apply bg-white;
+	@apply dark:bg-gray-500;
 }
 
 aside h3 {
 	@apply uppercase;
 	@apply text-base;
-	@apply text-white;
 	@apply mt-0;
 	background: unset;
 	background-clip: unset;
 	-webkit-text-fill-color: unset;
+
+	@apply text-gray-700;
+	@apply dark:text-white;
 }
 
 .sticky + .container {
@@ -216,18 +243,21 @@ aside h3 {
 }
 
 summary {
-	@apply text-white;
 	@apply text-sm;
 	@apply mb-1;
 	@apply font-bold;
 	@apply md:text-base;
+
+	@apply text-gray-500;
+	@apply dark:text-white;
 }
 
 .rt,
 time {
 	@apply text-sm;
-	@apply text-blue-500;
 	@apply font-normal;
+	@apply text-indigo-400;
+	@apply dark:text-blue-500;
 }
 
 .cld-image {
@@ -249,7 +279,9 @@ time {
 article.card  {
 	@apply w-full;
 	@apply shadow-lg;
-	@apply text-white;
+	@apply text-gray-700;
+	@apply dark:text-white;
+	@apply rounded-t-lg;
 }
 .card h2 {
 	@apply border-none;
