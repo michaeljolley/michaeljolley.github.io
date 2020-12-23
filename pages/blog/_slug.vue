@@ -94,7 +94,7 @@ export default {
 			{
 				hid: 'og:title',
 				property: 'og:title',
-				content: `${this.post.title}${config.baseSplitter}${config.baseTitle}`,
+				content: `${config.indexTitle}${config.baseSplitter}${config.baseTitle}`,
 			},
 			{
 				hid: 'og:description',
