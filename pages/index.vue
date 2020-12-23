@@ -30,6 +30,7 @@ export default {
 				'slug',
 				'dir',
 			])
+			.where({ date: { $lt: Date.now() } })
 			.sortBy('date', 'desc')
 			.limit(2)
 			.fetch()
