@@ -68,16 +68,15 @@ to take that into consideration when thinking about scaling your application.
 
 One of the biggest positives of Blazor Server is load &amp; render times.
 Since users aren't downloading the runtime or application libraries, they
-can start using teh application faster.
+can start using the application faster.
 
-**All-in-one Application**
+**Ease of On-Boarding**
 
-Because all your code runs on the server, all data-access, business logic,
-etc. can live in the same place. That means you can use your actual data
-entities and classes as models on the Razor pages without the need for
-DTO objects. In fact, it means you don't need an API at all as you can make
-data requests securely from the server. This makes building a feature-rich
-web UI much easier for existing C# developers.
+Getting started with Blazor Server is much faster because you're writing
+the same C# code you would regardless. As long as your code conforms to
+.NET Standard 2.0, your existing classes, data-access, business logic,
+etc. will just work. Because all the code runs on the server, it also
+means you don't have to build a separate front-end and back-end. 
 
 **Browser Support**
 
@@ -85,12 +84,6 @@ Unlike WASM, Blazor Server is supported in all major browsers because it
 doesn't require the browser to support WebAssembly. This is a major
 consideration if you still need to support users with IE 11 or other older
 browsers.
-
-**Search Engine Optimization**
-
-Microsoft is making improvements for SEO in Blazor WASM, but currently,
-Blazor Server is the gold standard between the two. Search engines can
-easily crawl &amp; index the HTML served from Blazor Server. 
 
 ### Server Cons
 
@@ -178,6 +171,40 @@ with the Intermediate Language Trimmer.
 
 **API**
 
-**Search Engine Optimization**
+When dealing with data or things that need to be secured, you'll need to
+make calls to an API. This is a paradigm that's popular with exiting
+JavaScript frameworks and is likely familiar to C# developers who have
+built with ASP.NET MVC.
 
-## Other Considerations
+## Other Observations
+
+If you're used to existing JavaScript frameworks like Vue.js, React, or
+Angular, then you'll understand the paradigm that Blazor WASM uses. It
+just sprinkles in the magic of C# for .NET developers.
+
+Blazor Server will be an easier entry point for WinForm &amp; XAML
+developers. I hesitate to compare it to WebForms because it is **NOT**
+WebForms, but it seems like an evolution from that world. It's all
+C# developers wanted WebForms to be.
+
+The choice of which to use will be dependent on several factors, but
+an important one will be: *"where will my code &amp; user state live?"*
+
+If you choose Blazor Server, you will want to be mindful of what kind
+of state you're maintaining for each user. Blazor Server handles state
+well, but the size and scope of that state are controlled by you. The
+larger state, the fewer users per server you'll be able to support.
+
+With Blazor WASM, that state remains on the client-side but requires
+you to use back-end APIs for data access and sensitive processes.
+
+Luckily, both use components that work in both flavors. This means that
+switching between the two isn't a daunting task and can be very simple
+with the right architecture.
+
+Hopefully, you now have a better understanding of the features &amp;
+limitations of Blazor Server and Blazor WebAssembly. I'd love to
+hear about what you're building. Reach out on socials or join our
+[Builders Club](https://discord.gg/XSG7HJm) community Discord to
+share with an amazing group of developers who are focused on improving
+as developers and humans. We'd love to have you as part of our tribe.
