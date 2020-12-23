@@ -18,13 +18,13 @@
 						</p>
 						<p>
 							<button type="submit" :disabled="isLoading">
-								<span v-if="!isLoading">Search</span>
-								<span v-if="isLoading">Searching...</span>
 								<font-awesome-icon
 									v-if="isLoading"
 									:icon="['fas', 'spinner']"
 									pulse
 								/>
+								<span v-if="!isLoading">Search</span>
+								<span v-if="isLoading">Searching...</span>
 							</button>
 						</p>
 					</form>
