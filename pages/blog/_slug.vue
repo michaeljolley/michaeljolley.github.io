@@ -94,7 +94,7 @@ export default {
 			{
 				hid: 'og:title',
 				property: 'og:title',
-				content: `${this.indexTitle}${config.baseSplitter}${config.baseTitle}`,
+				content: `${this.post.title}${config.baseSplitter}${config.baseTitle}`,
 			},
 			{
 				hid: 'og:description',
@@ -131,7 +131,7 @@ export default {
 			{
 				hid: 'og:site_name',
 				property: 'og:site_name',
-				content: `${this.post.title}${config.baseSplitter}${config.baseBrand}`,
+				content: `${config.indexTitle}${config.baseSplitter}${config.baseBrand}`,
 			},
 			{ hid: 'og:type', property: 'og:type', content: 'website' },
 		]
