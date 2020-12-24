@@ -8,8 +8,9 @@
 			quality="auto"
 			loading="lazy"
 			responsive
-			blur
-		></cld-image>
+		>
+			<cld-placeholder type="pixelate" />
+		</cld-image>
 	</client-only>
 </template>
 
@@ -27,4 +28,9 @@ export default {
 	},
 }
 </script>
-<style scoped></style>
+<style scoped>
+.cld-image,
+.cld-image img {
+	@apply h-auto;
+}
+</style>
