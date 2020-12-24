@@ -135,8 +135,7 @@ const config = {
 			},
 			{ hid: 'og:type', property: 'og:type', content: 'website' },
 			{
-				hid: 'monetization',
-				property: 'monetization',
+				name: 'monetization',
 				content: `${this.monetizationPointer}`,
 			},
 		]
