@@ -171,7 +171,7 @@ export default {
 							route: '/blog/',
 							payload: {
 								posts: posts
-									.filter((f) => f.date < Date.now())
+									.filter((f) => new Date(f.date) < Date.now())
 									.sort((a, b) => {
 										return new Date(b.date) - new Date(a.date)
 									})
