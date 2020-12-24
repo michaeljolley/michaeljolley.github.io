@@ -3,9 +3,9 @@ require('dotenv').config()
 const config = {
 	builtAt: new Date().toISOString(),
 	baseUrl:
-		(process.env.CONTEXT === 'production'
-			? process.env.URL
-			: process.env.DEPLOY_PRIME_URL) || 'http://localhost:3000',
+		process.env.CONTEXT === 'production'
+			? 'https://baldbeardedbuilder.com'
+			: 'http://localhost:3000',
 	indexTitle: 'Building Better Builders',
 	baseBrand: 'Bald. Bearded. Builder.',
 	baseTitle: 'Bald. Bearded. Builder.',
