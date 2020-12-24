@@ -30,6 +30,7 @@ const config = {
 	cloudinaryAPIKey: process.env.CLOUDINARY_API_KEY || null,
 	cloudinaryAPISecret: process.env.CLOUDINARY_API_SECRET || null,
 	stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY || null,
+	monetizationPointer: process.env.VUE_APP_MONETIZATION || null,
 	get headMeta() {
 		return [
 			{ charset: 'utf-8' },
@@ -133,6 +134,11 @@ const config = {
 				content: `${this.indexTitle}${this.baseSplitter}${this.baseBrand}`,
 			},
 			{ hid: 'og:type', property: 'og:type', content: 'website' },
+			{
+				hid: 'monetization',
+				property: 'monetization',
+				content: `${this.monetizationPointer}`,
+			},
 		]
 	},
 	get headLinks() {
