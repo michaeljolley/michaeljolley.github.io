@@ -64,6 +64,11 @@ export default {
 					.sortBy('date', 'desc')
 					.fetch()
 
+				console.dir({
+					page: this.page,
+					posts: newPosts,
+				})
+
 				this.page++
 
 				if (newPosts.length > 0) {

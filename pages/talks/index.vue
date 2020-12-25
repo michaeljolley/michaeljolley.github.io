@@ -9,7 +9,6 @@
 				type="speaking"
 			/>
 		</div>
-		<InfiniteScroll :enough="enough" @load-more="loadTalks()" />
 	</main>
 </template>
 
