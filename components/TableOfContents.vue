@@ -86,7 +86,7 @@ section {
 }
 
 li {
-	@apply ml-3;
+	@apply ml-2;
 }
 
 .toc a {

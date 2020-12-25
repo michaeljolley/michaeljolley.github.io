@@ -91,7 +91,7 @@ section {
 h3 {
 	@apply hidden;
 	@apply lg:flex;
-	@apply lg:mt-10;
+	@apply lg:mt-5;
 }
 
 ul {

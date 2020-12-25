@@ -6,6 +6,7 @@
 				:toc="post.toc"
 				:levels="post.toc.length > 10 ? [2] : [2, 3]"
 			/>
+			<RelatedPosts :tags="post.tags" :slug="post.slug" />
 			<SocialSharing :post="post" />
 		</aside>
 		<article class="content">
