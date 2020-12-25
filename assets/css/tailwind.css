@@ -293,8 +293,49 @@ div.nuxt-progress {
   background: linear-gradient(to right, #7fc6f4, #d5279b);
 }
 
+article > header {
+	min-width: 157px
+}
+
+.card header {
+	min-height: 176px
+}
+
+@screen md  {
+	article > header {
+		min-height: 322px
+	}
+	.card header {
+		min-height: 356px
+	}
+}
+
 @screen lg {
 	.cld-image {
 		margin: 0px -8px;
+	}
+	article > header {
+		min-height: 358px
+	}
+	.card header {
+		min-height: 222px
+	}
+}
+
+@screen xl  {
+	article > header {
+		min-height: 448px
+	}
+	.card header {
+		min-height: 278px
+	}
+}
+
+@screen 2xl {
+	article > header {
+		min-height: 537px
+	}
+	.card header {
+		min-height: 334px
 	}
 }

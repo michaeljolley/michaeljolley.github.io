@@ -1,5 +1,5 @@
 ---
-date: 2020-12-25
+date: 2020-12-24
 title: "Choosing Between Blazor Server or WebAssembly"
 cover: ./cover.png
 ograph: ./ograph.png
@@ -21,7 +21,7 @@ and use cases for both.
 <!--more-->
 
  > **Before we move on:** I'm stoked to be taking part in 
- > <a href="https://www.csadvent.christmas/" target="_blank">C# Advent</a>
+ > [C# Advent](https://www.csadvent.christmas/)
  > again this year. Honestly, I don't understand how I was allowed back.
  > I guess mistakes were made. 
  >

@@ -14,7 +14,7 @@
 				<a
 					href="https://github.com/MichaelJolley/michaeljolley.github.io"
 					target="_blank"
-					noreferrer
+					rel="noreferrer"
 					>Crafted with ♥.</a
 				>
 			</li>

@@ -162,7 +162,7 @@ export default {
 }
 
 @screen lg {
-	.cld-image {
+	.nuxt-content .cld-image {
 		margin: 50px -45px;
 	}
 }

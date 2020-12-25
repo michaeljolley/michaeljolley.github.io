@@ -203,7 +203,7 @@ export default {
 
 	purgeCSS: {},
 
-	plugins: ['~/directives/scroll.client.js', '~/plugins/formatDate.js'],
+	plugins: ['~/plugins/scroll.client.js', '~/plugins/formatDate.js'],
 
 	hooks: {
 		'content:file:beforeInsert': async (document, database) => {

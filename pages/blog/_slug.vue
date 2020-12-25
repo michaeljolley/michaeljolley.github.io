@@ -1,5 +1,5 @@
 <template>
-	<div class="post">
+	<div v-if="post" class="post">
 		<aside>
 			<TableOfContents
 				v-if="post.toc.length > 0"
@@ -156,8 +156,11 @@ export default {
 
 .cld-image {
 	width: unset !important;
-	margin: 35px -30px;
 	@apply shadow-lg;
+}
+
+.nuxt-content .cld-image {
+	margin: 35px -30px;
 }
 
 pre {
@@ -167,7 +170,7 @@ pre {
 }
 
 @screen lg {
-	.cld-image {
+	.nuxt-content .cld-image {
 		margin: 50px -45px;
 	}
 
