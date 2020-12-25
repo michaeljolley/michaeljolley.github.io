@@ -46,7 +46,7 @@ export default {
 
 			if (!this.enough && !this.isLoading) {
 				this.isLoading = true
-				const newTalks = await this.$content('talks')
+				const newTalks = await this.$content('/talks')
 					.only([
 						'path',
 						'title',
