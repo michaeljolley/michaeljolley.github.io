@@ -47,7 +47,7 @@ export default {
 
 			if (!this.enough && !this.isLoading) {
 				this.isLoading = true
-				const newPosts = await this.$content('/blog')
+				const newPosts = await this.$content('blog')
 					.only([
 						'path',
 						'title',
