@@ -2,6 +2,8 @@
 	<div class="post">
 		<aside>
 			<TableOfContents :toc="toc" :levels="toc.length > 10 ? [2] : [2, 3]" />
+
+			<RelatedPosts :tags="tags" slug="uses" />
 			<SocialSharing :post="info" />
 		</aside>
 		<article class="content">
@@ -445,6 +447,16 @@ import config from '@/modules/config'
 export default {
 	data() {
 		return {
+			tags: [
+				'twitch',
+				'hardware',
+				'software',
+				'tools',
+				'stream',
+				'youtube',
+				'video',
+				'blog',
+			],
 			toc: [
 				{
 					id: 'software',

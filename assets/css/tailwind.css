@@ -300,7 +300,8 @@ article > header {
 .card header {
 	min-height: 176px
 }
-.posts .card header {
+.posts .card header,
+.results .card header  {
 	min-height: 292px
 }
 
@@ -311,7 +312,8 @@ article > header {
 	.card header {
 		min-height: 356px
 	}
-	.posts .card header {
+	.posts .card header,
+	.results .card header  {
 		min-height: 356px
 	}
 }
@@ -326,7 +328,8 @@ article > header {
 	.card header {
 		min-height: 222px
 	}
-	.posts .card header {
+	.posts .card header,
+	.results .card header  {
 		min-height: 222px
 	}
 }
@@ -338,7 +341,8 @@ article > header {
 	.card header {
 		min-height: 278px
 	}
-	.posts .card header {
+	.posts .card header,
+	.results .card header  {
 		min-height: 181px
 	}
 }
@@ -350,7 +354,8 @@ article > header {
 	.card header {
 		min-height: 334px
 	}
-	.posts .card header {
+	.posts .card header,
+	.results .card header  {
 		min-height: 218px
 	}
 }
