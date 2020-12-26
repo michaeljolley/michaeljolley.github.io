@@ -58,16 +58,11 @@ export default {
 						'slug',
 						'dir',
 					])
-					//	.where({ date: { $lt: Date.now() } })
+					.where((obj) => new Date(obj.date) < Date.now())
 					.skip(this.page * this.pageSize)
 					.limit(this.pageSize)
 					.sortBy('date', 'desc')
 					.fetch()
-
-				console.dir({
-					page: this.page,
-					posts: newPosts,
-				})
 
 				this.page++
 
