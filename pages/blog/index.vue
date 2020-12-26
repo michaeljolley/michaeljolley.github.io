@@ -58,7 +58,7 @@ export default {
 						'slug',
 						'dir',
 					])
-					.where({ date: { $lt: Date.now() } })
+					//	.where({ date: { $lt: Date.now() } })
 					.skip(this.page * this.pageSize)
 					.limit(this.pageSize)
 					.sortBy('date', 'desc')
