@@ -32,7 +32,7 @@ header {
 	@apply mb-4;
 }
 h1 {
-	@apply text-3xl;
+	@apply text-2xl;
 	@apply border-0;
 	@apply mb-0;
 	@apply md:text-4xl;
