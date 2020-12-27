@@ -30,6 +30,7 @@ exports.handler = async (event, context, callback) => {
 		statusCode: 200,
 		headers: {
 			'Content-Type': 'application/json',
+			'Cache-Control': 'max-age=1800, immutable',
 		},
 		body: JSON.stringify({ status: streams.length ? 'online' : 'offline' }),
 	})
