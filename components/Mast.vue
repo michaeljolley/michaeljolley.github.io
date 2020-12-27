@@ -48,15 +48,19 @@ const salutations = ['Hey!', 'Hi!', 'Eh.', 'Oh no.', 'Meh.', 'Uh oh.', 'Eek!']
 export default {
 	data() {
 		return {
-			backgroundImage: null,
 			opening: null,
+			mastNumber: 0,
 		}
 	},
+	computed: {
+		backgroundImage() {
+			const modifier = this.$colorMode.value === 'light' ? 'light_' : ''
+			return `https://res.cloudinary.com/dk3rdh3yo/image/upload/g_auto,f_auto/v1607302424/mj_${modifier}${this.mastNumber}.png`
+		},
+	},
 	created() {
-		this.backgroundImage = `https://res.cloudinary.com/dk3rdh3yo/image/upload/g_auto,f_auto/v1607302424/mj_${Math.floor(
-			Math.random() * 13 + 1
-		)}.png`
 		this.opening = salutations[Math.floor(Math.random() * salutations.length)]
+		this.mastNumber = Math.floor(Math.random() * 13 + 1)
 	},
 }
 </script>
@@ -74,13 +78,7 @@ export default {
 	@apply lg:mx-auto;
 
 	@apply bg-gray-50;
-	@apply bg-blend-exclusion;
-
 	@apply dark:bg-gray-900;
-}
-
-.dark-mode .mast {
-	@apply bg-blend-lighten;
 }
 
 .text {
