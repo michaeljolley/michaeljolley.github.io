@@ -297,12 +297,10 @@ article > header {
 	min-width: 157px
 }
 
-.card header {
-	min-height: 176px
-}
+.card header,
 .posts .card header,
 .results .card header  {
-	min-height: 292px
+	min-height: 176px
 }
 
 @screen md  {
