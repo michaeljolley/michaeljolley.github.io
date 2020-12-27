@@ -302,6 +302,18 @@ article > header {
 	min-height: 176px
 }
 
+
+.card h2:before,
+.card h3:before,
+.card h4:before,
+.card h5:before,
+.card h6:before {
+	content:"";
+	@apply inline-block;
+	height: unset;
+	margin: 0;
+}
+
 @screen md  {
 	article > header {
 		min-height: 322px
