@@ -1,7 +1,7 @@
 <template>
 	<div
+		class="backToTop"
 		:class="{ 'opacity-100': showButton, 'opacity-0': !showButton }"
-		class="text-5xl fixed inset-x-auto bottom-0 right-0 z-30 mb-4 md:mb-12 mr-4 md:mr-12 transition-opacity duration-500 ease-in-out"
 	>
 		<a title="back to top" aria-label="back to top" @click="top">
 			<font-awesome-icon :icon="['fa', 'chevron-circle-up']" />
@@ -40,6 +40,21 @@ export default {
 }
 </script>
 <style scoped>
+.backToTop {
+	@apply text-5xl;
+	@apply fixed;
+	@apply inset-x-auto;
+	@apply bottom-0;
+	@apply right-0;
+	@apply z-30;
+	@apply mb-6;
+	@apply mr-6;
+	@apply md:mb-12;
+	@apply md:mr-12;
+	@apply transition-opacity;
+	@apply duration-500;
+	@apply ease-in-out;
+}
 a:hover {
 	@apply text-pink-500;
 	@apply dark:text-blue-500;
