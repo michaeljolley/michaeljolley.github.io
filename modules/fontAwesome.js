@@ -16,6 +16,7 @@ export default {
 			'faGithub',
 			'faInstagram',
 			'faLinkedinIn',
+			'faPatreon',
 			'faRedditAlien',
 			'faTwitch',
 			'faTwitter',

@@ -11,6 +11,10 @@
 			</li>
 			<li>&copy; Bald Bearded Builder.<span> All rights reserved.</span></li>
 			<li>
+				<a href="https://bbb.dev/patreon" target="_blank" rel="noreferrer">
+					<font-awesome-icon :icon="['fab', 'patreon']" /> Become a Patron</a
+				>
+				&nbsp; | &nbsp;
 				<a
 					href="https://github.com/MichaelJolley/michaeljolley.github.io"
 					target="_blank"
