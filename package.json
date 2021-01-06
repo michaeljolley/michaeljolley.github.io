@@ -21,7 +21,7 @@
 		"@nuxt/content": "^1.9.0",
 		"@nuxtjs/cloudinary": "^1.0.2",
 		"autoprefixer": "^10.1.0",
-		"axios": "^0.21.0",
+		"axios": "^0.21.1",
 		"core-js": "^3.6.5",
 		"faunadb": "^2.14.2",
 		"fontsource-roboto": "^3.0.3",
