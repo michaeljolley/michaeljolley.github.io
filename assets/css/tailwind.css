@@ -302,6 +302,10 @@ article > header {
 	min-height: 176px
 }
 
+::marker {
+	content: none;
+}
+
 .card h2:before,
 .card h3:before,
 .card h4:before,
