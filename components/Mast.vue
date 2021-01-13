@@ -24,7 +24,14 @@
 				>
 				where he gets to play with awesome APIs. You can also catch him giving
 				<NuxtLink to="/talks/" title="Talks Michael's given">talks</NuxtLink>
-				at various events or hosting the
+				at various events, sharing two videos a week on
+				<a
+					target="_blank"
+					title="Bald Bearded Builder on YouTube"
+					href="https://bbb.dev/youtube"
+					noreferrer
+					>YouTube</a
+				>, or hosting the
 				<a
 					target="_blank"
 					title="Bald Bearded Builder on Twitch"
