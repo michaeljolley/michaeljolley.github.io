@@ -73,7 +73,7 @@ Let's talk about them:
 ## Target: 2021
 
 I'm really hopeful about my goals for 2021, both personally &amp; professionally. Hopefully, a couple years of tracking 
-these have improved my process. Rather than setting a "goal" for 2021, I want to track metrics across 4 areas: Personal, BBB, and Giving. So let's go through each: 
+these have improved my process. Rather than setting a "goal" for 2021, I want to track metrics across 3 areas: Personal, BBB, and Giving. So let's go through each: 
 
 ### Personal
 
