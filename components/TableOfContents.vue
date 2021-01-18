@@ -97,6 +97,10 @@ li {
 	@apply text-pink-500;
 }
 
+.link--level3 {
+	@apply pl-2;
+}
+
 li.link--active a {
 	@apply text-pink-400;
 	@apply dark:text-gray-50;

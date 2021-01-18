@@ -22,7 +22,7 @@ goals for 2020.
 
 ## How did I do?
 
-At the start of 2019, I made a [blog post](https://baldbeardedbuilder.com/posts/2018-year-in-review/) reviewing
+At the start of 2019, I made a [blog post](https://baldbeardedbuilder.com/blog/2018-year-in-review/) reviewing
 2018 and setting goals for 2019. It's the first time I've made a blog post like that. Looking back, I'm glad
 I did because now I can compare the start and end of the year.
 
