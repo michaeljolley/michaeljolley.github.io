@@ -403,7 +403,9 @@
 						several voices at the same time, I'll use an
 						<a target="_blank" href="https://amzn.to/3rbyn8Z"
 							>Audio-Technica AT2020</a
-						>.
+						>. When using the SM7B or AT2020, I use the
+						<a target="_blank" href="https://amzn.to/36gP61M">Rode PSA1</a> as
+						my mount.
 					</p>
 
 					<p>
