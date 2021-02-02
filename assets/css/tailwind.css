@@ -298,7 +298,8 @@ article > header {
 
 .card header,
 .posts .card header,
-.results .card header  {
+.results .card header,
+.videos .card header {
 	min-height: 176px
 }
 
@@ -325,6 +326,7 @@ article > header {
 		min-height: 356px
 	}
 	.posts .card header,
+	.videos .card header,
 	.results .card header  {
 		min-height: 356px
 	}
@@ -341,6 +343,7 @@ article > header {
 		min-height: 222px
 	}
 	.posts .card header,
+	.videos .card header,
 	.results .card header  {
 		min-height: 222px
 	}
@@ -354,6 +357,7 @@ article > header {
 		min-height: 278px
 	}
 	.posts .card header,
+	.videos .card header,
 	.results .card header  {
 		min-height: 181px
 	}
@@ -367,6 +371,7 @@ article > header {
 		min-height: 334px
 	}
 	.posts .card header,
+	.videos .card header,
 	.results .card header  {
 		min-height: 218px
 	}

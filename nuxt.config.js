@@ -1,5 +1,5 @@
 import readingTime from 'reading-time'
-import { $cloudinary } from './middleware'
+import { $cloudinary, $youtube } from './middleware'
 import {
 	azureSearch,
 	cloudinary,
@@ -206,6 +206,9 @@ export default {
 	plugins: ['~/plugins/scroll.client.js', '~/plugins/formatDate.js'],
 
 	hooks: {
+		'generate:before': async (generator, generateOptions) => {
+			await $youtube.fetchVideos(generator)
+		},
 		'content:file:beforeInsert': async (document, database) => {
 			const directories = document.dir.split('/').filter((f) => f.length > 0)
 			const slug = directories[directories.length - 1]
