@@ -12,6 +12,16 @@
 			</div>
 		</div>
 		<SocialBar></SocialBar>
+		<div class="container mx-auto">
+			<div class="videos">
+				<Video
+					v-for="video in videos"
+					:key="video.id"
+					:v-if="videos"
+					:video="video"
+				/>
+			</div>
+		</div>
 	</main>
 </template>
 
@@ -34,8 +44,15 @@ export default {
 			.sortBy('date', 'desc')
 			.limit(2)
 			.fetch()
+		const videos = await $content('videos')
+			.only(['id', 'title', 'date', 'link', 'thumbnail'])
+			.where({ date: { $lt: Date.now() } })
+			.sortBy('date', 'desc')
+			.limit(3)
+			.fetch()
 		return {
 			posts,
+			videos,
 		}
 	},
 	methods: {
@@ -61,7 +78,17 @@ main {
 	@apply lg:gap-10;
 }
 
-.posts article {
+.videos {
+	@apply grid;
+	@apply gap-6;
+
+	@apply md:grid-cols-1;
+	@apply lg:grid-cols-3;
+	@apply lg:gap-10;
+}
+
+.posts article,
+.videos article {
 	@apply h-full;
 }
 
