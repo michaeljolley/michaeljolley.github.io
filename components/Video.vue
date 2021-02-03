@@ -4,7 +4,7 @@
 			<header>
 				<cld-image
 					:alt="video.title"
-					:public-id="video.id"
+					:public-id="video.slug"
 					:title="video.title"
 					fetch-format="auto"
 					quality="auto"

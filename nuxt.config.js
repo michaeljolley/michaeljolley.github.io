@@ -1,3 +1,4 @@
+import { faVideoSlash } from '@fortawesome/free-solid-svg-icons'
 import readingTime from 'reading-time'
 import { $cloudinary, $youtube } from './middleware'
 import {
@@ -108,6 +109,7 @@ export default {
 				const posts = await $content('blog').fetch()
 				const talks = await $content('talks').fetch()
 				const events = await $content('events').fetch()
+				const videos = await $content('videos').fetch()
 
 				const bodyParser = (body) => {
 					const results = []
@@ -146,6 +148,19 @@ export default {
 							route: `/talks/${talk.slug}/`,
 							cover_image: talk.cover.public_id,
 							body: bodyParser(talk.body).join(' '),
+						}
+					}),
+					...videos.map((video) => {
+						return {
+							slug: video.slug,
+							title: video.title,
+							description: video.title,
+							lastUpdated: video.date,
+							date: video.date,
+							type: 'video',
+							route: video.link,
+							cover_image: video.slug,
+							body: bodyParser(video.body).join(' '),
 						}
 					}),
 				]

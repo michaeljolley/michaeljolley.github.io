@@ -3,6 +3,7 @@
 # Custom build artifacts
 .nuxt
 lambda
+/content/videos
 
 ### Node template
 # Logs

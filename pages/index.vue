@@ -13,6 +13,7 @@
 		</div>
 		<SocialBar></SocialBar>
 		<div class="container mx-auto">
+			<h2>Recently on YouTube</h2>
 			<div class="videos">
 				<Video
 					v-for="video in videos"
@@ -45,7 +46,7 @@ export default {
 			.limit(2)
 			.fetch()
 		const videos = await $content('videos')
-			.only(['id', 'title', 'date', 'link', 'thumbnail'])
+			.only(['slug', 'title', 'date', 'link', 'thumbnail'])
 			.where({ date: { $lt: Date.now() } })
 			.sortBy('date', 'desc')
 			.limit(3)
@@ -90,6 +91,11 @@ main {
 .posts article,
 .videos article {
 	@apply h-full;
+}
+
+h2 {
+	@apply border-none;
+	@apply mb-1;
 }
 
 .cld-image {
