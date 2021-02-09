@@ -17,12 +17,17 @@
 						<NuxtLink to="/talks/" title="Talks">Speaking</NuxtLink>
 					</li>
 					<li>
-						<a href="https://bbb.dev/shop" rel="noreferrer" title="Swag"
-							>Swag</a
-						>
+						<NuxtLink to="/product/" title="Swag">Swag</NuxtLink>
 					</li>
 				</ul>
 				<ul class="permanent">
+					<li v-if="showCart" class="cart">
+						<NuxtLink to="/cart/" title="Shopping Cart">
+							<font-awesome-icon
+								:icon="['fas', 'shopping-cart']"
+							></font-awesome-icon
+						></NuxtLink>
+					</li>
 					<li>
 						<a
 							:title="`Switch to ${
@@ -67,7 +72,7 @@
 					<NuxtLink to="/talks/" title="Talks">Speaking</NuxtLink>
 				</li>
 				<li>
-					<a href="https://bbb.dev/shop" rel="noreferrer" title="Swag">Swag</a>
+					<NuxtLink to="/product/" title="Swag">Swag</NuxtLink>
 				</li>
 			</ul>
 		</transition>
@@ -75,6 +80,7 @@
 </template>
 <script>
 import Vue from 'vue'
+import { mapGetters } from 'vuex'
 
 export default {
 	data() {
@@ -86,6 +92,7 @@ export default {
 		lightMode() {
 			return this.$colorMode.value === 'dark' ? 'moon' : 'lightbulb'
 		},
+		...mapGetters(['showCart']),
 	},
 	methods: {
 		toggleColor() {

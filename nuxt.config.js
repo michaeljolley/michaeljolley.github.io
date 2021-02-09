@@ -1,6 +1,5 @@
-import { faVideoSlash } from '@fortawesome/free-solid-svg-icons'
 import readingTime from 'reading-time'
-import { $cloudinary, $youtube } from './middleware'
+import { $cloudinary, $stripe, $youtube } from './middleware'
 import {
 	azureSearch,
 	cloudinary,
@@ -110,6 +109,7 @@ export default {
 				const talks = await $content('talks').fetch()
 				const events = await $content('events').fetch()
 				const videos = await $content('videos').fetch()
+				const products = await $content('products').fetch()
 
 				const bodyParser = (body) => {
 					const results = []
@@ -202,6 +202,14 @@ export default {
 							},
 						},
 					],
+					...[
+						{
+							route: '/product',
+							payload: {
+								products,
+							},
+						},
+					],
 				]
 			}
 		},
@@ -222,7 +230,8 @@ export default {
 
 	hooks: {
 		'generate:before': async (generator, generateOptions) => {
-			await $youtube.fetchVideos(generator)
+			await $youtube.fetchVideos()
+			await $stripe.loadSwag()
 		},
 		'content:file:beforeInsert': async (document, database) => {
 			const directories = document.dir.split('/').filter((f) => f.length > 0)

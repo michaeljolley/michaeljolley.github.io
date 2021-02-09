@@ -4,6 +4,8 @@
 .nuxt
 lambda
 /content/videos
+/content/products
+/content/prices
 
 ### Node template
 # Logs

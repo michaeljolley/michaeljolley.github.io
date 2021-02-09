@@ -118,7 +118,8 @@ a:hover {
 }
 
 input,
-textarea {
+textarea,
+select {
 	@apply block;
 	@apply w-full;
 	@apply p-2;

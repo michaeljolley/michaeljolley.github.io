@@ -1,26 +1,67 @@
 export const state = () => ({
-	darkMode: true,
-	searchOpen: false,
+	cart: [],
 })
 
 export const getters = {
-	searchStatus: (state) => state.searchOpen,
+	showCart: (state) => state.cart.length > 0,
+	cart: (state) => state.cart,
 }
 
 export const actions = {
-	toggleDarkMode(context) {
-		context.commit('toggleDarkMode')
+	addToCart({ commit, state }, item) {
+		const exists = state.cart.some(
+			(f) => f.productId === item.productId && f.priceId === item.priceId
+		)
+		let cart = []
+		if (exists) {
+			cart = [
+				...state.cart.map((f) => {
+					if (f.productId === item.productId && f.priceId === item.priceId) {
+						f.quantity = f.quantity + item.quantity
+					}
+					return f
+				}),
+			]
+		} else {
+			cart = [...state.cart]
+			cart.push(item)
+		}
+
+		commit('updateCart', cart)
 	},
-	setSearchState(context, isSearchOpen) {
-		context.commit('setSearchState', isSearchOpen)
+	updateCart({ commit, state }, item) {
+		const exists = state.cart.some(
+			(f) => f.productId === item.productId && f.priceId === item.priceId
+		)
+		let cart = []
+
+		if (exists) {
+			cart = [
+				...state.cart.map((f) => {
+					if (f.productId === item.productId && f.priceId === item.priceId) {
+						f.quantity = item.quantity
+					}
+					return f
+				}),
+			]
+		} else {
+			cart = [...state.cart]
+			cart.push(item)
+		}
+
+		commit('updateCart', cart)
+	},
+	removeFromCart({ commit, state }, item) {
+		const cart = state.cart.filter(
+			(f) => f.productId !== item.productId && f.priceId !== item.priceId
+		)
+
+		commit('updateCart', cart)
 	},
 }
 
 export const mutations = {
-	toggleDarkMode(state) {
-		state.darkMode = !state.darkMode
-	},
-	setSearchState(state, isSearchOpen) {
-		state.searchOpen = isSearchOpen
+	updateCart(state, cart) {
+		state.cart = cart
 	},
 }
