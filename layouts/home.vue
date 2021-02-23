@@ -2,6 +2,7 @@
 	<div>
 		<Mast />
 		<Header />
+		<Twitch />
 		<Nuxt />
 		<div class="container">
 			<Footer />

@@ -84,6 +84,7 @@ export default {
 		'@nuxtjs/feed',
 		'@nuxtjs/sitemap',
 		'vue-social-sharing/nuxt',
+		'@nuxtjs/proxy',
 	],
 
 	content: {
@@ -223,6 +224,10 @@ export default {
 	purgeCss,
 	sitemap,
 	tailwindcss,
+
+	proxy: {
+		'/.netlify': `${config.functionsUrl}`,
+	},
 
 	purgeCSS: {},
 

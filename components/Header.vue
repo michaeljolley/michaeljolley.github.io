@@ -2,11 +2,17 @@
 	<header v-scroll>
 		<div class="navBar">
 			<nav class="container">
-				<NuxtLink to="/" title="back home" class="flex">
+				<NuxtLink
+					to="/"
+					title="back home"
+					class="flex"
+					:class="{ twitch: isStreaming }"
+				>
 					<div class="logo"></div>
 					<div class="text flex flex-col">
 						<h2>bald. bearded. builder.</h2>
-						<p>Building Better Builders</p>
+						<p v-if="!isStreaming">Building Better Builders</p>
+						<p v-if="isStreaming">Watch on Twitch now!</p>
 					</div>
 				</NuxtLink>
 				<ul class="links">
@@ -86,6 +92,7 @@ export default {
 	data() {
 		return {
 			navExpanded: false,
+			isStreaming: false,
 		}
 	},
 	computed: {
@@ -93,6 +100,11 @@ export default {
 			return this.$colorMode.value === 'dark' ? 'moon' : 'lightbulb'
 		},
 		...mapGetters(['showCart']),
+	},
+	async mounted() {
+		const response = await fetch(`/.netlify/functions/twitch`)
+		const { isOnline } = await response.json()
+		this.isStreaming = isOnline
 	},
 	methods: {
 		toggleColor() {
@@ -181,6 +193,25 @@ nav {
 
 .dark-mode .logo {
 	background-image: url('/images/bbb-logo.svg');
+}
+
+.twitch .logo {
+	background-image: url('/images/bbb-logo.svg');
+	@apply rounded-3xl;
+	@apply bg-pink-500;
+	animation: pulse-animation 2s infinite;
+}
+
+.twitch p {
+}
+
+@keyframes pulse-animation {
+	0% {
+		box-shadow: 0 0 0 0px rgba(255, 0, 255, 0.4);
+	}
+	100% {
+		box-shadow: 0 0 0 20px rgba(255, 0, 255, 0);
+	}
 }
 
 h2 {

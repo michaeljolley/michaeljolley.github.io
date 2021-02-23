@@ -1,5 +1,6 @@
 const qs = require('querystring')
 const axios = require('axios')
+require('dotenv').config()
 
 exports.handler = async (event, context, callback) => {
 	const opts = {
@@ -32,6 +33,6 @@ exports.handler = async (event, context, callback) => {
 			'Content-Type': 'application/json',
 			'Cache-Control': 'max-age=1800, immutable',
 		},
-		body: JSON.stringify({ status: streams.length ? 'online' : 'offline' }),
+		body: JSON.stringify({ isOnline: !!streams.length }),
 	})
 }

@@ -3,7 +3,7 @@
 	"version": "2.0.0",
 	"private": false,
 	"scripts": {
-		"dev": "nuxt",
+		"dev": "concurrently \"nuxt\" \"netlify-lambda serve functions\"",
 		"build": "npm run build:nuxt && npm run build:lambda",
 		"build:lambda": "netlify-lambda build functions",
 		"build:nuxt": "nuxt build",
@@ -20,6 +20,7 @@
 		"@jlengstorf/get-twitch-oauth": "^1.0.1",
 		"@nuxt/content": "^1.9.0",
 		"@nuxtjs/cloudinary": "^1.0.2",
+		"@nuxtjs/proxy": "^2.1.0",
 		"autoprefixer": "^10.1.0",
 		"axios": "^0.21.0",
 		"core-js": "^3.6.5",

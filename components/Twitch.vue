@@ -1,14 +1,14 @@
 <template>
 	<div
-		:class="{ hidden: !open }"
+		:class="{ hidden: !isStreaming }"
 		class="fixed inset-x-auto top-0 z-30 w-screen mt-4 transition-opacity duration-500 ease-in-out pointer-events-none md:mt-16"
 	>
 		<div class="px-4 mx-auto pointer-events-none md:p-0 max-w-screen-2xl">
 			<div class="flex xl:justify-end">
 				<section
 					:class="{
-						'pointer-events-auto': open,
-						'pointer-events-none': !open,
+						'pointer-events-auto': isStreaming,
+						'pointer-events-none': !isStreaming,
 					}"
 					class="bg-black rounded-lg shadow-xl sm:mx-6 lg:mx-8"
 				>
@@ -41,7 +41,7 @@
 					<main class="video-container">
 						<iframe
 							class=""
-							:src="open ? video : null"
+							:src="isStreaming ? video : null"
 							scrolling="no"
 							allow="autoplay"
 							allowfullscreen="false"
@@ -64,20 +64,21 @@
 </template>
 
 <script>
+// import config from '@/modules/config'
+
 export default {
 	data() {
-		const url = new URL(process.env.baseUrl)
-
 		return {
-			open: false,
-			video: `https://player.twitch.tv/?channel=baldbeardedbuilder&parent=${url.hostname}&autoplay=true`,
+			isStreaming: false,
+			video: `https://player.twitch.tv/?channel=baldbeardedbuilder&parent=localhost&autoplay=true`,
 		}
 	},
 
 	async mounted() {
 		try {
-			const { status } = await this.$axios.$get('/.netlify/functions/twitch')
-			this.open = status === 'online'
+			const response = await fetch(`/.netlify/functions/twitch`)
+			const { isOnline } = await response.json()
+			this.isStreaming = isOnline
 		} catch (error) {
 			this.open = false
 		}

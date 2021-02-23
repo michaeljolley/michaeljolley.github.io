@@ -1,6 +1,7 @@
 <template>
 	<div>
 		<Header />
+		<Twitch />
 		<div class="container mx-auto">
 			<Nuxt />
 			<Footer />
