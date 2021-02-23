@@ -1,14 +1,14 @@
 <template>
-	<section v-if="cart && showCart && products && prices">
+	<section v-if="cart && showCart && prices && products">
 		<h3>Shopping Cart</h3>
 		<ul class="toc">
 			<li
 				v-for="item of cart"
 				:key="item.productId"
 				class="py-2 text-xs truncate"
-				v-text="description(item)"
+				v-text="item.id"
 			>
-				{{ item.productId }}
+				{{ description(item) }}
 			</li>
 		</ul>
 	</section>
@@ -16,23 +16,14 @@
 <script>
 import { mapGetters } from 'vuex'
 export default {
-	async asyncData({ $content }) {
-		const products = await $content('products').only(['name', 'id']).fetch()
-		const prices = await $content('prices')
-			.only(['id', 'nickname', 'unitPrice'])
-			.fetch()
-
-		console.dir(products)
-
-		return { products, prices }
-	},
 	computed: {
-		...mapGetters(['cart', 'showCart']),
+		...mapGetters(['cart', 'showCart', 'products', 'prices']),
 	},
 	methods: {
 		description(item) {
 			const product = this.products.find((f) => f.id === item.productId)
 			const price = this.prices.find((f) => f.id === item.priceId)
+
 			let description = `${item.quantity} ${product.name}`
 			if (price.nickname) {
 				description = `${description} (${price.nickname})`

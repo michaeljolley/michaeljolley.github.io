@@ -94,6 +94,9 @@ export default {
 		},
 		...mapGetters(['showCart']),
 	},
+	created() {
+		this.$store.dispatch('initShoppingData', this.$content)
+	},
 	methods: {
 		toggleColor() {
 			this.$colorMode.preference =

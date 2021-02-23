@@ -1,13 +1,23 @@
 export const state = () => ({
 	cart: [],
+	products: [],
+	prices: [],
 })
 
 export const getters = {
 	showCart: (state) => state.cart.length > 0,
 	cart: (state) => state.cart,
+	products: (state) => state.products,
+	prices: (state) => state.prices,
 }
 
 export const actions = {
+	async initShoppingData({ commit }, $content) {
+		const products = await $content('products').fetch()
+		const prices = await $content('prices').fetch()
+
+		commit('initShoppingData', { products, prices })
+	},
 	addToCart({ commit, state }, item) {
 		const exists = state.cart.some(
 			(f) => f.productId === item.productId && f.priceId === item.priceId
@@ -63,5 +73,9 @@ export const actions = {
 export const mutations = {
 	updateCart(state, cart) {
 		state.cart = cart
+	},
+	initShoppingData(state, { products, prices }) {
+		state.prices = prices
+		state.products = products
 	},
 }
