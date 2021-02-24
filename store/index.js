@@ -18,7 +18,9 @@ export const actions = {
 	async checkStream({ commit }) {
 		let isStreaming = false
 		try {
-			const response = await fetch(`/.netlify/functions/twitch`)
+			const response = await fetch(
+				`https://baldbeardedbuilder.com/.netlify/functions/twitch`
+			)
 			const { isOnline } = await response.json()
 			isStreaming = isOnline
 		} catch (error) {

@@ -40,9 +40,7 @@ import { mapGetters } from 'vuex'
 export default {
 	data() {
 		return {
-			video: `https://player.twitch.tv/?channel=baldbeardedbuilder&parent=${
-				window.location.host.split(':')[0]
-			}&autoplay=true`,
+			video: `https://player.twitch.tv/?channel=baldbeardedbuilder&parent=baldbeardedbuilder.com&autoplay=true`,
 		}
 	},
 	computed: {
