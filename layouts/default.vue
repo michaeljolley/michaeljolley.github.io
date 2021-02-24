@@ -1,11 +1,11 @@
 <template>
 	<div>
 		<Header />
-		<Twitch />
 		<div class="container mx-auto">
 			<Nuxt />
 			<Footer />
 		</div>
+		<Twitch />
 		<BackToTop />
 	</div>
 </template>

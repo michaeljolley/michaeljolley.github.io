@@ -226,7 +226,7 @@ export default {
 	tailwindcss,
 
 	proxy: {
-		'/.netlify': `${config.functionsUrl}`,
+		'/api': `${config.functionsUrl}/.netlify/functions`,
 	},
 
 	purgeCSS: {},
