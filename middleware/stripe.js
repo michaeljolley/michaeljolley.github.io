@@ -83,6 +83,6 @@ unitPrice: ${price.unitPrice}
 	})
 }
 
-export default {
-	loadSwag,
+export default async function (moduleOptions) {
+	await loadSwag()
 }

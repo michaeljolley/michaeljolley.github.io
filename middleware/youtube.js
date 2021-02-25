@@ -44,6 +44,6 @@ ${video.description}`
 	})
 }
 
-export default {
-	fetchVideos,
+export default async function (moduleOptions) {
+	await fetchVideos()
 }
