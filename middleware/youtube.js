@@ -20,7 +20,6 @@ const fetchVideos = async () => {
 			id: item.id.replace('yt:video:', ''),
 			thumbnail: item['media:group']['media:thumbnail'][0].$.url,
 			date: item.pubDate,
-			description: item['media:group']['media:description'][0],
 		}
 	})
 
@@ -30,17 +29,12 @@ const fetchVideos = async () => {
 	}
 
 	videos.forEach((video) => {
-		const data = `---
-date: ${new Date(video.date).toISOString().substring(0, 10)}
+		const data = `id: ${video.id}
 title: ${video.title}
-slug: ${video.id}
 thumbnail: ${video.thumbnail}
 link: ${video.link}
-description: ${video.title}
----
-
-${video.description}`
-		fs.writeFileSync(`${videoPath}/${video.id}.md`, data)
+date: ${video.date}`
+		fs.writeFileSync(`${videoPath}/${video.id}.yml`, data)
 	})
 }
 
