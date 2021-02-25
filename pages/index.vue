@@ -45,7 +45,7 @@ export default {
 			.limit(2)
 			.fetch()
 		const videos = await $content('videos')
-			.only(['id', 'title', 'date', 'link', 'thumbnail'])
+			.only(['slug', 'title', 'date', 'link', 'thumbnail'])
 			.where({ date: { $lt: Date.now() } })
 			.sortBy('date', 'desc')
 			.limit(3)
