@@ -4,6 +4,7 @@
 	"private": false,
 	"scripts": {
 		"dev": "concurrently \"nuxt\" \"netlify-lambda serve functions\"",
+		"dev:nuxt": "nuxt",
 		"build": "npm run build:nuxt && npm run build:lambda",
 		"build:lambda": "netlify-lambda build functions",
 		"build:nuxt": "nuxt build",

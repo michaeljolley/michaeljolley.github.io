@@ -22,8 +22,6 @@ export default {
 			.only(['id', 'nickname', 'unitPrice'])
 			.fetch()
 
-		console.dir(products)
-
 		return { products, prices }
 	},
 	computed: {
