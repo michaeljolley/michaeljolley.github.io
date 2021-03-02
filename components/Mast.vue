@@ -65,7 +65,7 @@ export default {
 			return `https://res.cloudinary.com/dk3rdh3yo/image/upload/g_auto,f_auto/v1607302424/mj_${modifier}${this.mastNumber}.png`
 		},
 	},
-	created() {
+	mounted() {
 		this.opening = salutations[Math.floor(Math.random() * salutations.length)]
 		this.mastNumber = Math.floor(Math.random() * 13 + 1)
 	},

@@ -32,6 +32,7 @@ const config = {
 	stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY || null,
 	monetizationPointer: process.env.VUE_APP_MONETIZATION || null,
 	youtubeChannelId: process.env.YOUTUBE_CHANNEL_ID || null,
+	functionsUrl: process.env.FUNCTION_URL || null,
 	get headMeta() {
 		return [
 			{ charset: 'utf-8' },

@@ -4,7 +4,7 @@
 			<header>
 				<cld-image
 					:alt="video.title"
-					:public-id="video.id"
+					:public-id="video.slug"
 					:title="video.title"
 					fetch-format="auto"
 					quality="auto"
@@ -12,7 +12,6 @@
 					responsive
 					type="youtube"
 				>
-					<cld-placeholder type="pixelate" />
 				</cld-image>
 			</header>
 			<section class="p-3">
@@ -34,3 +33,4 @@ export default {
 	},
 }
 </script>
+<style scoped></style>

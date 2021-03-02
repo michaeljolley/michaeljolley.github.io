@@ -32,6 +32,20 @@
 			</section>
 			<section class="searchSection">
 				<div class="nuxt-content">
+					<div v-if="videos.length > 0">
+						<header>
+							<h2>Videos</h2>
+						</header>
+						<div class="results">
+							<Video
+								v-for="video in videos"
+								:key="video.path"
+								:v-if="videos"
+								:video="video"
+							/>
+						</div>
+					</div>
+
 					<div v-if="posts.length > 0">
 						<header>
 							<h2>Blog Posts</h2>
@@ -100,7 +114,18 @@ export default {
 			this.posts = this.results.filter((f) => f.type === 'post')
 			this.talks = this.results.filter((f) => f.type === 'talk')
 			this.streams = this.results.filter((f) => f.type === 'stream')
-			this.videos = this.results.filter((f) => f.type === 'video')
+			this.videos = this.results
+				.filter((f) => f.type === 'video')
+				.map((m) => {
+					return {
+						title: m.title,
+						link: m.route,
+						slug: m.cover_image,
+						thumbnail: m.cover_image,
+						date: m.date,
+						descripton: m.title,
+					}
+				})
 		},
 	},
 	head() {

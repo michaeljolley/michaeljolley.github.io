@@ -5,6 +5,7 @@
 			<Nuxt />
 			<Footer />
 		</div>
+		<Twitch />
 		<BackToTop />
 	</div>
 </template>

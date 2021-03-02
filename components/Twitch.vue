@@ -1,91 +1,54 @@
 <template>
-	<div
-		:class="{ hidden: !open }"
-		class="fixed inset-x-auto top-0 z-30 w-screen mt-4 transition-opacity duration-500 ease-in-out pointer-events-none md:mt-16"
-	>
-		<div class="px-4 mx-auto pointer-events-none md:p-0 max-w-screen-2xl">
-			<div class="flex xl:justify-end">
-				<section
-					:class="{
-						'pointer-events-auto': open,
-						'pointer-events-none': !open,
-					}"
-					class="bg-black rounded-lg shadow-xl sm:mx-6 lg:mx-8"
-				>
-					<header class="flex justify-between p-2 pl-4 text-sm text-white">
-						<span class="flex w-3 h-3 py-1">
-							<span
-								class="absolute inline-flex w-3 h-3 bg-pink-400 rounded-full opacity-75 animate-ping"
-							></span>
-							<span
-								class="relative inline-flex w-3 h-3 bg-pink-500 rounded-full"
-							></span>
-						</span>
-						<p>We're live on Twitch, now!</p>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke="currentColor"
-							class="text-white cursor-pointer icon-size hover:bg-gray-700"
-							@click.prevent="close()"
-						>
-							<path
-								strokeLinecap="round"
-								strokeLinejoin="round"
-								strokeWidth="{2}"
-								d="M6 18L18 6M6 6l12 12"
-							/>
-						</svg>
-					</header>
-					<main class="video-container">
-						<iframe
-							class=""
-							:src="open ? video : null"
-							scrolling="no"
-							allow="autoplay"
-							allowfullscreen="false"
-						>
-						</iframe>
-					</main>
-					<footer class="px-4 py-2 text-right">
-						<a
-							class="px-2 py-1 my-2 text-white rounded bg-brand-twitch"
-							href="https://twitch.tv/baldbeardedbuilder"
-							target="_blank"
-							rel="noreferrer"
-							>Watch now</a
-						>
-					</footer>
-				</section>
-			</div>
-		</div>
-	</div>
+	<aside v-if="isStreaming && showStream" class="twitch">
+		<header>
+			<h3>
+				<span
+					><font-awesome-icon :icon="['fab', 'twitch']"></font-awesome-icon
+				></span>
+				Live on Twitch!
+			</h3>
+			<a title="Close" @click.prevent="close"
+				><font-awesome-icon :icon="['fas', 'times']"></font-awesome-icon
+			></a>
+		</header>
+		<main>
+			<iframe
+				class=""
+				:src="video"
+				scrolling="no"
+				allow="autoplay"
+				allowfullscreen="false"
+			>
+			</iframe>
+		</main>
+		<footer>
+			<p>Schedule: Tues-Thurs 2p ET / 7p UTC</p>
+			<a
+				href="https://twitch.tv/baldbeardedbuilder"
+				target="_blank"
+				rel="noreferrer"
+				title="Watch the stream live on Twitch!"
+				>Watch now</a
+			>
+		</footer>
+	</aside>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
 	data() {
-		const url = new URL(process.env.baseUrl)
-
 		return {
-			open: false,
-			video: `https://player.twitch.tv/?channel=baldbeardedbuilder&parent=${url.hostname}&autoplay=true`,
+			video: `https://player.twitch.tv/?channel=baldbeardedbuilder&parent=baldbeardedbuilder.com&autoplay=true`,
 		}
 	},
-
-	async mounted() {
-		try {
-			const { status } = await this.$axios.$get('/.netlify/functions/twitch')
-			this.open = status === 'online'
-		} catch (error) {
-			this.open = false
-		}
+	computed: {
+		...mapGetters(['isStreaming', 'showStream']),
 	},
-
 	methods: {
 		close() {
-			this.open = false
+			this.$store.dispatch('toggleShowStream')
 		},
 	},
 }
@@ -93,8 +56,122 @@ export default {
 
 <style scoped>
 iframe {
-	width: 400px;
-	max-width: 100%;
+	@apply w-full;
 	height: 220px;
+	@apply rounded-xl;
+}
+
+.twitch {
+	@apply fixed;
+
+	@apply left-4;
+	@apply bottom-4;
+	@apply right-4;
+	@apply top-auto;
+	@apply z-40;
+	@apply bg-white;
+	@apply rounded-2xl;
+	@apply shadow-xl;
+	@apply py-3 px-3;
+	@apply w-auto;
+
+	@apply bg-brand-twitch;
+
+	@apply sm:right-auto;
+	@apply sm:block;
+	@apply sm:w-3/4;
+
+	@apply md:w-1/2;
+	@apply xl:w-4/12;
+
+	@apply 2xl:w-1/4;
+}
+
+header {
+	@apply flex;
+	@apply justify-between;
+	@apply align-middle;
+}
+
+header a {
+	@apply m-0;
+	@apply mt-1;
+	@apply p-0;
+	@apply h-7;
+	@apply w-7;
+	@apply mr-2;
+	@apply rounded-2xl;
+	@apply flex;
+	@apply justify-center;
+	@apply items-center;
+
+	@apply bg-gray-50;
+	@apply text-gray-200 !important;
+}
+
+a:hover {
+	@apply bg-indigo-300;
+	@apply text-white !important;
+}
+
+main {
+	@apply flex;
+	@apply justify-center;
+}
+
+footer {
+	@apply flex;
+	@apply m-0;
+	@apply pt-3;
+	@apply justify-between;
+	@apply items-center;
+}
+
+footer a {
+	@apply font-bold;
+	@apply rounded-md;
+	@apply p-2;
+	@apply uppercase;
+	@apply text-base;
+
+	@apply bg-white;
+	@apply text-gray-800;
+	animation: pulse-animation 2s infinite;
+}
+
+footer p {
+	@apply border-none;
+	@apply m-0;
+	@apply p-0;
+	@apply font-bold;
+	@apply text-white;
+	@apply hidden;
+	@apply sm:inline-block;
+}
+
+h3 {
+	@apply flex;
+	@apply items-center;
+	@apply border-none;
+	@apply mb-2;
+	@apply text-white;
+}
+
+h3 span {
+	@apply m-0;
+	@apply p-0;
+	@apply h-8;
+	@apply w-8;
+	@apply mr-2;
+	@apply rounded-2xl;
+	@apply flex;
+	@apply justify-center;
+	@apply items-center;
+	@apply bg-white;
+}
+
+header h3 svg {
+	@apply text-xl;
+	@apply text-gray-800 !important;
 }
 </style>

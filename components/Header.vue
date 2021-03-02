@@ -2,13 +2,31 @@
 	<header v-scroll>
 		<div class="navBar">
 			<nav class="container">
-				<NuxtLink to="/" title="back home" class="flex">
+				<NuxtLink v-if="!isStreaming" to="/" title="back home" class="flex">
 					<div class="logo"></div>
 					<div class="text flex flex-col">
 						<h2>bald. bearded. builder.</h2>
-						<p>Building Better Builders</p>
+						<p v-if="!isStreaming">Building Better Builders</p>
 					</div>
 				</NuxtLink>
+				<div v-if="isStreaming" class="flex twitch">
+					<NuxtLink to="/" title="back home">
+						<div class="logo"></div
+					></NuxtLink>
+					<div class="text flex flex-col">
+						<NuxtLink to="/" title="back home">
+							<h2>bald. bearded. builder.</h2>
+						</NuxtLink>
+						<p>
+							<a
+								href="https://twitch.tv/baldbeardedbuilder"
+								noreferrer
+								title="Live on Twitch now!"
+								>Live on Twitch now!</a
+							>
+						</p>
+					</div>
+				</div>
 				<ul class="links">
 					<li>
 						<NuxtLink to="/blog/" title="Blog posts">Blog</NuxtLink>
@@ -17,12 +35,17 @@
 						<NuxtLink to="/talks/" title="Talks">Speaking</NuxtLink>
 					</li>
 					<li>
-						<a href="https://bbb.dev/shop" rel="noreferrer" title="Swag"
-							>Swag</a
-						>
+						<a href="http://bbb.dev/shop" noreferrer title="Swag">Swag</a>
 					</li>
 				</ul>
 				<ul class="permanent">
+					<li v-if="showCart" class="cart">
+						<NuxtLink to="/cart/" title="Shopping Cart">
+							<font-awesome-icon
+								:icon="['fas', 'shopping-cart']"
+							></font-awesome-icon
+						></NuxtLink>
+					</li>
 					<li>
 						<a
 							:title="`Switch to ${
@@ -67,7 +90,7 @@
 					<NuxtLink to="/talks/" title="Talks">Speaking</NuxtLink>
 				</li>
 				<li>
-					<a href="https://bbb.dev/shop" rel="noreferrer" title="Swag">Swag</a>
+					<a href="http://bbb.dev/shop" noreferrer title="Swag">Swag</a>
 				</li>
 			</ul>
 		</transition>
@@ -75,6 +98,7 @@
 </template>
 <script>
 import Vue from 'vue'
+import { mapGetters } from 'vuex'
 
 export default {
 	data() {
@@ -86,6 +110,10 @@ export default {
 		lightMode() {
 			return this.$colorMode.value === 'dark' ? 'moon' : 'lightbulb'
 		},
+		...mapGetters(['showCart', 'isStreaming']),
+	},
+	created() {
+		this.$store.dispatch('checkStream')
 	},
 	methods: {
 		toggleColor() {
@@ -176,6 +204,18 @@ nav {
 	background-image: url('/images/bbb-logo.svg');
 }
 
+.twitch .logo {
+	background-image: url('/images/bbb-logo.svg');
+	@apply rounded-3xl;
+	@apply bg-pink-500;
+
+	animation: pulse-animation 2s infinite;
+}
+.dark-mode .twitch .logo {
+	@apply bg-blue-500;
+	background-image: url('/images/bbb-logo-black.svg');
+}
+
 h2 {
 	background: linear-gradient(
 		90deg,
@@ -233,6 +273,7 @@ ul.mobile-links {
 	@apply flex-col;
 	@apply lg:hidden;
 	@apply shadow-xl;
+	@apply z-50;
 }
 
 ul.mobile-links li {

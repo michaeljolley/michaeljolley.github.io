@@ -118,7 +118,8 @@ a:hover {
 }
 
 input,
-textarea {
+textarea,
+select {
 	@apply block;
 	@apply w-full;
 	@apply p-2;
@@ -374,5 +375,22 @@ article > header {
 	.videos .card header,
 	.results .card header  {
 		min-height: 218px
+	}
+}
+
+@keyframes pulse-animation-twitch {
+	0% {
+		box-shadow: 0 0 0 0px rgba(100, 65, 164, 0.4);
+	}
+	100% {
+		box-shadow: 0 0 0 20px rgba(100, 65, 164, 0);
+	}
+}
+@keyframes pulse-animation {
+	0% {
+		box-shadow: 0 0 0 0px rgba(255, 0, 255, 0.4);
+	}
+	100% {
+		box-shadow: 0 0 0 20px rgba(255, 0, 255, 0);
 	}
 }

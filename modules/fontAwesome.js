@@ -6,6 +6,7 @@ export default {
 			'faLightbulb',
 			'faMoon',
 			'faSearch',
+			'faShoppingCart',
 			'faSpinner',
 			'faTimes',
 		],

@@ -6,6 +6,7 @@
 		<div class="container">
 			<Footer />
 		</div>
+		<Twitch />
 		<BackToTop />
 	</div>
 </template>

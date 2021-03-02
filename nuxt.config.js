@@ -18,23 +18,7 @@ const isProduction = () => {
 }
 
 const isPreviewBuild = () => {
-	return (
-		process.env.PULL_REQUEST &&
-		process.env.HEAD &&
-		process.env.HEAD.startsWith('cms/blog')
-	)
-}
-
-const previewRoute = () => {
-	if (process.env.HEAD) {
-		const [, type, slug] = process.env.HEAD.split('/')
-
-		if (type === 'blog') {
-			return `/${type}/${slug}`
-		} else {
-			return null
-		}
-	}
+	return process.env.PULL_REQUEST
 }
 
 export default {
@@ -76,6 +60,7 @@ export default {
 		'@nuxtjs/color-mode',
 		'@nuxtjs/tailwindcss',
 		'@nuxtjs/fontawesome',
+		$youtube,
 	],
 
 	modules: [
@@ -84,6 +69,7 @@ export default {
 		'@nuxtjs/feed',
 		'@nuxtjs/sitemap',
 		'vue-social-sharing/nuxt',
+		'@nuxtjs/proxy',
 	],
 
 	content: {
@@ -101,94 +87,113 @@ export default {
 		crawler: isProduction(),
 		fallback: true,
 		async routes() {
-			if (isPreviewBuild()) {
-				return [previewRoute()]
-			} else {
-				const { $content } = require('@nuxt/content')
-				const posts = await $content('blog').fetch()
-				const talks = await $content('talks').fetch()
-				const events = await $content('events').fetch()
+			const { $content } = require('@nuxt/content')
+			const posts = await $content('blog').fetch()
+			const talks = await $content('talks').fetch()
+			const events = await $content('events').fetch()
+			const videos = await $content('videos').fetch()
+			// const products = await $content('products').fetch()
 
-				const bodyParser = (body) => {
-					const results = []
-					if (body.children) {
-						body.children.forEach((child) => results.push(...bodyParser(child)))
-					} else if (body.type === 'text') {
-						results.push(body.value)
-					}
-					return results
+			const bodyParser = (body) => {
+				const results = []
+				if (body.children) {
+					body.children.forEach((child) => results.push(...bodyParser(child)))
+				} else if (body.type === 'text') {
+					results.push(body.value)
 				}
-
-				const searchIndexDocuments = [
-					...posts.map((post) => {
-						return {
-							slug: post.slug,
-							title: post.title,
-							description: post.description,
-							tags: post.tags,
-							lastUpdated: post.updatedAt,
-							date: post.date,
-							type: 'post',
-							route: `/blog/${post.slug}/`,
-							cover_image: post.cover.public_id,
-							body: bodyParser(post.body).join(' '),
-						}
-					}),
-					...talks.map((talk) => {
-						return {
-							slug: talk.slug,
-							title: talk.title,
-							description: talk.description,
-							tags: talk.tags,
-							lastUpdated: talk.updatedAt,
-							date: talk.date,
-							type: 'talk',
-							route: `/talks/${talk.slug}/`,
-							cover_image: talk.cover.public_id,
-							body: bodyParser(talk.body).join(' '),
-						}
-					}),
-				]
-
-				await azureSearch.buildSearchIndex(searchIndexDocuments)
-
-				return [
-					...talks.map((talk) => {
-						const talkEvents = events.filter((f) => f.talk === talk.slug)
-						return {
-							route: `/talks/${talk.slug}/`,
-							payload: { talk, events: talkEvents },
-						}
-					}),
-					...posts.map((post) => {
-						return {
-							route: `/blog/${post.slug}/`,
-							payload: post,
-						}
-					}),
-					...[
-						{
-							route: '/blog/',
-							payload: {
-								posts: posts
-									.filter((f) => new Date(f.date) < Date.now())
-									.sort((a, b) => {
-										return new Date(b.date) - new Date(a.date)
-									})
-									.slice(0, 12),
-							},
-						},
-					],
-					...[
-						{
-							route: '/talks/',
-							payload: {
-								talks: talks.slice(0, 12),
-							},
-						},
-					],
-				]
+				return results
 			}
+
+			const searchIndexDocuments = [
+				...posts.map((post) => {
+					return {
+						slug: post.slug,
+						title: post.title,
+						description: post.description,
+						tags: post.tags,
+						lastUpdated: post.updatedAt,
+						date: post.date,
+						type: 'post',
+						route: `/blog/${post.slug}/`,
+						cover_image: post.cover.public_id,
+						body: bodyParser(post.body).join(' '),
+					}
+				}),
+				...talks.map((talk) => {
+					return {
+						slug: talk.slug,
+						title: talk.title,
+						description: talk.description,
+						tags: talk.tags,
+						lastUpdated: talk.updatedAt,
+						date: talk.date,
+						type: 'talk',
+						route: `/talks/${talk.slug}/`,
+						cover_image: talk.cover.public_id,
+						body: bodyParser(talk.body).join(' '),
+					}
+				}),
+				...videos.map((video) => {
+					return {
+						slug: video.slug,
+						title: video.title,
+						description: video.title,
+						lastUpdated: video.date,
+						date: video.date,
+						type: 'video',
+						route: video.link,
+						cover_image: video.slug,
+						body: bodyParser(video.body).join(' '),
+					}
+				}),
+			]
+
+			await azureSearch.buildSearchIndex(searchIndexDocuments)
+
+			return [
+				...talks.map((talk) => {
+					const talkEvents = events.filter((f) => f.talk === talk.slug)
+					return {
+						route: `/talks/${talk.slug}/`,
+						payload: { talk, events: talkEvents },
+					}
+				}),
+				...posts.map((post) => {
+					return {
+						route: `/blog/${post.slug}/`,
+						payload: post,
+					}
+				}),
+				...[
+					{
+						route: '/blog/',
+						payload: {
+							posts: posts
+								.filter((f) => new Date(f.date) < Date.now())
+								.sort((a, b) => {
+									return new Date(b.date) - new Date(a.date)
+								})
+								.slice(0, 12),
+						},
+					},
+				],
+				...[
+					{
+						route: '/talks/',
+						payload: {
+							talks: talks.slice(0, 12),
+						},
+					},
+				],
+				// ...[
+				// 	{
+				// 		route: '/product',
+				// 		payload: {
+				// 			products,
+				// 		},
+				// 	},
+				// ],
+			]
 		},
 	},
 
@@ -201,14 +206,15 @@ export default {
 	sitemap,
 	tailwindcss,
 
+	proxy: {
+		'/api': `${config.functionsUrl}/.netlify/functions`,
+	},
+
 	purgeCSS: {},
 
 	plugins: ['~/plugins/scroll.client.js', '~/plugins/formatDate.js'],
 
 	hooks: {
-		'generate:before': async (generator, generateOptions) => {
-			await $youtube.fetchVideos(generator)
-		},
 		'content:file:beforeInsert': async (document, database) => {
 			const directories = document.dir.split('/').filter((f) => f.length > 0)
 			const slug = directories[directories.length - 1]
