@@ -68,9 +68,7 @@ export default {
 			{
 				hid: 'twitter:image',
 				name: 'twitter:image',
-				content: this.post.ograph
-					? this.post.ograph.secure_url
-					: this.post.cover.secure_url,
+				content: this.post.ograph || this.post.cover.secure_url,
 			},
 			{
 				hid: 'twitter:image:width',
@@ -105,9 +103,7 @@ export default {
 			{
 				hid: 'og:image',
 				property: 'og:image',
-				content: this.post.ograph
-					? this.post.ograph.secure_url
-					: this.post.cover.secure_url,
+				content: this.post.ograph || this.post.cover.secure_url,
 			},
 			{
 				hid: 'og:image:width',
