@@ -319,6 +319,10 @@ article > header {
 	margin: 0;
 }
 
+summary {
+	list-style: none;
+}
+
 @screen md  {
 	article > header {
 		min-height: 322px
