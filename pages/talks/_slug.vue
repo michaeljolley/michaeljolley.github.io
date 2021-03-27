@@ -10,9 +10,18 @@
 		</aside>
 		<article class="content">
 			<ArticleHeaderImage
+				v-if="!talk.video"
 				:cover="talk.cover"
 				:title="talk.banner_image_alt || talk.title"
 			/>
+			<header v-if="talk.video">
+				<iframe
+					:src="`https://www.youtube.com/embed/${talk.video}`"
+					frameborder="0"
+					allow="autoplay; encrypted-media"
+					allowfullscreen
+				></iframe>
+			</header>
 			<section>
 				<TalkHeader :post="talk" />
 				<nuxt-content :document="talk" />
@@ -143,6 +152,12 @@ export default {
 </script>
 
 <style scoped>
+header > iframe {
+	width: 100%;
+	margin: 0 auto;
+	border-radius: 0.5rem;
+}
+
 .post {
 	@apply flex;
 	@apply items-start;
@@ -164,6 +179,30 @@ export default {
 @screen lg {
 	.nuxt-content .cld-image {
 		margin: 50px -45px;
+	}
+}
+
+@screen md {
+	header > iframe {
+		min-height: 322px;
+	}
+}
+
+@screen lg {
+	header > iframe {
+		min-height: 358px;
+	}
+}
+
+@screen xl {
+	header > iframe {
+		min-height: 448px;
+	}
+}
+
+@screen 2xl {
+	header > iframe {
+		min-height: 537px;
 	}
 }
 </style>

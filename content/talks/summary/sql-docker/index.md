@@ -3,6 +3,7 @@ date: 2019-09-25
 title: SQL Server in Docker Containers
 cover: ./netconf_sabsng.png
 slug: sql-docker
+video: 17aI3KZxmxw
 description: "Resources for my talk Death to SQL Server! Long live SQL Server! How containerized SQL Server makes development easier."
 tags: [docker, sql-server, dotnetconf, talks, presentation]
 ---

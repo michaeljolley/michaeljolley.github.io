@@ -109,11 +109,10 @@ pre {
 
 a {
 	@apply cursor-pointer;
-	@apply text-indigo-400;
-	@apply dark:text-pink-500;
+	@apply text-pink-500;
 }
 a:hover {
-	@apply text-pink-500;
+	@apply text-pink-700;
 	@apply dark:text-blue-500;
 }
 
@@ -324,7 +323,8 @@ summary {
 }
 
 @screen md  {
-	article > header {
+	article > header,
+	header iframe, {
 		min-height: 322px
 	}
 	.card header {
@@ -341,7 +341,8 @@ summary {
 	.cld-image {
 		margin: 0px -8px;
 	}
-	article > header {
+	article > header,
+	header iframe, {
 		min-height: 358px
 	}
 	.card header {
@@ -355,7 +356,8 @@ summary {
 }
 
 @screen xl  {
-	article > header {
+	article > header,
+	header iframe, {
 		min-height: 448px
 	}
 	.card header {
@@ -369,7 +371,8 @@ summary {
 }
 
 @screen 2xl {
-	article > header {
+	article > header,
+	header iframe, {
 		min-height: 537px
 	}
 	.card header {
