@@ -3,6 +3,7 @@ date: 2020-05-22
 title: IoT - Controlling Servos with Facial Tracking in a Browser
 cover: ./vondev_i1qjlr.png
 description: "Controlling servo motors via webhooks, Particle Argon boards, JavaScript and facial tracking."
+video: Qcn0GgDlLfk
 tags: [iot, facial-recognition, talks, presentation]
 ---
 
