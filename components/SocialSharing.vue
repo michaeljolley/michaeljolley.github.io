@@ -47,17 +47,6 @@
 					<font-awesome-icon :icon="['fab', 'reddit-alien']" />
 				</ShareNetwork>
 			</li>
-			<li>
-				<ShareNetwork
-					network="Vk"
-					:url="`${baseUrl}${post.path}/`"
-					:title="post.title"
-					:description="post.description"
-					class="vk"
-				>
-					<font-awesome-icon :icon="['fab', 'vk']" />
-				</ShareNetwork>
-			</li>
 		</ul>
 	</section>
 </template>
@@ -121,8 +110,7 @@ li a {
 .facebook,
 .twitter,
 .linkedin,
-.reddit,
-.vk {
+.reddit {
 	@apply flex;
 	@apply justify-center;
 	@apply items-center;
@@ -147,10 +135,6 @@ li a {
 }
 .reddit:hover {
 	@apply bg-brand-reddit;
-	@apply text-white;
-}
-.vk:hover {
-	@apply bg-brand-vk;
 	@apply text-white;
 }
 /* .facebook,

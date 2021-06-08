@@ -1,7 +1,12 @@
-// tailwind.config.js
+const headerStyles = {
+	fontFamily: "Cairo",
+	fontWeight: "bold",
+	marginTop: "1.5rem",
+	marginBottom: ".75rem",
+	textTransform: "uppercase",
+};
 
 module.exports = {
-	darkMode: '.dark-mode',
 	purge: [
 		'./components/**/*.{vue,js}',
 		'./layouts/**/*.vue',
@@ -12,36 +17,20 @@ module.exports = {
 	theme: {
 		darkSelector: '.dark-mode',
 		fontFamily: {
-			display: ['roboto', 'sans-serif'],
-			body: ['roboto', 'sans-serif'],
+			cairo: ["Cairo", "sans-serif"],
+			sourceSans: ["Source Sans Pro", "sans-serif"],
+			robotoMono: ["Roboto Mono", "sans-serif"],
 		},
-		container: {
-			padding: {
-				DEFAULT: '1rem',
-				sm: '2rem',
-				lg: '4rem',
-				xl: '5rem',
-				'2xl': '6rem',
-			},
-		},
-		fontSize: {
-			xs: ['0.75rem', { lineHeight: '1rem' }],
-			sm: ['0.875rem', { lineHeight: '1.25rem' }],
-			base: ['1rem', { lineHeight: '1.5rem' }],
-			lg: ['1.125rem', { lineHeight: '1.75rem' }],
-			xl: ['1.25rem', { lineHeight: '1.75rem' }],
-			'2xl': ['1.5rem', { lineHeight: '2rem' }],
-			'3xl': ['1.875rem', { lineHeight: '2.25rem' }],
-			'4xl': ['2.25rem', { lineHeight: '2.5rem' }],
-			'5xl': ['3rem', { lineHeight: '1' }],
-			'6xl': ['4rem', { lineHeight: '1' }],
-			'7xl': ['5rem', { lineHeight: '1' }],
-			'8xl': ['6rem', { lineHeight: '1' }],
-		},
+
 		typography: {
 			default: {
 				css: {
-					maxWidth: '100%',
+					h1: { ...headerStyles },
+					h2: { ...headerStyles },
+					h3: { ...headerStyles },
+					h4: { ...headerStyles },
+					h5: { ...headerStyles },
+					h6: { ...headerStyles },
 				},
 			},
 		},
@@ -59,7 +48,6 @@ module.exports = {
 				twitch: '#6441A4',
 				twitter: '#1da1f2',
 				youtube: '#e52d27',
-				vk: '#45668e',
 			},
 			pink: {
 				100: '#ffccff',
@@ -114,8 +102,6 @@ module.exports = {
 		},
 	},
 	plugins: [
-		require('tailwindcss-dark-mode')(),
 		require('@tailwindcss/typography'),
-		require('tailwindcss-blend-mode')(),
 	],
 }

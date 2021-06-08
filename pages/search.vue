@@ -153,12 +153,10 @@ section:first-child {
 	@apply shadow-lg;
 
 	@apply bg-white;
-	@apply dark:bg-gray-500;
 }
 
 section:not(:first-child) {
 	@apply pt-0;
-	@apply dark:bg-gray-900;
 }
 
 .results {
@@ -176,7 +174,5 @@ section:not(:first-child) {
 	@apply bg-white;
 	@apply rounded-lg;
 	@apply shadow-lg;
-
-	@apply dark:bg-gray-500;
 }
 </style>

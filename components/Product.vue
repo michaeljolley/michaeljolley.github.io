@@ -32,7 +32,5 @@ header {
 	@apply shadow-lg;
 	@apply rounded-xl;
 	@apply overflow-hidden;
-
-	@apply dark:bg-gray-50;
 }
 </style>

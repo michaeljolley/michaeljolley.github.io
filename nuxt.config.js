@@ -1,9 +1,7 @@
 import readingTime from 'reading-time'
 import { $cloudinary, $youtube } from './middleware'
 import {
-	azureSearch,
 	cloudinary,
-	colorMode,
 	config,
 	feed,
 	fontawesome,
@@ -57,7 +55,6 @@ export default {
 		'@nuxtjs/dotenv',
 		'@nuxtjs/eslint-module',
 		'@nuxtjs/google-analytics',
-		'@nuxtjs/color-mode',
 		'@nuxtjs/tailwindcss',
 		'@nuxtjs/fontawesome',
 		$youtube,
@@ -92,7 +89,6 @@ export default {
 			const talks = await $content('talks').fetch()
 			const events = await $content('events').fetch()
 			const videos = await $content('videos').fetch()
-			// const products = await $content('products').fetch()
 
 			const bodyParser = (body) => {
 				const results = []
@@ -103,52 +99,6 @@ export default {
 				}
 				return results
 			}
-
-			const searchIndexDocuments = [
-				...posts.map((post) => {
-					return {
-						slug: post.slug,
-						title: post.title,
-						description: post.description,
-						tags: post.tags,
-						lastUpdated: post.updatedAt,
-						date: post.date,
-						type: 'post',
-						route: `/blog/${post.slug}/`,
-						cover_image: post.cover.public_id,
-						body: bodyParser(post.body).join(' '),
-					}
-				}),
-				...talks.map((talk) => {
-					return {
-						slug: talk.slug,
-						title: talk.title,
-						description: talk.description,
-						tags: talk.tags,
-						lastUpdated: talk.updatedAt,
-						date: talk.date,
-						type: 'talk',
-						route: `/talks/${talk.slug}/`,
-						cover_image: talk.cover.public_id,
-						body: bodyParser(talk.body).join(' '),
-					}
-				}),
-				...videos.map((video) => {
-					return {
-						slug: video.slug,
-						title: video.title,
-						description: video.title,
-						lastUpdated: video.date,
-						date: video.date,
-						type: 'video',
-						route: video.link,
-						cover_image: video.slug,
-						body: bodyParser(video.body).join(' '),
-					}
-				}),
-			]
-
-			await azureSearch.buildSearchIndex(searchIndexDocuments)
 
 			return [
 				...talks.map((talk) => {
@@ -185,19 +135,10 @@ export default {
 						},
 					},
 				],
-				// ...[
-				// 	{
-				// 		route: '/product',
-				// 		payload: {
-				// 			products,
-				// 		},
-				// 	},
-				// ],
 			]
 		},
 	},
 
-	colorMode,
 	cloudinary,
 	feed,
 	fontawesome,

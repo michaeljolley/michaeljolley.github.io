@@ -30,7 +30,6 @@ export default {
 	@apply rounded-lg;
 	@apply shadow-lg;
 	@apply bg-gray-50;
-	@apply dark:bg-gray-600;
 }
 
 header {

@@ -1,16 +1,53 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
-@import '../fonts/spezia/spezia.css';
-@import 'fontsource-roboto/index.css';
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+	@apply font-sourceSans;
+	@apply bg-gray-50;
+}
+
+header,
+footer {
+	@apply flex justify-center;
+}
+
+html,
+body,
+#__nuxt,
+#__layout,
+#__layout > div {
+	@apply h-full;
+	@apply flex flex-col;
+}
+
+#__layout > div > main {
+	@apply flex justify-center;
+	flex: 1 1 auto;
+}
+
+.container {
+	@apply w-full;
+	@apply flex flex-row justify-between;
+
+	@apply md:max-w-3xl;
+	@apply lg:max-w-5xl;
+	@apply xl:max-w-7xl;
+}
+
+a:hover {
+	@apply text-pink-600;
+}
+
+/*
 html {
-  font-family: Roboto, sans-serif;
-  scroll-behavior: smooth;
+	font-family: Roboto, sans-serif;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -21,7 +58,12 @@ body {
 	@apply dark:text-white;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-family: 'SpeziaWide', sans-serif;
 	@apply font-bold;
 	border-bottom: 1px solid;
@@ -65,9 +107,9 @@ h3:before,
 h4:before,
 h5:before,
 h6:before {
-	content:"";
+	content: '';
 	@apply block;
-	height:90px;
+	height: 90px;
 	margin: -90px 0 0;
 }
 
@@ -160,8 +202,8 @@ button {
 }
 
 img {
-  @apply rounded-lg;
-  margin: 0 auto;
+	@apply rounded-lg;
+	margin: 0 auto;
 }
 
 header {
@@ -230,7 +272,7 @@ aside h3 {
 }
 
 .sticky + .container {
-  padding-top: 66px;
+	padding-top: 66px;
 }
 
 .post {
@@ -275,7 +317,7 @@ time {
 	@apply pl-6;
 }
 
-article.card  {
+article.card {
 	@apply w-full;
 	@apply shadow-lg;
 	@apply text-gray-700;
@@ -289,18 +331,18 @@ article.card  {
 }
 
 div.nuxt-progress {
-  background: linear-gradient(to right, #7fc6f4, #d5279b);
+	background: linear-gradient(to right, #7fc6f4, #d5279b);
 }
 
 article > header {
-	min-width: 157px
+	min-width: 157px;
 }
 
 .card header,
 .posts .card header,
 .results .card header,
 .videos .card header {
-	min-height: 176px
+	min-height: 176px;
 }
 
 ::marker {
@@ -312,7 +354,7 @@ article > header {
 .card h4:before,
 .card h5:before,
 .card h6:before {
-	content:"";
+	content: '';
 	@apply inline-block;
 	height: unset;
 	margin: 0;
@@ -322,18 +364,18 @@ summary {
 	list-style: none;
 }
 
-@screen md  {
+@screen md {
 	article > header,
-	header iframe, {
-		min-height: 322px
+	header iframe {
+		min-height: 322px;
 	}
 	.card header {
-		min-height: 356px
+		min-height: 356px;
 	}
 	.posts .card header,
 	.videos .card header,
-	.results .card header  {
-		min-height: 356px
+	.results .card header {
+		min-height: 356px;
 	}
 }
 
@@ -342,46 +384,46 @@ summary {
 		margin: 0px -8px;
 	}
 	article > header,
-	header iframe, {
-		min-height: 358px
+	header iframe {
+		min-height: 358px;
 	}
 	.card header {
-		min-height: 222px
+		min-height: 222px;
 	}
 	.posts .card header,
 	.videos .card header,
-	.results .card header  {
-		min-height: 222px
+	.results .card header {
+		min-height: 222px;
 	}
 }
 
-@screen xl  {
+@screen xl {
 	article > header,
-	header iframe, {
-		min-height: 448px
+	header iframe {
+		min-height: 448px;
 	}
 	.card header {
-		min-height: 278px
+		min-height: 278px;
 	}
 	.posts .card header,
 	.videos .card header,
-	.results .card header  {
-		min-height: 181px
+	.results .card header {
+		min-height: 181px;
 	}
 }
 
 @screen 2xl {
 	article > header,
-	header iframe, {
-		min-height: 537px
+	header iframe {
+		min-height: 537px;
 	}
 	.card header {
-		min-height: 334px
+		min-height: 334px;
 	}
 	.posts .card header,
 	.videos .card header,
-	.results .card header  {
-		min-height: 218px
+	.results .card header {
+		min-height: 218px;
 	}
 }
 
@@ -400,4 +442,4 @@ summary {
 	100% {
 		box-shadow: 0 0 0 20px rgba(255, 0, 255, 0);
 	}
-}
+} */

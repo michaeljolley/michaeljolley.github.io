@@ -65,6 +65,5 @@ li {
 
 li.link--active a {
 	@apply text-pink-400;
-	@apply dark:text-gray-50;
 }
 </style>

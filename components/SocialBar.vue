@@ -96,7 +96,6 @@ export default {}
 	@apply shadow-lg;
 
 	@apply bg-white;
-	@apply dark:bg-gray-800;
 }
 h2 {
 	@apply hidden;
@@ -140,8 +139,6 @@ li a {
 
 	@apply bg-gray-50;
 	@apply text-gray-200;
-	@apply dark:bg-gray-600;
-	@apply dark:text-gray-300;
 }
 .facebook:hover {
 	@apply bg-brand-facebook;

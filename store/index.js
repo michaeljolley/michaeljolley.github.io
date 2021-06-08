@@ -2,6 +2,7 @@ export const state = () => ({
 	cart: [],
 	isStreaming: false,
 	showStream: true,
+	menuExpanded: false,
 })
 
 export const getters = {
@@ -9,9 +10,13 @@ export const getters = {
 	cart: (state) => state.cart,
 	isStreaming: (state) => state.isStreaming,
 	showStream: (state) => state.showStream,
+	menuExpanded: (state) => state.menuExpanded,
 }
 
 export const actions = {
+	toggleMenu({ commit, state }) {
+		commit('toggleMenu', !state.menuExpanded)
+	},
 	toggleShowStream({ commit, state }) {
 		commit('updateShowStream', !state.showStream)
 	},
@@ -82,6 +87,9 @@ export const actions = {
 }
 
 export const mutations = {
+	toggleMenu(state, expandMenu) {
+		state.menuExpanded = expandMenu
+	},
 	updateStreamingStatus(state, isStreaming) {
 		state.isStreaming = isStreaming
 	},

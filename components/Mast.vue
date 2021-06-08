@@ -85,7 +85,6 @@ export default {
 	@apply lg:mx-auto;
 
 	@apply bg-gray-50;
-	@apply dark:bg-gray-900;
 }
 
 .text {
@@ -125,6 +124,5 @@ p span {
 	@apply italic;
 	@apply block;
 	@apply text-blue-600;
-	@apply dark:text-blue-400;
 }
 </style>

@@ -57,6 +57,5 @@ export default {
 }
 a:hover {
 	@apply text-pink-500;
-	@apply dark:text-blue-500;
 }
 </style>
