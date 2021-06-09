@@ -2,7 +2,7 @@
 	<nav :class="{ open: menuExpanded }">
 		<ul>
 			<li>
-				<NuxtLink to="/community/" title="Community">Podcasts</NuxtLink>
+				<NuxtLink to="/podcasts/" title="Podcasts">Podcasts</NuxtLink>
 			</li>
 			<li>
 				<NuxtLink to="/community/" title="Community">Community</NuxtLink>
@@ -20,31 +20,11 @@
 	</nav>
 </template>
 <script>
-import Vue from 'vue'
 import { mapGetters } from 'vuex'
 
 export default {
-	data() {
-		return {
-			navigation: [],
-			activeRoute: null,
-			navExpanded: false,
-		}
-	},
-	async fetch() {
-		const navigation = await this.$content('').only(['name', 'to']).fetch()
-		this.navigation = navigation
-	},
 	computed: {
 		...mapGetters(['menuExpanded']),
-	},
-	methods: {
-		toggleNav() {
-			this.navExpanded = !this.navExpanded
-			if (this.navExpanded) {
-				Vue.nextTick(this.bindClicks())
-			}
-		},
 	},
 }
 </script>
@@ -53,17 +33,18 @@ nav {
 	@apply hidden;
 	@apply content-start;
 	@apply mt-3;
-
-	@apply md:mt-0 md:flex md:flex-row md:items-center;
-}
-
-nav.open {
-	@apply flex flex-col;
 	background: linear-gradient(
 		90deg,
 		rgba(255, 0, 255, 1) 0%,
 		rgba(0, 255, 255, 1) 100%
 	);
+
+	@apply md:bg-none;
+	@apply md:mt-0 md:flex md:flex-row md:items-center;
+}
+
+nav.open {
+	@apply flex flex-col;
 	@apply py-4;
 
 	@apply md:flex-row;
@@ -72,11 +53,9 @@ nav.open {
 
 ul {
 	@apply inline-flex flex-row flex-wrap;
-	@apply pl-6;
 	@apply w-full;
 
 	@apply md:flex;
-	@apply md:pl-0;
 }
 
 li {
@@ -102,10 +81,13 @@ a {
 	@apply px-3 py-3;
 
 	@apply bg-white;
+
+	@apply md:bg-opacity-0;
 }
 
 a:hover {
-	@apply text-pink-500;
+	@apply text-white;
+	@apply bg-gray-500;
 }
 
 a.active,

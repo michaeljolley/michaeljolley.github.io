@@ -32,10 +32,9 @@ body,
 }
 
 .container {
-	@apply w-full;
+	@apply w-full max-w-none;
 	@apply flex flex-row justify-between;
 
-	@apply md:max-w-3xl;
 	@apply lg:max-w-5xl;
 	@apply xl:max-w-7xl;
 }

@@ -30,4 +30,7 @@ footer {
 	@apply my-3;
 	@apply text-gray-700;
 }
+.container {
+	@apply px-4 pb-2;
+}
 </style>

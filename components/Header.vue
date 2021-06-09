@@ -16,7 +16,6 @@
 	</header>
 </template>
 <script>
-import Vue from 'vue'
 import { mapGetters } from 'vuex'
 
 export default {
@@ -26,35 +25,10 @@ export default {
 	created() {
 		this.$store.dispatch('checkStream')
 	},
-	methods: {
-		bindClicks() {
-			document.addEventListener('click', this.testClickOrTouch)
-			document.addEventListener('touchstart', this.testClickOrTouch)
-		},
-		unbindClicks() {
-			document.removeEventListener('click', this.testClickOrTouch)
-			document.removeEventListener('touchstart', this.testClickOrTouch)
-		},
-		testClickOrTouch(e) {
-			const menuButton = this.$refs.menuButton
-
-			if (
-				e.target !== menuButton &&
-				menuButton !== undefined &&
-				!menuButton.contains(e.target)
-			) {
-				Vue.nextTick(() => {
-					this.toggleNav()
-					this.unbindClicks()
-				})
-			}
-		},
-	},
 }
 </script>
 <style scoped>
 header {
-	@apply flex flex-row;
 	border-top: solid 5px;
 	border-image-slice: 1;
 	border-image-source: linear-gradient(
@@ -114,13 +88,13 @@ h2 {
 	@apply text-xl;
 	@apply font-bold;
 
-	@apply md:flex;
+	@apply lg:flex;
 }
 
 h2:last-child {
 	@apply flex;
 
-	@apply md:hidden;
+	@apply lg:hidden;
 }
 
 @screen md {
