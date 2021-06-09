@@ -39,6 +39,10 @@ body,
 	@apply xl:max-w-7xl;
 }
 
+main .container {
+	@apply mt-28;
+}
+
 a:hover {
 	@apply text-pink-600;
 }
