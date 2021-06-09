@@ -19,6 +19,7 @@ section {
 	@apply font-robotoMono;
 	@apply p-6;
 	@apply text-indigo-800;
+	@apply shadow-md;
 }
 
 div {
