@@ -1,10 +1,15 @@
 export default {
 	icons: {
+		regular: [
+			'faNewspaper'
+		],
 		solid: [
 			'faBars',
 			'faChevronCircleUp',
 			'faLightbulb',
+			'faMicrophone',
 			'faMoon',
+			'faPen',
 			'faSearch',
 			'faShoppingCart',
 			'faSpinner',

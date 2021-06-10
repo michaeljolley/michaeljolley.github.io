@@ -2,13 +2,10 @@
 	<nav :class="{ open: menuExpanded }">
 		<ul>
 			<li>
-				<NuxtLink to="/podcasts/" title="Podcasts">Podcasts</NuxtLink>
+				<NuxtLink to="/blog/" title="Blog posts">Blog</NuxtLink>
 			</li>
 			<li>
 				<NuxtLink to="/community/" title="Community">Community</NuxtLink>
-			</li>
-			<li>
-				<NuxtLink to="/blog/" title="Blog posts">Blog</NuxtLink>
 			</li>
 			<li>
 				<NuxtLink to="/talks/" title="Talks">Talks</NuxtLink>
@@ -38,9 +35,11 @@ nav {
 		rgba(255, 0, 255, 1) 0%,
 		rgba(0, 255, 255, 1) 100%
 	);
+	@apply mr-0;
 
 	@apply md:bg-none;
-	@apply md:mt-0 md:flex md:flex-row md:items-center;
+	@apply md:mt-0 md:mr-8 md:flex md:flex-row md:items-center;
+	@apply lg:mr-0;
 }
 
 nav.open {
@@ -63,16 +62,8 @@ li {
 	@apply py-2 pl-4;
 	@apply whitespace-nowrap;
 
-	@apply md:py-0 md:pr-6 md:pl-0;
-	@apply lg:pr-10;
-}
-
-li:nth-last-child(3) {
-	@apply lg:ml-auto;
-}
-
-li:nth-last-child(2) {
-	@apply lg:pr-10 lg:pl-0;
+	@apply md:py-0 md:pl-6;
+	@apply lg:pl-10;
 }
 
 a {

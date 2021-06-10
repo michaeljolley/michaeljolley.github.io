@@ -4,7 +4,7 @@
 		<section>
 			<h2>{{ data.title }}</h2>
 			<p>{{ data.description }}</p>
-			<span>read more ></span>
+			<span><font-awesome-icon :icon="['far', 'newspaper']" />read more ></span>
 		</section>
 	</nuxt-link>
 </template>
@@ -19,50 +19,12 @@ export default {
 }
 </script>
 <style scoped>
-a {
-	@apply grid grid-cols-2;
-	@apply shadow-md;
-	@apply rounded-xl;
-	@apply overflow-hidden;
-
-	min-height: 13rem;
-	grid-template: 1fr / 20% 1fr;
-	color: unset;
-}
-a:hover {
-	color: unset;
-}
-
 div {
-	@apply bg-cover bg-no-repeat;
+	@apply bg-cover;
+	@apply bg-indigo-500;
 }
-
-section {
-	@apply flex flex-col;
-	@apply bg-white;
-	@apply p-4;
-}
-h2 {
-	@apply font-cairo font-bold;
-	@apply text-3xl;
-	@apply pb-2;
-	@apply text-indigo-400;
-}
-
-p {
-	@apply font-robotoMono text-sm;
-	@apply text-black;
-}
-
+h2,
 span {
-	@apply flex justify-end text-sm;
-	@apply justify-self-end;
-	@apply font-robotoMono;
-	@apply mt-auto;
-	@apply text-indigo-400;
-}
-
-span:hover {
-	@apply text-black;
+	@apply text-indigo-500;
 }
 </style>

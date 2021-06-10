@@ -1,7 +1,7 @@
 <template>
 	<header>
 		<div class="container">
-			<div>
+			<main>
 				<NuxtLink to="/" class="title" title="back home">
 					<div class="logo" :class="{ live: isStreaming }"></div>
 					<div class="text">
@@ -10,7 +10,7 @@
 					</div>
 				</NuxtLink>
 				<Hamburger />
-			</div>
+			</main>
 			<Navigation />
 		</div>
 	</header>
@@ -41,6 +41,7 @@ header {
 
 .title {
 	@apply flex flex-row;
+	@apply ml-8 lg:ml-0;
 }
 
 .container {
@@ -48,18 +49,13 @@ header {
 	@apply md:flex-row md:justify-between;
 }
 
-.container > div {
+main {
 	@apply flex flex-row justify-between;
 	@apply w-full;
 
 	@apply md:w-auto;
 }
 
-.logo {
-	@apply ml-2;
-
-	@apply lg:ml-3;
-}
 .text {
 	@apply flex items-center;
 }

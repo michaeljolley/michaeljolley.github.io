@@ -54,6 +54,7 @@ export default {
 	@apply transition-opacity;
 	@apply duration-500;
 	@apply ease-in-out;
+	@apply cursor-pointer;
 }
 a:hover {
 	@apply text-pink-500;

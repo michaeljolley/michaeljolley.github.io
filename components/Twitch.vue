@@ -110,7 +110,7 @@ header a {
 }
 
 a:hover {
-	@apply bg-indigo-300;
+	@apply bg-indigo-500;
 	@apply text-white !important;
 }
 

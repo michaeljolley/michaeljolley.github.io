@@ -27,7 +27,7 @@ export default {
 	@apply outline-none;
 	@apply p-0;
 	@apply border-0;
-	@apply mr-4;
+	@apply mr-8;
 
 	@apply md:hidden;
 }

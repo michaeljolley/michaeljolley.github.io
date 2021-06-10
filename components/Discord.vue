@@ -11,7 +11,7 @@
 				Our Discord community brings developers together to learn together,
 				build each other up, and have fun.
 			</p>
-			<p class="link">check it out ></p>
+			<p class="link">join in the fun ></p>
 		</div>
 		<svg viewBox="0 0 89 102" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path
@@ -26,13 +26,12 @@ export default {}
 </script>
 <style scoped>
 a {
-	@apply flex flex-row gap-4;
+	@apply flex flex-row;
 	@apply bg-brand-discord;
 	@apply rounded-xl;
 	@apply font-robotoMono;
 	@apply p-4;
 	@apply shadow-md;
-	@apply text-indigo-800;
 }
 
 div {
@@ -40,16 +39,17 @@ div {
 }
 
 h3 {
-	@apply text-lg font-bold uppercase text-indigo-800;
+	@apply flex-nowrap;
+	@apply text-lg font-bold uppercase text-indigo-900;
 }
 p {
 	@apply text-white text-xs;
 }
 .link,
 .link:hover {
-	@apply text-indigo-800 text-xs;
+	@apply text-indigo-900 text-xs;
 	@apply font-bold;
-	@apply flex justify-end;
+	@apply ml-auto mt-auto;
 }
 svg {
 	@apply h-full w-full;

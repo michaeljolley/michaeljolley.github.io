@@ -1,25 +1,24 @@
 <template>
-	<div v-if="post" class="post">
-		<aside>
-			<TableOfContents
-				v-if="post.toc.length > 0"
-				:toc="post.toc"
-				:levels="post.toc.length > 10 ? [2] : [2, 3]"
-			/>
-			<RelatedPosts :tags="post.tags" :slug="post.slug" />
-			<SocialSharing :post="post" />
-		</aside>
-		<article class="content">
-			<ArticleHeaderImage
-				:cover="post.cover"
-				:title="post.banner_image_alt || post.title"
-			/>
-			<section>
-				<ArticleHeader :post="post" />
+	<main>
+		<header
+			:style="{ backgroundImage: `url(${post.cover.secure_url})` }"
+		></header>
+		<div class="container">
+			<aside>
+				<TableOfContents
+					v-if="post.toc.length > 0"
+					:toc="post.toc"
+					:levels="post.toc.length > 10 ? [2] : [2, 3]"
+				/>
+				<RelatedPosts :tags="post.tags" :slug="post.slug" />
+				<SocialSharing :post="post" />
+			</aside>
+			<article class="content">
+				<h1>{{ post.title }}</h1>
 				<nuxt-content :document="post" />
-			</section>
-		</article>
-	</div>
+			</article>
+		</div>
+	</main>
 </template>
 
 <script>
@@ -141,23 +140,35 @@ export default {
 	},
 }
 </script>
-
 <style scoped>
-.post {
-	@apply flex;
-	@apply items-start;
+main {
+	@apply mt-4;
+	@apply flex flex-col justify-center;
+}
+
+header {
+	@apply bg-center bg-cover;
+	min-height: 15rem;
+}
+
+.container {
+	@apply flex items-start gap-6;
 	@apply mt-10;
-	@apply space-x-2;
-	@apply lg:space-x-3;
+	@apply mx-auto;
 }
 
-.cld-image {
-	width: unset !important;
-	@apply shadow-lg;
+aside,
+article {
+	@apply bg-white;
+	@apply rounded-lg;
+	@apply shadow-md;
+	@apply p-5;
 }
 
-.nuxt-content .cld-image {
-	margin: 35px -30px;
+aside {
+}
+
+.post {
 }
 
 pre {
@@ -166,13 +177,15 @@ pre {
 	@apply shadow-lg;
 }
 
-@screen lg {
-	.nuxt-content .cld-image {
-		margin: 50px -45px;
+@screen md {
+	header {
+		min-height: 20rem;
 	}
+}
 
-	pre {
-		margin: 50px -45px;
+@screen lg {
+	header {
+		min-height: 30rem;
 	}
 }
 </style>
