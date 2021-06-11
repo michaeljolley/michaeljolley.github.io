@@ -4,6 +4,7 @@
 .nuxt
 lambda
 /content/videos
+/content/meetup
 /content/products
 /content/prices
 

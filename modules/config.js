@@ -33,6 +33,8 @@ const config = {
 	monetizationPointer: process.env.VUE_APP_MONETIZATION || null,
 	youtubeChannelId: process.env.YOUTUBE_CHANNEL_ID || null,
 	functionsUrl: process.env.FUNCTION_URL || null,
+	airtableAPIKey: process.env.AIRTABLE_API_KEY || null,
+	airtableBase: process.env.AIRTABLE_BASE || null,
 	get headMeta() {
 		return [
 			{ charset: 'utf-8' },

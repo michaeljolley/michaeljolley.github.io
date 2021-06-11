@@ -1,5 +1,5 @@
 import readingTime from 'reading-time'
-import { $cloudinary, $youtube } from './middleware'
+import { $airtable, $cloudinary, $youtube } from './middleware'
 import {
 	cloudinary,
 	config,
@@ -58,6 +58,7 @@ export default {
 		'@nuxtjs/tailwindcss',
 		'@nuxtjs/fontawesome',
 		$youtube,
+		$airtable,
 	],
 
 	modules: [
@@ -89,6 +90,7 @@ export default {
 			const talks = await $content('talks').fetch()
 			const events = await $content('events').fetch()
 			const videos = await $content('videos').fetch()
+			const meetups = await $content('meetups').fetch()
 
 			const bodyParser = (body) => {
 				const results = []
@@ -112,6 +114,12 @@ export default {
 					return {
 						route: `/blog/${post.slug}/`,
 						payload: post,
+					}
+				}),
+				...meetups.map((meetup) => {
+					return {
+						route: `/community/${meetup.slug}/`,
+						payload: meetup,
 					}
 				}),
 				...[

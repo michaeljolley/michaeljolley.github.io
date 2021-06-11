@@ -2,7 +2,7 @@
 	<main>
 		<div class="container">
 			<aside>
-				<NextEvent class="mini" />
+				<NextEvent v-if="nextMeetup" class="mini" :meetup="nextMeetup" />
 				<Discord class="mid" />
 			</aside>
 			<section>
@@ -16,7 +16,7 @@
 					/>
 				</div>
 				<div>
-					<NextEvent />
+					<NextEvent v-if="nextMeetup" :meetup="nextMeetup" />
 					<Discord />
 				</div>
 			</section>
@@ -41,6 +41,12 @@ export default {
 
 		// load community events
 
+		const nextMeetup = await $content('/meetup')
+			.where({ date: { $gte: new Date() } })
+			.limit(1)
+			.sortBy('date', 'asc')
+			.fetch()
+
 		const items = [
 			...posts.map((p) => {
 				return { type: 'BlogCard', slug: p.slug, date: p.date, data: p }
@@ -52,6 +58,7 @@ export default {
 
 		return {
 			items: items.sort((a, b) => new Date(b.date) - new Date(a.date)),
+			nextMeetup: nextMeetup.length > 0 ? nextMeetup[0] : undefined,
 		}
 	},
 }
