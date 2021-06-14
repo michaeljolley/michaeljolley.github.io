@@ -21,7 +21,6 @@ export default {
 <style scoped>
 div {
 	@apply bg-cover;
-	@apply bg-indigo-500;
 }
 h2,
 span {

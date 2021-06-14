@@ -85,12 +85,25 @@ section {
 	@apply flex-col;
 }
 
+h3 {
+	@apply font-cairo font-bold;
+	@apply text-indigo-700 text-sm uppercase;
+}
+
+ul {
+	@apply pt-1;
+}
+
 li {
 	@apply ml-2;
+	@apply font-sourceSans text-sm;
+	@apply py-1;
+	@apply overflow-ellipsis;
+	@apply truncate;
 }
 
 .toc a {
-	@apply text-gray-200;
+	@apply text-gray-300;
 }
 
 .toc a:hover {

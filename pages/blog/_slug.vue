@@ -1,8 +1,6 @@
 <template>
 	<main>
-		<header
-			:style="{ backgroundImage: `url(${post.cover.secure_url})` }"
-		></header>
+		<PostHeader :post="post" />
 		<div class="container">
 			<aside>
 				<TableOfContents
@@ -15,7 +13,8 @@
 			</aside>
 			<article class="content">
 				<h1>{{ post.title }}</h1>
-				<nuxt-content :document="post" />
+				<div class="info">{{ post.readingTime.text }}</div>
+				<nuxt-content class="prose" :document="post" />
 			</article>
 		</div>
 	</main>
@@ -146,15 +145,14 @@ main {
 	@apply flex flex-col justify-center;
 }
 
-header {
-	@apply bg-center bg-cover;
-	min-height: 15rem;
-}
-
 .container {
-	@apply flex items-start gap-6;
+	@apply flex items-start gap-2;
 	@apply mt-10;
 	@apply mx-auto;
+	@apply px-4;
+
+	@apply md:gap-4;
+	@apply lg:gap-6;
 }
 
 aside,
@@ -162,30 +160,43 @@ article {
 	@apply bg-white;
 	@apply rounded-lg;
 	@apply shadow-md;
-	@apply p-5;
+	@apply p-5 py-2;
+
+	@apply lg:pt-5 lg:pb-2;
 }
 
 aside {
+	@apply sticky;
+	top: 120px;
 }
 
-.post {
+h1 {
+	@apply font-cairo font-bold;
+	@apply text-indigo-700;
+	@apply text-2xl;
+	@apply pb-2;
+
+	@apply md:text-3xl;
+	@apply lg:text-4xl;
+
+	border-bottom: 1px solid;
+	border-image-source: linear-gradient(
+		90deg,
+		rgba(255, 0, 255, 1) 0%,
+		rgba(0, 255, 255, 1) 100%
+	);
+	border-image-slice: 1;
+}
+
+.info {
+	@apply font-robotoMono;
+	@apply text-xs text-gray-300;
+	@apply pt-2 pb-4;
 }
 
 pre {
 	margin: 35px -30px;
 	@apply rounded;
 	@apply shadow-lg;
-}
-
-@screen md {
-	header {
-		min-height: 20rem;
-	}
-}
-
-@screen lg {
-	header {
-		min-height: 30rem;
-	}
 }
 </style>

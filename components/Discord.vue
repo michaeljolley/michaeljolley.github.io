@@ -26,12 +26,17 @@ export default {}
 </script>
 <style scoped>
 a {
-	@apply flex flex-row;
-	@apply bg-brand-discord;
+	@apply flex flex-row gap-6;
 	@apply rounded-xl;
 	@apply font-robotoMono;
 	@apply p-4;
 	@apply shadow-md;
+
+	background: linear-gradient(
+		180deg,
+		rgba(114, 137, 218, 1) 0%,
+		rgba(114, 137, 218, 0.9) 100%
+	);
 }
 
 div {
@@ -40,18 +45,18 @@ div {
 
 h3 {
 	@apply flex-nowrap;
-	@apply text-lg font-bold uppercase text-indigo-900;
+	@apply text-lg font-bold uppercase text-gray-700;
 }
 p {
 	@apply text-white text-xs;
 }
 .link,
 .link:hover {
-	@apply text-indigo-900 text-xs;
+	@apply text-gray-700 text-xs;
 	@apply font-bold;
 	@apply ml-auto mt-auto;
 }
 svg {
-	@apply h-full w-full;
+	@apply w-1/2;
 }
 </style>

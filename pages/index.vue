@@ -17,6 +17,7 @@
 				</div>
 				<div>
 					<NextEvent v-if="nextMeetup" :meetup="nextMeetup" />
+					<LastVideo :video="latestVideo" />
 					<Discord />
 				</div>
 			</section>
@@ -33,13 +34,9 @@ export default {
 			.fetch()
 
 		const videos = await $content('/videos')
-			.limit(5)
+			.limit(1)
 			.sortBy('date', 'desc')
 			.fetch()
-
-		// load podcasts
-
-		// load community events
 
 		const nextMeetup = await $content('/meetup')
 			.where({ date: { $gte: new Date() } })
@@ -51,14 +48,12 @@ export default {
 			...posts.map((p) => {
 				return { type: 'BlogCard', slug: p.slug, date: p.date, data: p }
 			}),
-			...videos.map((v) => {
-				return { type: 'VideoCard', slug: v.slug, date: v.date, data: v }
-			}),
 		]
 
 		return {
 			items: items.sort((a, b) => new Date(b.date) - new Date(a.date)),
 			nextMeetup: nextMeetup.length > 0 ? nextMeetup[0] : undefined,
+			latestVideo: videos[0],
 		}
 	},
 }
@@ -114,6 +109,8 @@ button.Video:hover {
 }
 
 .mini {
+	@apply w-full;
+
 	@apply lg:hidden;
 }
 

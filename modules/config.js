@@ -162,10 +162,6 @@ const config = {
 			},
 			{
 				rel: 'prerender',
-				href: `${this.baseUrl}/talks`,
-			},
-			{
-				rel: 'prerender',
 				href: `${this.baseUrl}/blog`,
 			},
 			{
@@ -195,8 +191,7 @@ const config = {
 			},
 			{
 				rel: 'stylesheet',
-				href:
-					'https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&Roboto+Mono:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap',
+				href: 'https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Roboto+Mono:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap',
 			},
 		]
 	},

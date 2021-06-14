@@ -63,14 +63,4 @@ a >>> span svg {
 	@apply mr-2;
 	@apply text-2xl;
 }
-
-a:hover >>> section {
-	@apply bg-gray-500;
-}
-a:hover >>> div {
-	@apply bg-blend-luminosity;
-}
-a:hover >>> p {
-	@apply text-white;
-}
 </style>

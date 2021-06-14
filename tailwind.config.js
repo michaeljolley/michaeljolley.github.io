@@ -17,9 +17,9 @@ module.exports = {
 	theme: {
 		darkSelector: '.dark-mode',
 		fontFamily: {
-			cairo: ["Cairo", "sans-serif"],
-			sourceSans: ["Source Sans Pro", "sans-serif"],
-			robotoMono: ["Roboto Mono", "sans-serif"],
+			cairo: ["'Cairo'", "sans-serif"],
+			sourceSans: ["'Source Sans Pro'", "sans-serif"],
+			robotoMono: ["'Roboto Mono'", "sans-serif"],
 		},
 
 		typography: {
@@ -96,7 +96,5 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [
-		require('@tailwindcss/typography'),
-	],
+	plugins: [require('@tailwindcss/typography')],
 }

@@ -22,7 +22,11 @@ export default {
 			required: true,
 		},
 	},
-
+	data() {
+		return {
+			relatedPosts: {},
+		}
+	},
 	async fetch() {
 		try {
 			this.relatedPosts = await this.$content(`blog`, { deep: true })
@@ -58,11 +62,6 @@ export default {
 			}
 		} catch (error) {}
 	},
-	data() {
-		return {
-			relatedPosts: {},
-		}
-	},
 }
 </script>
 <style scoped>
@@ -74,14 +73,18 @@ section {
 
 h3 {
 	@apply mt-5;
+	@apply font-cairo font-bold;
+	@apply text-indigo-700 text-sm uppercase;
 }
 
 li {
 	@apply mx-2;
+	@apply py-1;
+	@apply font-sourceSans text-sm;
 }
 
 .related a {
-	@apply text-gray-200;
+	@apply text-gray-300;
 }
 
 .related a:hover {

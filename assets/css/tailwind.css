@@ -48,3 +48,33 @@ main .container {
 a:hover {
 	@apply text-pink-600;
 }
+
+.nuxt-content h1,
+.nuxt-content h2,
+.nuxt-content h3,
+.nuxt-content h4,
+.nuxt-content h5,
+.nuxt-content h6 {
+	@apply font-cairo font-bold;
+}
+
+.nuxt-content h1 {
+	@apply text-4xl;
+}
+.nuxt-content h2 {
+	@apply text-3xl;
+}
+.nuxt-content h3 {
+	@apply text-2xl;
+}
+.nuxt-content h4 {
+	@apply text-xl;
+}
+.nuxt-content h5 {
+	@apply text-lg;
+}
+
+.nuxt-content p {
+	@apply text-base;
+	@apply pb-3;
+}

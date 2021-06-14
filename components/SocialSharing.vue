@@ -12,7 +12,10 @@
 					:hashtags="post.tags && post.tags.join(',')"
 					class="facebook"
 				>
-					<font-awesome-icon :icon="['fab', 'facebook-f']" />
+					<font-awesome-icon
+						title="Share on Facebook"
+						:icon="['fab', 'facebook-f']"
+					/>
 				</ShareNetwork>
 			</li>
 			<li>
@@ -24,7 +27,10 @@
 					:hashtags="post.tags && post.tags.join(',')"
 					class="twitter"
 				>
-					<font-awesome-icon :icon="['fab', 'twitter']" />
+					<font-awesome-icon
+						title="Share on Twitter"
+						:icon="['fab', 'twitter']"
+					/>
 				</ShareNetwork>
 			</li>
 			<li>
@@ -34,7 +40,10 @@
 					:url="`${baseUrl}${post.path}/`"
 					class="linkedin"
 				>
-					<font-awesome-icon :icon="['fab', 'linkedin-in']" />
+					<font-awesome-icon
+						title="Share on LinkedIn"
+						:icon="['fab', 'linkedin-in']"
+					/>
 				</ShareNetwork>
 			</li>
 			<li>
@@ -44,7 +53,10 @@
 					:title="post.title"
 					class="reddit"
 				>
-					<font-awesome-icon :icon="['fab', 'reddit-alien']" />
+					<font-awesome-icon
+						title="Share on Reddit"
+						:icon="['fab', 'reddit-alien']"
+					/>
 				</ShareNetwork>
 			</li>
 		</ul>
@@ -81,6 +93,8 @@ h3 {
 	@apply hidden;
 	@apply lg:flex;
 	@apply lg:mt-5;
+	@apply font-cairo font-bold;
+	@apply text-indigo-700 text-sm uppercase;
 }
 
 ul {
@@ -89,6 +103,7 @@ ul {
 	@apply items-center;
 	@apply text-xl;
 	@apply list-none;
+	@apply py-1;
 
 	@apply lg:items-start;
 	@apply lg:flex-row;
@@ -98,6 +113,7 @@ ul {
 li {
 	@apply mt-2;
 	@apply lg:mt-0;
+	@apply py-1;
 }
 
 .max-w-40 {
@@ -122,20 +138,16 @@ li a {
 }
 
 .facebook:hover {
-	@apply bg-brand-facebook;
-	@apply text-white;
+	@apply text-brand-facebook;
 }
 .twitter:hover {
-	@apply bg-brand-twitter;
-	@apply text-white;
+	@apply text-brand-twitter;
 }
 .linkedin:hover {
-	@apply bg-brand-linkedin;
-	@apply text-white;
+	@apply text-brand-linkedin;
 }
 .reddit:hover {
-	@apply bg-brand-reddit;
-	@apply text-white;
+	@apply text-brand-reddit;
 }
 /* .facebook,
 .twitter,

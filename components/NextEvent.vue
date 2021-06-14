@@ -26,11 +26,16 @@ export default {
 <style scoped>
 section {
 	@apply flex flex-row;
-	@apply bg-black;
 	@apply rounded-xl;
 	@apply font-robotoMono;
 	@apply p-5;
 	@apply shadow-md;
+
+	background: linear-gradient(
+		180deg,
+		rgba(0, 0, 0, 1) 0%,
+		rgba(0, 0, 0, 0.8) 100%
+	);
 
 	@apply md:p-4;
 }
