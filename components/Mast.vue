@@ -14,13 +14,14 @@
 				<span>(Yes, another one.)</span>
 			</p>
 			<p>
-				At work, he's a developer advocate at
+				At work, he leads the Developer Relations team at
 				<a
 					target="_blank"
-					title="Vonage"
-					href="https://www.vonage.com/communications-apis/"
+					title="Deepgram"
+					href="https://www.deepgram.com/"
 					noreferrer
-					>Vonage</a
+					class="deepgram"
+					>Deepgram</a
 				>
 				where he gets to play with awesome APIs. You can also catch him giving
 				<NuxtLink to="/talks/" title="Talks Michael's given">talks</NuxtLink>
@@ -30,6 +31,7 @@
 					title="Bald Bearded Builder on YouTube"
 					href="https://bbb.dev/youtube"
 					noreferrer
+					class="youtube"
 					>YouTube</a
 				>, or hosting the
 				<a
@@ -37,6 +39,7 @@
 					title="Bald Bearded Builder on Twitch"
 					href="https://bbb.dev/twitch"
 					noreferrer
+					class="twitch"
 					>Bald. Bearded. Builder.</a
 				>, a live-streamed show on Twitch.
 			</p>
@@ -79,9 +82,8 @@ export default {
 	@apply lg:bg-no-repeat;
 	@apply lg:flex;
 	@apply lg:flex-col;
-	@apply lg:pb-10;
 	@apply lg:visible;
-	@apply lg:pt-16;
+	@apply lg:py-12;
 	@apply lg:mx-auto;
 
 	@apply bg-gray-50;
@@ -126,5 +128,15 @@ p span {
 	@apply block;
 	@apply text-blue-600;
 	@apply dark:text-blue-400;
+}
+
+.deepgram {
+	color: #fb2640;
+}
+.youtube {
+	@apply text-brand-youtube;
+}
+.twitch {
+	@apply text-brand-twitch;
 }
 </style>

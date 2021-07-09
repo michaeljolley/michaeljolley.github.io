@@ -154,8 +154,6 @@ export default {
 </script>
 <style scoped>
 header {
-	@apply mb-12;
-	@apply z-10;
 	@apply shadow-lg;
 }
 .navBar {
@@ -169,12 +167,6 @@ header {
 	@apply bg-white;
 
 	@apply dark:bg-gray-500;
-}
-
-.sticky {
-	@apply fixed;
-	@apply w-full;
-	@apply top-0;
 }
 
 nav {
