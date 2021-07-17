@@ -85,6 +85,7 @@ export default {
 	@apply lg:visible;
 	@apply lg:py-12;
 	@apply lg:mx-auto;
+	@apply lg:mb-16 lg:mt-8;
 
 	@apply bg-gray-50;
 	@apply dark:bg-gray-900;
