@@ -1,9 +1,10 @@
 ---
-date: 2021-07-19
-title: "Using Polywork to Break My Unconscious Biases"
-cover:
+date: 2021-07-18
+title: 'Using Polywork to Break My Unconscious Biases'
+cover: ./cover.png
+ograph: ./ograph.png
 slug: using-polywork-to-break-unconscious-biases
-banner_image_alt: 
+banner_image_alt: Preview of Polywork multiverse screen with the Polywork logo overlayed.
 description: How I use Polywork to break unconscious biases in the content creators I follow on social platforms.
 tags: [polywork, diversity, inclusion]
 ---
@@ -47,7 +48,7 @@ quickly fill up a "following" list of the same people. This is the first place
 I changed my habits.
 
 Step one in operation Expand The Bubble was realizing that I have an unconscious
-inclination to follow content created by white guys, here on referred to as 
+inclination to follow content created by white guys, here on referred to as
 White Guy Creators (WGC). Does that mean I stop following creators who look like
 me? Nope. Instead, I decided to counteract this disposition by following 3
 non-WGCs for every one WGC. So if I see content I enjoy from a WGC, I give them a
@@ -82,10 +83,10 @@ to share it with my community.
 ## Break Out of Your Bubble
 
 If you'd like to join Polywork, they've given me a VIP code for anyone reading
-who'd like to get in on the action. Go to 
+who'd like to get in on the action. Go to
 [https://polywork.com](https://polywork.com) and use the code `baldbeardbuild`.
 Once you're in, I highly recommend using the steps above to expand your bubble
 and amplify the amazing content you find.
 
 How do you actively combat your unconscious biases? Hit me up on
-[Twitter](https://twitter.com/baldbeardbuild) and let me know. 
+[Twitter](https://twitter.com/baldbeardbuild) and let me know.
