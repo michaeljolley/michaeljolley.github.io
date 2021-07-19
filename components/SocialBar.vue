@@ -49,17 +49,6 @@
 				</li>
 				<li>
 					<a
-						href="https://www.facebook.com/baldbeardedbuilder"
-						noreferrer
-						target="_blank"
-						class="facebook"
-						title="Like the Facebook page"
-					>
-						<font-awesome-icon :icon="['fab', 'facebook-f']"></font-awesome-icon
-					></a>
-				</li>
-				<li>
-					<a
 						href="https://www.linkedin.com/in/michaelwjolley/"
 						noreferrer
 						target="_blank"
@@ -71,7 +60,7 @@
 						></font-awesome-icon
 					></a>
 				</li>
-				<li class="mid">
+				<li>
 					<a
 						href="https://discord.gg/XSG7HJm"
 						noreferrer
@@ -115,17 +104,12 @@ ul {
 	@apply gap-2;
 
 	@apply lg:gap-6;
-	@apply lg:grid-cols-7;
+	@apply lg:grid-cols-6;
 }
 
 li {
 	@apply flex;
 	@apply justify-center;
-}
-
-li.mid {
-	@apply col-start-2;
-	@apply md:col-auto;
 }
 
 li a {
@@ -142,10 +126,6 @@ li a {
 	@apply text-gray-200;
 	@apply dark:bg-gray-600;
 	@apply dark:text-gray-300;
-}
-.facebook:hover {
-	@apply bg-brand-facebook;
-	@apply text-white;
 }
 .twitter:hover {
 	@apply bg-brand-twitter;
