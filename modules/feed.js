@@ -26,10 +26,9 @@ export default () => {
 				feed.addItem({
 					title: post.title,
 					id: post.slug,
-					date: new Date(post.updatedAt || post.date),
+					date: new Date(post.date),
 					link: `${config.baseUrl}/blog/${post.slug}`,
 					description: post.description,
-					content: `${post.excerpt} ...`,
 				})
 			})
 		}
