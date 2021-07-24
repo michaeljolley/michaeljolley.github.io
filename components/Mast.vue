@@ -19,7 +19,7 @@
 					target="_blank"
 					title="Deepgram"
 					href="https://www.deepgram.com/"
-					noreferrer
+					rel="noreferrer"
 					class="deepgram"
 					>Deepgram</a
 				>
@@ -30,7 +30,7 @@
 					target="_blank"
 					title="Bald Bearded Builder on YouTube"
 					href="https://bbb.dev/youtube"
-					noreferrer
+					rel="noreferrer"
 					class="youtube"
 					>YouTube</a
 				>, or hosting the
@@ -38,7 +38,7 @@
 					target="_blank"
 					title="Bald Bearded Builder on Twitch"
 					href="https://bbb.dev/twitch"
-					noreferrer
+					rel="noreferrer"
 					class="twitch"
 					>Bald. Bearded. Builder.</a
 				>, a live-streamed show on Twitch.

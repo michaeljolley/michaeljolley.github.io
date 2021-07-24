@@ -6,7 +6,7 @@
 				<li>
 					<a
 						href="https://twitter.com/baldbeardbuild"
-						noreferrer
+						rel="noreferrer"
 						target="_blank"
 						class="twitter"
 						title="Follow the musings on Twitter"
@@ -17,7 +17,7 @@
 				<li>
 					<a
 						href="https://twitch.tv/baldbeardedbuilder"
-						noreferrer
+						rel="noreferrer"
 						target="_blank"
 						class="twitch"
 						title="Check out the live streams on Twitch"
@@ -28,7 +28,7 @@
 				<li>
 					<a
 						href="https://youtube.com/baldbeardedbuilder"
-						noreferrer
+						rel="noreferrer"
 						target="_blank"
 						class="youtube"
 						title="Subscribe, like & comment on YouTube videos"
@@ -39,7 +39,7 @@
 				<li>
 					<a
 						href="https://www.instagram.com/baldbeardedbuilder/"
-						noreferrer
+						rel="noreferrer"
 						target="_blank"
 						class="instagram"
 						title="Follow the fun on Instagram"
@@ -50,7 +50,7 @@
 				<li>
 					<a
 						href="https://www.linkedin.com/in/michaelwjolley/"
-						noreferrer
+						rel="noreferrer"
 						target="_blank"
 						class="linkedin"
 						title="Get professional on LinkedIn"
@@ -63,7 +63,7 @@
 				<li>
 					<a
 						href="https://discord.gg/XSG7HJm"
-						noreferrer
+						rel="noreferrer"
 						target="_blank"
 						class="discord"
 						title="Join the Discord community"
