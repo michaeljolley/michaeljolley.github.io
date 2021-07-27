@@ -1,27 +1,46 @@
 <template>
-	<article class="card">
-		<nuxt-link :to="talk.route || `/talks/${talk.slug}/`" :title="talk.title">
-			<header>
-				<v-image
-					v-if="talk.cover_image || talk.cover"
-					:alt="talk.banner_image_alt || talk.title"
-					:src="talk.cover_image || talk.cover.public_id"
-				/>
-			</header>
-			<section class="p-3">
-				<h2>{{ talk.title }}</h2>
-				<summary></summary>
-			</section>
-		</nuxt-link>
-	</article>
+  <div class="card">
+    <nuxt-link
+      class="img"
+      :to="`/talks/${data.slug}/`"
+      :title="data.title"
+      :style="{ backgroundImage: `url(${data.cover.secure_url})` }"
+    >
+    </nuxt-link>
+    <section>
+      <nuxt-link :to="`/talks/${data.slug}/`" :title="data.title">
+        <h2>{{ data.title }}</h2>
+      </nuxt-link>
+      <p>{{ data.description }}</p>
+      <span>
+        <nuxt-link :to="`/talks/${data.slug}/`" :title="data.title">
+          <font-awesome-icon :icon="['fas', 'microphone']" />learn more >
+        </nuxt-link>
+      </span>
+    </section>
+  </div>
 </template>
 <script>
 export default {
-	props: {
-		talk: {
-			type: Object,
-			required: true,
-		},
-	},
+  props: {
+    data: {
+      type: Object,
+      required: true,
+    },
+  },
 }
 </script>
+<style scoped>
+.img {
+  @apply bg-cover;
+}
+
+span {
+  @apply text-indigo-500;
+}
+
+.card:hover {
+  box-shadow: 0 4px 6px -1px rgba(102, 102, 204, 0.4),
+    0 2px 4px -1px rgba(102, 102, 204, 0.4);
+}
+</style>
