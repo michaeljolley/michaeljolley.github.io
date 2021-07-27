@@ -1,12 +1,4 @@
 # Created by .ignore support plugin (hsz.mobi)
-
-# Custom build artifacts
-.nuxt
-lambda
-/content/videos
-/content/products
-/content/prices
-
 ### Node template
 # Logs
 /logs
@@ -14,7 +6,6 @@ lambda
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-report*.json
 
 # Runtime data
 pids
