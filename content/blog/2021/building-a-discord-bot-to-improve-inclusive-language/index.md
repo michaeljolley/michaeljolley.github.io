@@ -111,6 +111,28 @@ project with the following:
 
 ### Setting up Fauna
 
-### Setting
+Discuss setting up Fauna & indexes
 
-### Continuous Deployments with GitHub
+Discuss the fauna.ts file
+
+### Environment Variables
+
+Discuss the .env here
+
+### Build-A-Bot
+
+Discuss building the bot.ts file
+
+### Allowing Others to Use the GuyBot
+
+Discuss building the website
+
+### Docker all the Things
+
+Discuss the dockerfile and Azure CR
+
+### Continuous Deployments with GitHub &amp; Azure
+
+Discuss using the GitHub Action to automate deployments
+
+## Wrap Up
