@@ -155,6 +155,23 @@ export default {
 	@apply lg:space-x-3;
 }
 
+.content ul {
+	list-style: none;
+}
+.content ul li {
+	@apply pl-4;
+	text-indent: -0.5rem;
+}
+
+.content ul li::before {
+	content: '\2022'; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+	color: #ff00ff; /* Change the color */
+	font-weight: bold; /* If you want it to be bold */
+	display: inline-block; /* Needed to add space between the bullet and the text */
+	width: 1em; /* Also needed for space (tweak if needed) */
+	margin-left: 0.5rem; /* Also needed for space (tweak if needed) */
+}
+
 .cld-image {
 	width: unset !important;
 	@apply shadow-lg;
