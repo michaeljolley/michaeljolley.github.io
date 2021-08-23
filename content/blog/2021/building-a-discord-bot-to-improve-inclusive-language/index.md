@@ -158,7 +158,7 @@ you can always check out
 [the code](https://github.com/michaeljolley/discord-guy-bot) for yourself. But I
 do want to point out the two methods that actually mean something:
 
-#### getNoticesByUser
+### getNoticesByUser
 
 The `getNoticesByUser` function uses Fauna's FQL to call the index we created
 and return any notices sent to a specific user on a specific server.
@@ -190,7 +190,7 @@ static async getNoticesByUser(user: String, guild: String): Promise<Notice[] | u
 }
 ```
 
-#### saveNotice
+### saveNotice
 
 The `saveNotice` function saves the notice to Fauna. Nothing complicated here,
 but I do use Fauna's FQL for this as well.
