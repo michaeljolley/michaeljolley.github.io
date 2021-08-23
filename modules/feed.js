@@ -29,6 +29,7 @@ export default () => {
 					date: new Date(post.date),
 					link: `${config.baseUrl}/blog/${post.slug}`,
 					description: post.description,
+					thumbnail: post.cover ? post.cover.secure_url : '',
 				})
 			})
 		}
