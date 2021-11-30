@@ -1,121 +1,50 @@
-// tailwind.config.js
+const headerStyles = {
+  fontFamily: 'Source Sans Pro',
+  fontWeight: 'bold',
+  marginTop: '1.5rem',
+  marginBottom: '.75rem',
+}
 
 module.exports = {
-	darkMode: '.dark-mode',
-	purge: [
-		'./components/**/*.{vue,js}',
-		'./layouts/**/*.vue',
-		'./pages/**/*.vue',
-		'./plugins/**/*.{js,ts}',
-		'./nuxt.config.{js,ts}',
-	],
-	theme: {
-		darkSelector: '.dark-mode',
-		fontFamily: {
-			display: ['roboto', 'sans-serif'],
-			body: ['roboto', 'sans-serif'],
-		},
-		container: {
-			padding: {
-				DEFAULT: '1rem',
-				sm: '2rem',
-				lg: '4rem',
-				xl: '5rem',
-				'2xl': '6rem',
-			},
-		},
-		fontSize: {
-			xs: ['0.75rem', { lineHeight: '1rem' }],
-			sm: ['0.875rem', { lineHeight: '1.25rem' }],
-			base: ['1rem', { lineHeight: '1.5rem' }],
-			lg: ['1.125rem', { lineHeight: '1.75rem' }],
-			xl: ['1.25rem', { lineHeight: '1.75rem' }],
-			'2xl': ['1.5rem', { lineHeight: '2rem' }],
-			'3xl': ['1.875rem', { lineHeight: '2.25rem' }],
-			'4xl': ['2.25rem', { lineHeight: '2.5rem' }],
-			'5xl': ['3rem', { lineHeight: '1' }],
-			'6xl': ['4rem', { lineHeight: '1' }],
-			'7xl': ['5rem', { lineHeight: '1' }],
-			'8xl': ['6rem', { lineHeight: '1' }],
-		},
-		typography: {
-			default: {
-				css: {
-					maxWidth: '100%',
-				},
-			},
-		},
-		colors: {
-			black: '#000000',
-			white: '#ffffff',
-			brand: {
-				discord: '#7289da',
-				facebook: '#3B5998',
-				github: '#181717',
-				instagram: '#bc2a8d',
-				linkedin: '#0077B5',
-				reddit: '#ff4500',
-				rss: '#FFA500',
-				twitch: '#6441A4',
-				twitter: '#1da1f2',
-				youtube: '#e52d27',
-				vk: '#45668e',
-			},
-			pink: {
-				100: '#ffccff',
-				200: '#ff99ff',
-				300: '#ff66ff',
-				400: '#ff33ff',
-				500: '#ff00ff',
-				600: '#cc00cc',
-				700: '#990099',
-				800: '#660066',
-				900: '#330033',
-			},
-			blue: {
-				100: '#ccffff',
-				200: '#99ffff',
-				300: '#66ffff',
-				400: '#33ffff',
-				500: '#00ffff',
-				600: '#00cccc',
-				700: '#009999',
-				800: '#006666',
-				900: '#003333',
-			},
-			indigo: {
-				100: '#dedce9',
-				200: '#beb9d3',
-				300: '#9d97bd',
-				400: '#7d74a7',
-				500: '#5c5191',
-				600: '#4a4174',
-				700: '#373157',
-				800: '#25203a',
-				900: '#12101d',
-			},
-			gray: {
-				50: '#f3f3f5',
-				100: '#d1d1d1',
-				200: '#a3a3a4',
-				300: '#747676',
-				400: '#464849',
-				500: '#181a1b',
-				600: '#131516',
-				700: '#0e1010',
-				800: '#0a0a0b',
-				900: '#050505',
-			},
-		},
-		extend: {
-			zIndex: {
-				'-10': '-10',
-			},
-		},
-	},
-	plugins: [
-		require('tailwindcss-dark-mode')(),
-		require('@tailwindcss/typography'),
-		require('tailwindcss-blend-mode')(),
-	],
+  mode: "jit",
+  purge: [
+    './components/**/*.{vue,js}',
+    './layouts/**/*.vue',
+    './pages/**/*.vue',
+    "./app.vue",
+    './plugins/**/*.{js,ts}',
+    './nuxt.config.{js,ts}',
+  ],
+  darkMode: 'class',
+  theme: {
+    fontFamily: {
+      cairo: ['Cairo', 'sans-serif'],
+      fira: ['Fira Code', 'sans-serif'],
+      sourceSans: ["'Source Sans Pro'", 'sans-serif'],
+    },
+    typography: {
+      DEFAULT: {
+        css: {
+          h1: { ...headerStyles },
+          h2: { ...headerStyles },
+          h3: { ...headerStyles },
+          h4: { ...headerStyles },
+          h5: { ...headerStyles },
+          h6: { ...headerStyles },
+        },
+      },
+    },
+    extend: {
+      colors: {
+        bbbpink: "#c04b9b",
+        bbbblue: "#21c0db"
+      }
+    },
+  },
+  variants: {
+    extend: {},
+  },
+  plugins: [
+    require("@tailwindcss/typography"),
+  ],
 }

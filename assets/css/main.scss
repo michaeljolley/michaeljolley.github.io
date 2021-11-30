@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import '@fontsource/source-sans-pro/index.css';
+@import '@fontsource/source-sans-pro/400.css';
+@import '@fontsource/source-sans-pro/700.css';
+@import '@fontsource/cairo/index.css';
+@import '@fontsource/cairo/400.css';
+@import '@fontsource/cairo/700.css';
+@import '@fontsource/fira-code/index.css';
+@import '@fontsource/fira-code/400.css';
+@import '@fontsource/fira-code/700.css';
+
+html, body, #__nuxt, .wrapper {
+  @apply h-full w-full;
+  @apply flex flex-col;
+}
+
+body {
+  @apply bg-gray-100 ;
+  background-image: url('/images/bg-logo-light.png');
+
+  &.dark {
+    @apply bg-gray-800;
+    background-image: url('/images/bg-logo-dark.png');
+  }
+
+}
+.wrapper {
+  > div {
+    @apply mb-auto;
+    @apply relative;
+
+    > main {
+      @apply flex;
+      @apply m-auto mb-auto;
+
+      @apply font-cairo;
+
+      @apply prose;
+      @apply sm:prose-sm md:prose;
+
+      @apply max-w-full;
+      @apply md:max-w-4xl;
+      @apply lg:max-w-5xl;
+      @apply xl:max-w-6xl;
+      @apply 2xl:max-w-7xl;
+    }
+  }
+}

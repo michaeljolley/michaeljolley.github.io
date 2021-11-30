@@ -1,15 +1,11 @@
 <template>
-	<div>
-		<Header />
-		<div class="container mx-auto">
-			<Nuxt />
-			<Footer />
-		</div>
-		<Twitch />
-		<BackToTop />
-	</div>
+  <div class="wrapper">
+    <PageHeader/>
+    <div>
+      <main>
+        <slot></slot>
+      </main> 
+    </div>
+    <PageFooter/>
+  </div>
 </template>
-<script>
-export default {}
-</script>
-<style></style>
