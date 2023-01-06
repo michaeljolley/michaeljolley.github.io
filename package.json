@@ -64,6 +64,6 @@
 		"rss-parser": "^3.10.0",
 		"tailwindcss-blend-mode": "^1.0.0",
 		"tailwindcss-dark-mode": "^1.1.7",
-		"vue-jest": "^3.0.4"
+		"vue-jest": "^4.0.1"
 	}
 }
